@@ -252,7 +252,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_252
+	dw BattleAnim_BugBuzz
 	dw BattleAnim_253
 	dw BattleAnim_254
 	dw BattleAnim_SweetScent2
@@ -1875,6 +1875,7 @@ BattleAnim_Roar:
 .done
 	anim_ret
 
+BattleAnim_BugBuzz:
 BattleAnim_Supersonic:
 	anim_1gfx ANIM_GFX_PSYCHIC
 .loop
