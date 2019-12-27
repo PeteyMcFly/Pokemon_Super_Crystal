@@ -43,6 +43,10 @@ DontSwitch:
 	ret
 
 SwitchOften:
+	ld a, [wTimesUsedSwitch]
+	cp ENEMY_SWITCH_THROTTLE_LIMIT
+	jr nc, SwitchRarely
+
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
@@ -78,6 +82,10 @@ SwitchOften:
 	jp AI_TrySwitch
 
 SwitchRarely:
+	ld a, [wTimesUsedSwitch]
+	cp MAX_ENEMY_SWITCHES
+	jp nc, DontSwitch
+
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
@@ -112,6 +120,10 @@ SwitchRarely:
 	jp AI_TrySwitch
 
 SwitchSometimes:
+	ld a, [wTimesUsedSwitch]
+	cp ENEMY_SWITCH_THROTTLE_LIMIT
+	jr nc, SwitchRarely
+
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
@@ -665,6 +677,8 @@ AI_TrySwitch:
 	ret
 
 AI_Switch:
+	ld hl, wTimesUsedSwitch
+	inc [hl]
 	ld a, $1
 	ld [wEnemyIsSwitching], a
 	ld [wEnemyGoesFirst], a

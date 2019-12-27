@@ -2,6 +2,7 @@
 
 DoBattle:
 	xor a
+	ld [wTimesUsedSwitch], a
 	ld [wBattleParticipantsNotFainted], a
 	ld [wBattleParticipantsIncludingFainted], a
 	ld [wBattlePlayerAction], a
