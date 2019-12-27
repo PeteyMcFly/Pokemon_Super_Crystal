@@ -6102,10 +6102,23 @@ LoadEnemyMon:
 ; Forced shiny battle type
 ; Used by Red Gyarados at Lake of Rage
 	cp BATTLETYPE_SHINY
-	jr nz, .GenerateDVs
+	jr nz, .TryExtraShinyChance
 
 	ld b, ATKDEFDV_SHINY ; $ea
 	ld c, SPDSPCDV_SHINY ; $aa
+	jr .UpdateDVs
+
+; Increase the chance of getting a Shiny
+; Force a 1/256 chance of generating a PKMN with all DVs set to 10
+.TryExtraShinyChance
+	call BattleRandom
+	cp $8
+	jr nc, .GenerateDVs
+	call BattleRandom
+	cp $20
+	jr nc, .GenerateDVs
+	ld b, SPDSPCDV_SHINY ; all 10s
+	ld c, SPDSPCDV_SHINY
 	jr .UpdateDVs
 
 .GenerateDVs:
