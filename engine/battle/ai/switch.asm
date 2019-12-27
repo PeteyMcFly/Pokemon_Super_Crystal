@@ -57,6 +57,35 @@ EnemyMonHasSuperEffectiveMove:
 	cp 2 ; were there any super effective moves? (zero-flag)
 	ret
 
+CheckUndesirableStatus:
+; Check for undesirable substatuses that would go away if we switched
+; Returns Z if status is OK, NZ if undesirable
+	ld a, [$feee]
+	ld a, [wEnemySubStatus1]
+	bit SUBSTATUS_CURSE, a
+	ret nz
+	bit SUBSTATUS_IN_LOVE, a
+	ret nz
+	bit SUBSTATUS_NIGHTMARE, a
+	ret nz
+
+	ld a, [wEnemySubStatus3]
+	bit SUBSTATUS_CONFUSED, a
+	ret nz
+
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_ENCORED, a
+	jr z, .noencore
+	ld a, [wLastEnemyMove]
+	dec a
+	ld hl, Moves + MOVE_POWER
+	call GetMoveAttr
+	and a
+	jr z, .noencore ; Enemy is encored with a non-damaging move
+	rra
+.noencore
+	ret
+
 CheckBaseMatchup:
 ; If the enemy pokemon's type combo has inferior effectiveness in attacking
 ; and defending against the player's pokemon, and it has no super effective
@@ -345,6 +374,15 @@ CheckAbleToSwitch:
 	ret
 
 .no_perish
+	call CheckUndesirableStatus
+	jr z, .no_bad_status
+
+	; If enemy Pokemon is in a bad state, and has no super effective moves,
+	; treat it as a bad matchup, and encourage a switch
+	call EnemyMonHasSuperEffectiveMove
+	jr nz, .bad_matchup
+
+.no_bad_status
 	call CheckBaseMatchup
 	jr c, .no_bad_matchup
 	call CheckPlayerMoveTypeMatchups
