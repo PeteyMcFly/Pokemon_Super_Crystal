@@ -1,3 +1,128 @@
+EnemyMonHasSuperEffectiveMove:
+; Check whether the current enemy pokemon has any super effective moves
+; against the current player pokemon. If true, set zero flag. False otherwise.
+	push hl
+	push bc
+
+	ld hl, wEnemyMonMoves
+	ld b, NUM_MOVES
+	ld c, 0
+.loop
+	; if move is None: break
+	ld a, [hli]
+	and a
+	push hl
+	jr z, .break
+
+	; if move has no power: continue
+	dec a
+	ld hl, Moves + MOVE_POWER
+	call GetMoveAttr
+	and a
+	jr z, .nope
+
+	; check type matchups
+	inc hl
+	call GetMoveByte
+	ld hl, wBattleMonType1
+	call CheckTypeMatchup
+
+	; if immune or not very effective: continue
+	ld a, [wTypeMatchup]
+	cp 10
+	jr c, .nope
+
+	; if neutral: load 1 and continue
+	ld e, 1
+	cp EFFECTIVE + 1
+	jr c, .nope
+
+	; if super-effective: load 2 and break
+	ld e, 2
+	jr .break
+
+.nope
+	pop hl
+	dec b
+	jr nz, .loop
+
+	jr .done
+
+.break
+	pop hl
+.done
+	ld a, e
+	pop bc
+	pop hl
+	cp 2 ; were there any super effective moves? (zero-flag)
+	ret
+
+CheckBaseMatchup:
+; If the enemy pokemon's type combo has inferior effectiveness in attacking
+; and defending against the player's pokemon, and it has no super effective
+; moves, it is a bad matchup. (Carry flag set on good matchup)
+	push hl
+	push de
+	push bc
+; Player's pokemon types loaded to E
+	ld a, [wBattleMonType1]
+	ld b, a
+	ld hl, wEnemyMonType1
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	ld e, a
+
+	ld a, [wBattleMonType2]
+	cp b
+	jr z, .notype2_1
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	add e
+	ld e, a
+	jr .type2found_1
+
+.notype2_1
+	ld a, e
+	add e
+	ld e, a
+.type2found_1
+; Enemy pokemon types loaded to D
+	ld a, [wEnemyMonType1]
+	ld b, a
+	ld hl, wBattleMonType1
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	ld d, a
+
+	ld a, [wEnemyMonType2]
+	cp b
+	jr z, .notype2_2
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	add d
+	ld d, a
+	jr .type2found_2
+
+.notype2_2
+	ld a, d
+	add d
+	ld d, a
+.type2found_2
+	ld a, e
+	cp d ; Carry flag is set if enemy type combo is overall more effective
+	pop hl
+	pop de
+	pop bc
+	push af
+	call EnemyMonHasSuperEffectiveMove
+	jr z, .se_found
+	pop af
+	ret
+.se_found ; Not a bad matchup if a super effective move is found
+	pop af
+	and a
+	ret
+
 CheckPlayerMoveTypeMatchups:
 ; Check how well the moves you've already used
 ; fare against the enemy's Pokemon.  Used to
@@ -220,6 +345,12 @@ CheckAbleToSwitch:
 	ret
 
 .no_perish
+	call CheckBaseMatchup
+	jr c, .no_bad_matchup
+	call CheckPlayerMoveTypeMatchups
+	jr .bad_matchup
+
+.no_bad_matchup
 	call CheckPlayerMoveTypeMatchups
 	ld a, [wEnemyAISwitchScore]
 	cp 11
@@ -284,6 +415,32 @@ CheckAbleToSwitch:
 	cp $2
 	ret nz
 
+	ld a, [wEnemyAISwitchScore]
+	add $10
+	ld [wEnemySwitchMonParam], a
+	ret
+
+.bad_matchup
+	;First look for pokemon that both resist and have super effective moves
+	call FindAliveEnemyMons
+	call FindEnemyMonsWithAtLeastQuarterMaxHP
+	call FindEnemyMonsThatResistPlayer
+	call FindAliveEnemyMonsWithASuperEffectiveMove
+
+	ld a, e
+	cp $2
+	jr z, .bad_matchup_complete
+
+	;If that fails, just super effective moves
+	call FindAliveEnemyMons
+	call FindEnemyMonsWithAtLeastQuarterMaxHP
+	call FindAliveEnemyMonsWithASuperEffectiveMove
+
+	ld a, e
+	cp $2
+	ret nz
+
+.bad_matchup_complete
 	ld a, [wEnemyAISwitchScore]
 	add $10
 	ld [wEnemySwitchMonParam], a
