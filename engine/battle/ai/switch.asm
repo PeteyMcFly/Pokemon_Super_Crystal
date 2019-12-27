@@ -60,7 +60,6 @@ EnemyMonHasSuperEffectiveMove:
 CheckUndesirableStatus:
 ; Check for undesirable substatuses that would go away if we switched
 ; Returns Z if status is OK, NZ if undesirable
-	ld a, [$feee]
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	ret nz
