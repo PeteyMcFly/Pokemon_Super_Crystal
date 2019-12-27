@@ -1521,7 +1521,7 @@ JohtoGrassWildMons:
 	db 16, RHYHORN
 	db 16, FARFETCH_D
 	db 15, STANTLER
-	db 17, FLAAFY
+	db 17, FLAAFFY
 	db 17, CYNDAQUIL
 	db 17, CYNDAQUIL
 	; day
@@ -1529,7 +1529,7 @@ JohtoGrassWildMons:
 	db 16, RHYHORN
 	db 16, FARFETCH_D
 	db 15, STANTLER
-	db 17, FLAAFY
+	db 17, FLAAFFY
 	db 17, CYNDAQUIL
 	db 17, CYNDAQUIL
 	; nite
@@ -1537,7 +1537,7 @@ JohtoGrassWildMons:
 	db 16, RHYHORN
 	db 16, FARFETCH_D
 	db 15, STANTLER
-	db 17, FLAAFY
+	db 17, FLAAFFY
 	db 17, CYNDAQUIL
 	db 17, CYNDAQUIL
 

@@ -35,7 +35,7 @@ KantoGrassWildMons:
 	db 6, NIDORINA
 	db 8, GEODUDE
 	db 8, NIDORINO
-	db 12, JIFFLYPUFF
+	db 12, JIGGLYPUFF
 	db 12, WIGGLYTUFF
 	db 10, CLEFAIRY
 	db 15, CLEFABLE
@@ -43,7 +43,7 @@ KantoGrassWildMons:
 	db 6, NIDORINA
 	db 8, GEODUDE
 	db 8, NIDORINO
-	db 12, JIFFLYPUFF
+	db 12, JIGGLYPUFF
 	db 12, WIGGLYTUFF
 	db 10, CLEFAIRY
 	db 15, CLEFABLE
@@ -51,7 +51,7 @@ KantoGrassWildMons:
 	db 6, NIDORINA
 	db 8, GEODUDE
 	db 8, NIDORINO
-	db 12, JIFFLYPUFF
+	db 12, JIGGLYPUFF
 	db 12, WIGGLYTUFF
 	db 10, CLEFAIRY
 	db 15, CLEFABLE
