@@ -56,7 +56,7 @@ Route2DireHit:
 	itemball DIRE_HIT
 
 Route2MaxPotion:
-	itemball MAX_POTION
+	itemball GS_BALL
 
 Route2Carbos:
 	itemball CARBOS
