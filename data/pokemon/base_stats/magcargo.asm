@@ -1,9 +1,9 @@
 	db MAGCARGO ; 219
 
-	db  50,  50, 120,  30,  80,  80
+	db  60,  60, 120,  30,  80,  80
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, ROCK ; type
+	db FIRE, GROUND ; type
 	db 75 ; catch rate
 	db 154 ; base exp
 	db NO_ITEM, NO_ITEM ; items
