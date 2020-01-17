@@ -1,6 +1,6 @@
 	db SCYTHER ; 123
 
-	db  70, 110,  80, 105,  55,  80
+	db  71, 110,  81, 105,  55,  81
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type
