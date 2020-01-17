@@ -1,6 +1,6 @@
 	db YANMA ; 193
 
-	db  65,  65,  45,  95,  75,  45
+	db  70,  70,  55,  95,  80,  55
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type
