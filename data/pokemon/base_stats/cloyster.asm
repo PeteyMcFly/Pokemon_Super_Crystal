@@ -1,6 +1,6 @@
 	db CLOYSTER ; 091
 
-	db  50,  95, 180,  70,  85,  45
+	db  55,  95, 180,  70,  85,  55
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, ICE ; type
