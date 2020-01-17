@@ -1,6 +1,6 @@
 	db GENGAR ; 094
 
-	db  60,  65,  60, 110, 130,  75
+	db  65,  65,  60, 110, 130,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, POISON ; type
