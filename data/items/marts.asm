@@ -329,7 +329,7 @@ MartCeladon4F:
 	db SCOPE_LENS
 	db FOCUS_BAND
 	db KINGS_ROCK
-	db SURF_MAIL
+	db LEFTOVERS
 	db -1 ; end
 
 MartCeladon5F1:
