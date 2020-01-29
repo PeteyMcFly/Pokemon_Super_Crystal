@@ -18,9 +18,9 @@ Moves: ; 41afb
 	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, NORMAL,   PHYSICAL,  85, 15,   0
 	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,   PHYSICAL,  85, 20,   0
 	move PAY_DAY,      EFFECT_ALL_UP_HIT,         65, NORMAL,   PHYSICAL, 100, 20,  20
-	move FIRE_PUNCH,   EFFECT_BURN_HIT,           70, FIRE,     PHYSICAL, 100, 15,  10
-	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         70, ICE,      PHYSICAL, 100, 15,  10
-	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       70, ELECTRIC, PHYSICAL, 100, 15,  10
+	move FIRE_PUNCH,   EFFECT_BURN_HIT,           72, FIRE,     PHYSICAL, 100, 15,  10
+	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         72, ICE,      PHYSICAL, 100, 15,  10
+	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       72, ELECTRIC, PHYSICAL, 100, 15,  10
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,   PHYSICAL, 100, 30,   0
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,   PHYSICAL,  30,  5,   0
@@ -154,7 +154,7 @@ Moves: ; 41afb
 	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,   PHYSICAL,  85, 20,   0
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          65, BUG,      SPECIAL,  100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,   STATUS,    75, 10,   0
-	move SKY_ATTACK,   EFFECT_SKULL_BASH,        140, FLYING,   PHYSICAL,  90,  5,   0
+	move SKY_ATTACK,   EFFECT_SKULL_BASH,        130, FLYING,   PHYSICAL,  90,  5,   0
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,   STATUS,   100, 10,   0
 	move BUBBLE,       EFFECT_SPEED_DOWN_HIT,     20, WATER,    SPECIAL,  100, 30,  10
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        80, NORMAL,   PHYSICAL, 100, 10,  20
@@ -182,7 +182,7 @@ Moves: ; 41afb
 	move THIEF,        EFFECT_THIEF,              40, DARK,     PHYSICAL, 100, 10, 100
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,      STATUS,   100, 10,   0
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,   STATUS,   100,  5,   0
-	move NIGHTMARE,    EFFECT_NORMAL_HIT,         70, GHOST,    SPECIAL,   100, 15,   0
+	move NIGHTMARE,    EFFECT_NORMAL_HIT,         75, GHOST,    SPECIAL,   100, 15,   0
 	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        75, FIRE,     PHYSICAL, 100, 25,  10
 	move SNORE,        EFFECT_SNORE,              40, NORMAL,   SPECIAL,  100, 15,  30
 	move CURSE,        EFFECT_CURSE,               0, GHOST,    STATUS,   100, 10,   0
@@ -207,7 +207,7 @@ Moves: ; 41afb
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,   STATUS,   100, 40,   0
 	move DESTINY_BOND, EFFECT_DESTINY_BOND,        0, GHOST,    STATUS,   100,  5,   0
 	move PERISH_SONG,  EFFECT_PERISH_SONG,         0, NORMAL,   STATUS,   100,  5,   0
-	move ICY_WIND,     EFFECT_SPEED_DOWN_HIT,     65, ICE,      SPECIAL,   95, 15, 100
+	move ICY_WIND,     EFFECT_SPEED_DOWN_HIT,     60, ICE,      SPECIAL,   95, 15, 100
 	move DETECT,       EFFECT_PROTECT,             0, FIGHTING, STATUS,   100,  5,   0
 	move BONE_RUSH,    EFFECT_MULTI_HIT,          25, GROUND,   PHYSICAL,  80, 10,   0
 	move LOCK_ON,      EFFECT_LOCK_ON,             0, NORMAL,   STATUS,   100,  5,   0
