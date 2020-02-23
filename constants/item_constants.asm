@@ -221,7 +221,7 @@ ENDM
 	add_tm HIDDEN_POWER ; c9
 	add_tm SUNNY_DAY    ; ca
 	add_tm BUBBLEBEAM  ; cb
-	add_tm SNORE        ; cc
+	add_tm SUBMISSION        ; cc
 	add_tm BLIZZARD     ; cd
 	add_tm HYPER_BEAM   ; ce
 	add_tm ICY_WIND     ; cf
