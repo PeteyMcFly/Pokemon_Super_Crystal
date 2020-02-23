@@ -117,7 +117,7 @@ BurnedTowerB1FEusine:
 	end
 
 BurnedTowerB1FTMEndure:
-	itemball TM_ENDURE
+	itemball TM_DRAGON_RAGE
 
 BurnedTowerB1FBoulder:
 	jumpstd strengthboulder

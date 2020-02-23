@@ -249,7 +249,7 @@ ENDM
 	add_tm SKY_ATTACK   ; e5
 	add_tm FIRE_BLAST   ; e6
 	add_tm ROCK_SLIDE        ; e7
-	add_tm SWIFT ; e8
+	add_tm SUBSTITUTE ; e8
 	add_tm THUNDERPUNCH ; e9
 	add_tm DREAM_EATER  ; ea
 	add_tm EXPLOSION       ; eb

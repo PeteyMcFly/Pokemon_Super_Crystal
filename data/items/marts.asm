@@ -315,9 +315,9 @@ MartCeladon3F:
 	db 5 ; # items
 	db TM_HIDDEN_POWER
 	db TM_SUNNY_DAY
-	db TM_PROTECT
+	db TM_ROCK_SLIDE
 	db TM_RAIN_DANCE
-	db TM_SANDSTORM
+	db TM_DOUBLE_EDGE
 	db -1 ; end
 
 MartCeladon4F:

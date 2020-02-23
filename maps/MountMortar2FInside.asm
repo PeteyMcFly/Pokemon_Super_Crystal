@@ -24,13 +24,13 @@ TrainerSupernerdHugh:
 	end
 
 MountMortar2FInsideMaxPotion:
-	itemball MAX_POTION
+	itemball TM_EARTHQUAKE
 
 MountMortar2FInsideRareCandy:
 	itemball RARE_CANDY
 
 MountMortar2FInsideTMDefenseCurl:
-	itemball TM_DEFENSE_CURL
+	itemball TM_SUBSTITUTE
 
 MountMortar2FInsideDragonScale:
 	itemball DRAGON_SCALE
