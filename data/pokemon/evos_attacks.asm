@@ -64,9 +64,13 @@ VenusaurEvosAttacks:
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
 	db 29, SWEET_SCENT
+	db 33, SAFEGUARD
+	db 36, LIGHT_SCREEN
+	db 38, SKULL_BASH
 	db 41, GROWTH
 	db 53, SYNTHESIS
-	db 65, SOLARBEAM
+	db 58, GIGA_DRAIN
+	db 60, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:
@@ -111,10 +115,15 @@ CharizardEvosAttacks:
 	db 20, RAGE
 	db 27, SCARY_FACE
 	db 34, FLAMETHROWER
+	db 35, BITE
 	db 36, WING_ATTACK
+	db 38, ROCK_SLIDE
+	db 40, OUTRAGE
+	db 42, BELLY_DRUM
 	db 44, SLASH
+	db 48, ANCIENTPOWER
 	db 54, DRAGON_RAGE
-	db 64, FIRE_SPIN
+	db 58, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 SquirtleEvosAttacks:
@@ -164,9 +173,15 @@ BlastoiseEvosAttacks:
 	db 19, BITE
 	db 25, RAPID_SPIN
 	db 31, PROTECT
+	db 33, METAL_CLAW
+	db 35, MIRROR_COAT
+	db 38, CONFUSION
 	db 42, RAIN_DANCE
+	db 45, HAZE
+	db 48, MIST
+	db 50, ZAP_CANNON
 	db 55, SKULL_BASH
-	db 68, HYDRO_PUMP
+	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 CaterpieEvosAttacks:
