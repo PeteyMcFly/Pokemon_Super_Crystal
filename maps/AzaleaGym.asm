@@ -205,29 +205,29 @@ BugsyText_HiveBadgeSpeech:
 
 BugsyText_FuryCutterSpeech:
 	text "TM49 contains"
-	line "FURY CUTTER."
+	line "SWORDS DANCE."
 
-	para "If you don't miss,"
-	line "it gets stronger"
-	cont "every turn."
+	para "It doubles your,"
+	line "pokemon's attack"
+	cont "when used"
 
-	para "The longer your"
-	line "battle goes, the"
-	cont "better it gets."
+	para "Use it when"
+	line "you want to "
+	cont "setup a sweep."
 
-	para "Isn't that great?"
-	line "I discovered it!"
+	para "Let it rip"
+	line "on Psychic types"
 	done
 
 BugsyText_BugMonsAreDeep:
-	text "Bug #MON are"
-	line "deep. There are"
+	text "The GS Ball"
+	line "will awaken"
 
-	para "many mysteries to"
-	line "be explored."
+	para "the guardian of"
+	line "Ilex Forest."
 
-	para "Study your favor-"
-	line "ites thoroughly."
+	para "Where is it?"
+	line "Search KANTO."
 	done
 
 BugCatcherBennySeenText:
