@@ -2078,6 +2078,7 @@ GyaradosEvosAttacks:
 	db 20, BITE
 	db 25, DRAGON_RAGE
 	db 30, LEER
+	db 32, REVERSAL
 	db 35, TWISTER
 	db 40, HYDRO_PUMP
 	db 45, RAIN_DANCE
@@ -2093,6 +2094,7 @@ LaprasEvosAttacks:
 	db 15, BODY_SLAM
 	db 22, CONFUSE_RAY
 	db 29, PERISH_SONG
+	db 33, AURORA_BEAM
 	db 36, ICE_BEAM
 	db 43, RAIN_DANCE
 	db 50, SAFEGUARD
@@ -2114,11 +2116,13 @@ EeveeEvosAttacks:
 	db 1, TACKLE
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
-	db 16, GROWL
+	db 16, FLAIL
+	db 18, CHARM
+	db 20, GROWTH
 	db 23, QUICK_ATTACK
-	db 30, BITE
-	db 36, BATON_PASS
-	db 42, TAKE_DOWN
+	db 24, BITE
+	db 26, BATON_PASS
+	db 32, TAKE_DOWN
 	db 0 ; no more level-up moves
 
 VaporeonEvosAttacks:
@@ -2144,6 +2148,7 @@ JolteonEvosAttacks:
 	db 23, QUICK_ATTACK
 	db 30, DOUBLE_KICK
 	db 36, PIN_MISSILE
+	db 39, TRI_ATTACK
 	db 42, THUNDER_WAVE
 	db 47, AGILITY
 	db 52, THUNDER
@@ -2158,6 +2163,7 @@ FlareonEvosAttacks:
 	db 23, QUICK_ATTACK
 	db 30, BITE
 	db 36, FIRE_SPIN
+	db 39, FLAME_WHEEL
 	db 42, SMOG
 	db 47, LEER
 	db 52, FLAMETHROWER
@@ -2185,10 +2191,11 @@ OmanyteEvosAttacks:
 	db 1, WITHDRAW
 	db 13, BITE
 	db 19, WATER_GUN
+	db 24, ROCK_THROW
 	db 31, LEER
 	db 37, PROTECT
-	db 49, ANCIENTPOWER
-	db 55, HYDRO_PUMP
+	db 42, ANCIENTPOWER
+	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 OmastarEvosAttacks:
@@ -2201,8 +2208,12 @@ OmastarEvosAttacks:
 	db 31, LEER
 	db 37, PROTECT
 	db 40, SPIKE_CANNON
-	db 54, ANCIENTPOWER
-	db 65, HYDRO_PUMP
+	db 41, AURORA_BEAM
+	db 42, SPIKES
+	db 43, RAPID_SPIN
+	db 44, ANCIENTPOWER
+	db 47, HAZE
+	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
@@ -2212,7 +2223,9 @@ KabutoEvosAttacks:
 	db 1, HARDEN
 	db 10, ABSORB
 	db 19, LEER
+	db 24, ROCK_THROW
 	db 28, SAND_ATTACK
+	db 30, FLAIL
 	db 37, ENDURE
 	db 46, MEGA_DRAIN
 	db 55, ANCIENTPOWER
@@ -2228,8 +2241,13 @@ KabutopsEvosAttacks:
 	db 28, SAND_ATTACK
 	db 37, ENDURE
 	db 40, SLASH
-	db 51, MEGA_DRAIN
-	db 65, ANCIENTPOWER
+	db 41, GIGA_DRAIN
+	db 42, DIG
+	db 43, RAPID_SPIN
+	db 44, AURORA_BEAM
+	db 45, ROCK_SLIDE
+	db 47, BUBBLEBEAM
+	db 55, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:
@@ -2240,7 +2258,9 @@ AerodactylEvosAttacks:
 	db 22, SUPERSONIC
 	db 29, ANCIENTPOWER
 	db 36, SCARY_FACE
+	db 39, WHIRLWIND
 	db 43, TAKE_DOWN
+	db 46, ROCK_SLIDE
 	db 50, HYPER_BEAM
 	db 0 ; no more level-up moves
 
@@ -2250,6 +2270,7 @@ SnorlaxEvosAttacks:
 	db 8, AMNESIA
 	db 15, DEFENSE_CURL
 	db 22, BELLY_DRUM
+	db 25, LICK
 	db 29, HEADBUTT
 	db 36, SNORE
 	db 36, REST
@@ -2262,10 +2283,11 @@ ArticunoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUST
 	db 1, POWDER_SNOW
-	db 13, MIST
+	db 13, GUST
 	db 25, AGILITY
 	db 37, MIND_READER
 	db 49, ICE_BEAM
+	db 54, PSYCHIC
 	db 61, REFLECT
 	db 73, BLIZZARD
 	db 0 ; no more level-up moves
@@ -2278,6 +2300,7 @@ ZapdosEvosAttacks:
 	db 25, AGILITY
 	db 37, DETECT
 	db 49, DRILL_PECK
+	db 54, ICY_WIND
 	db 61, LIGHT_SCREEN
 	db 73, THUNDER
 	db 0 ; no more level-up moves
@@ -2290,6 +2313,7 @@ MoltresEvosAttacks:
 	db 25, AGILITY
 	db 37, ENDURE
 	db 49, FLAMETHROWER
+	db 54, DRILL_PECK
 	db 61, SAFEGUARD
 	db 73, SKY_ATTACK
 	db 0 ; no more level-up moves
@@ -2339,8 +2363,11 @@ DragoniteEvosAttacks:
 	db 38, AGILITY
 	db 47, SAFEGUARD
 	db 55, WING_ATTACK
-	db 61, OUTRAGE
-	db 75, HYPER_BEAM
+	db 56, LIGHT_SCREEN
+	db 57, HAZE
+	db 58, OUTRAGE
+	db 59, HYDRO_PUMP
+	db 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 MewtwoEvosAttacks:
@@ -2366,6 +2393,10 @@ MewEvosAttacks:
 	db 30, METRONOME
 	db 40, PSYCHIC_M
 	db 50, ANCIENTPOWER
+	db 60, RECOVER
+	db 70, FUTURE_SIGHT
+	db 80, HYPER_BEAM
+	db 90, SAFEGUARD
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
