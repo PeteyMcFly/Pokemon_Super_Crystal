@@ -28,23 +28,18 @@ CreditsScript:
 
 	db CREDITS_WAIT, 12
 
-	db          PROGRAMMERS, 0
-	db       SOUSUKE_TAMADA, 1
-	db       HISASHI_SOGABE, 2
-	db         KEITA_KAGAYA, 3
-	db    YOSHINORI_MATSUDA, 4
+	db          PROJECT_LEAD, 0
+	db       PETER_TALEN, 1
 
 	db CREDITS_WAIT, 12
 
-	db          PROGRAMMERS, 0
-	db     SHIGEKI_MORIMOTO, 1
-	db     TETSUYA_WATANABE, 2
-	db        TAKENORI_OOTA, 3
+	db          LEAD_DEVELOPER, 0
+	db     NOLAN_VARANI, 1
 
 	db CREDITS_WAIT, 12
 
-	db    GRAPHICS_DIRECTOR, 1
-	db         KEN_SUGIMORI, 2
+	db    GAME_DESIGNER, 1
+	db         DYLAN_SAUL, 2
 
 	db CREDITS_WAIT, 12
 
