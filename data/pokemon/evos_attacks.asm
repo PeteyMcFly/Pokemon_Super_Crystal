@@ -53,12 +53,7 @@ IvysaurEvosAttacks:
 
 VenusaurEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
 	db 1, LEECH_SEED
-	db 1, VINE_WHIP
-	db 4, GROWL
-	db 7, LEECH_SEED
 	db 10, VINE_WHIP
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
@@ -106,12 +101,7 @@ CharmeleonEvosAttacks:
 
 CharizardEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
 	db 1, EMBER
-	db 1, SMOKESCREEN
-	db 7, EMBER
-	db 13, SMOKESCREEN
 	db 20, RAGE
 	db 27, SCARY_FACE
 	db 34, FLAMETHROWER
@@ -162,14 +152,7 @@ WartortleEvosAttacks:
 
 BlastoiseEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, TAIL_WHIP
-	db 1, BUBBLE
-	db 1, WITHDRAW
-	db 4, TAIL_WHIP
-	db 7, BUBBLE
-	db 10, WITHDRAW
-	db 13, WATER_GUN
+	db 1, WATER_GUN
 	db 19, BITE
 	db 25, RAPID_SPIN
 	db 31, PROTECT
@@ -357,8 +340,6 @@ EkansEvosAttacks:
 
 ArbokEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WRAP
-	db 1, LEER
 	db 1, POISON_STING
 	db 1, BITE
 	db 9, POISON_STING
@@ -392,7 +373,6 @@ PikachuEvosAttacks:
 RaichuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
-	db 1, GROWL
 	db 6, TAIL_WHIP
 	db 8, THUNDER_WAVE
 	db 11, QUICK_ATTACK
@@ -422,10 +402,7 @@ SandshrewEvosAttacks:
 
 SandslashEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
 	db 1, DEFENSE_CURL
-	db 1, SAND_ATTACK
-	db 6, DEFENSE_CURL
 	db 11, SAND_ATTACK
 	db 17, POISON_STING
 	db 23, PIN_MISSILE
@@ -539,9 +516,6 @@ ClefairyEvosAttacks:
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SING
-	db 1, DOUBLESLAP
-	db 1, METRONOME
 	db 1, MOONLIGHT
 	db 4, ENCORE
 	db 8, SING
@@ -571,9 +545,6 @@ VulpixEvosAttacks:
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, EMBER
-	db 1, QUICK_ATTACK
-	db 1, CONFUSE_RAY
 	db 1, SAFEGUARD
 	db 7, QUICK_ATTACK
 	db 13, ROAR
@@ -604,11 +575,7 @@ JigglypuffEvosAttacks:
 
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SING
-	db 1, DISABLE
 	db 1, DEFENSE_CURL
-	db 1, DOUBLESLAP
-	db 4, DEFENSE_CURL
 	db 9, POUND
 	db 14, DISABLE
 	db 19, ROLLOUT
@@ -680,9 +647,6 @@ GloomEvosAttacks:
 
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ABSORB
-	db 1, SWEET_SCENT
-	db 1, STUN_SPORE
 	db 1, PETAL_DANCE
 	db 7, SWEET_SCENT
 	db 14, POISONPOWDER
@@ -712,11 +676,7 @@ ParasEvosAttacks:
 
 ParasectEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
 	db 1, STUN_SPORE
-	db 1, POISONPOWDER
-	db 7, STUN_SPORE
-	db 13, POISONPOWDER
 	db 19, LEECH_LIFE
 	db 28, SPORE
 	db 32, COUNTER
@@ -749,11 +709,7 @@ VenonatEvosAttacks:
 
 VenomothEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, DISABLE
-	db 1, FORESIGHT
 	db 1, SUPERSONIC
-	db 9, SUPERSONIC
 	db 17, CONFUSION
 	db 20, POISONPOWDER
 	db 25, LEECH_LIFE
@@ -782,9 +738,6 @@ DiglettEvosAttacks:
 
 DugtrioEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TRI_ATTACK
-	db 1, SCRATCH
-	db 1, GROWL
 	db 1, MAGNITUDE
 	db 5, GROWL
 	db 9, MAGNITUDE
@@ -840,11 +793,7 @@ PsyduckEvosAttacks:
 
 GolduckEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
 	db 1, TAIL_WHIP
-	db 1, DISABLE
-	db 1, CONFUSION
-	db 5, TAIL_WHIP
 	db 10, DISABLE
 	db 16, CONFUSION
 	db 23, SCREECH
@@ -876,11 +825,7 @@ MankeyEvosAttacks:
 
 PrimeapeEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
 	db 1, LOW_KICK
-	db 1, RAGE
-	db 9, LOW_KICK
 	db 15, KARATE_CHOP
 	db 21, FURY_SWIPES
 	db 27, FOCUS_ENERGY
@@ -893,7 +838,6 @@ PrimeapeEvosAttacks:
 	db 45, CROSS_CHOP
 	db 49, ROCK_SLIDE
 	db 54, SCREECH
-	db 63, THRASH
 	db 0 ; no more level-up moves
 
 GrowlitheEvosAttacks:
@@ -911,9 +855,6 @@ GrowlitheEvosAttacks:
 
 ArcanineEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ROAR
-	db 1, LEER
-	db 1, TAKE_DOWN
 	db 1, FLAME_WHEEL
 	db 9, EMBER
 	db 18, LEER
@@ -959,12 +900,7 @@ PoliwhirlEvosAttacks:
 
 PoliwrathEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, HYPNOSIS
-	db 1, DOUBLESLAP
-	db 1, SUBMISSION
-	db 1, WATER_GUN
-	db 7, HYPNOSIS
 	db 13, WATER_GUN
 	db 19, DOUBLESLAP
 	db 27, RAIN_DANCE
@@ -1050,8 +986,6 @@ MachokeEvosAttacks:
 MachampEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
-	db 1, LEER
-	db 1, FOCUS_ENERGY
 	db 8, FOCUS_ENERGY
 	db 15, KARATE_CHOP
 	db 19, SEISMIC_TOSS
@@ -1094,19 +1028,13 @@ WeepinbellEvosAttacks:
 	db 24, ACID
 	db 33, SWEET_SCENT
 	db 42, RAZOR_LEAF
-	db 54, SLAM
 	db 0 ; no more level-up moves
 
 VictreebelEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, VINE_WHIP
-	db 1, SLEEP_POWDER
-	db 1, SWEET_SCENT
 	db 1, RAZOR_LEAF
 	db 6, GROWTH
-	db 11, WRAP
 	db 15, SLEEP_POWDER
-	db 17, POISONPOWDER
 	db 19, STUN_SPORE
 	db 24, ACID
 	db 32, ENCORE
@@ -1135,11 +1063,7 @@ TentacoolEvosAttacks:
 
 TentacruelEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_STING
 	db 1, SUPERSONIC
-	db 1, CONSTRICT
-	db 6, SUPERSONIC
-	db 12, CONSTRICT
 	db 19, ACID
 	db 25, BUBBLEBEAM
 	db 30, WRAP
@@ -1186,8 +1110,6 @@ GravelerEvosAttacks:
 
 GolemEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, DEFENSE_CURL
 	db 1, ROCK_THROW
 	db 1, MAGNITUDE
 	db 6, DEFENSE_CURL
@@ -1219,12 +1141,7 @@ PonytaEvosAttacks:
 
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
 	db 1, TAIL_WHIP
-	db 1, EMBER
-	db 4, GROWL
-	db 8, TAIL_WHIP
 	db 13, EMBER
 	db 19, STOMP
 	db 26, FIRE_SPIN
@@ -1260,9 +1177,6 @@ SlowpokeEvosAttacks:
 
 SlowbroEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CURSE
-	db 1, TACKLE
-	db 1, GROWL
 	db 1, WATER_GUN
 	db 6, GROWL
 	db 15, WATER_GUN
@@ -1294,9 +1208,6 @@ MagnemiteEvosAttacks:
 
 MagnetonEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, THUNDERSHOCK
-	db 1, SUPERSONIC
 	db 1, SONICBOOM
 	db 6, THUNDERSHOCK
 	db 11, SUPERSONIC
@@ -1340,9 +1251,6 @@ DoduoEvosAttacks:
 
 DodrioEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
-	db 1, GROWL
-	db 1, PURSUIT
 	db 1, FURY_ATTACK
 	db 9, PURSUIT
 	db 13, FURY_ATTACK
@@ -1369,8 +1277,6 @@ SeelEvosAttacks:
 
 DewgongEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, HEADBUTT
-	db 1, GROWL
 	db 1, AURORA_BEAM
 	db 5, GROWL
 	db 16, AURORA_BEAM
@@ -1431,11 +1337,7 @@ ShellderEvosAttacks:
 
 CloysterEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WITHDRAW
 	db 1, SUPERSONIC
-	db 1, AURORA_BEAM
-	db 1, PROTECT
-	db 9, SUPERSONIC
 	db 17, AURORA_BEAM
 	db 25, PROTECT
 	db 33, LEER
@@ -1482,9 +1384,6 @@ HaunterEvosAttacks:
 GengarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, LICK
-	db 1, SPITE
-	db 8, SPITE
 	db 13, MEAN_LOOK
 	db 16, CURSE
 	db 21, NIGHT_SHADE
@@ -1528,9 +1427,6 @@ DrowzeeEvosAttacks:
 
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
-	db 1, HYPNOSIS
-	db 1, DISABLE
 	db 1, CONFUSION
 	db 10, DISABLE
 	db 18, CONFUSION
@@ -1559,11 +1455,7 @@ KrabbyEvosAttacks:
 
 KinglerEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, LEER
-	db 1, VICEGRIP
-	db 5, LEER
-	db 12, VICEGRIP
+	db 11, VICEGRIP
 	db 16, HARDEN
 	db 23, STOMP
 	db 27, GUILLOTINE
@@ -1592,9 +1484,6 @@ VoltorbEvosAttacks:
 
 ElectrodeEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, SCREECH
-	db 1, SONICBOOM
 	db 1, SELFDESTRUCT
 	db 9, SCREECH
 	db 17, SONICBOOM
@@ -1625,8 +1514,6 @@ ExeggcuteEvosAttacks:
 
 ExeggutorEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BARRAGE
-	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 7, REFLECT
 	db 13, LEECH_SEED
@@ -1659,17 +1546,9 @@ CuboneEvosAttacks:
 
 MarowakEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
-	db 1, TAIL_WHIP
 	db 1, BONE_CLUB
-	db 1, HEADBUTT
-	db 5, TAIL_WHIP
-	db 9, BONE_CLUB
 	db 13, HEADBUTT
-	db 17, LEER
-	db 21, FOCUS_ENERGY
 	db 25, BONEMERANG
-	db 32, RAGE
 	db 33, PERISH_SONG
 	db 35, SCREECH
 	db 36, BELLY_DRUM
@@ -1685,7 +1564,6 @@ MarowakEvosAttacks:
 HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
-	db 6, MEDITATE
 	db 11, ROLLING_KICK
 	db 16, JUMP_KICK
 	db 21, FOCUS_ENERGY
@@ -1703,7 +1581,6 @@ HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
 	db 7, AGILITY
-	db 13, PURSUIT
 	db 26, THUNDERPUNCH
 	db 26, ICE_PUNCH
 	db 26, FIRE_PUNCH
@@ -1748,9 +1625,6 @@ KoffingEvosAttacks:
 
 WeezingEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_GAS
-	db 1, TACKLE
-	db 1, SMOG
 	db 1, SELFDESTRUCT
 	db 9, SMOG
 	db 17, SELFDESTRUCT
@@ -1780,9 +1654,6 @@ RhyhornEvosAttacks:
 
 RhydonEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, HORN_ATTACK
-	db 1, TAIL_WHIP
-	db 1, STOMP
 	db 1, FURY_ATTACK
 	db 13, STOMP
 	db 19, FURY_ATTACK
@@ -1810,14 +1681,11 @@ ChanseyEvosAttacks:
 	db 23, MINIMIZE
 	db 29, SING
 	db 35, EGG_BOMB
-	db 41, DEFENSE_CURL
 	db 49, LIGHT_SCREEN
-	db 57, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
 	db 10, ABSORB
 	db 13, POISONPOWDER
@@ -1825,12 +1693,10 @@ TangelaEvosAttacks:
 	db 19, VINE_WHIP
 	db 21, AMNESIA
 	db 23, FAINT_ATTACK
-	db 25, BIND
 	db 28, FLAIL
 	db 31, MEGA_DRAIN
 	db 33, REFLECT
 	db 34, STUN_SPORE
-	db 40, SLAM
 	db 43, SYNTHESIS
 	db 46, GROWTH
 	db 0 ; no more level-up moves
@@ -1838,7 +1704,6 @@ TangelaEvosAttacks:
 KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
-	db 7, LEER
 	db 13, BITE
 	db 19, TAIL_WHIP
 	db 22, DISABLE
@@ -1895,8 +1760,6 @@ GoldeenEvosAttacks:
 
 SeakingEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
-	db 1, TAIL_WHIP
 	db 1, TAIL_WHIP
 	db 10, SUPERSONIC
 	db 15, HORN_ATTACK
@@ -1949,7 +1812,6 @@ MrMimeEvosAttacks:
 	db 6, CONFUSION
 	db 11, SUBSTITUTE
 	db 16, MEDITATE
-	db 21, DOUBLESLAP
 	db 26, LIGHT_SCREEN
 	db 26, REFLECT
 	db 31, ENCORE
@@ -1979,9 +1841,6 @@ ScytherEvosAttacks:
 
 JynxEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
-	db 1, LICK
-	db 1, LOVELY_KISS
 	db 1, POWDER_SNOW
 	db 13, POWDER_SNOW
 	db 18, SWEET_KISS
@@ -1990,7 +1849,7 @@ JynxEvosAttacks:
 	db 29, LOVELY_KISS
 	db 33, PETAL_DANCE
 	db 35, MEAN_LOOK
-	db 38, METRONOMNE
+	db 38, METRONOME
 	db 41, BODY_SLAM
 	db 48, ICE_BEAM
 	db 51, PERISH_SONG
@@ -2000,8 +1859,6 @@ JynxEvosAttacks:
 ElectabuzzEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
-	db 1, LEER
-	db 1, THUNDERPUNCH
 	db 9, THUNDERPUNCH
 	db 17, LIGHT_SCREEN
 	db 25, SWIFT
@@ -2116,8 +1973,6 @@ EeveeEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, TAIL_WHIP
-	db 8, SAND_ATTACK
 	db 16, FLAIL
 	db 18, CHARM
 	db 20, GROWTH
@@ -2204,7 +2059,6 @@ OmastarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
-	db 1, BITE
 	db 13, BITE
 	db 19, WATER_GUN
 	db 31, LEER
@@ -2235,10 +2089,7 @@ KabutoEvosAttacks:
 
 KabutopsEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, HARDEN
 	db 1, ABSORB
-	db 10, ABSORB
 	db 19, LEER
 	db 28, SAND_ATTACK
 	db 37, ENDURE
@@ -2268,8 +2119,7 @@ AerodactylEvosAttacks:
 
 SnorlaxEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 8, AMNESIA
+	db 1, AMNESIA
 	db 15, DEFENSE_CURL
 	db 22, BELLY_DRUM
 	db 25, LICK
@@ -2354,10 +2204,7 @@ DragonairEvosAttacks:
 
 DragoniteEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WRAP
-	db 1, LEER
 	db 1, THUNDER_WAVE
-	db 1, TWISTER
 	db 8, THUNDER_WAVE
 	db 15, TWISTER
 	db 22, DRAGON_RAGE
@@ -2422,9 +2269,6 @@ ChikoritaEvosAttacks:
 BayleefEvosAttacks:
 	db EVOLVE_LEVEL, 32, MEGANIUM
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
@@ -2441,9 +2285,6 @@ BayleefEvosAttacks:
 
 MeganiumEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
@@ -2487,9 +2328,6 @@ QuilavaEvosAttacks:
 
 TyphlosionEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, LEER
-	db 1, SMOKESCREEN
 	db 1, EMBER
 	db 6, SMOKESCREEN
 	db 12, EMBER
@@ -2520,8 +2358,6 @@ TotodileEvosAttacks:
 CroconawEvosAttacks:
 	db EVOLVE_LEVEL, 30, FERALIGATR
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
 	db 1, RAGE
 	db 7, RAGE
 	db 13, WATER_GUN
@@ -2535,16 +2371,12 @@ CroconawEvosAttacks:
 
 FeraligatrEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
 	db 1, RAGE
-	db 1, WATER_GUN
-	db 7, RAGE
 	db 13, WATER_GUN
 	db 21, BITE
 	db 28, SCARY_FACE
 	db 31, CRUNCH
-	db 36, ANCIENT_POWER
+	db 36, ANCIENTPOWER
 	db 38, SLASH
 	db 41, SUBMISSION
 	db 44, ROCK_SLIDE
@@ -2597,12 +2429,7 @@ HoothootEvosAttacks:
 
 NoctowlEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 1, FORESIGHT
 	db 1, PECK
-	db 6, FORESIGHT
-	db 11, PECK
 	db 16, HYPNOSIS
 	db 21, FAINT_ATTACK
 	db 24, MIRROR_MOVE
@@ -2634,7 +2461,6 @@ LedybaEvosAttacks:
 
 LedianEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
 	db 1, SUPERSONIC
 	db 8, SUPERSONIC
 	db 15, COMET_PUNCH
@@ -2666,9 +2492,6 @@ SpinarakEvosAttacks:
 
 AriadosEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_STING
-	db 1, STRING_SHOT
-	db 1, SCARY_FACE
 	db 1, CONSTRICT
 	db 6, SCARY_FACE
 	db 11, CONSTRICT
@@ -2686,8 +2509,6 @@ AriadosEvosAttacks:
 
 CrobatEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCREECH
-	db 1, LEECH_LIFE
 	db 1, SUPERSONIC
 	db 6, SUPERSONIC
 	db 12, BITE
@@ -2719,8 +2540,6 @@ ChinchouEvosAttacks:
 
 LanturnEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, THUNDER_WAVE
 	db 1, SUPERSONIC
 	db 5, SUPERSONIC
 	db 13, FLAIL
@@ -2777,7 +2596,6 @@ TogepiEvosAttacks:
 
 TogeticEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, CHARM
 	db 7, METRONOME
 	db 18, SWEET_KISS
@@ -2806,8 +2624,6 @@ NatuEvosAttacks:
 XatuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 1, LEER
-	db 1, NIGHT_SHADE
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
 	db 26, DRILL_PECK
@@ -2847,11 +2663,7 @@ FlaaffyEvosAttacks:
 
 AmpharosEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
 	db 1, THUNDERSHOCK
-	db 1, THUNDER_WAVE
-	db 9, THUNDERSHOCK
 	db 18, THUNDER_WAVE
 	db 27, COTTON_SPORE
 	db 30, THUNDERPUNCH
@@ -2866,11 +2678,7 @@ AmpharosEvosAttacks:
 
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ABSORB
-	db 1, SWEET_SCENT
-	db 1, STUN_SPORE
 	db 1, PETAL_DANCE
-	db 7, SWEET_SCENT
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -2900,18 +2708,11 @@ MarillEvosAttacks:
 
 AzumarillEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, DEFENSE_CURL
-	db 1, TAIL_WHIP
 	db 1, WATER_GUN
-	db 3, DEFENSE_CURL
-	db 6, TAIL_WHIP
-	db 10, WATER_GUN
-	db 15, ROLLOUT
 	db 19, AMNESIA
 	db 22, FORESIGHT
 	db 25, BUBBLEBEAM
-	db 28, PERSIGH_SONG
+	db 28, PERISH_SONG
 	db 31, LIGHT_SCREEN
 	db 33, FUTURE_SIGHT
 	db 36, DOUBLE_EDGE
@@ -2919,7 +2720,6 @@ AzumarillEvosAttacks:
 	db 41, DIZZY_PUNCH
 	db 44, HYDRO_PUMP
 	db 46, SCARY_FACE
-	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
 
 SudowoodoEvosAttacks:
@@ -2939,13 +2739,8 @@ SudowoodoEvosAttacks:
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
 	db 1, HYPNOSIS
-	db 1, DOUBLESLAP
-	db 1, PERISH_SONG
-	db 7, HYPNOSIS
 	db 13, WATER_GUN
-	db 19, DOUBLESLAP
 	db 27, RAIN_DANCE
 	db 35, BODY_SLAM
 	db 36, PERISH_SONG
@@ -2977,9 +2772,6 @@ HoppipEvosAttacks:
 SkiploomEvosAttacks:
 	db EVOLVE_LEVEL, 27, JUMPLUFF
 	db 0 ; no more evolutions
-	db 1, SPLASH
-	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
 	db 1, TACKLE
 	db 5, SYNTHESIS
 	db 5, TAIL_WHIP
@@ -2995,21 +2787,14 @@ SkiploomEvosAttacks:
 
 JumpluffEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SPLASH
 	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
-	db 1, TACKLE
-	db 5, SYNTHESIS
-	db 5, TAIL_WHIP
-	db 10, TACKLE
-	db 13, POISONPOWDER
 	db 15, STUN_SPORE
 	db 17, SLEEP_POWDER
 	db 22, LEECH_SEED
 	db 28, AMNESIA
 	db 30, GUST
 	db 31, ENCORE
-	db 32, CONFUSIOn
+	db 32, CONFUSION
 	db 33, COTTON_SPORE
 	db 36, REFLECT
 	db 38, DOUBLE_EDGE
@@ -3019,7 +2804,6 @@ JumpluffEvosAttacks:
 
 AipomEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
 	db 1, TAIL_WHIP
 	db 6, SAND_ATTACK
 	db 12, BATON_PASS
@@ -3047,7 +2831,6 @@ SunkernEvosAttacks:
 SunfloraEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 1, POUND
 	db 4, GROWTH
 	db 10, RAZOR_LEAF
 	db 19, SUNNY_DAY
@@ -3062,11 +2845,8 @@ SunfloraEvosAttacks:
 
 YanmaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
 	db 1, FORESIGHT
 	db 7, QUICK_ATTACK
-	db 13, DOUBLE_TEAM
-	db 19, SONICBOOM
 	db 22, TWISTER
 	db 25, DETECT
 	db 26, LEECH_LIFE
@@ -3096,13 +2876,12 @@ WooperEvosAttacks:
 QuagsireEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 1, TAIL_WHIP
 	db 11, SLAM
 	db 23, AMNESIA
 	db 26, SCARY_FACE
 	db 33, BELLY_DRUM
 	db 35, EARTHQUAKE
-	db 37, ANCIENT_POWER
+	db 37, ANCIENTPOWER
 	db 39, BODY_SLAM
 	db 41, SAFEGUARD
 	db 47, RAIN_DANCE
@@ -3129,7 +2908,6 @@ EspeonEvosAttacks:
 UmbreonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
 	db 16, PURSUIT
 	db 23, QUICK_ATTACK
@@ -3143,8 +2921,7 @@ UmbreonEvosAttacks:
 
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
-	db 11, PURSUIT
+	db 1, PURSUIT
 	db 16, HAZE
 	db 21, MIRROR_MOVE
 	db 24, TRI_ATTACK
@@ -3157,16 +2934,11 @@ MurkrowEvosAttacks:
 	db 37, QUICK_ATTACK
 	db 40, DOUBLE_EDGE
 	db 41, MEAN_LOOK
-	db 50, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CURSE
-	db 1, TACKLE
 	db 1, GROWL
-	db 1, WATER_GUN
-	db 6, GROWL
 	db 15, WATER_GUN
 	db 20, CONFUSION
 	db 22, BELLY_DRUM
@@ -3239,10 +3011,7 @@ PinecoEvosAttacks:
 
 ForretressEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, PROTECT
 	db 1, SELFDESTRUCT
-	db 8, SELFDESTRUCT
 	db 15, TAKE_DOWN
 	db 22, RAPID_SPIN
 	db 29, BIDE
@@ -3273,7 +3042,6 @@ DunsparceEvosAttacks:
 GligarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
-	db 6, SAND_ATTACK
 	db 13, HARDEN
 	db 20, QUICK_ATTACK
 	db 26, DIG
@@ -3291,7 +3059,6 @@ GligarEvosAttacks:
 SteelixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SCREECH
 	db 10, BIND
 	db 14, ROCK_THROW
 	db 23, HARDEN
@@ -3323,12 +3090,9 @@ SnubbullEvosAttacks:
 GranbullEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SCARY_FACE
-	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
-	db 19, LICK
-	db 24, REFELCT
+	db 24, REFLECT
 	db 26, FAINT_ATTACK
 	db 28, ROAR
 	db 30, CRUNCH
@@ -3343,14 +3107,11 @@ GranbullEvosAttacks:
 QwilfishEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SPIKES
-	db 1, TACKLE
-	db 1, POISON_STING
-	db 10, HARDEN
 	db 10, MINIMIZE
 	db 19, WATER_GUN
 	db 20, SPIKES
 	db 24, FLAIL
-	db 26, BUBBLE_BEAM
+	db 26, BUBBLEBEAM
 	db 28, PIN_MISSILE
 	db 37, TAKE_DOWN
 	db 40, HAZE
@@ -3361,10 +3122,6 @@ QwilfishEvosAttacks:
 ScizorEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
-	db 1, LEER
-	db 6, FOCUS_ENERGY
-	db 12, PURSUIT
-	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, METAL_CLAW
 	db 36, SLASH
@@ -3410,11 +3167,8 @@ HeracrossEvosAttacks:
 
 SneaselEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 9, QUICK_ATTACK
+	db 1, QUICK_ATTACK
 	db 17, SCREECH
-	db 25, FAINT_ATTACK
 	db 28, FURY_SWIPES
 	db 31, AGILITY
 	db 32, FORESIGHT
@@ -3424,7 +3178,6 @@ SneaselEvosAttacks:
 	db 39, REFLECT
 	db 40, TWINEEDLE
 	db 42, COUNTER
-	db 44, SWORDS_DANCE
 	db 45, METAL_CLAW
 	db 50, MOONLIGHT
 	db 0 ; no more level-up moves
@@ -3445,13 +3198,7 @@ TeddiursaEvosAttacks:
 
 UrsaringEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 1, LICK
 	db 1, FURY_SWIPES
-	db 8, LICK
-	db 15, FURY_SWIPES
-	db 22, FAINT_ATTACK
 	db 29, REST
 	db 31, SUBMISSION
 	db 34, METAL_CLAW
@@ -3510,10 +3257,7 @@ SwinubEvosAttacks:
 
 PiloswineEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, HORN_ATTACK
 	db 1, POWDER_SNOW
-	db 1, ENDURE
-	db 10, POWDER_SNOW
 	db 19, ENDURE
 	db 28, TAKE_DOWN
 	db 33, FURY_ATTACK
@@ -3560,7 +3304,6 @@ RemoraidEvosAttacks:
 OctilleryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 11, CONSTRICT
 	db 22, PSYBEAM
 	db 22, AURORA_BEAM
 	db 22, BUBBLEBEAM
@@ -3643,21 +3386,16 @@ HoundoomEvosAttacks:
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
-	db 1, SMOKESCREEN
-	db 1, LEER
-	db 1, WATER_GUN
-	db 8, SMOKESCREEN
-	db 15, LEER
 	db 22, WATER_GUN
 	db 29, TWISTER
 	db 40, AGILITY
 	db 41, AURORA_BEAM
 	db 42, DRAGON_RAGE
-	db 44, DRAGON_BREATH
-	db 46, BUBBLE_BEAM
+	db 44, DRAGONBREATH
+	db 46, BUBBLEBEAM
 	db 48, FLAIL
 	db 49, HAZE
-	db 50, OCTOZOOKA
+	db 50, OCTAZOOKA
 	db 51, HYDRO_PUMP
 	db 53, OUTRAGE
 	db 0 ; no more level-up moves
@@ -3678,8 +3416,6 @@ PhanpyEvosAttacks:
 DonphanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
-	db 1, GROWL
-	db 9, DEFENSE_CURL
 	db 17, FLAIL
 	db 25, FURY_ATTACK
 	db 29, BODY_SLAM
@@ -3696,14 +3432,9 @@ DonphanEvosAttacks:
 
 Porygon2EvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONVERSION2
-	db 1, TACKLE
-	db 1, CONVERSION
-	db 9, AGILITY
+	db 1, AGILITY
 	db 12, PSYBEAM
 	db 20, RECOVER
-	db 24, DEFENSE_CURL
-	db 32, LOCK_ON
 	db 36, TRI_ATTACK
 	db 39, SHARPEN
 	db 41, BARRIER
@@ -3714,10 +3445,6 @@ Porygon2EvosAttacks:
 	db 58, MIMIC
 	db 60, PSYCHIC_M
 	db 63, FUTURE_SIGHT
-	db 65, DOUBLE_EDGE
-	db 68, THUNDER
-	db 70, HYPER_BEAM
-	db 75, BLIZZARD
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
@@ -3728,7 +3455,6 @@ StantlerEvosAttacks:
 	db 23, STOMP
 	db 25, BITE
 	db 30, LIGHT_SCREEN
-	db 31, SAND_ATTACK
 	db 34, TRI_ATTACK
 	db 35, REFLECT
 	db 38, BODY_SLAM
@@ -3838,9 +3564,7 @@ MiltankEvosAttacks:
 
 BlisseyEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
-	db 4, GROWL
-	db 7, TAIL_WHIP
+	db 1, TAIL_WHIP
 	db 10, SOFTBOILED
 	db 13, DOUBLESLAP
 	db 18, MINIMIZE
@@ -3879,7 +3603,7 @@ EnteiEvosAttacks:
 	db 41, STOMP
 	db 43, FLAMETHROWER
 	db 51, SACRED_FIRE
-	db 53, ANCIENT_POWER
+	db 53, ANCIENTPOWER
 	db 61, SWAGGER
 	db 63, PSYCH_UP
 	db 71, FIRE_BLAST
@@ -3934,11 +3658,7 @@ PupitarEvosAttacks:
 
 TyranitarEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BITE
-	db 1, LEER
-	db 1, SANDSTORM
 	db 1, SCREECH
-	db 8, SANDSTORM
 	db 15, SCREECH
 	db 22, ROCK_SLIDE
 	db 29, THRASH
@@ -3955,8 +3675,6 @@ TyranitarEvosAttacks:
 
 LugiaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AEROBLAST
-	db 11, SAFEGUARD
 	db 22, GUST
 	db 33, RECOVER
 	db 44, HYDRO_PUMP
@@ -3965,7 +3683,7 @@ LugiaEvosAttacks:
 	db 63, BODY_SLAM
 	db 66, SKY_ATTACK
 	db 69, TRI_ATTACK
-	db 73, BUBBLEBEAM
+	db 73, GUST
 	db 77, WHIRLWIND
 	db 88, ANCIENTPOWER
 	db 99, FUTURE_SIGHT
