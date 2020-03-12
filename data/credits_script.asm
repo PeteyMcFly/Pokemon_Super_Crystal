@@ -25,14 +25,15 @@ CreditsScript:
 
 	db           CODIRECTOR, 1
 	db       JUNICHI_MASUDA, 2
+	db    YOSHINORI_MATSUDA, 3
+	db       SOUSUKE_TAMADA, 1
 
 	db CREDITS_WAIT, 12
 
-	db          PROGRAMMERS, 0
-	db       SOUSUKE_TAMADA, 1
-	db       HISASHI_SOGABE, 2
-	db         KEITA_KAGAYA, 3
-	db    YOSHINORI_MATSUDA, 4
+	db       SPECIAL_THANKS, 0
+	db       HISASHI_SOGABE, 1
+	db         KEITA_KAGAYA, 2
+
 
 	db CREDITS_WAIT, 12
 
