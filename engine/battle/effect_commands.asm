@@ -3684,7 +3684,7 @@ BattleCommand_SleepTarget:
 	jr nz, .dont_fail
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	ret c
 
 .dont_fail
@@ -3778,7 +3778,7 @@ BattleCommand_Poison:
 	jr nz, .dont_sample_failure
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .failed
 
 .dont_sample_failure
@@ -4443,7 +4443,7 @@ BattleCommand_StatDown:
 	jr z, .DidntMiss
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .Failed
 
 .DidntMiss:
@@ -5964,7 +5964,7 @@ BattleCommand_Paralyze:
 	jr nz, .dont_sample_failure
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .failed
 
 .dont_sample_failure
