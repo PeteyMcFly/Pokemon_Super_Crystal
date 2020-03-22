@@ -3532,7 +3532,7 @@ SageGroup:
 	db 4, BELLSPROUT
 	db 4, BELLSPROUT
 	db 4, BELLSPROUT
-	db 24, FEAROW
+	db 14, FEAROW
 	db -1 ; end
 	
 	; SAGE (8)
