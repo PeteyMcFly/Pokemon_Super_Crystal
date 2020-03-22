@@ -2,14 +2,16 @@
 	const MOUNTMOONSQUARE_FAIRY1
 	const MOUNTMOONSQUARE_FAIRY2
 	const MOUNTMOONSQUARE_ROCK
+	const MT_MOON_MEW
 
 MountMoonSquare_MapScripts:
 	db 1 ; scene scripts
 	scene_script .DummyScene ; SCENE_DEFAULT
 
-	db 2 ; callbacks
+	db 3 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .DisappearMoonStone
 	callback MAPCALLBACK_OBJECTS, .DisappearRock
+	callback MAPCALLBACK_OBJECTS, .Mew
 
 .DummyScene:
 	end
@@ -21,6 +23,38 @@ MountMoonSquare_MapScripts:
 .DisappearRock:
 	disappear MOUNTMOONSQUARE_ROCK
 	return
+
+.Mew:
+	checkevent EVENT_FOUGHT_MEW
+	iftrue .NoAppear
+	sjump .Appear
+
+.Appear:
+	appear MT_MOON_MEW
+	return
+
+.NoAppear:
+	disappear MT_MOON_MEW
+	return
+
+Mew:
+	faceplayer
+	opentext
+	writetext MewText
+	cry MEW
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MEW
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon MEW, 30
+	startbattle
+	disappear MT_MOON_MEW
+	reloadmapafterbattle
+	end
+
+MewText:
+	text "Meeeew!"
+	done
 
 ClefairyDance:
 	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
@@ -145,7 +179,8 @@ MountMoonSquare_MapEvents:
 	bg_event  7,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone
 	bg_event 17,  7, BGEVENT_READ, DontLitterSign
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  6,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonSquareRock, EVENT_MT_MOON_SQUARE_ROCK
+	object_event  5,  5, SPRITE_MONSTER, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Mew, EVENT_MT_MOON_MEW_MEW

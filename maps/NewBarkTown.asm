@@ -2,16 +2,15 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_SILVER
-	const VICTORY_ROAD_MOLTRES
 
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
 
-	db 2 ; callbacks
+	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_OBJECTS, .Moltres
+	
 
 .DummyScene0:
 	end
@@ -23,38 +22,6 @@ NewBarkTown_MapScripts:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
-
-.Moltres:
-	checkevent EVENT_FOUGHT_MOLTRES
-	iftrue .NoAppear
-	sjump .Appear
-
-.Appear:
-	appear VICTORY_ROAD_MOLTRES
-	return
-
-.NoAppear:
-	disappear VICTORY_ROAD_MOLTRES
-	return
-
-Moltres:
-	faceplayer
-	opentext
-	writetext MoltresText
-	cry MOLTRES
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MOLTRES
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MOLTRES, 50
-	startbattle
-	disappear VICTORY_ROAD_MOLTRES
-	reloadmapafterbattle
-	end
-
-MoltresText:
-	text "Cacaw!"
-	done
 
 NewBarkTown_TeacherStopsYouScene1:
 	playmusic MUSIC_MOM
@@ -332,8 +299,10 @@ NewBarkTown_MapEvents:
 	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event  5,  6, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Moltres, EVENT_VICTORY_ROAD_MOLTRES_MOLTRES
+
+
+

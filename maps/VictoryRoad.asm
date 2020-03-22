@@ -5,19 +5,53 @@
 	const VICTORYROAD_POKE_BALL3
 	const VICTORYROAD_POKE_BALL4
 	const VICTORYROAD_POKE_BALL5
+	const VICTORY_ROAD_MOLTRES
 
 VictoryRoad_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Moltres
 
 .DummyScene0:
 	end
 
 .DummyScene1:
 	end
+
+.Moltres:
+	checkevent EVENT_FOUGHT_MOLTRES
+	iftrue .NoAppear
+	sjump .Appear
+
+.Appear:
+	appear VICTORY_ROAD_MOLTRES
+	return
+
+.NoAppear:
+	disappear VICTORY_ROAD_MOLTRES
+	return
+
+Moltres:
+	faceplayer
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MOLTRES
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon MOLTRES, 50
+	startbattle
+	disappear VICTORY_ROAD_MOLTRES
+	reloadmapafterbattle
+	end
+
+MoltresText:
+	text "Cacaw!"
+	done
 
 VictoryRoadRivalLeft:
 	moveobject VICTORYROAD_SILVER, 18, 11
@@ -259,10 +293,11 @@ VictoryRoad_MapEvents:
 	bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
 	bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 18, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
 	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE
 	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
 	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
 	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP
+	object_event 14, 9, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Moltres, EVENT_VICTORY_ROAD_MOLTRES_MOLTRES
