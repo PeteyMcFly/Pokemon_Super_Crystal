@@ -91,20 +91,20 @@ Route34IlexForestGateTeacherText:
 	line "making a #DEX?"
 
 	para "It must be hard if"
-	line "#MON won't"
+	line "#MON are"
 
-	para "appear. Try using"
+	para "quick. Try using"
 	line "this TM."
 	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
+	text "It's BUBBLEBEAM."
 
-	para "Use it wherever"
-	line "#MON appear."
+	para "It isn't the"
+	line "strongest... "
 
-	para "#MON will be"
-	line "enticed by it."
+	para "But it lowers"
+	line "enemy speed."
 	done
 
 Route34IlexForestGateTeacher_ForestIsRestless:
