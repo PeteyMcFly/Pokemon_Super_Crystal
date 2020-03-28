@@ -1,5 +1,26 @@
 ; Core components of the battle engine.
 
+; Takes status type in reg E
+; returns zero flag (set if true)
+CheckPartyHasStatus:
+        ld d, PARTY_LENGTH
+        ld bc, PARTYMON_STRUCT_LENGTH
+        ld hl, wPartyMon1Status
+        ldh a, [hBattleTurn]
+        and a
+        jr z, .loop ; Player's turn - check the player's party
+        ld de, wOTPartyMon1Status ; Enemy's turn - check the enemy's party
+.loop
+        ld a, [hl]
+        and e ;Check status specified in E
+        ret z
+
+        add hl, bc
+        dec d
+        jr nz, .loop
+        rla
+        ret
+
 DoBattle:
 	xor a
 	ld [wTimesUsedSwitch], a

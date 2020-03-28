@@ -4028,6 +4028,9 @@ Defrost:
 BattleCommand_FreezeTarget:
 ; freezetarget
 
+	ld e, FRZ
+	farcall CheckPartyHasStatus ; Uses register A as status type to check
+	jr z, .only_one_frozen
 	xor a
 	ld [wNumHits], a
 	call CheckSubstituteOpp
@@ -4076,6 +4079,12 @@ BattleCommand_FreezeTarget:
 	ld hl, wPlayerJustGotFrozen
 .finish
 	ld [hl], $1
+	ret
+; Called when a pokemon is already frozen
+; Will explain that only one pokemon is allowed to take the frozen effect
+.only_one_frozen
+	ld hl, OnlyOneFrozenText
+	call StdBattleTextbox
 	ret
 
 BattleCommand_ParalyzeTarget:
