@@ -3382,7 +3382,7 @@ SageGroup:
 	; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_NORMAL
 	db 4, BELLSPROUT
-	db 4, BELLSPROU
+	db 4, BELLSPROUT
 	db 14, FEAROW
 	db -1 ; end
 	
