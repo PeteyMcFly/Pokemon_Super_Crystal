@@ -3,23 +3,41 @@
 ; Takes status type in reg E
 ; returns zero flag (unset if true)
 CheckPartyHasStatus:
-        ld d, PARTY_LENGTH
-        ld bc, PARTYMON_STRUCT_LENGTH
-        ld hl, wPartyMon1Status
-        ldh a, [hBattleTurn]
-        and a
-        jr z, .loop ; Player's turn - check the player's party
-        ld de, wOTPartyMon1Status ; Enemy's turn - check the enemy's party
+	ld d, PARTY_LENGTH
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wPartyMon1Status
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .loop ; Player's turn - check the player's party
+	ld hl, wOTPartyMon1Status ; Enemy's turn - check the enemy's party
 .loop
-        ld a, [hl]
-        and e ;Check status specified in E
-        ret nz
+	push bc
+	ld a, e
+	jr z, .shiftloop_zero
+	ld b, e
+	ld a, 1
+.shiftloop
+	rla
+	dec b
+	jr nz, .shiftloop
+	jr .shiftloop_done
+.shiftloop_zero
+	ld a, 1
+.shiftloop_done
+	ld b, a
+	ld a, [hl]
+	and b
+	jr nz, .popret
+	pop bc
 
-        add hl, bc
-        dec d
-        jr nz, .loop
-        xor a
-        ret
+	add hl, bc
+	dec d
+	jr nz, .loop
+	xor a
+	ret
+.popret
+	pop bc
+	ret
 
 DoBattle:
 	xor a
