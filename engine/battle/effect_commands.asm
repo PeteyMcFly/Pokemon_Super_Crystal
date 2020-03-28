@@ -4030,7 +4030,7 @@ BattleCommand_FreezeTarget:
 
 	ld e, FRZ
 	farcall CheckPartyHasStatus ; Uses register A as status type to check
-	jr z, .only_one_frozen
+	jr nz, .only_one_frozen
 	xor a
 	ld [wNumHits], a
 	call CheckSubstituteOpp
