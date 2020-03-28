@@ -1638,6 +1638,7 @@ wDaysSince:: db
 
 ; How many times an enemy trainer has switched out their pokemon in a battle
 wTimesUsedSwitch:: db ; cfd8
+wCheckStatusReturn:: db ; cfd9
 
 
 SECTION "WRAM 1", WRAMX
