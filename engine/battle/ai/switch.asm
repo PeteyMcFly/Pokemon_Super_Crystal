@@ -462,22 +462,11 @@ CheckAbleToSwitch:
 	call FindAliveEnemyMons
 	call FindEnemyMonsWithAtLeastQuarterMaxHP
 	call FindEnemyMonsThatResistPlayer
-	call FindAliveEnemyMonsWithASuperEffectiveMove
-
-	ld a, e
-	cp $2
-	jr z, .bad_matchup_complete
-
-	;If that fails, just super effective moves
-	call FindAliveEnemyMons
-	call FindEnemyMonsWithAtLeastQuarterMaxHP
-	call FindAliveEnemyMonsWithASuperEffectiveMove
 
 	ld a, e
 	cp $2
 	ret nz
 
-.bad_matchup_complete
 	ld a, [wEnemyAISwitchScore]
 	add $10
 	ld [wEnemySwitchMonParam], a

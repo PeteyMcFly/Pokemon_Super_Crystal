@@ -729,6 +729,11 @@ WasFrozenText:
 	line "was frozen solid!"
 	prompt
 
+OnlyOneFrozenText:
+	text "another #MON"
+	line "is already frozen!"
+	prompt
+
 WontRiseAnymoreText:
 	text "<USER>'s"
 	line "@"

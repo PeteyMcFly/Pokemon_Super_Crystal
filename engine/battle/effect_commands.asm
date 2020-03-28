@@ -3684,7 +3684,7 @@ BattleCommand_SleepTarget:
 	jr nz, .dont_fail
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	ret c
 
 .dont_fail
@@ -3778,7 +3778,7 @@ BattleCommand_Poison:
 	jr nz, .dont_sample_failure
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .failed
 
 .dont_sample_failure
@@ -4028,6 +4028,9 @@ Defrost:
 BattleCommand_FreezeTarget:
 ; freezetarget
 
+	ld e, FRZ
+	farcall CheckPartyHasStatus ; Uses register A as status type to check
+	jr z, .only_one_frozen
 	xor a
 	ld [wNumHits], a
 	call CheckSubstituteOpp
@@ -4076,6 +4079,12 @@ BattleCommand_FreezeTarget:
 	ld hl, wPlayerJustGotFrozen
 .finish
 	ld [hl], $1
+	ret
+; Called when a pokemon is already frozen
+; Will explain that only one pokemon is allowed to take the frozen effect
+.only_one_frozen
+	ld hl, OnlyOneFrozenText
+	call StdBattleTextbox
 	ret
 
 BattleCommand_ParalyzeTarget:
@@ -4443,7 +4452,7 @@ BattleCommand_StatDown:
 	jr z, .DidntMiss
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .Failed
 
 .DidntMiss:
@@ -5964,7 +5973,7 @@ BattleCommand_Paralyze:
 	jr nz, .dont_sample_failure
 
 	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
+	cp 10 percent + 1 ; 25% chance AI fails
 	jr c, .failed
 
 .dont_sample_failure
