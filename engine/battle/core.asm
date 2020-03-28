@@ -13,11 +13,12 @@ CheckPartyHasStatus:
 .loop
 	push bc
 	ld a, e
+	and a
 	jr z, .shiftloop_zero
 	ld b, e
 	ld a, 1
 .shiftloop
-	rla
+	sla a
 	dec b
 	jr nz, .shiftloop
 	jr .shiftloop_done
