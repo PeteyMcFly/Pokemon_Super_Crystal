@@ -1,7 +1,7 @@
 ; Core components of the battle engine.
 
 ; Takes status type in reg E
-; returns zero flag (set if true)
+; returns zero flag (unset if true)
 CheckPartyHasStatus:
         ld d, PARTY_LENGTH
         ld bc, PARTYMON_STRUCT_LENGTH
@@ -13,12 +13,12 @@ CheckPartyHasStatus:
 .loop
         ld a, [hl]
         and e ;Check status specified in E
-        ret z
+        ret nz
 
         add hl, bc
         dec d
         jr nz, .loop
-        rla
+        xor a
         ret
 
 DoBattle:
