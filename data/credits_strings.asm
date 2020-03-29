@@ -144,7 +144,7 @@ CreditsStrings:
 .HiroyukiZinnai:      db "  HIROYUKI ZINNAI@"         ; "じんない　ひろゆき@"
 .KunimiKawamura:      db "  KUNIMI KAWAMURA@"         ; "かわむら　くにみ@"
 .HisashiSogabe:       db "    DYLAN SAUL@"         ; "そがべ　ひさし@"
-.KeitaKagaya:         db "   BROCK HAMPTON@"          ; "かがや　けいた@"
+.KeitaKagaya:         db "   BROCK STEVENS@"          ; "かがや　けいた@"
 .YoshinoriMatsuda:    db "    PETER TALEN@"        ; "まつだ　よしのり@"
 .HitomiSato:          db "    HITOMI SATO@"           ; "さとう　ひとみ@"
 .ToruOsawa:           db "     TORU OSAWA@"           ; "おおさわ　とおる@"
