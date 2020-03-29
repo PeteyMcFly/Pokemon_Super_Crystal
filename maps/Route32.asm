@@ -489,7 +489,7 @@ Route32GreatBall:
 	itemball GREAT_BALL
 
 Route32Repel:
-	itemball EXP_SHARE
+	itemball HP_UP
 
 Route32Sign:
 	jumptext Route32SignText
