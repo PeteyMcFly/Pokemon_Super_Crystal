@@ -14,7 +14,7 @@ Script_Whiteout:
 	special HealParty
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .bug_contest
-	callasm HalveMoney
+	callasm WhiteoutTakeMoney
 	callasm GetWhiteoutSpawn
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
@@ -42,20 +42,45 @@ BattleBGMap:
 	call SetPalettes
 	ret
 
-HalveMoney:
+WhiteoutTakeMoney:
 	farcall StubbedTrainerRankings_WhiteOuts
 
-; Halve the player's money.
+; Take 1/4 of player's money
+	push bc
+	push de
+; Load money values (big-endian) into B, C, and D
 	ld hl, wMoney
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
 	ld a, [hl]
-	srl a
+	ld d, a
+
+; Halve the money twice
+	srl b
+	rr c
+	rr d
+
+	srl b
+	rr c
+	rr d
+
+; Store 1/4 of current money to hMoneyTemp
+	ld hl, hMoneyTemp
+	ld a, b
 	ld [hli], a
-	ld a, [hl]
-	rra
+	ld a, c
 	ld [hli], a
-	ld a, [hl]
-	rra
-	ld [hl], a
+	ld a, d
+	ld [hl], d
+
+; Subtract it from the player's money
+	ld de, wMoney
+	ld bc, hMoneyTemp
+	farcall TakeMoney
+	pop de
+	pop bc
 	ret
 
 GetWhiteoutSpawn:
