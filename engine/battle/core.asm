@@ -6,11 +6,16 @@
 CheckPartyHasStatus:
 	ld d, PARTY_LENGTH
 	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1Status
+	ld hl, wOTPartyMon1Status
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .loop ; Player's turn - check the player's party
-	ld hl, wOTPartyMon1Status ; Enemy's turn - check the enemy's party
+	jr z, .checkenemy ; Player's turn - check the enemy's party
+	ld hl, wPartyMon1Status ; Enemy's turn - check the player's party
+	jr .loop
+.checkenemy
+	ld a, [wBattleMode]
+	dec a
+	jr z, .bail ; Don't try to process this for a wild enemy
 .loop
 	ld b, 1 << FRZ
 	ld a, [hl]
@@ -20,6 +25,7 @@ CheckPartyHasStatus:
 	add hl, bc
 	dec d
 	jr nz, .loop
+.bail
 	xor a
 .found
 	ld [wCheckStatusReturn], a
