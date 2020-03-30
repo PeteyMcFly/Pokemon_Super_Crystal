@@ -4,24 +4,40 @@
 ; TODO: add more statuses
 ; returns value in memory @ 0xCFD9
 CheckPartyHasStatus:
-	ld d, PARTY_LENGTH
+	ld a, [wOTPartyCount]
+	ld d, a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wOTPartyMon1Status
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .checkenemy ; Player's turn - check the enemy's party
 	ld hl, wPartyMon1Status ; Enemy's turn - check the player's party
+	ld a, [wPartyCount]
+	ld d, a
 	jr .loop
 .checkenemy
 	ld a, [wBattleMode]
 	dec a
 	jr z, .bail ; Don't try to process this for a wild enemy
 .loop
+	; Check for fainted. Ignore if so.
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld b, a
+	ld a, [hl]
+	or b
+	dec hl
+	dec hl
+	dec hl
+	jr z, .ignore_fainted
+
 	ld b, 1 << FRZ
 	ld a, [hl]
 	and b
 	jr nz, .found
 
+.ignore_fainted
 	add hl, bc
 	dec d
 	jr nz, .loop
@@ -30,7 +46,6 @@ CheckPartyHasStatus:
 .found
 	ld [wCheckStatusReturn], a
 	ret
-
 
 DoBattle:
 	xor a
