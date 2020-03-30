@@ -1,43 +1,50 @@
 ; Core components of the battle engine.
 
-; Takes status type in reg E
-; returns zero flag (unset if true)
+; Checks for FRZ state
+; TODO: add more statuses
+; returns value in memory @ 0xCFD9
 CheckPartyHasStatus:
-	ld d, PARTY_LENGTH
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1Status
+	ld a, [wOTPartyCount]
+	ld d, a
+	ld hl, wOTPartyMon1Status
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .loop ; Player's turn - check the player's party
-	ld hl, wOTPartyMon1Status ; Enemy's turn - check the enemy's party
+	jr z, .checkenemy ; Player's turn - check the enemy's party
+	ld hl, wPartyMon1Status ; Enemy's turn - check the player's party
+	ld a, [wPartyCount]
+	ld d, a
+	jr .loop
+.checkenemy
+	ld a, [wBattleMode]
+	dec a
+	jr z, .bail ; Don't try to process this for a wild enemy
 .loop
-	push bc
-	ld a, e
-	and a
-	jr z, .shiftloop_zero
-	ld b, e
-	ld a, 1
-.shiftloop
-	sla a
-	dec b
-	jr nz, .shiftloop
-	jr .shiftloop_done
-.shiftloop_zero
-	ld a, 1
-.shiftloop_done
+	; Check for fainted. Ignore if so.
+	inc hl
+	inc hl
+	ld a, [hli]
 	ld b, a
 	ld a, [hl]
-	and b
-	jr nz, .popret
-	pop bc
+	or b
+	dec hl
+	dec hl
+	dec hl
+	jr z, .ignore_fainted
 
+	ld b, 1 << FRZ
+	ld a, [hl]
+	and b
+	jr nz, .found
+
+.ignore_fainted
+	ld bc, PARTYMON_STRUCT_LENGTH
 	add hl, bc
 	dec d
 	jr nz, .loop
+.bail
 	xor a
-	ret
-.popret
-	pop bc
+.found
+	ld [wCheckStatusReturn], a
 	ret
 
 DoBattle:
