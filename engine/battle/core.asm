@@ -6,7 +6,6 @@
 CheckPartyHasStatus:
 	ld a, [wOTPartyCount]
 	ld d, a
-	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wOTPartyMon1Status
 	ldh a, [hBattleTurn]
 	and a
@@ -38,6 +37,7 @@ CheckPartyHasStatus:
 	jr nz, .found
 
 .ignore_fainted
+	ld bc, PARTYMON_STRUCT_LENGTH
 	add hl, bc
 	dec d
 	jr nz, .loop
