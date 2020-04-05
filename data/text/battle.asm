@@ -730,8 +730,13 @@ WasFrozenText:
 	prompt
 
 OnlyOneFrozenText:
-	text "another #MON"
+	text "Another #MON"
 	line "is already frozen!"
+	prompt
+
+OnlyOneSleepText:
+	text "Another #MON"
+	line "is already asleep!"
 	prompt
 
 WontRiseAnymoreText:

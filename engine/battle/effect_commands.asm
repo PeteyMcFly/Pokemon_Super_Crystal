@@ -1,3 +1,14 @@
+RunCheckStatus:
+	push bc
+	push de
+	ld [wCheckStatusReturn], a
+	farcall CheckPartyHasStatus
+	ld a, [wCheckStatusReturn]
+	and a
+	pop de
+	pop bc
+	ret
+
 DoPlayerTurn:
 	call SetPlayerTurn
 
@@ -2682,17 +2693,12 @@ TruncateHL_BC:
 	inc l
 
 .finish
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .done
 ; If we go back to the loop point,
 ; it's the same as doing this exact
 ; same check twice.
 	ld a, h
 	or b
 	jr nz, .loop
-
-.done
 	ld b, l
 	ret
 
@@ -3616,6 +3622,10 @@ BattleCommand_SleepTarget:
 	ld hl, AlreadyAsleepText
 	jr nz, .fail
 
+	ld a, SLP
+	call RunCheckStatus
+	jr nz, .only_one_asleep
+
 	ld a, [wAttackMissed]
 	and a
 	jp nz, PrintDidntAffect2
@@ -3689,6 +3699,9 @@ BattleCommand_SleepTarget:
 
 .dont_fail
 	xor a
+	ret
+.only_one_asleep
+	farcall OnlyOneStatus
 	ret
 
 BattleCommand_PoisonTarget:
@@ -4045,10 +4058,7 @@ BattleCommand_FreezeTarget:
 	call CheckMoveTypeMatchesTarget ; Don't freeze an Ice-type
 	ret z
 	ld a, 1 << FRZ
-	ld [wCheckStatusReturn], a
-	farcall CheckPartyHasStatus ; Uses register E as status type to check
-	ld a, [wCheckStatusReturn]
-	and a
+	call RunCheckStatus
 	jr nz, .only_one_frozen
 	call GetOpponentItem
 	ld a, b
@@ -4086,11 +4096,7 @@ BattleCommand_FreezeTarget:
 ; Called when a pokemon is already frozen
 ; Will explain that only one pokemon is allowed to take the frozen effect
 .only_one_frozen
-	ld de, SAFEGUARD
-	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
-	ld hl, OnlyOneFrozenText
-	call StdBattleTextbox
+	farcall OnlyOneStatus
 	ret
 
 BattleCommand_ParalyzeTarget:
@@ -5363,8 +5369,7 @@ BattleCommand_EndLoop:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	res SUBSTATUS_IN_LOOP, [hl]
-	call BattleCommand_BeatUpFailText
-	jp EndMoveEffect
+	ret
 
 .not_triple_kick
 	call BattleRandom
@@ -6683,10 +6688,7 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 
 CheckHiddenOpponent:
-; BUG: This routine is completely redundant and introduces a bug, since BattleCommand_CheckHit does these checks properly.
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	xor a
 	ret
 
 GetUserItem:

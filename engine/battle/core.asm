@@ -1,4 +1,20 @@
 ; Core components of the battle engine.
+OnlyOneStatus:
+	ld de, SAFEGUARD
+	farcall PlayOpponentBattleAnim
+	farcall RefreshBattleHuds
+	ld a, [wCheckStatusReturn]
+	ld b, 1 << FRZ
+	and b
+	jr z, .not_frozen
+	; Assuming only freeze and sleep
+	ld hl, OnlyOneFrozenText
+	call StdBattleTextbox
+	ret
+.not_frozen
+	ld hl, OnlyOneSleepText
+	call StdBattleTextbox
+	ret
 
 ; Checks for FRZ state
 ; TODO: add more statuses
