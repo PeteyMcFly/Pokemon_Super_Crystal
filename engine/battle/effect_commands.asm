@@ -4044,6 +4044,8 @@ BattleCommand_FreezeTarget:
 	ret z
 	call CheckMoveTypeMatchesTarget ; Don't freeze an Ice-type
 	ret z
+	ld a, 1 << FRZ
+	ld [wCheckStatusReturn], a
 	farcall CheckPartyHasStatus ; Uses register E as status type to check
 	ld a, [wCheckStatusReturn]
 	and a

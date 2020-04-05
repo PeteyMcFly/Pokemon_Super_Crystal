@@ -31,7 +31,8 @@ CheckPartyHasStatus:
 	dec hl
 	jr z, .ignore_fainted
 
-	ld b, 1 << FRZ
+	ld a, [wCheckStatusReturn]
+	ld b, a
 	ld a, [hl]
 	and b
 	jr nz, .found
