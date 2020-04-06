@@ -32,7 +32,6 @@ EnemyMonHasSuperEffectiveMove:
 	cp 10
 	jr c, .nope
 
-	; if neutral: load 1 and continue
 	ld e, 1
 	cp EFFECTIVE + 1
 	jr c, .nope
@@ -141,14 +140,15 @@ CheckBaseMatchup:
 	pop hl
 	pop de
 	pop bc
-	push af
+	ret c
+	jr z, .okay
+.possible_bad
 	call EnemyMonHasSuperEffectiveMove
-	jr z, .se_found
-	pop af
+	jr z, .okay
+	ccf
 	ret
-.se_found ; Not a bad matchup if a super effective move is found
-	pop af
-	and a
+.okay
+	scf
 	ret
 
 CheckPlayerMoveTypeMatchups:
@@ -468,7 +468,7 @@ CheckAbleToSwitch:
 	ret nz
 
 	ld a, [wEnemyAISwitchScore]
-	add $10
+	add $20
 	ld [wEnemySwitchMonParam], a
 	ret
 
