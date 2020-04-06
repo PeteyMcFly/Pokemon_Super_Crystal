@@ -82,6 +82,61 @@ DrawHP:
 	pop de
 	ret
 
+PrintTempMonDVs:
+	; Load all of the DVs to separate memory blocks
+	push bc
+	push hl
+	ld de, SCREEN_WIDTH
+	add hl, de
+	ld de, .StatNames
+	call PlaceString
+	pop hl
+	pop bc
+	;ATK, DEF
+	ld a, [wTempMonDVs]
+	and %1111
+	ld [wTempDVDef], a
+	ld a, [wTempMonDVs]
+	srl a
+	srl a
+	srl a
+	srl a
+	ld [wTempDVAtk], a
+	;SPD, SPC
+	ld a, [wTempMonDVs + 1]
+	and %1111
+	ld [wTempDVSpc], a
+	ld a, [wTempMonDVs + 1]
+	srl a
+	srl a
+	srl a
+	srl a
+	ld [wTempDVSpd], a
+
+	; Print them out
+	add hl, bc
+	ld bc, SCREEN_WIDTH
+	add hl, bc
+	ld de, wTempDVAtk
+	lb bc, 1, 2
+	call .PrintStat
+	ld de, wTempDVDef
+	call .PrintStat
+	ld de, wTempDVSpd
+	call .PrintStat
+	ld de, wTempDVSpc
+	jp PrintNum
+.PrintStat:
+	push hl
+	call PrintNum
+	pop hl
+	ld de, SCREEN_WIDTH
+	add hl, de
+	ret
+
+.StatNames:
+	db "ATK DV<LF>DEF DV<LF>SPD DV<LF>SPC DV@"
+
 PrintTempMonStats:
 ; Print wTempMon's stats at hl, with spacing bc.
 	push bc

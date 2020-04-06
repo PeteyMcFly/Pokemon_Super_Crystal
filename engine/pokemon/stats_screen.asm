@@ -735,6 +735,9 @@ StatsScreen_LoadGFX:
 	hlcoord 11, 8
 	ld bc, 6
 	predef PrintTempMonStats
+	hlcoord 1, 13
+	ld bc, 6
+	predef PrintTempMonDVs
 	ret
 
 .PlaceOTInfo:

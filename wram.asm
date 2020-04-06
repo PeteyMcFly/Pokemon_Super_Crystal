@@ -1640,6 +1640,11 @@ wDaysSince:: db
 wTimesUsedSwitch:: db ; cfd8
 wCheckStatusReturn:: db ; cfd9
 
+; Scratch variables for DV information
+wTempDVAtk:: db ; cfda
+wTempDVDef:: db ; cfdb
+wTempDVSpd:: db ; cfdc
+wTempDVSpc:: db ; cfdd
 
 SECTION "WRAM 1", WRAMX
 
