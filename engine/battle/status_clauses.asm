@@ -51,7 +51,7 @@ CheckPartyHasStatus:
 	dec hl
 	dec hl
 	dec hl
-	jr z, .ignore_fainted
+	jr z, .ignore_fainted_rest
 
 	ld a, [wCheckStatusReturn]
 	ld b, a
@@ -59,13 +59,23 @@ CheckPartyHasStatus:
 	and b
 	jr nz, .found
 
-.ignore_fainted
+.ignore_fainted_rest
 	ld bc, PARTYMON_STRUCT_LENGTH
 	add hl, bc
 	dec d
 	jr nz, .loop
 .bail
 	xor a
-.found
 	ld [wCheckStatusReturn], a
+	ret
+.found
+	ld a, [wCheckStatusReturn]
+	and SLP
+	jr nz, .check_rest ; if we're checking for sleep, ignore rested mon
+	ret
+.check_rest
+	inc hl ; go to "unused" bit after status
+	ld a, [hld]
+	and 1 ; if first bit is set, it is rested
+	jr nz, .ignore_fainted_rest
 	ret

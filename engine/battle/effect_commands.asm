@@ -164,10 +164,16 @@ CheckPlayerTurn:
 	jr z, .not_asleep
 
 	dec a
-	ld [wBattleMonStatus], a
+	ld [hl], a
 	and SLP
-	jr z, .woke_up
+	jr nz, .didnt_wake_up
+	; Clear rest bit
+	inc hl
+	xor a
+	ld [hl], a ;TODO refactor if we want to use more bits from this byte
+	jr .woke_up
 
+.didnt_wake_up
 	xor a
 	ld [wNumHits], a
 	ld de, ANIM_SLP
@@ -393,10 +399,16 @@ CheckEnemyTurn:
 	jr z, .not_asleep
 
 	dec a
-	ld [wEnemyMonStatus], a
+	ld [hl], a
 	and a
-	jr z, .woke_up
+	jr nz, .didnt_wake_up
+	; Clear rest bit
+	xor a
+	inc hl
+	ld [hl], a ;TODO refactor if we want to use more bits from this byte
+	jr .woke_up
 
+.didnt_wake_up
 	ld hl, FastAsleepText
 	call StdBattleTextbox
 	xor a
@@ -2455,9 +2467,9 @@ BattleCommand_CheckFaint:
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_TRIPLE_KICK
-	jr z, .multiple_hit_raise_sub
-	cp EFFECT_BEAT_UP
 	jr nz, .finish
+	;cp EFFECT_BEAT_UP
+	;jr nz, .finish
 
 .multiple_hit_raise_sub
 	call BattleCommand_RaiseSub
@@ -3573,8 +3585,8 @@ DoSubstituteDamage:
 	jr z, .ok
 	cp EFFECT_TRIPLE_KICK
 	jr z, .ok
-	cp EFFECT_BEAT_UP
-	jr z, .ok
+	;cp EFFECT_BEAT_UP
+	;jr z, .ok
 	xor a
 	ld [hl], a
 .ok
@@ -5331,8 +5343,8 @@ BattleCommand_EndLoop:
 	ld a, 1
 	jr z, .double_hit
 	ld a, [hl]
-	cp EFFECT_BEAT_UP
-	jr z, .beat_up
+	;cp EFFECT_BEAT_UP
+	;jr z, .beat_up
 	cp EFFECT_TRIPLE_KICK
 	jr nz, .not_triple_kick
 .reject_triple_kick_sample
@@ -5410,8 +5422,8 @@ BattleCommand_EndLoop:
 	push bc
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	cp EFFECT_BEAT_UP
-	jr z, .beat_up_2
+	;cp EFFECT_BEAT_UP
+	;jr z, .beat_up_2
 	call StdBattleTextbox
 .beat_up_2
 
@@ -6194,6 +6206,8 @@ BattleCommand_Heal:
 	ld a, [hl]
 	and a
 	ld [hl], REST_SLEEP_TURNS + 1
+	inc hl
+	ld [hl], 1 ; TODO refactor if we want to use more of the bits in the unused byte
 	ld hl, WentToSleepText
 	jr z, .no_status_to_heal
 	ld hl, RestedText

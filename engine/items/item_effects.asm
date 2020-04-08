@@ -1453,6 +1453,7 @@ HealStatus:
 	ret nc
 	xor a
 	ld [wBattleMonStatus], a
+	ld [wBattleMonStatus + 1], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_TOXIC, [hl]
 	ld hl, wPlayerSubStatus1
@@ -2213,6 +2214,9 @@ PokeFluteEffect:
 	push af
 	and SLP
 	jr z, .not_asleep
+	inc hl
+	xor a
+	ld [hld], a
 	ld a, 1
 	ld [wd002], a
 .not_asleep
