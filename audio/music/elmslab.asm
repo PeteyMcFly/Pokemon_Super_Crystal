@@ -1,537 +1,400 @@
 Music_ElmsLab:
-	musicheader 4, 1, Music_ElmsLab_Ch1
-	musicheader 1, 2, Music_ElmsLab_Ch2
-	musicheader 1, 3, Music_ElmsLab_Ch3
-	musicheader 1, 4, Music_ElmsLab_Ch4
+	musicheader 4, 1, Music_Placeholder_Ch2
+	musicheader 1, 2, Music_Placeholder_Ch1
+	musicheader 1, 3, Music_Placeholder_Ch3
+	musicheader 1, 4, Music_Placeholder_Ch4
 
-Music_ElmsLab_Ch1:
-	tempo 144
-	volume $77
-	dutycycle $3
-	tone $0001
-	vibrato $10, $15
-	stereopanning $f0
-	notetype $c, $b2
+Music_Placeholder_Ch1:
+	dutycycle $1
+	notetype 12, $a7
+;Bar 1
+ElmsLab_branch_pulse1:
+	octave 3
+	note D_, 2 ; WARNING: Rounded.
+	note C#, 2
+	note C_, 2
 	octave 2
-	note F_, 2
-	note G_, 2
-	note A_, 2
 	note B_, 2
-	intensity $b6
-	octave 3
-	note C_, 8
-	intensity $b2
-	octave 2
-	note A#, 2
-	note A_, 2
-	note G_, 2
-	octave 3
-	note C_, 8
-	note F_, 4
-	note F_, 4
-	note F_, 8
-	note A_, 4
-	note A_, 4
-	note A_, 2
-Music_ElmsLab_branch_ea075:
+	note G_, 1
 	note __, 2
-	note A_, 2
-	note G#, 2
-	note A_, 2
-	intensity $b7
-	octave 4
-	note C_, 4
-	intensity $b5
-	octave 3
+	note G_, 1
 	note B_, 2
-	octave 4
-	note C_, 2
-	intensity $b4
-	note F_, 8
-	intensity $b5
+	note G_, 1
 	octave 3
-	note A_, 2
-	note G#, 2
-	note A_, 2
-	note F_, 2
-	intensity $b7
-	note F_, 8
-	intensity $b5
-	note A_, 2
-	note G_, 2
-	note F_, 2
-	intensity $b2
-	note G_, 4
-	intensity $b5
-	note A_, 2
-	note G#, 2
-	note A_, 2
-	intensity $b7
-	note F_, 4
-	intensity $b5
-	note C_, 4
-	intensity $b7
-	note D_, 8
-	intensity $b4
-	note F_, 2
-	note E_, 2
 	note D_, 2
-	note F_, 2
-	intensity $b7
-	note E_, 8
-	intensity $b4
+;Bar 2
+	octave 2
+	note B_, 1
+	octave 3
+	note __, 1 ; WARNING: Rounded.
+	note F#, 1 ; WARNING: Rounded.
+	note G_, 1
+	note A_, 1
+	note G_, 1
+	note F#, 1
 	note G_, 2
-	note F_, 2
-	note E_, 2
-	note G_, 2
-	intensity $b7
-	note F_, 8
-	intensity $b4
-	note G_, 2
-	note A_, 2
-	note A#, 2
-	note A_, 2
-	intensity $b2
-	note G_, 4
-	intensity $b4
-	note F_, 2
-	note A_, 2
-	note G_, 2
-	note F_, 2
-	note E_, 2
-	intensity $b2
-	note G_, 6
-	intensity $b7
-	note F_, 4
-	octave 4
-	note C_, 2
-	octave 3
-	note F_, 4
-	note D_, 2
-	note A#, 4
-	note A_, 4
-	intensity $b4
-	note G_, 2
-	note F_, 2
-	note G_, 2
-	intensity $b2
-	note A_, 6
-	intensity $b7
-	note E_, 4
-	note A#, 2
-	note E_, 6
-	intensity $b3
-	note F_, 2
-	note E_, 2
-	note F_, 2
-	note G_, 2
-	note A_, 2
-	note A_, 2
-	note G_, 2
-	intensity $b2
-	note E_, 6
-	intensity $b4
-	note F_, 4
-	octave 4
-	note C_, 4
-	octave 3
-	note F_, 2
-	octave 4
-	note C_, 2
-	note D_, 2
-	note C_, 2
-	octave 3
-	note A#, 2
-	note A_, 2
-	intensity $b7
-	note A#, 8
-	octave 4
-	note E_, 4
-	note D_, 4
-	note C_, 4
-	octave 3
-	note A#, 4
-	octave 4
-	note C_, 4
-	note D_, 4
-	note D#, 4
-	note E_, 4
-	intensity $b4
-	octave 3
-	note A_, 2
-	note F_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note F_, 2
-	note A_, 2
-	note F_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note F_, 2
-	note A_, 2
-	note F_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note F_, 2
-	note A_, 2
-	intensity $b2
-	note F_, 2
-	note F_, 4
-	loopchannel 0, Music_ElmsLab_branch_ea075
-
-Music_ElmsLab_Ch2:
-	dutycycle $3
-	vibrato $10, $26
-	stereopanning $f
-	notetype $c, $c3
-	octave 4
-	note F_, 2
-	note E_, 2
-	note D_, 2
-	octave 3
+	note D_, 1
+	octave 2
 	note B_, 2
-	intensity $c5
-	octave 4
-	note C_, 8
-	intensity $c3
-	octave 3
-	note A#, 2
-	note A_, 2
-	note G_, 2
-	note E_, 2
-	intensity $c2
-	note F_, 6
-	octave 4
-	note C_, 4
-	note C_, 4
-	note C_, 8
-	note C_, 4
-	note C_, 4
-	note C_, 2
-	stereopanning $ff
-Music_ElmsLab_branch_ea14f:
-	intensity $c6
-	octave 4
-	note F_, 6
-	intensity $c2
-	note E_, 2
-	note F_, 2
-	note E_, 2
-	note F_, 2
-	note G_, 2
-	intensity $c7
-	note A_, 6
-	intensity $c2
-	note F_, 2
-	intensity $c7
-	note C_, 8
-	intensity $c7
-	note D_, 6
-	intensity $c3
-	note C#, 2
-	note D_, 2
-	note C#, 2
-	note D_, 2
-	note E_, 2
-	intensity $c7
-	note F_, 6
-	intensity $c3
-	note C_, 2
-	intensity $c7
-	octave 3
-	note A_, 10
-	intensity $c3
-	note A#, 2
-	note A#, 2
-	octave 4
-	note D_, 2
-	intensity $c5
-	note C_, 4
-	octave 3
-	note A#, 6
-	intensity $c3
-	octave 4
-	note C_, 2
-	note C_, 2
-	note E_, 2
-	intensity $c4
-	note D_, 4
-	note C_, 6
-	intensity $c2
-	note D_, 2
-	note D_, 2
-	note F_, 2
-	note G_, 2
-	note F_, 2
-	note E_, 2
-	note F_, 2
-	intensity $c2
-	note G_, 4
-	intensity $c6
-	note C_, 4
-	note D_, 4
-	intensity $c4
-	note E_, 6
-	intensity $c3
-	note F_, 2
-	note F_, 2
-	note G_, 2
-	intensity $c7
-	note A_, 4
-	intensity $c3
-	note G_, 2
+	note G_, 1
 	note F#, 2
-	note G_, 2
+;Bar 3
+	note E_, 1
 	note F#, 2
 	note G_, 1
-	note F_, 2
-	intensity $c7
-	note D_, 11
-	intensity $c3
-	note E_, 2
-	note E_, 2
-	note F_, 2
-	intensity $c7
-	note G_, 4
-	intensity $c3
-	note F_, 2
-	note E_, 2
-	note F_, 2
-	note G_, 2
-	note F_, 1
-	note D_, 2
-	intensity $c7
-	note C_, 11
-	intensity $c4
-	note F_, 2
-	note F_, 2
-	note G_, 2
-	intensity $c7
-	note A_, 4
-	intensity $c4
-	note G_, 2
-	note F_, 2
-	note A#, 2
-	note A_, 2
-	note A#, 1
-	octave 5
-	note C_, 2
-	note D_, 5
-	intensity $c3
-	note E_, 2
-	note D_, 2
-	intensity $c7
-	note C_, 4
-	octave 4
-	note A#, 4
-	note A_, 4
-	note G_, 4
-	octave 5
-	note C_, 4
-	octave 4
-	note A#, 4
-	note A_, 4
-	note G_, 4
-	intensity $b0
-	note F_, 8
-	intensity $a0
-	note F_, 8
-	intensity $a7
-	note F_, 10
-	intensity $c2
-	note C_, 2
-	note F_, 2
-	intensity $c4
+	note A_, 1
+	note __, 1 ; WARNING: Rounded.
+	note B_, 1 ; WARNING: Rounded.
 	octave 3
-	note E_, 2
-	loopchannel 0, Music_ElmsLab_branch_ea14f
-
-Music_ElmsLab_Ch3:
-	stereopanning $f
-	notetype $c, $25
-	note __, 8
-	note __, 14
-	octave 3
-	note C_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note C_, 2
-	note D_, 2
-	note E_, 2
-Music_ElmsLab_branch_ea216:
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note E_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note D_, 2
-	note A_, 2
+	note C_, 1
 	octave 2
-	note A_, 2
+	note B_, 1
+	note A_, 1
 	octave 3
-	note A_, 2
-	note D_, 2
-	note A_, 2
-	note D_, 2
+	note D_, 1
+	note C#, 1
+	note D_, 1
 	note E_, 2
-	note F_, 2
-	note A_, 2
+	note F_, 1
+;Bar 4
+	note F#, 2
+	note D_, 1
 	note C_, 2
-	note A_, 2
-	note F_, 2
-	note C_, 2
-	note D_, 2
-	note E_, 2
-	note F_, 2
-	note A#, 2
-	note D_, 2
-	note A#, 2
-	note F_, 2
-	note A#, 2
-	note D_, 2
-	note A#, 2
-	note G_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note E_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note G_, 2
-	octave 4
-	note C_, 2
-	octave 3
-	note E_, 2
-	note A_, 2
-	note A#, 2
-	octave 4
-	note D_, 2
-	octave 3
-	note F_, 2
-	octave 4
-	note D_, 2
-	octave 3
-	note A#, 2
-	octave 4
-	note D_, 2
-	octave 3
-	note F_, 2
+	octave 2
+	note A_, 1
 	note B_, 2
-	octave 4
-	note C_, 2
+	note G_, 1
 	note __, 2
-	note C_, 4
+	note G_, 1
+	note B_, 2
+	note G_, 1
 	octave 3
-	note A#, 4
-	note G_, 4
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note G_, 2
-	note A#, 2
 	note D_, 2
-	note A#, 2
+;Bar 5
+	octave 2
+	note B_, 1
+	octave 3
+	note G_, 1
+	note F#, 1
+	note G_, 1
+	note A_, 1
+	note G_, 1
+	note F#, 1
 	note G_, 2
-	note A#, 2
-	note D_, 2
-	note A_, 2
-	note E_, 2
+	note D_, 1
+	octave 2
+	note B_, 2
+	note G_, 1
+	note B_, 1
+	octave 3
+	note C_, 1
+;Bar 6
+	note D_, 1
 	note G_, 2
+	note D_, 1
 	note C_, 2
-	note G_, 2
-	note E_, 2
-	note G_, 2
-	note C_, 2
-	note G_, 2
-	note F_, 2
+	octave 2
+	note A_, 1
+	note F#, 2
+	note G_, 1
 	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note G_, 2
-	note E_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note G_, 2
-	note A#, 2
-	note D_, 2
-	note A#, 2
-	note G_, 2
-	note A#, 2
-	note A_, 2
-	note G_, 2
-	note C_, 4
-	note D_, 4
-	note E_, 4
-	note G_, 4
-	note E_, 4
-	note F_, 4
-	note F#, 4
-	note G_, 4
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	note C_, 2
-	note A_, 2
-	note F_, 2
-	note C_, 2
-	note F_, 2
-	note A_, 2
-	loopchannel 0, Music_ElmsLab_branch_ea216
-
-Music_ElmsLab_Ch4:
-	stereopanning $f0
-	togglenoise $0
-	notetype $c
-	note __, 16
+	note G_, 1
+	note G_, 1
+	note __, 1 ; WARNING: Rounded.
+	note F#, 1 ; WARNING: Rounded.
+;Bar 7
+	note G_, 1
 	note __, 2
-Music_ElmsLab_branch_ea2b9:
-	note G_, 4
-	loopchannel 0, Music_ElmsLab_branch_ea2b9
+	octave 3
+	note D_, 1
+	note C#, 1
+	note C_, 1
+	octave 2
+	note B_, 2
+	note G_, 1
+	note __, 2
+	note G_, 1
+	note B_, 2
+	note G_, 1
+	octave 3
+	note D_, 2
+;Bar 8
+	octave 2
+	note __, 1 ; WARNING: Rounded.
+	octave 3
+	note G_, 1 ; WARNING: Rounded.
+	note F#, 1
+	note G_, 1
+	note A_, 1
+	note G_, 1
+	note F#, 1
+	note G_, 2
+	note D_, 1
+	octave 2
+	note B_, 2
+	note G_, 1
+	note B_, 1
+	octave 3
+	note C_, 1
+;Bar 9
+	note D_, 1
+	note G_, 2
+	note D_, 1
+	note C_, 2
+	octave 2
+	note A_, 1
+	note F#, 2
+	note G_, 1
+	note A_, 2
+	note G_, 1
+	note G_, 2
+	note F#, 1
+;Bar 10
+	note G_, 1
+	note __, 3 ; WARNING: Rounded.
+	loopchannel 0, ElmsLab_branch_pulse1
+
+; ============================================================================================================
+
+Music_Placeholder_Ch2:
+	volume $77
+	dutycycle $2
+	notetype 12, $a7
+	tempo 201
+;Bar 1
+ElmsLab_branch_pulse2:
+	note __, 6 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note __, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+;Bar 2
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1
+	note __, 3 ; WARNING: Rounded.
+	note A_, 1 ; WARNING: Rounded.
+	note F#, 1 ; WARNING: Rounded.
+;Bar 3
+	note D_, 1
+	note __, 3 ; WARNING: Rounded.
+	note A_, 1 ; WARNING: Rounded.
+	note F#, 1 ; WARNING: Rounded.
+	note D_, 1
+	note __, 3 ; WARNING: Rounded.
+	note A_, 1
+	note F#, 1 ; WARNING: Rounded.
+	note D_, 1
+	note __, 9 ; WARNING: Rounded.
+;Bar 4
+	octave 2
+	note D_, 1
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 2 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+;Bar 5
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1
+	note __, 3 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1
+	note __, 16
+	note __, 11 ; WARNING: Rounded.
+;Bar 7
+	octave 2
+	note D_, 1
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1
+	note __, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1
+	note __, 3 ; WARNING: Rounded.
+;Bar 8
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	octave 2
+	note D_, 1
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1
+	note __, 6 ; WARNING: Rounded.
+;Bar 9
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 1 ; WARNING: Rounded.
+	note A_, 1 ; WARNING: Rounded.
+	note F#, 1 ; WARNING: Rounded.
+	note D_, 1 ; WARNING: Rounded.
+;Bar 10
+	octave 2
+	note D_, 1 ; WARNING: Rounded.
+	octave 1
+	note B_, 1 ; WARNING: Rounded.
+	note G_, 2
+	loopchannel 0, ElmsLab_branch_pulse2
+
+; ============================================================================================================
+
+Music_Placeholder_Ch3:
+	notetype 12, $10
+ElmsLab_branch_wave:
+;Bar 1
+	note __, 6 ; WARNING: Rounded.
+	octave 2
+	note B_, 4 ; WARNING: Rounded.
+	note __, 2 ; WARNING: Rounded.
+	note B_, 4 ; WARNING: Rounded.
+;Bar 2
+	note __, 2 ; WARNING: Rounded.
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note F#, 3 ; WARNING: Rounded.
+;Bar 3
+	note __, 3 ; WARNING: Rounded.
+	note F#, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note F#, 3 ; WARNING: Rounded.
+	note __, 9 ; WARNING: Rounded.
+;Bar 4
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+;Bar 5
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note B_, 3 ; WARNING: Rounded.
+	note __, 16
+	note __, 11 ; WARNING: Rounded.
+;Bar 7
+	octave 3
+	note D_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	octave 2
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+;Bar 8
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note B_, 3 ; WARNING: Rounded.
+	note __, 6 ; WARNING: Rounded.
+;Bar 9
+	octave 3
+	note D_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	octave 2
+	note B_, 3 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	note F#, 3 ; WARNING: Rounded.
+;Bar 10
+	note G_, 4 ; WARNING: Rounded.
+	loopchannel 0, ElmsLab_branch_wave
+
+; ============================================================================================================
+
+Music_Placeholder_Ch4:
+	togglenoise 1
+	notetype 12
+ElmsLab_branch_noise:
+;Bar 1
+	note __, 6
+	note D_, 6
+	note D_, 6
+;Bar 2
+	note D_, 6
+	note D_, 6
+	note D_, 6
+;Bar 3
+	note D_, 6
+	note D_, 6
+;Bar 4
+	note D_, 6
+	note D_, 6
+	note D_, 6
+;Bar 5
+	note D_, 6
+	note D_, 1
+	note __, 16
+	note __, 13
+;Bar 7
+	note D_, 6
+	note D_, 6
+;Bar 8
+	note D_, 6
+	note D_, 9
+;Bar 9
+	note D_, 6
+	note D_, 3
+	note D_, 6
+;Bar 10
+	note D_, 1 ; WARNING: Rounded.
+	note __, 3 ; WARNING: Rounded.
+	loopchannel 0, ElmsLab_branch_noise
+
