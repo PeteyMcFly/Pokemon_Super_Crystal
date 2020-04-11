@@ -883,7 +883,7 @@ PoliwagEvosAttacks:
 	db 0 ; no more level-up moves
 
 PoliwhirlEvosAttacks:
-	db EVOLVE_ITEM, WATER_STONE, 
+	db EVOLVE_ITEM, WATER_STONE
 	db EVOLVE_LEVEL, 40, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE
@@ -993,7 +993,7 @@ MachampEvosAttacks:
 	db 34, VITAL_THROW
 	db 41, ENCORE
 	db 43, CROSS_CHOP
-	db 46, LIGHT_SCREEN,
+	db 46, LIGHT_SCREEN
 	db 48, MEDITATE
 	db 52, SCARY_FACE
 	db 61, SUBMISSION
