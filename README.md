@@ -8,7 +8,7 @@ Major changes include:
 1. Can catch every pokemon
 2. Physical/Special split
 3. No need to trade to evolve
-4. Pokemon available earlier on in a playthrough. All Pokemon except legendaries can be obtained by the Elite 4.
+4. Pokemon available earlier on in a playthrough. All Pokemon except legendaries can be obtained before the Elite 4.
 5. Many moves are only accessible via TM in gen 1, or through breeding. Everyone's level-up learnset is going to be altered to give them their strong egg moves, and many TMs from Gen 1 will be brought over like Swords Dance, Ice Beam, etc.
 6. Trainers and Bosses will be significantly tougher.
 7. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
