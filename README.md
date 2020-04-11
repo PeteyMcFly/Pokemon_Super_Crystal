@@ -1,4 +1,26 @@
+# Pokémon Super Crystal: 
+For a complete description of the game and a list of changes, please visit:
+https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit?usp=sharing
+
+Pokemon Super Crystal is a hack of Pokemon Crystal, built using the pokecrystal disassembly project. Super Crystal introduces many changes to the make the game more fun and challenging, and allows you to capture every pokemon without trading. 
+
+Major changes include:
+1. Can catch every pokemon
+2. Physical/Special split
+3. No need to trade to evolve
+4. Pokemon available earlier on in a playthrough. All Pokemon except legendaries can be obtained by the Elite 4.
+5. Many moves are only accessible via TM in gen 1, or through breeding. Everyone's level-up learnset is going to be altered to give them their strong egg moves, and many TMs from Gen 1 will be brought over like Swords Dance, Ice Beam, etc.
+6. Trainers and Bosses will be significantly tougher.
+7. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
+
+For all listed changes, please see:
+https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit#gid=442710120
+https://docs.google.com/spreadsheets/d/1WtUM1VQbPSdDESuNMYJPpupwrSgFVcDa-DC3ZWKORfU/edit?usp=sharing
+
+
 # Pokémon Crystal [![Build Status][travis-badge]][travis]
+
+https://github.com/pret/pokecrystal
 
 This is a disassembly of Pokémon Crystal.
 
@@ -44,3 +66,4 @@ Other disassembly projects:
 [irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
 [travis]: https://travis-ci.org/pret/pokecrystal
 [travis-badge]: https://travis-ci.org/pret/pokecrystal.svg?branch=master
+[supercrystal]: https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit?usp=sharing
