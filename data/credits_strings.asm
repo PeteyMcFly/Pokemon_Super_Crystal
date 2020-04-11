@@ -103,12 +103,19 @@ CreditsStrings:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	dw .ProjectLead
+	dw .LeadDeveloper
+	dw .PSCSpecialThanks
+	dw .NolanVarani
+	dw .PeterTalen
+	dw .DylanSaul
+	dw .BrockStevens
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
 .TetsuyaWatanabe:     db "  TETSUYA WATANABE@"        ; "わたなべ　てつや@"
 .ShigekiMorimoto:     db "  SHIGEKI MORIMOTO@"        ; "もりもと　しげき@"
-.SousukeTamada:       db "    NOLAN VARANI@"         ; "たまだ　そうすけ@"
+.SousukeTamada:       db "    SOUSUKE TAMADA@"         ; "たまだ　そうすけ@"
 .TakenoriOota:        db "   TAKENORI OOTA@"          ; "おおた　たけのり@"
 .KenSugimori:         db "    KEN SUGIMORI@"          ; "すぎもり　けん@"
 .MotofumiFujiwara:    db " MOTOFUMI FUJIWARA@"        ; "ふじわら　もとふみ@"
@@ -143,9 +150,9 @@ CreditsStrings:
 .NaokoKawakami:       db "   NAOKO KAWAKAMI@"         ; "かわかみ　なおこ@"
 .HiroyukiZinnai:      db "  HIROYUKI ZINNAI@"         ; "じんない　ひろゆき@"
 .KunimiKawamura:      db "  KUNIMI KAWAMURA@"         ; "かわむら　くにみ@"
-.HisashiSogabe:       db "    DYLAN SAUL@"         ; "そがべ　ひさし@"
-.KeitaKagaya:         db "   BROCK STEVENS@"          ; "かがや　けいた@"
-.YoshinoriMatsuda:    db "    PETER TALEN@"        ; "まつだ　よしのり@"
+.HisashiSogabe:       db "   HISASHI SOGABE@"         ; "そがべ　ひさし@"
+.KeitaKagaya:         db "   KEITA KAGAYA@"          ; "かがや　けいた@"
+.YoshinoriMatsuda:    db " YOSHINORI MATSUDA@"        ; "まつだ　よしのり@"
 .HitomiSato:          db "    HITOMI SATO@"           ; "さとう　ひとみ@"
 .ToruOsawa:           db "     TORU OSAWA@"           ; "おおさわ　とおる@"
 .TakaoOhara:          db "    TAKAO OHARA@"           ; "おおはら　たかお@"
@@ -210,6 +217,13 @@ CreditsStrings:
 .UsCoordination:      db "  US COORDINATION@"
 .TextTranslation:     db "  TEXT TRANSLATION@"
 .PaadTesting:         db "    PAAD TESTING@"
+.ProjectLead:         db "  PSC PROJECT LEAD@"
+.LeadDeveloper:       db "  PSC LEAD DEVELOPER@"
+.PSCSpecialThanks:    db "  SPECIAL THANKS TO@"
+.NolanVarani:         db "    NOLAN VARANI@"
+.PeterTalen:          db "     PETER TALEN@"
+.DylanSaul:           db "      DYLAN SAUL@"
+.BrockStevens:        db "    BROCK STEVENS@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

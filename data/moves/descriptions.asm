@@ -589,8 +589,8 @@ StringShotDescription:
 	next "the foe's SPEED.@"
 
 DragonRageDescription:
-	db   "Always inflicts"
-	next "40HP damage.@"
+	db   "An attack that"
+	next "always burns.@"
 
 FireSpinDescription:
 	db   "Traps foe in fire"
@@ -833,7 +833,7 @@ LovelyKissDescription:
 	next "to fall asleep.@"
 
 SkyAttackDescription:
-	db   "1st turn: Prepare"
+	db   "1st turn: Defend"
 	next "2nd turn: Attack@"
 
 TransformDescription:
@@ -1265,5 +1265,5 @@ WhirlpoolDescription:
 	next "2-5 turns.@"
 
 BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+	db   "Deals 2-5 hits"
+	next "of damage.@"

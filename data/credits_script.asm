@@ -147,22 +147,19 @@ CreditsScript:
 ; Update the banner.
 	db CREDITS_SCENE, 2 ; Ditto
 
-	db        SCRIPT_DESIGN, 1
-	db         TETSUJI_OOTA, 2
-	db        NOBUHIRO_SEYA, 3
+	db          PROJECTLEAD, 1
+	db           PETERTALEN, 2
 
 	db CREDITS_WAIT, 12
 
-	db      MAP_DATA_DESIGN, 1
-	db         TETSUJI_OOTA, 2
-	db      KAZUHITO_SEKINE, 3
+	db        LEADDEVELOPER, 1
+	db          NOLANVARANI, 2
 
 	db CREDITS_WAIT, 12
 
-	db           MAP_DESIGN, 0
-	db         TETSUJI_OOTA, 1
-	db        KOHJI_NISHINO, 2
-	db        NOBUHIRO_SEYA, 3
+	db     PSCSPECIALTHANKS, 0
+	db            DYLANSAUL, 1
+	db         BROCKSTEVENS, 2
 
 	db CREDITS_WAIT, 12
 

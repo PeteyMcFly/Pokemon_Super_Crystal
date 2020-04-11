@@ -103,6 +103,13 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const PROJECTLEAD
+	const LEADDEVELOPER
+	const PSCSPECIALTHANKS
+	const NOLANVARANI
+	const PETERTALEN
+	const DYLANSAUL
+	const BROCKSTEVENS
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7
