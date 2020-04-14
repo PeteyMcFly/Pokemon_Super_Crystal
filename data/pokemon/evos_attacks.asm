@@ -883,7 +883,7 @@ PoliwagEvosAttacks:
 	db 0 ; no more level-up moves
 
 PoliwhirlEvosAttacks:
-	db EVOLVE_ITEM, WATER_STONE
+	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	db EVOLVE_LEVEL, 40, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE
