@@ -37,7 +37,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; ITEM_19
+	dw PokeBallEffect      ; NN_BALL
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -723,6 +723,7 @@ BallMultiplierFunctionTable:
 	dbw MOON_BALL,   MoonBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
+	dbw NN_BALL,     NinetyNineBallMultiplier
 	db -1 ; end
 
 UltraBallMultiplier:
@@ -765,6 +766,18 @@ GetPokedexEntryBank:
 	db BANK("Pokedex Entries 065-128")
 	db BANK("Pokedex Entries 129-192")
 	db BANK("Pokedex Entries 193-251")
+
+NinetyNineBallMultiplier:
+; I was dreaming when I wrote this,
+; Forgive me if it goes astray.
+	push af
+	ld a, $fa ; best possible shiny atk/def
+	ld [wEnemyMonDVs], a
+	ld a, $aa ; best possible shiny spc/spd
+	ld [wEnemyMonDVs + 1], a
+	pop af
+	ld b, $ff ; max catch rate
+	ret
 
 HeavyBallMultiplier:
 ; subtract 20 from catch rate if weight < 102.4 kg

@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw NNBallDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -351,9 +351,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
-
+NNBallDesc:
+	db   "Party like it's"
+	next "1999.@"
 HPUpDesc:
 	db   "Raises the HP of"
 	next "one #MON.@"

@@ -23,8 +23,8 @@ RedsHouse2FPCText:
 	cont "in a long time…"
 	done
 
-RedMasterBall:
-	itemball MASTER_BALL
+RedSpecialBall:
+	itemball NN_BALL
 
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
@@ -39,4 +39,4 @@ RedsHouse2F_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, RedsHouse2FPCScript
 
 	db 1 ; object events
-	object_event  1, 2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedMasterBall, EVENT_RED_MASTER_BALL
+	object_event  1, 2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedSpecialBall, EVENT_RED_SPECIAL_BALL
