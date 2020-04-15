@@ -253,6 +253,9 @@ PokeBallEffect:
 
 .skip_or_return_from_ball_fn
 	ld a, [wCurItem]
+	cp NN_BALL
+	jp z, .catch_without_fail
+	ld a, [wCurItem]
 	cp LEVEL_BALL
 	ld a, b
 	jp z, .skip_hp_calc
