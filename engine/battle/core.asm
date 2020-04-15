@@ -6121,8 +6121,16 @@ LoadEnemyMon:
 	call BattleRandom
 	cp $20
 	jr nc, .GenerateDVs
+; regular shiny
+	call BattleRandom
+	cp 1 percent
+	jr c, .super_shiny
 	ld b, SPDSPCDV_SHINY ; all 10s
 	ld c, SPDSPCDV_SHINY
+	jr .UpdateDVs
+.super_shiny
+	ld b, $ff
+	ld c, $ff
 	jr .UpdateDVs
 
 .GenerateDVs:
