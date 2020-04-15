@@ -320,10 +320,18 @@ Function1dc52c:
 	hlcoord 17, 2
 	ld [hl], a
 	ld bc, wTempMonDVs
+	push bc
+	farcall CheckSuperShininess
+	pop bc
+	jr c, .super_shiny
 	farcall CheckShininess
 	ret nc
 	hlcoord 18, 2
 	ld [hl], "⁂"
+	ret
+.super_shiny
+	hlcoord 18, 2
+	ld [hl], "!"
 	ret
 
 String1dc550:

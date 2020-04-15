@@ -43,30 +43,20 @@ CheckShininess:
 	and a
 	ret
 
-Unused_CheckShininess:
-; Return carry if the DVs at hl are all 10 or higher.
+CheckSuperShininess:
+; Return carry if the DVs are all max
+	ld l, c
+	ld h, b
 
-; Attack
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Defense
+; Attack/Def
 	ld a, [hli]
-	and $f
-	cp 10
-	jr c, .NotShiny
+	cp $ff
+	jr nz, .NotShiny
 
-; Speed
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Special
-	ld a, [hl]
-	and $f
-	cp 10
-	jr c, .NotShiny
+; Speed/Spc
+	ld a, [hld]
+	cp $ff
+	jr nz, .NotShiny
 
 .Shiny:
 	scf
@@ -796,12 +786,19 @@ GetMonNormalOrShinyPalettePointer:
 	call _GetMonPalettePointer
 	pop bc
 	push hl
+	call CheckSuperShininess
+	pop hl
+	jr c, .super_shiny
+	push hl
 	call CheckShininess
 	pop hl
 	ret nc
 rept 4
 	inc hl
 endr
+	ret
+.super_shiny
+	ld hl, PAL_SUPER_SHINY
 	ret
 
 PushSGBPals:

@@ -3902,6 +3902,10 @@ BattleCheckEnemyShininess:
 BattleCheckShininess:
 	ld b, h
 	ld c, l
+	push bc
+	callfar CheckSuperShininess
+	pop bc
+	ret c
 	callfar CheckShininess
 	ret
 

@@ -475,10 +475,16 @@ StatsScreen_PlacePageSwitchArrows:
 
 StatsScreen_PlaceShinyIcon:
 	ld bc, wTempMonDVs
+	farcall CheckSuperShininess
+	jr c, .super_shiny
 	farcall CheckShininess
 	ret nc
 	hlcoord 19, 0
 	ld [hl], "⁂"
+	ret
+.super_shiny
+	hlcoord 19, 0
+	ld [hl], "!"
 	ret
 
 StatsScreen_LoadGFX:
