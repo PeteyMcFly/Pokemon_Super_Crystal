@@ -388,6 +388,7 @@ AI_Smart:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_DEFENSE_CURL,     AI_Smart_DefenseCurl
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -924,10 +925,31 @@ AI_Smart_Bide:
 AI_Smart_ForceSwitch:
 ; Whirlwind, Roar.
 
+; Strongly encourage this move if the player has
+; a stat buff of at least 2 in any stat
+	push hl
+	ld hl, wPlayerAtkLevel
+	ld c, $8
+.check_next_stat
+	dec c
+	jr z, .no_stat_buff
+	ld a, [hli]
+	cp $9
+	jr c, .check_next_stat
+	pop hl
+; player has a stat buffed by at least 2
+	dec [hl]
+	cp $a
+	ret c
+; encourage more if buffed by >2
+	dec [hl]
+	ret
+
 ; Discourage this move if the player has not shown
 ; a super-effective move against the enemy.
 ; Consider player's type(s) if its moves are unknown.
-
+.no_stat_buff
+	pop hl
 	push hl
 	callfar CheckPlayerMoveTypeMatchups
 	ld a, [wEnemyAISwitchScore]
@@ -2137,6 +2159,21 @@ AI_Smart_FuryCutter:
 
 	; fallthrough
 
+AI_Smart_DefenseCurl:
+; Encourage this move if the enemy has Rollout
+	ld b, EFFECT_ROLLOUT
+	call AIHasMoveEffect
+	ret nc
+
+; But not if already curled
+	ld a, [wEnemySubStatus2]
+	bit SUBSTATUS_CURLED, a
+	ret nz
+
+	dec [hl]
+	dec [hl]
+	ret
+
 AI_Smart_Rollout:
 ; Rollout, Fury Cutter
 
@@ -2165,6 +2202,16 @@ AI_Smart_Rollout:
 	cp 8
 	jr nc, .asm_39020
 
+; If the mon has Defense Curl, and hasn't used it yet,
+; don't encourage Rollout
+	ld b, EFFECT_DEFENSE_CURL
+	call AIHasMoveEffect
+	jr nc, .no_defense_curl
+	ld a, [wEnemySubStatus2]
+	bit SUBSTATUS_CURLED, a
+	ret z
+
+.no_defense_curl
 ; Otherwise, 80% chance to greatly encourage this move.
 	call Random
 	cp 79 percent - 1
