@@ -59,29 +59,37 @@ EnemyMonHasSuperEffectiveMove:
 CheckUndesirableStatus:
 ; Check for undesirable substatuses that would go away if we switched
 ; Returns Z if status is OK, NZ if undesirable
+	ld a, [wEnemyMonStatus]
+	and SLP
+	ret nz
+
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	ret nz
 	bit SUBSTATUS_IN_LOVE, a
 	ret nz
-	bit SUBSTATUS_NIGHTMARE, a
-	ret nz
+	;SUBSTATUS_NIGHTMARE has been removed
+	;bit SUBSTATUS_NIGHTMARE, a
+	;ret nz
 
 	ld a, [wEnemySubStatus3]
 	bit SUBSTATUS_CONFUSED, a
 	ret nz
 
+	ld a, [wEnemySubStatus4]
+	bit SUBSTATUS_LEECH_SEED, a
+	ret nz
+
 	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_TOXIC, a
+	ret nz
 	bit SUBSTATUS_ENCORED, a
-	jr z, .noencore
+	ret z
 	ld a, [wLastEnemyMove]
 	dec a
 	ld hl, Moves + MOVE_POWER
 	call GetMoveAttr
 	and a
-	jr z, .noencore ; Enemy is encored with a non-damaging move
-	rra
-.noencore
 	ret
 
 CheckBaseMatchup:
