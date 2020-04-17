@@ -6123,7 +6123,7 @@ LoadEnemyMon:
 	jr nc, .GenerateDVs
 ; regular shiny
 	call BattleRandom
-	cp 1 percent
+	cp 2 percent
 	jr c, .super_shiny
 	ld b, SPDSPCDV_SHINY ; all 10s
 	ld c, SPDSPCDV_SHINY
