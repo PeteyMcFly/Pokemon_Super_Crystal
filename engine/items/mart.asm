@@ -565,6 +565,10 @@ RooftopSaleAskPurchaseQuantity:
 
 .GetSalePrice:
 	ld a, [wMartItemID]
+	cp POKE_BALL
+	jr z, .poke_ball
+	cp GREAT_BALL
+	jr z, .great_ball
 	ld e, a
 	ld d, 0
 	ld hl, wMartPointer
@@ -579,6 +583,12 @@ RooftopSaleAskPurchaseQuantity:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
+	ret
+.great_ball
+	ld de, 300
+	ret
+.poke_ball
+	ld de, 75
 	ret
 
 MartHowManyText:
