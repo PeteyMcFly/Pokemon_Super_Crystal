@@ -907,7 +907,6 @@ PoliwrathEvosAttacks:
 	db 35, BODY_SLAM
 	db 39, HAZE
 	db 40, SWEET_KISS
-	db 41, LOVELY_KISS
 	db 43, BELLY_DRUM
 	db 45, SUBMISSION
 	db 51, HYDRO_PUMP
@@ -2746,7 +2745,6 @@ PolitoedEvosAttacks:
 	db 36, PERISH_SONG
 	db 39, HAZE
 	db 41, SWEET_KISS
-	db 42, LOVELY_KISS
 	db 43, BELLY_DRUM
 	db 44, GROWTH
 	db 48, BODY_SLAM
