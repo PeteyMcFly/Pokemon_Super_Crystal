@@ -97,7 +97,7 @@ MartGoldenrod2F1:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db ICE_HEAL
+	db REVIVE
 	db -1 ; end
 
 MartGoldenrod2F2:
@@ -105,11 +105,11 @@ MartGoldenrod2F2:
 	db POKE_BALL
 	db GREAT_BALL
 	db MOON_STONE
-	db REVIVE
+	db SUN_STONE
 	db THUNDERSTONE
 	db WATER_STONE
 	db FIRE_STONE
-	db FLOWER_MAIL
+	db LEAF_STONE
 	db -1 ; end
 
 MartGoldenrod3F:
@@ -144,7 +144,7 @@ MartGoldenrod5F2:
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
-	db TM_HEADBUTT
+	db TM_PSYCH_UP
 	db -1 ; end
 
 MartGoldenrod5F3:
@@ -160,7 +160,7 @@ MartGoldenrod5F4:
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
-	db TM_HEADBUTT
+	db TM_PSYCH_UP
 	db TM_ROCK_SMASH
 	db -1 ; end
 
@@ -201,7 +201,7 @@ MartMahogany1:
 
 MartMahogany2:
 	db 9 ; # items
-	db RAGECANDYBAR
+	db BERRY
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
@@ -302,13 +302,13 @@ MartCeladon2F2:
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
-	db ESCAPE_ROPE
-	db FULL_HEAL
-	db ANTIDOTE
-	db BURN_HEAL
-	db ICE_HEAL
-	db AWAKENING
-	db PARLYZ_HEAL
+	db MOON_BALL
+	db LOVE_BALL
+	db LURE_BALL
+	db FAST_BALL
+	db HEAVY_BALL
+	db FRIEND_BALL
+	db LIGHT_BALL
 	db -1 ; end
 
 MartCeladon3F:
@@ -344,13 +344,13 @@ MartCeladon5F1:
 
 MartCeladon5F2:
 	db 7 ; # items
-	db X_ACCURACY
-	db GUARD_SPEC
-	db DIRE_HIT
-	db X_ATTACK
-	db X_DEFEND
-	db X_SPEED
-	db X_SPECIAL
+	db THICK_CLUB
+	db STICK
+	db POLKADOT_BOW
+	db LUCKY_EGG
+	db SACRED_ASH
+	db AMULET_COIN
+	db EXP_SHARE
 	db -1 ; end
 
 MartFuchsia:
