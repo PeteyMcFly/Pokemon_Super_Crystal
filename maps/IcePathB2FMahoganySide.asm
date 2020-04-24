@@ -15,7 +15,7 @@ IcePathB2FMahoganySideBoulder:
 	jumptext IcePathB2FMahoganySideBoulderText
 
 IcePathB2FMahoganySideFullHeal:
-	itemball FULL_HEAL
+	itemball HP_UP
 
 IcePathB2FMahoganySideMaxPotion:
 	itemball MAX_POTION

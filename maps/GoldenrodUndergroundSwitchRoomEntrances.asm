@@ -626,7 +626,7 @@ GoldenrodUndergroundSwitchRoomEntrancesSmokeBall:
 	itemball SMOKE_BALL
 
 GoldenrodUndergroundSwitchRoomEntrancesFullHeal:
-	itemball FULL_HEAL
+	itemball ULTRA_BALL
 
 GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_HIDDEN_MAX_POTION

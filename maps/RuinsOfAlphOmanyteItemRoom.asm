@@ -10,7 +10,7 @@ RuinsOfAlphOmanyteItemRoom_MapScripts:
 	db 0 ; callbacks
 
 RuinsOfAlphOmanyteItemRoomMysteryberry:
-	itemball MYSTERYBERRY
+	itemball PP_UP
 
 RuinsOfAlphOmanyteItemRoomMysticWater:
 	itemball MYSTIC_WATER

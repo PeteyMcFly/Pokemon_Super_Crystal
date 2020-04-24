@@ -206,13 +206,13 @@ TeamRocketBaseB3FProtein:
 	itemball PROTEIN
 
 TeamRocketBaseB3FXSpecial:
-	itemball X_SPECIAL
+	itemball CARBOS
 
 TeamRocketBaseB3FFullHeal:
 	itemball FULL_HEAL
 
 TeamRocketBaseB3FIceHeal:
-	itemball ICE_HEAL
+	itemball CALCIUM
 
 TeamRocketBaseB3FUltraBall:
 	itemball ULTRA_BALL

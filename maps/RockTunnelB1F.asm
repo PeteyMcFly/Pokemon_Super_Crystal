@@ -18,7 +18,7 @@ RockTunnelB1FRevive:
 	itemball REVIVE
 
 RockTunnelB1FHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_ROCK_TUNNEL_B1F_HIDDEN_MAX_POTION
+	hiddenitem NUGGET, EVENT_ROCK_TUNNEL_B1F_HIDDEN_MAX_POTION
 
 RockTunnelB1F_MapEvents:
 	db 0, 0 ; filler

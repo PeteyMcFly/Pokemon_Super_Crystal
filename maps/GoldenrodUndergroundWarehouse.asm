@@ -87,7 +87,7 @@ GoldenrodUndergroundWarehouseDirectorScript:
 	end
 
 GoldenrodUndergroundWarehouseMaxEther:
-	itemball MAX_ETHER
+	itemball CALCIUM
 
 GoldenrodUndergroundWarehouseTMSleepTalk:
 	itemball TM_BODY_SLAM

@@ -189,7 +189,7 @@ Route25Protein:
 	itemball PROTEIN
 
 Route25HiddenPotion:
-	hiddenitem POTION, EVENT_ROUTE_25_HIDDEN_POTION
+	hiddenitem PP_UP, EVENT_ROUTE_25_HIDDEN_POTION
 
 MovementData_0x19efe8:
 	big_step DOWN

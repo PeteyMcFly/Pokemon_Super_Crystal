@@ -403,22 +403,22 @@ IlexForestRevive:
 	itemball REVIVE
 
 IlexForestXAttack:
-	itemball X_ATTACK
+	itemball GREAT_BALL
 
 IlexForestAntidote:
 	itemball ANTIDOTE
 
 IlexForestEther:
-	itemball ETHER
+	itemball POKE_BALL
 
 IlexForestHiddenEther:
-	hiddenitem ETHER, EVENT_ILEX_FOREST_HIDDEN_ETHER
+	hiddenitem PP_UP, EVENT_ILEX_FOREST_HIDDEN_ETHER
 
 IlexForestHiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ILEX_FOREST_HIDDEN_SUPER_POTION
 
 IlexForestHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_ILEX_FOREST_HIDDEN_FULL_HEAL
+	hiddenitem ULTRA_BALL, EVENT_ILEX_FOREST_HIDDEN_FULL_HEAL
 
 IlexForestBoulder:
 ; unused

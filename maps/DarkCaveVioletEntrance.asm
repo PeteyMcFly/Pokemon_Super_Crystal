@@ -23,13 +23,13 @@ DarkCaveVioletEntranceHyperPotion:
 	itemball HYPER_POTION
 
 DarkCaveVioletEntranceDireHit:
-	itemball DIRE_HIT
+	itemball ULTRA_BALL
 
 DarkCaveVioletEntranceRock:
 	jumpstd smashrock
 
 DarkCaveVioletEntranceHiddenElixer:
-	hiddenitem ELIXER, EVENT_DARK_CAVE_VIOLET_ENTRANCE_HIDDEN_ELIXER
+	hiddenitem ULTRA_BALL, EVENT_DARK_CAVE_VIOLET_ENTRANCE_HIDDEN_ELIXER
 
 DarkCaveVioletEntrance_MapEvents:
 	db 0, 0 ; filler

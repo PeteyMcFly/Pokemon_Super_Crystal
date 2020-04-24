@@ -160,7 +160,7 @@ Route46Sign:
 	jumptext Route46SignText
 
 Route46XSpeed:
-	itemball X_SPEED
+	itemball ULTRA_BALL
 
 Route46FruitTree1:
 	fruittree FRUITTREE_ROUTE_46_1

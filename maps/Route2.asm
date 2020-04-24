@@ -53,7 +53,7 @@ Route2DiglettsCaveSign:
 	jumptext Route2DiglettsCaveSignText
 
 Route2DireHit:
-	itemball DIRE_HIT
+	itemball ULTRA_BALL
 
 Route2MaxPotion:
 	itemball GS_BALL
@@ -71,7 +71,7 @@ Route2HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_2_HIDDEN_MAX_ETHER
 
 Route2HiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_ROUTE_2_HIDDEN_FULL_HEAL
+	hiddenitem PP_UP, EVENT_ROUTE_2_HIDDEN_FULL_HEAL
 
 Route2HiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_ROUTE_2_HIDDEN_FULL_RESTORE

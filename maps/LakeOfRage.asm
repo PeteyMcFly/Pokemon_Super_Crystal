@@ -224,7 +224,7 @@ WesleyNotWednesdayScript:
 	end
 
 LakeOfRageElixer:
-	itemball ELIXER
+	itemball ULTRA_BALL
 
 LakeOfRageTMDetect:
 	itemball TM_EXPLOSION

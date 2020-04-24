@@ -10,16 +10,16 @@ RuinsOfAlphKabutoItemRoom_MapScripts:
 	db 0 ; callbacks
 
 RuinsOfAlphKabutoItemRoomBerry:
-	itemball BERRY
+	itemball GOLD_BERRY
 
 RuinsOfAlphKabutoItemRoomPsncureberry:
-	itemball PSNCUREBERRY
+	itemball IRON
 
 RuinsOfAlphKabutoItemRoomHealPowder:
-	itemball HEAL_POWDER
+	itemball HP_UP
 
 RuinsOfAlphKabutoItemRoomEnergypowder:
-	itemball ENERGYPOWDER
+	itemball GREAT_BALL
 
 RuinsOfAlphKabutoItemRoomAncientReplica:
 	jumptext RuinsOfAlphKabutoItemRoomAncientReplicaText

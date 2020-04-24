@@ -10,16 +10,16 @@ RuinsOfAlphHoOhItemRoom_MapScripts:
 	db 0 ; callbacks
 
 RuinsOfAlphHoOhItemRoomGoldBerry:
-	itemball GOLD_BERRY
+	itemball CALCIUM
 
 RuinsOfAlphHoOhItemRoomMysteryberry:
-	itemball MYSTERYBERRY
+	itemball PP_UP
 
 RuinsOfAlphHoOhItemRoomRevivalHerb:
-	itemball REVIVAL_HERB
+	itemball SACRED_ASH
 
 RuinsOfAlphHoOhItemRoomCharcoal:
-	itemball CHARCOAL
+	itemball PP_UP
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText

@@ -8,16 +8,16 @@ RockTunnel1F_MapScripts:
 	db 0 ; callbacks
 
 RockTunnel1FElixer:
-	itemball ELIXER
+	itemball ULTRA_BALL
 
 RockTunnel1FTMSteelWing:
 	itemball TM_STEEL_WING
 
 RockTunnel1FHiddenXAccuracy:
-	hiddenitem X_ACCURACY, EVENT_ROCK_TUNNEL_1F_HIDDEN_X_ACCURACY
+	hiddenitem PP_UP, EVENT_ROCK_TUNNEL_1F_HIDDEN_X_ACCURACY
 
 RockTunnel1FHiddenXDefend:
-	hiddenitem X_DEFEND, EVENT_ROCK_TUNNEL_1F_HIDDEN_X_DEFEND
+	hiddenitem NUGGET, EVENT_ROCK_TUNNEL_1F_HIDDEN_X_DEFEND
 
 RockTunnel1F_MapEvents:
 	db 0, 0 ; filler

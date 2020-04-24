@@ -73,13 +73,13 @@ UnionCave1FGreatBall:
 	itemball GREAT_BALL
 
 UnionCave1FXAttack:
-	itemball X_ATTACK
+	itemball CARBOS
 
 UnionCave1FPotion:
 	itemball POTION
 
 UnionCave1FAwakening:
-	itemball AWAKENING
+	itemball POKE_BALL
 
 UnionCave1FUnusedSign:
 ; unused

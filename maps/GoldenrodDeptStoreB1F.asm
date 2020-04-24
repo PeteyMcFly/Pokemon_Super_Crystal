@@ -62,13 +62,13 @@ GoldenrodDeptStoreB1FMachopScript:
 	end
 
 GoldenrodDeptStoreB1FEther:
-	itemball ETHER
+	itemball ULTRA_BALL
 
 GoldenrodDeptStoreB1FAmuletCoin:
 	itemball AMULET_COIN
 
 GoldenrodDeptStoreB1FBurnHeal:
-	itemball BURN_HEAL
+	itemball PROTEIN
 
 GoldenrodDeptStoreB1FUltraBall:
 	itemball ULTRA_BALL

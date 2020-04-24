@@ -13,13 +13,13 @@ RuinsOfAlphAerodactylItemRoomGoldBerry:
 	itemball GOLD_BERRY
 
 RuinsOfAlphAerodactylItemRoomMoonStone:
-	itemball MOON_STONE
+	itemball SUN_STONE
 
 RuinsOfAlphAerodactylItemRoomHealPowder:
-	itemball HEAL_POWDER
+	itemball PP_UP
 
 RuinsOfAlphAerodactylItemRoomEnergyRoot:
-	itemball ENERGY_ROOT
+	itemball CARBOS
 
 RuinsOfAlphAerodactylItemRoomAncientReplica:
 	jumptext RuinsOfAlphAerodactylItemRoomAncientReplicaText
