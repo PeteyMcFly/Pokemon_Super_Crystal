@@ -417,6 +417,12 @@ AI_Smart_LeechHit:
 	callfar BattleCheckTypeMatchup
 	pop hl
 
+; Always strongly discourage leech hit moves like giga drain, etc
+; when the player mon has a substitute out
+	ld a, [wPlayerSubStatus4]
+	bit SUBSTATUS_SUBSTITUTE, a
+	jr nz, .substituted
+
 ; 60% chance to discourage this move if not very effective.
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE
@@ -441,6 +447,10 @@ AI_Smart_LeechHit:
 	cp 39 percent + 1
 	ret c
 
+	inc [hl]
+	ret
+.substituted
+	inc [hl]
 	inc [hl]
 	ret
 
