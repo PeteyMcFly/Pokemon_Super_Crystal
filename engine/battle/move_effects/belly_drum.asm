@@ -17,14 +17,9 @@ BattleCommand_BellyDrum:
 	pop bc
 	callfar SubtractHPFromUser
 	call UpdateUserInParty
-	ld a, 5
 
-.max_attack_loop
-	push af
+; Modification: only raise by 4 stages, rather than max
 	call BattleCommand_AttackUp2
-	pop af
-	dec a
-	jr nz, .max_attack_loop
 
 	ld hl, BellyDrumText
 	jp StdBattleTextbox

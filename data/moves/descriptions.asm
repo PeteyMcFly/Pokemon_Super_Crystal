@@ -1010,7 +1010,7 @@ SweetKissDescription:
 
 BellyDrumDescription:
 	db   "Reduces own HP to"
-	next "maximize ATTACK.@"
+	next "raise ATK greatly.@"
 
 SludgeBombDescription:
 	db   "An attack that may"
