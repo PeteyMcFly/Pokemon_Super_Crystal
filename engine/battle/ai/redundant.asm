@@ -44,6 +44,7 @@ AI_Redundant:
 	dbw EFFECT_MOONLIGHT,    .Moonlight
 	dbw EFFECT_SWAGGER,      .Swagger
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
+	dbw EFFECT_LEECH_HIT,    .LeechHit
 	db -1
 
 .LightScreen:
@@ -178,6 +179,13 @@ AI_Redundant:
 .FutureSight:
 	ld a, [wEnemyScreens]
 	bit 5, a
+	ret
+
+.LeechHit:
+	; not "redundant" per se,
+	; but don't use when player is substituted
+	ld a, [wPlayerSubStatus4]
+	bit SUBSTATUS_SUBSTITUTE, a
 	ret
 
 .Heal:
