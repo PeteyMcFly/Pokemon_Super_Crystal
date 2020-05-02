@@ -1968,6 +1968,14 @@ GetHealingItemAmount:
 	inc hl
 	ld d, [hl]
 	pop hl
+	ld a, [wBattleMode]
+	and a
+	jr nz, .in_battle
+	ret
+.in_battle
+; Halve the amount of HP restoration if in battle
+	srl d
+	rr e
 	ret
 
 INCLUDE "data/items/heal_hp.asm"
