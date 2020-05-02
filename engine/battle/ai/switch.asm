@@ -341,7 +341,7 @@ CheckAbleToSwitch:
 	ret c
 
 	ld a, [wPlayerSubStatus4]
-	bit SUBSTATUS_SUBSTITUTE
+	bit SUBSTATUS_SUBSTITUTE, a
 	jr z, .no_sub
 	call EnemyMonHasSuperEffectiveMove
 	jr nz, .bad_matchup
