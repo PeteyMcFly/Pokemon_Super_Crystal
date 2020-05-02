@@ -62,6 +62,9 @@ CheckUndesirableStatus:
 	ld a, [wEnemyMonStatus]
 	and SLP
 	ret nz
+	ld a, [wEnemyMonStatus]
+	and FRZ
+	ret nz
 
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
@@ -390,6 +393,9 @@ CheckAbleToSwitch:
 	call CheckUndesirableStatus
 	jr z, .no_bad_status
 
+	ld a, [wPlayerSubStatus4]
+	bit SUBSTATUS_SUBSTITUTE, a
+	jr nz, .bad_matchup
 	; If enemy Pokemon is in a bad state, and has no super effective moves,
 	; treat it as a bad matchup, and encourage a switch
 	call EnemyMonHasSuperEffectiveMove
