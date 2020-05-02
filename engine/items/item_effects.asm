@@ -1450,7 +1450,7 @@ HealStatus:
 	and a
 	jr z, .no_failure_chance
 	call BattleRandom
-	cp 15 percent
+	cp 85 percent
 	jr nc, .failed
 .no_failure_chance
 	xor a

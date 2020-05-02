@@ -184,7 +184,8 @@ ForgetMove:
 	pop bc
 	pop de
 	ld a, d
-	jr c, .hmmove
+	; Allow HM moves to be forgotten
+	;jr c, .hmmove
 	pop hl
 	add hl, bc
 	and a
