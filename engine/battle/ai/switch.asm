@@ -344,7 +344,7 @@ CheckAbleToSwitch:
 	bit SUBSTATUS_SUBSTITUTE, a
 	jr z, .no_sub
 	call EnemyMonHasSuperEffectiveMove
-	jr nz, .bad_matchup
+	jp nz, .bad_matchup
 .no_sub
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_PERISH, a
