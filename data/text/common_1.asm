@@ -1873,3 +1873,8 @@ _PrestoAllDoneText::
 	text "Presto! All done."
 	line "Come again, OK?"
 	done
+
+_ItemFailedText::
+	text "The item failed"
+	line "to work..."
+	done

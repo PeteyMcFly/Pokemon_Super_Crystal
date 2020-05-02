@@ -1646,6 +1646,8 @@ wTempDVDef:: db ; cfdb
 wTempDVSpd:: db ; cfdc
 wTempDVSpc:: db ; cfdd
 
+wRandomFailure:: db ; cfde
+
 SECTION "WRAM 1", WRAMX
 
 wGBCOnlyDecompressBuffer:: ds 1 ; also uses the next $53f bytes for $540 total

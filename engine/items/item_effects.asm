@@ -1401,7 +1401,16 @@ UseStatusHealer:
 	ld a, b
 	ld [wPartyMenuActionText], a
 	call HealStatus
+	ld a, [wRandomFailure]
+	and a
+	jr z, .success
+	call Play_SFX_HEAL_FAIL
+	ld a, PARTYMENUTEXT_ITEM_FAILED
+	ld [wPartyMenuActionText], a
+	jr .failed
+.success
 	call Play_SFX_FULL_HEAL
+.failed
 	call ItemActionTextWaitButton
 	call UseDisposableItem
 	ld a, $0
@@ -1437,7 +1446,15 @@ BattlemonRestoreHealth:
 HealStatus:
 	call IsItemUsedOnBattleMon
 	ret nc
+	ld a, [wBattleMode]
+	and a
+	jr z, .no_failure_chance
+	call BattleRandom
+	cp 15 percent
+	jr nc, .failed
+.no_failure_chance
 	xor a
+	ld [wRandomFailure], a
 	ld [wBattleMonStatus], a
 	ld [wBattleMonStatus + 1], a
 	ld hl, wPlayerSubStatus5
@@ -1454,6 +1471,10 @@ HealStatus:
 	push bc
 	farcall CalcPlayerStats
 	pop bc
+	ret
+.failed
+	ld a, $ff
+	ld [wRandomFailure], a
 	ret
 
 GetItemHealingAction:
@@ -1587,9 +1608,17 @@ FullRestoreEffect:
 	ld [hli], a
 	ld [hl], a
 	call HealStatus
+	ld a, [wRandomFailure]
+	and a
+	jr z, .success
+	call Play_SFX_HEAL_FAIL
+	ld a, PARTYMENUTEXT_ITEM_FAILED
+	jr .failed
+.success
 	call BattlemonRestoreHealth
 	call HealHP_SFX_GFX
 	ld a, PARTYMENUTEXT_HEAL_HP
+.failed
 	ld [wPartyMenuActionText], a
 	call ItemActionTextWaitButton
 	call UseDisposableItem
@@ -2577,6 +2606,13 @@ NoEffect:
 Play_SFX_FULL_HEAL:
 	push de
 	ld de, SFX_FULL_HEAL
+	call WaitPlaySFX
+	pop de
+	ret
+
+Play_SFX_HEAL_FAIL:
+	push de
+	ld de, SFX_WRONG
 	call WaitPlaySFX
 	pop de
 	ret
