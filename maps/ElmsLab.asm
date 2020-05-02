@@ -1222,9 +1222,15 @@ AideText_GiveYouPotion:
 	done
 
 AideText_AlwaysBusy:
-	text "There are only two"
-	line "of us, so we're"
-	cont "always busy."
+	text "Keep in mind,"
+	line "healing items are"
+	cont "half as effective,"
+
+	para "when you use them"
+	line "in a battle."
+	;text "There are only two"
+	;line "of us, so we're"
+	;cont "always busy."
 	done
 
 AideText_TheftTestimony:
