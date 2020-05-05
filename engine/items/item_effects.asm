@@ -57,7 +57,7 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw NoEffect            ; ITEM_2D
+	dw PokeBallEffect      ; EN_BALL
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
@@ -258,6 +258,8 @@ PokeBallEffect:
 .skip_or_return_from_ball_fn
 	ld a, [wCurItem]
 	cp NN_BALL
+	jp z, .catch_without_fail
+	cp EN_BALL
 	jp z, .catch_without_fail
 	ld a, [wCurItem]
 	cp LEVEL_BALL
@@ -712,6 +714,7 @@ BallMultiplierFunctionTable:
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
 	dbw NN_BALL,     NinetyNineBallMultiplier
+	dbw EN_BALL,     EightyNineBallMultiplier
 	db -1 ; end
 
 UltraBallMultiplier:
@@ -762,6 +765,16 @@ NinetyNineBallMultiplier:
 	ld a, $fa ; best possible shiny atk/def
 	ld [wEnemyMonDVs], a
 	ld a, $aa ; best possible shiny spc/spd
+	ld [wEnemyMonDVs + 1], a
+	pop af
+	ld b, $ff ; max catch rate
+	ret
+
+EightyNineBallMultiplier:
+	push af
+	ld a, $ff ; max DVs
+	ld [wEnemyMonDVs], a
+	ld a, $ff ; max DVs
 	ld [wEnemyMonDVs + 1], a
 	pop af
 	ld b, $ff ; max catch rate

@@ -4,7 +4,7 @@
 
 TimeCapsule_CatchRateItems:
 	db NN_BALL, LEFTOVERS
-	db ITEM_2D, BITTER_BERRY
+	db EN_BALL, BITTER_BERRY
 	db ITEM_32, GOLD_BERRY
 	db ITEM_5A, BERRY
 	db ITEM_64, BERRY

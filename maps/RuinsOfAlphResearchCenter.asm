@@ -104,7 +104,7 @@ RuinsOfAlphResearchCenterScientist1Script:
 .GotAllUnown:
 	writetext RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 	waitbutton
-	verbosegiveitem CHARCOAL
+	verbosegiveitem EN_BALL
 	iffalse .Done
 	setevent EVENT_FINISHED_UNOWN
 	closetext
@@ -278,11 +278,12 @@ RuinsOfAlphResearchCenterScientist1Text_GotAllUnown:
 	para "giving us insight"
 	line "into the RUINS."
 
-	para "The RUINS appear"
-	line "to have been built"
+	para "We found this down"
+	line "in the crypt."
 
-	para "as a habitat for"
-	line "#MON."
+	para "Be careful. It's"
+	line "giving off a"
+	cont "strange signal..."
 	done
 
 RuinsOfAlphResearchCenterScientist2Text:
