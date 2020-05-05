@@ -75,6 +75,9 @@ KRIS EQU __enum__
 	const CAL1
 	const CAL2
 	const CAL3
+	const NOLAN
+	const DYLAN
+	const PETER
 
 	trainerclass BRUNO ; d
 	const BRUNO1
@@ -162,7 +165,7 @@ KRIS EQU __enum__
 	const BORIS
 	const BOB
 	const JOSE1
-	const PETER
+	const PETE
 	const JOSE2
 	const PERRY
 	const BRET

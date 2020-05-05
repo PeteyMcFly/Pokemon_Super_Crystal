@@ -339,10 +339,10 @@ EusineAfterText:
 	done
 
 CianwoodCitySignText:
-	text "CIANWOOD CITY"
+	text "Today's Forecast"
 
-	para "A Port Surrounded"
-	line "by Rough Seas"
+	para "Divine winds,"
+	line "Shikoku - NYT"
 	done
 
 CianwoodGymSignText:

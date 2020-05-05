@@ -439,7 +439,7 @@ TrainerYoungsterGordon:
 	end
 
 TrainerBirdKeeperPeter:
-	trainer BIRD_KEEPER, PETER, EVENT_BEAT_BIRD_KEEPER_PETER, BirdKeeperPeterSeenText, BirdKeeperPeterBeatenText, 0, .Script
+	trainer BIRD_KEEPER, PETE, EVENT_BEAT_BIRD_KEEPER_PETER, BirdKeeperPeterSeenText, BirdKeeperPeterBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

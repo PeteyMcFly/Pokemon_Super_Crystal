@@ -76,6 +76,8 @@ RuinsOfAlphResearchCenterScientist3Script:
 RuinsOfAlphResearchCenterScientist1Script:
 	faceplayer
 	opentext
+	checkevent EVENT_FINISHED_UNOWN
+	iftrue .Done
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .GotAllUnown
 	checkflag ENGINE_UNOWN_DEX
@@ -102,8 +104,15 @@ RuinsOfAlphResearchCenterScientist1Script:
 .GotAllUnown:
 	writetext RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 	waitbutton
+	verbosegiveitem CHARCOAL
+	iffalse .Done
+	setevent EVENT_FINISHED_UNOWN
 	closetext
 	clearevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
+	end
+
+.Done:
+	closetext
 	end
 
 RuinsOfAlphResearchCenterScientist2Script:
