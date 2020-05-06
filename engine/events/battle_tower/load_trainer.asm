@@ -102,23 +102,40 @@ Function_LoadRandomBattleTowerMon:
 	; From Which LevelGroup are the mon loaded
 	; a = 1..10
 	ld a, [wBTChoiceOfLvlGroup]
+	cp a, 6
+	jr c, .lessthan60
 	dec a
 	ld hl, BattleTowerMons
-	ld bc, BATTLETOWER_NUM_UNIQUE_MON * NICKNAMED_MON_STRUCT_LENGTH
+	ld bc, BATTLETOWER_NUM_UNIQUE_MON_BIG * NICKNAMED_MON_STRUCT_LENGTH
 	call AddNTimes
-
 	ldh a, [hRandomAdd]
 	ld b, a
-.resample
+.resample_big
 	call Random
 	ldh a, [hRandomAdd]
 	add b
 	ld b, a
-	maskbits BATTLETOWER_NUM_UNIQUE_MON
-	cp BATTLETOWER_NUM_UNIQUE_MON
-	jr nc, .resample
+	maskbits BATTLETOWER_NUM_UNIQUE_MON_BIG
+	cp BATTLETOWER_NUM_UNIQUE_MON_BIG
+	jr nc, .resample_big
+	jr .done
+.lessthan60
+	dec a
+	ld hl, BattleTowerMons
+	ld bc, BATTLETOWER_NUM_UNIQUE_MON_SMALL * NICKNAMED_MON_STRUCT_LENGTH
+	call AddNTimes
+	ldh a, [hRandomAdd]
+	ld b, a
+.resample_small
+	call Random
+	ldh a, [hRandomAdd]
+	add b
+	ld b, a
+	maskbits BATTLETOWER_NUM_UNIQUE_MON_SMALL
+	cp BATTLETOWER_NUM_UNIQUE_MON_SMALL
+	jr nc, .resample_small
 	; in register 'a' is the chosen mon of the LevelGroup
-
+.done
 	; Check if mon was already loaded before
 	; Check current and the 2 previous teams
 	; includes check if item is double at the current team
@@ -151,19 +168,19 @@ Function_LoadRandomBattleTowerMon:
 	jr z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevTrainer2]
 	cp b
-	jr z, .FindARandomBattleTowerMon
+	jp z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevTrainer3]
 	cp b
-	jr z, .FindARandomBattleTowerMon
+	jp z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevPrevTrainer1]
 	cp b
-	jr z, .FindARandomBattleTowerMon
+	jp z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevPrevTrainer2]
 	cp b
-	jr z, .FindARandomBattleTowerMon
+	jp z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevPrevTrainer3]
 	cp b
-	jr z, .FindARandomBattleTowerMon
+	jp z, .FindARandomBattleTowerMon
 
 	ld bc, NICKNAMED_MON_STRUCT_LENGTH
 	call CopyBytes
