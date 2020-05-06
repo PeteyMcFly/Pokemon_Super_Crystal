@@ -26,7 +26,7 @@ CheckForMobileBattleRules:
 
 _CheckForBattleTowerRules:
 	ld hl, wStringBuffer2
-	ld [hl], "3"
+	ld [hl], "6"
 	inc hl
 	ld [hl], "@"
 	ld de, .PointerTables
@@ -42,7 +42,7 @@ _CheckForBattleTowerRules:
 	dw .TextPointers
 
 .Functions:
-	dw Function_PartyCountEq3
+	dw Function_PartyCountEq6
 	dw Function_PartySpeciesAreUnique
 	dw Function_PartyItemsAreUnique
 	dw Function_HasPartyAnEgg
@@ -203,7 +203,7 @@ BattleTower_CheckPartyHasThreeMonsThatAreNotEggs:
 	cp BATTLETOWER_PARTY_LENGTH
 	ret
 
-Function_PartyCountEq3:
+Function_PartyCountEq6:
 	ld a, [wPartyCount]
 	cp BATTLETOWER_PARTY_LENGTH
 	ret z
