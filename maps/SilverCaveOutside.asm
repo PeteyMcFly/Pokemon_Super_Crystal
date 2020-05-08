@@ -14,7 +14,7 @@ SilverCaveOutside_MapScripts:
 	return
 
 TrainerPKMNTrainerNolan:
-	trainer CAL, NOLAN, EVENT_BEAT_PKMNTRAINER_NOLAN, PKMNTrainerNolanSeenText, PKMNTrainerNolanBeatenText, 0, .Script
+	trainer PKMNMASTER, NOLAN, EVENT_BEAT_PKMNTRAINER_NOLAN, PKMNTrainerNolanSeenText, PKMNTrainerNolanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -25,7 +25,7 @@ TrainerPKMNTrainerNolan:
 	end
 
 TrainerPKMNTrainerDylan:
-	trainer CAL, DYLAN, EVENT_BEAT_PKMNTRAINER_DYLAN, PKMNTrainerDylanSeenText, PKMNTrainerDylanBeatenText, 0, .Script
+	trainer PKMNMASTER, DYLAN, EVENT_BEAT_PKMNTRAINER_DYLAN, PKMNTrainerDylanSeenText, PKMNTrainerDylanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -36,7 +36,7 @@ TrainerPKMNTrainerDylan:
 	end
 
 TrainerPKMNTrainerPeter:
-	trainer CAL, PETER, EVENT_BEAT_PKMNTRAINER_PETER, PKMNTrainerPeterSeenText, PKMNTrainerPeterBeatenText, 0, .Script
+	trainer PKMNMASTER, PETER, EVENT_BEAT_PKMNTRAINER_PETER, PKMNTrainerPeterSeenText, PKMNTrainerPeterBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -60,7 +60,7 @@ PKMNTrainerNolanSeenText:
 	line "to defeat us,"
 
 	para "If you want to"
-	line "face Red."
+	line "face RED."
 	cont "Let's Go!"
 	done
 
@@ -74,7 +74,7 @@ PKMNTrainerNolanAfterBattleText:
 	line "bring your best"
 
 	para "against us,"
-	line "and Red."
+	line "and RED."
 	done
 
 PKMNTrainerDylanSeenText:
@@ -96,7 +96,7 @@ PKMNTrainerDylanAfterBattleText:
 	line "Peter is next."
 
 	para "He's the final"
-	line "boss before Red."
+	line "boss before RED."
 	done
 
 PKMNTrainerPeterSeenText:
@@ -117,7 +117,7 @@ PKMNTrainerPeterAfterBattleText:
 	text "Nice battle."
 	line "You fought well."
 
-	para "You'll find Red"
+	para "You'll find RED"
 	line "inside here."
 	cont "Good luck."
 	done

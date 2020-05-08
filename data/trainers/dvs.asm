@@ -8,7 +8,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; PRYCE
 	dn  9,  8,  8,  8 ; JASMINE
 	dn  9,  8,  8,  8 ; CHUCK
-	dn  7, 12, 13, 13 ; CLAIR
+	dn 11, 12, 13, 13 ; CLAIR
 	dn 13, 13, 13, 13 ; RIVAL1
 	dn  9,  8,  8,  8 ; POKEMON_PROF
 	dn 13, 12, 13, 13 ; WILL
@@ -64,7 +64,8 @@ TrainerClassDVs:
 	dn  6,  8, 10,  8 ; TWINS
 	dn  6, 13,  8,  8 ; POKEFANF
 	dn 15, 13, 13, 14 ; RED
-	dn  9, 13, 13, 13 ; BLUE
+	dn 15, 13, 13, 13 ; BLUE
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
+	dn 13, 13, 13, 13 ; PKMNMASTER

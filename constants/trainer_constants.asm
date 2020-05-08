@@ -75,9 +75,6 @@ KRIS EQU __enum__
 	const CAL1
 	const CAL2
 	const CAL3
-	const NOLAN
-	const DYLAN
-	const PETER
 
 	trainerclass BRUNO ; d
 	const BRUNO1
@@ -702,5 +699,10 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+
+	trainerclass PKMNMASTER ; 44
+	const NOLAN
+	const DYLAN
+	const PETER
 
 NUM_TRAINER_CLASSES EQU __enum__
