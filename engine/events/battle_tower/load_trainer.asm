@@ -104,10 +104,15 @@ Function_LoadRandomBattleTowerMon:
 	ld a, [wBTChoiceOfLvlGroup]
 	cp a, 6
 	jr c, .lessthan60
-	dec a
-	ld hl, BattleTowerMons
+	sub a, 6 ; only apply larger size for those above tier 5.
+	ld hl, BattleTowerMons ; destination pointer
 	ld bc, BATTLETOWER_NUM_UNIQUE_MON_BIG * NICKNAMED_MON_STRUCT_LENGTH
 	call AddNTimes
+
+	ld a, 5 ; 1-5 are smaller
+	ld bc, BATTLETOWER_NUM_UNIQUE_MON_SMALL * NICKNAMED_MON_STRUCT_LENGTH
+	call AddNTimes
+
 	ldh a, [hRandomAdd]
 	ld b, a
 .resample_big
