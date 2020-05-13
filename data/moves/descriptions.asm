@@ -285,8 +285,8 @@ MegaPunchDescription:
 	next "thrown very hard.@"
 
 PayDayDescription:
-	db   "Throws coins. Gets"
-	next "them back later.@"
+	db   "May raise all"
+	next "the user's stats.@"
 
 FirePunchDescription:
 	db   "A fiery punch. May"
@@ -466,7 +466,7 @@ DisableDescription:
 
 AcidDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower SP DEF.@"
 
 EmberDescription:
 	db   "An attack that may"
@@ -945,8 +945,8 @@ MindReaderDescription:
 	next "attack will hit.@"
 
 NightmareDescription:
-	db   "A sleeper loses"
-	next "1/4 HP every turn.@"
+	db   "Attack enemy with"
+	next "a haunting power.@"
 
 FlameWheelDescription:
 	db   "An attack that may"
