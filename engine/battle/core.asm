@@ -6143,7 +6143,7 @@ LoadEnemyMon:
 	call BattleRandom
 	cp 2 percent
 	jr c, .super_shiny
-	ld b, $ba ; 11, 10
+	ld b, $da ; 13, 10
 	ld c, SPDSPCDV_SHINY ; 10, 10
 	jr .UpdateDVs
 .super_shiny
