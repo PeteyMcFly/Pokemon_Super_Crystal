@@ -19,7 +19,7 @@ RuinsOfAlphHoOhItemRoomRevivalHerb:
 	itemball SACRED_ASH
 
 RuinsOfAlphHoOhItemRoomCharcoal:
-	itemball PP_UP
+	itemball NN_BALL
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText
