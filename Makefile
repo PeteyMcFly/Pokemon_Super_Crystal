@@ -38,7 +38,7 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 crystal_au clean tidy compare tools
+.PHONY: all crystal crystal11 crystal_au clean tidy compare tools ips
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -49,7 +49,7 @@ crystal11: pokecrystal11.gbc
 crystal-au: pokecrystal-au.gbc
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(crystal_au_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(crystal_au_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) supercrystal.ips
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 	$(MAKE) clean -C tools/
@@ -63,6 +63,9 @@ compare: $(roms)
 
 tools:
 	$(MAKE) -C tools/
+
+ips:
+	tools/make_ips.sh
 
 
 $(crystal_obj):   RGBASMFLAGS =
