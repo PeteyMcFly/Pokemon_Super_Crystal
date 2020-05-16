@@ -6143,7 +6143,11 @@ LoadEnemyMon:
 	call BattleRandom
 	cp 2 percent
 	jr c, .super_shiny
-	ld b, $da ; 13, 10
+	call BattleRandom
+	or 1 << SHINY_ATK_BIT ; random number with shiny bit set
+	and $f0
+	or $0a ; set def to 10
+	ld b, a
 	ld c, SPDSPCDV_SHINY ; 10, 10
 	jr .UpdateDVs
 .super_shiny
