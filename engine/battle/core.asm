@@ -6139,11 +6139,14 @@ LoadEnemyMon:
 	call BattleRandom
 	cp $20
 	jr nc, .GenerateDVs
-; regular shiny
+; shiny
+	ldh a, [hSeconds] ; Get current number of seconds for MOAR ENTROPY
+	swap a
+	ld c, a
 	call BattleRandom
 	cp 2 percent
 	jr c, .super_shiny
-	call BattleRandom
+	xor c ; Modify the RNG value with the exclusive-or of the last 4 bits of timer seconds
 	or 1 << SHINY_ATK_BIT ; random number with shiny bit set
 	and $f0
 	or $0a ; set def to 10
