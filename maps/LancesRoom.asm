@@ -62,6 +62,7 @@ LancesRoomLanceScript:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	opentext
 	writetext LanceBattleAfterText
 	waitbutton
