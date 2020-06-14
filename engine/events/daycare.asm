@@ -660,7 +660,7 @@ DayCare_InitBreeding:
 	ld a, TEMPMON
 	ld [wMonType], a
 	push hl
-	farcall GetGender
+	farcall GetGender ; this is random now
 	pop hl
 	ld de, wBreedMon1DVs
 	ld bc, wBreedMon2DVs
@@ -681,20 +681,20 @@ DayCare_InitBreeding:
 	ld e, c
 
 .GotDVs:
-	ld a, [de]
+	ld a, [de] ; take parent's ATK/DEF
 	inc de
-	and $f
+	and $f ; only store DEF
 	ld b, a
-	ld a, [hl]
+	ld a, [hl] ; load random ATK/DEF
 	and $f0
-	add b
+	add b ; put in the parent's DEF
 	ld [hli], a
-	ld a, [de]
-	and $7
+	ld a, [de] ; load parent SPD/SPC
+	and $77 ; keep only the lower 3 bits of SPD and SPC
 	ld b, a
-	ld a, [hl]
-	and $f8
-	add b
+	ld a, [hl] ; load random SPD/SPC
+	and $88 ; keep highest bit of SPD and SPC
+	or b ; add lower bits from parent's SPD and SPC
 	ld [hl], a
 
 .SkipDVs:
