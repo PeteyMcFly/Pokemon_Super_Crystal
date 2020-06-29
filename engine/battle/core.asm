@@ -6856,11 +6856,13 @@ BadgeStatBoosts:
 	ret
 
 BoostStat:
-; Raise stat at hl by 1/16.
+; Raise stat at hl by 1/32.
 
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
+	srl d
+	rr e
 	srl d
 	rr e
 	srl d
