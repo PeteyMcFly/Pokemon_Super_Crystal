@@ -1,27 +1,27 @@
 TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 	;  atk,def,spd,spc
-	dn  9, 10,  7,  7 ; FALKNER
-	dn  8,  8,  8,  8 ; WHITNEY
-	dn  9,  8,  8,  8 ; BUGSY
-	dn  9,  8,  8,  8 ; MORTY
-	dn  9,  8,  8,  8 ; PRYCE
-	dn  9,  8,  8,  8 ; JASMINE
-	dn  9,  8,  8,  8 ; CHUCK
+	dn  9, 10,  8,  7 ; FALKNER
+	dn  9,  9,  9,  8 ; WHITNEY
+	dn  9,  8,  10,  8 ; BUGSY
+	dn  9,  8,  9,  9 ; MORTY
+	dn 11, 11, 11, 8 ; PRYCE
+	dn  9,  11,  8,  8 ; JASMINE
+	dn 11,  9,  8,  7 ; CHUCK
 	dn 11, 12, 13, 13 ; CLAIR
 	dn 13, 13, 13, 13 ; RIVAL1
 	dn  9,  8,  8,  8 ; POKEMON_PROF
 	dn 13, 12, 13, 13 ; WILL
 	dn 13, 12, 13, 13 ; CAL
 	dn 13, 12, 13, 13 ; BRUNO
-	dn  7, 15, 13, 15 ; KAREN
+	dn 11, 13, 13, 15 ; KAREN
 	dn 13, 12, 13, 13 ; KOGA
-	dn 13, 12, 13, 13 ; CHAMPION
-	dn  9,  8,  8,  8 ; BROCK
-	dn  7,  8,  8,  8 ; MISTY
-	dn  9,  8,  8,  8 ; LT_SURGE
+	dn 13, 13, 13, 13 ; CHAMPION
+	dn  9,  11,  8,  8 ; BROCK
+	dn  7,  8,  11,  11 ; MISTY
+	dn  9,  8,  13,  9 ; LT_SURGE
 	dn  9,  8,  8,  8 ; SCIENTIST
-	dn  7,  8,  8,  8 ; ERIKA
+	dn  7,  10,  9, 11 ; ERIKA
 	dn  9,  8,  8,  8 ; YOUNGSTER
 	dn  9,  8,  8,  8 ; SCHOOLBOY
 	dn  9,  8,  8,  8 ; BIRD_KEEPER
@@ -35,18 +35,18 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; GENTLEMAN
 	dn  9,  8,  8,  8 ; SKIER
 	dn  6,  8,  8,  8 ; TEACHER
-	dn  7, 13,  8,  7 ; SABRINA
+	dn  7, 13,  11, 11 ; SABRINA
 	dn  9,  8,  8,  8 ; BUG_CATCHER
 	dn  9,  8,  8,  8 ; FISHER
 	dn  9,  8,  8,  8 ; SWIMMERM
 	dn  7,  8,  8,  8 ; SWIMMERF
 	dn  9,  8,  8,  8 ; SAILOR
 	dn  9,  8,  8,  8 ; SUPER_NERD
-	dn  9,  8,  8,  8 ; RIVAL2
+	dn  11, 11, 11, 11 ; RIVAL2
 	dn  9,  8,  8,  8 ; GUITARIST
 	dn 10,  8,  8,  8 ; HIKER
 	dn  9,  8,  8,  8 ; BIKER
-	dn  9,  8,  8,  8 ; BLAINE
+	dn  11,  9,  11, 10 ; BLAINE
 	dn  9,  8,  8,  8 ; BURGLAR
 	dn  9,  8,  8,  8 ; FIREBREATHER
 	dn  9,  8,  8,  8 ; JUGGLER
@@ -55,7 +55,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; PSYCHIC_T
 	dn  6, 10, 10,  8 ; PICNICKER
 	dn  9,  8,  8,  8 ; CAMPER
-	dn  7, 14, 10,  8 ; EXECUTIVEF
+	dn  9, 14, 10,  8 ; EXECUTIVEF
 	dn  9,  8,  8,  8 ; SAGE
 	dn  7,  8,  8,  8 ; MEDIUM
 	dn  9,  8,  8,  8 ; BOARDER
