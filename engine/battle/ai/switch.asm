@@ -391,21 +391,15 @@ CheckAbleToSwitch:
 
 .no_perish
 	call CheckUndesirableStatus
-	jr z, .no_bad_status
-
-	ld a, [wPlayerSubStatus4]
-	bit SUBSTATUS_SUBSTITUTE, a
-	jr nz, .bad_matchup
-	; If enemy Pokemon is in a bad state, and has no super effective moves,
-	; treat it as a bad matchup, and encourage a switch
-	call EnemyMonHasSuperEffectiveMove
-	jr nz, .bad_matchup
-
-.no_bad_status
+	jr z, .not_undesirable
+	ld a, [wAISwitchedInLock]
+	and a
+	jr z, .bad_matchup
+.not_undesirable
 	call CheckBaseMatchup
 	jr c, .no_bad_matchup
-	call CheckPlayerMoveTypeMatchups
-	jr .bad_matchup
+	call EnemyMonHasSuperEffectiveMove
+	jp nz, .bad_matchup
 
 .no_bad_matchup
 	call CheckPlayerMoveTypeMatchups
@@ -479,16 +473,30 @@ CheckAbleToSwitch:
 
 .bad_matchup
 	;First look for pokemon that both resist and have super effective moves
+	call CheckPlayerMoveTypeMatchups
 	call FindAliveEnemyMons
 	call FindEnemyMonsWithAtLeastQuarterMaxHP
 	call FindEnemyMonsThatResistPlayer
-
+	call FindAliveEnemyMonsWithASuperEffectiveMove
 	ld a, e
 	cp $2
-	ret nz
-
+	jr nz, .no_se
 	ld a, [wEnemyAISwitchScore]
+
 	add $20
+	ld [wEnemySwitchMonParam], a
+	ret
+
+	;Use the index stored by the ResistPlayer function if no SE move is available
+.no_se
+	call FindSuitableReplacement
+	jr nc, .nothing
+	add $20
+	ld [wEnemySwitchMonParam], a
+	ret
+
+.nothing
+	xor a
 	ld [wEnemySwitchMonParam], a
 	ret
 
@@ -858,4 +866,99 @@ FindEnemyMonsWithAtLeastQuarterMaxHP:
 	pop bc
 	and c
 	ld c, a
+	ret
+
+FindSuitableReplacement:
+	push hl
+	push bc
+	push de
+	ld hl, wOTPartyMon1Status
+	ld de, wOTPartySpecies
+	ld c, 0
+.loop
+	ld a, [wCurOTMon] ; get current mon party index
+	cp c
+	jr z, .bad_choice ; don't pick self
+	ld a, [de]
+	cp $ff ; reached the end of the party
+	jr z, .done
+
+	; check the type matchups, reject any super-weak
+	push hl
+	ld [wCurSpecies], a
+	call GetBaseData
+	ld a, [wBattleMonType1]
+	ld hl, wBaseType
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	cp 10 + 1
+	jr nc, .bad_choice_pop
+	ld a, [wBattleMonType2]
+	ld hl, wBaseType
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE + 1
+	jr nc, .bad_choice_pop
+	pop hl
+
+	ld a, [hl] ; read status
+	and a
+	jr nz, .bad_choice
+	inc hl
+	inc hl
+	push bc
+	push de
+	ld a, [hli] ; read health lower byte
+	ld b, a ; store health
+	ld a, [hli] ; read health upper byte
+	ld c, a
+	ld a, [hli] ; read max health lower byte
+	ld d, a
+	ld a, [hld] ; read max health upper byte
+	ld e, a
+	dec hl
+	dec hl
+	dec hl
+	dec hl
+	; cut de (max hp) in eigths
+	srl d
+	rr e
+	srl d
+	rr e
+	srl d
+	rr e
+	; cut bc (hp) in quarters
+	srl b
+	rr c
+	srl b
+	rr c
+	; Now both fit in one byte! How convenient!
+	; Subtract (max hp / 8) - (current hp / 4)
+	ld a, e
+	cp c
+	pop de
+	pop bc
+	jr nc, .bad_choice ; if (current hp / 4) isn't more, it doesn't have enough HP
+	ld a, c ; output the index in register A
+	pop de
+	pop bc
+	pop hl
+	scf
+	ret
+
+.bad_choice_pop
+	pop hl
+.bad_choice
+	inc c
+	inc de
+	push de
+	ld de, PARTYMON_STRUCT_LENGTH
+	add hl, de ; jump to next mon in party
+	pop de
+	jr .loop
+.done
+	pop de
+	pop bc
+	pop hl
+	and a
 	ret

@@ -70,7 +70,7 @@ SwitchOften:
 
 	; $30
 	call Random
-	cp 24 percent
+	cp 1 percent
 	jp c, DontSwitch
 
 .switch
@@ -109,7 +109,7 @@ SwitchRarely:
 
 	; $30
 	call Random
-	cp 99 percent - 1
+	cp 89 percent - 1
 	jp c, DontSwitch
 
 .switch
@@ -147,7 +147,7 @@ SwitchSometimes:
 
 	; $30
 	call Random
-	cp 40 percent - 1
+	cp 10 percent - 1
 	jp c, DontSwitch
 
 .switch

@@ -2,6 +2,7 @@
 
 DoBattle:
 	xor a
+	ld [wAISwitchedInLock], a
 	ld [wTimesUsedSwitch], a
 	ld [wBattleParticipantsNotFainted], a
 	ld [wBattleParticipantsIncludingFainted], a
@@ -3562,7 +3563,25 @@ Function_SetEnemyMonAndSendOutAnimation:
 	predef CopyMonToTempMon
 	call GetEnemyMonFrontpic
 
+	; set flag to not switch if statused
+	push hl
+	ld a, [wEnemyMonStatus]
+	and SLP
+	jr nz, .status
+	ld a, [wEnemyMonStatus]
+	and FRZ
+	jr z, .nostatus
+	pop hl
+.status
+	ld a, 1
+	ld [wAISwitchedInLock], a
 	xor a
+	jr .status_done
+
+.nostatus
+	xor a
+	ld [wAISwitchedInLock], a
+.status_done
 	ld [wNumHits], a
 	ld [wBattleAnimParam], a
 	call SetEnemyTurn
@@ -5198,6 +5217,8 @@ TryPlayerSwitch:
 PlayerSwitch:
 	ld a, 1
 	ld [wPlayerIsSwitching], a
+	xor a
+	ld [wAISwitchedInLock], a
 	ld a, [wLinkMode]
 	and a
 	jr z, .not_linked
