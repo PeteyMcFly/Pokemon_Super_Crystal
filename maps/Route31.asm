@@ -296,20 +296,20 @@ BugCatcherWade1AfterText:
 	done
 
 Text_Route31SleepyMan:
-	text "… Hnuurg… Huh?"
+	text "You do not need"
 
-	para "I walked too far"
-	line "today looking for"
-	cont "#MON."
+	para "to wait to evolve"
+	line "a Pokemon. Any"
+	cont "evolved Pokemon"
 
-	para "My feet hurt and"
-	line "I'm sleepy…"
+	para "can now learn all"
+	line "The moves that"
 
-	para "If I were a wild"
-	line "#MON, I'd be"
-	cont "easy to catch…"
+	para "its base forms"
+	line "learn by level up."
+	cont "Feel free to"
 
-	para "…Zzzz…"
+	para "evolve early!"
 	done
 
 Text_Route31SleepyManGotMail:
@@ -392,16 +392,16 @@ Text_Route31CantTakeLastMon:
 	done
 
 Route31YoungsterText:
-	text "I found a good"
-	line "#MON in DARK"
-	cont "CAVE."
+	text "Some trainers"
+	line "can lead off with"
+	cont "a random Pokemon."
 
-	para "I'm going to raise"
-	line "it to take on"
-	cont "FALKNER."
+	para "They can lead"
+	line "with any of their"
+	cont "first 3 Pokemon!"
 
-	para "He's the leader of"
-	line "VIOLET CITY's GYM."
+	para "Be prepared for"
+	line "this when battling!"
 	done
 
 Route31SignText:
