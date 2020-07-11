@@ -315,20 +315,20 @@ Route29TeacherText:
 	done
 
 Route29FisherText:
-	text "I wanted to take a"
-	line "break, so I saved"
+	text "You never need to"
+	line "trade a Pokemon in"
 
-	para "to record my"
-	line "progress."
+	para "order to evolve it."
+	line "Neat!"
 	done
 
 ; unused
 Text_WaitingForDay:
-	text "I'm waiting for"
-	line "#MON that"
+	text "Time of day"
+	line "does not matter."
 
-	para "appear only in the"
-	line "daytime."
+	para "Pokemon can be"
+	line "found anytime!"
 	done
 
 Route29CooltrainerMText_WaitingForNight:
@@ -340,11 +340,11 @@ Route29CooltrainerMText_WaitingForNight:
 	done
 
 Route29CooltrainerMText_WaitingForMorning:
-	text "I'm waiting for"
-	line "#MON that"
+	text "Time of day"
+	line "does not matter."
 
-	para "appear only in the"
-	line "morning."
+	para "Pokemon can be"
+	line "found anytime!"
 	done
 
 MeetTuscanyText:
