@@ -347,12 +347,12 @@ AzaleaTownGrampsTextAfter:
 	done
 
 AzaleaTownTeacherText:
-	text "Did you come to"
-	line "get KURT to make"
-	cont "some BALLS?"
+	text "Gender is not"
+	line "based on ATK DV."
+	cont "So male and female"
 
-	para "A lot of people do"
-	line "just that."
+	para "Pokemon are equal"
+	line "in strength!"
 	done
 
 AzaleaTownYoungsterText:
