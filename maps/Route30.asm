@@ -349,17 +349,17 @@ Route30YoungsterText_DirectionsToMrPokemonsHouse:
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
-	text "Everyone's having"
-	line "fun battling!"
-	cont "You should too!"
+	text "Did you know?"
+	line "some Pokemon now"
+	cont "have new TYPES!"
 	done
 
 Route30CooltrainerFText:
-	text "I'm not a trainer."
+	text "POISON is now"
 
-	para "But if you look"
-	line "one in the eyes,"
-	cont "prepare to battle."
+	para "strong vs NORMAL."
+	line "WATER is now"
+	cont "weak vs ICE."
 	done
 
 Route30SignText:
