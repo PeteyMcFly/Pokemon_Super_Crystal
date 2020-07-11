@@ -3564,14 +3564,12 @@ Function_SetEnemyMonAndSendOutAnimation:
 	call GetEnemyMonFrontpic
 
 	; set flag to not switch if statused
-	push hl
 	ld a, [wEnemyMonStatus]
 	and SLP
 	jr nz, .status
 	ld a, [wEnemyMonStatus]
 	and FRZ
 	jr z, .nostatus
-	pop hl
 .status
 	ld a, 1
 	ld [wAISwitchedInLock], a
