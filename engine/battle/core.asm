@@ -36,7 +36,32 @@ DoBattle:
 	ld a, [wBattleMode]
 	dec a
 	jr z, .wild
+
+	; get the size of the enemy party
+	push bc
+	push de
+	ld c, 0
+	ld de, wOTPartySpecies
+.sizeloop
+	inc c
+	inc de
+	ld a, [de]
+	cp $ff ; reached the end of the party
+	jr nz, .sizeloop
+	ld a, c
+	pop de
+	pop bc
+
+	cp 4
+	jr c, .no_random
+	; if party size is at least 4, pick a random mon
+	; out of the first 3 to start with
+	call BattleRandom
+	and %11
+	jr .random_done
+.no_random
 	xor a
+.random_done
 	ld [wEnemySwitchMonIndex], a
 	call NewEnemyMonStatus
 	call ResetEnemyStatLevels
