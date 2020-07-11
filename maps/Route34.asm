@@ -639,12 +639,12 @@ PokefanmBrandonBeatenText:
 	done
 
 PokefanmBrandonAfterText:
-	text "My #MON knew"
-	line "moves I didn't"
-	cont "know it had."
+	text "Breeding a shiny"
+	line "#MON has a high"
+	cont "chance to make"
 
-	para "That confounded me"
-	line "to no end!"
+	para "a shiny offspring."
+	line "Try it out!"
 	done
 
 CooltrainerfIreneSeenText:
