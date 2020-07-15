@@ -72,13 +72,13 @@ NurseReturnPokemonText:
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
+	text "Good luck out"
+	line "there."
 	done
 
 ; not used
-	text "We hope to see you"
-	line "again."
+	text "Good luck out"
+	line "there."
 	done
 
 NursePokerusText:
