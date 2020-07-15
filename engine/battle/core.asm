@@ -3588,6 +3588,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	predef CopyMonToTempMon
 	call GetEnemyMonFrontpic
 
+	call ApplyStatusEffectOnEnemyStats
 	; set flag to not switch if statused
 	ld a, [wEnemyMonStatus]
 	and SLP
@@ -4033,7 +4034,7 @@ InitEnemyMon:
 	ld de, wEnemyStats
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_ATK
 	call CopyBytes
-	call ApplyStatusEffectOnEnemyStats
+	;call ApplyStatusEffectOnEnemyStats
 	ld hl, wBaseType1
 	ld de, wEnemyMonType1
 	ld a, [hli]
