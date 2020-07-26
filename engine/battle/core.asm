@@ -6179,7 +6179,7 @@ LoadEnemyMon:
 ; Force a 1/256 chance of generating a PKMN with all DVs set to 10
 .TryExtraShinyChance
 	call BattleRandom
-	cp $8
+	cp $a
 	jr nc, .GenerateDVs
 	call BattleRandom
 	cp $20
