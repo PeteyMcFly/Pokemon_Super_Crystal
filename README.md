@@ -13,6 +13,8 @@ Major changes include:
 6. Trainers and Bosses will be significantly tougher.
 7. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
 8. Male and Female Pokemon are equally strong now.
+9. Infinitely Reusable TMs
+10. HMs can be overwritten
 
 For all listed changes, please see:
 https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit#gid=442710120
