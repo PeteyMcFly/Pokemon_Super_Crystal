@@ -12,6 +12,7 @@ Major changes include:
 5. Many moves are only accessible via TM in gen 1, or through breeding. Everyone's level-up learnset is going to be altered to give them their strong egg moves, and many TMs from Gen 1 will be brought over like Swords Dance, Ice Beam, etc.
 6. Trainers and Bosses will be significantly tougher.
 7. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
+8. Male and Female Pokemon are equally strong now.
 
 For all listed changes, please see:
 https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit#gid=442710120
