@@ -103,6 +103,7 @@ TrainerType1:
 	ld [wMonType], a
 	push hl
 	predef TryAddMonToParty
+	call GetCurrentMonAndGenStats
 	pop hl
 	jr .loop
 
@@ -149,6 +150,7 @@ TrainerType2:
 	call AddNTimes
 	ld d, h
 	ld e, l
+	call GenerateLeveledStatExp
 	ld hl, MON_PP
 	add hl, de
 	push hl
@@ -205,6 +207,7 @@ TrainerType3:
 	call AddNTimes
 	ld d, h
 	ld e, l
+	call GetCurrentMonAndGenStats
 	pop hl
 	ld a, [hli]
 	ld [de], a
@@ -267,6 +270,7 @@ TrainerType4:
 	call AddNTimes
 	ld d, h
 	ld e, l
+	call GenerateLeveledStatExp
 	ld hl, MON_PP
 	add hl, de
 
@@ -380,12 +384,55 @@ CopyTrainerName:
 	pop de
 	ret
 
-Function39990:
-; This function is useless.
-	ld de, wStringBuffer1
+GenerateLeveledStatExp:
+	; takes pointer to mon struct in hl
+	; updates mon stat exp in mem
+	; 4*(mon level ^ 2)
 	push de
-	ld bc, NAME_LENGTH
+	push bc
+	push hl
+	ld de, MON_LEVEL
+	add hl, de
+	ld a, [hl]
+	pop hl
+	ld b, 0
+	ld c, a
+	push hl
+	ld hl, 0
+	call AddNTimes
+	ld b, h
+	ld c, l
+
+	add hl, bc
+	add hl, bc
+	add hl, bc
+
+	ld b, h
+	ld c, l
+	pop hl
+	push hl
+	ld de, MON_STAT_EXP
+	add hl, de
+
+rept 5
+	ld [hl], c
+	inc hl
+	ld [hl], b
+	inc hl
+endr
+
+	pop hl
+	pop bc
 	pop de
+	ret
+
+GetCurrentMonAndGenStats:
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1Species
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	call GenerateLeveledStatExp
 	ret
 
 INCLUDE "data/trainers/parties.asm"
