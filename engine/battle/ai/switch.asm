@@ -581,6 +581,20 @@ FindEnemyMonsImmuneToLastCounterMove:
 	ld [wCurSpecies], a
 	call GetBaseData
 
+	; and it isn't weak to the player mon
+	ld a, [wBattleMonType1]
+	ld hl, wBaseType
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	cp 10 + 1
+	jr nc, .next
+	ld a, [wBattleMonType2]
+	ld hl, wBaseType
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE + 1
+	jr nc, .next
+
 	; the player's last move is damaging...
 	ld a, [wLastPlayerCounterMove]
 	dec a
