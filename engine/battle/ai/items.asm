@@ -721,6 +721,7 @@ AI_Switch:
 	res SUBSTATUS_IN_LOVE, [hl]
 	farcall EnemySwitch
 	farcall ResetBattleParticipants
+	farcall SpikesDamage
 	xor a
 	ld [wBattleHasJustStarted], a
 	ld a, [wLinkMode]
