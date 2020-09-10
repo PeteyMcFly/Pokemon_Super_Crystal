@@ -150,7 +150,8 @@ TrainerType2:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	call GenerateLeveledStatExp
+	farcall GenerateLeveledStatExp
+	call RecalcStats
 	ld hl, MON_PP
 	add hl, de
 	push hl
@@ -270,7 +271,8 @@ TrainerType4:
 	call AddNTimes
 	ld d, h
 	ld e, l
-	call GenerateLeveledStatExp
+	farcall GenerateLeveledStatExp
+	call RecalcStats
 	ld hl, MON_PP
 	add hl, de
 
@@ -303,7 +305,7 @@ TrainerType4:
 .copied_pp
 
 	pop hl
-	jr .loop
+	jp .loop
 
 ComputeTrainerReward:
 	ld hl, hProduct
@@ -384,55 +386,47 @@ CopyTrainerName:
 	pop de
 	ret
 
-GenerateLeveledStatExp:
-	; takes pointer to mon struct in hl
-	; updates mon stat exp in mem
-	; 4*(mon level ^ 2)
-	push de
-	push bc
-	push hl
-	ld de, MON_LEVEL
-	add hl, de
-	ld a, [hl]
-	pop hl
-	ld b, 0
-	ld c, a
-	push hl
-	ld hl, 0
-	call AddNTimes
-	ld b, h
-	ld c, l
-
-	add hl, bc
-	add hl, bc
-	add hl, bc
-
-	ld b, h
-	ld c, l
-	pop hl
-	push hl
-	ld de, MON_STAT_EXP
-	add hl, de
-
-rept 5
-	ld [hl], c
-	inc hl
-	ld [hl], b
-	inc hl
-endr
-
-	pop hl
-	pop bc
-	pop de
-	ret
-
 GetCurrentMonAndGenStats:
+	push de
 	ld a, [wOTPartyCount]
 	dec a
 	ld hl, wOTPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	call GenerateLeveledStatExp
+	ld d, h
+	ld e, l
+	farcall GenerateLeveledStatExp
+	pop de
+	; fallthrough
+RecalcStats:
+	push de
+	; recalc stats so HP is in sync with new max HP after stat boost
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1MaxHP
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1StatExp - 1
+	call GetPartyLocation
+
+	ld b, TRUE
+	push de
+	predef CalcMonStats
+	pop hl
+
+	inc hl
+	ld c, [hl]
+	dec hl
+	ld b, [hl]
+	dec hl
+	ld [hl], c
+	dec hl
+	ld [hl], b
+	pop de
 	ret
 
 INCLUDE "data/trainers/parties.asm"
