@@ -354,11 +354,11 @@ GoldenrodCityLassText:
 	done
 
 GoldenrodCityGrampsText:
-	text "Whew! This is one"
-	line "big town. I don't"
+	text "There are new"
+	line "and rare items"
 
-	para "know where any-"
-	line "thing is."
+	para "at the Goldenrod"
+	line "Mart! Neat!"
 	done
 
 GoldenrodCityRocketScoutText1:
