@@ -1190,11 +1190,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 55000
-	bigdw 50000
-	bigdw 60000
-	bigdw 60000
+	bigdw 37000
+	bigdw 37700
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 13, 13, 15, 14 ; DVs
 	db 20, 15, 5, 5 ; PP
 	db 100 ; Happiness
@@ -1216,11 +1216,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
+	bigdw 37000
+	bigdw 37700
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 14, 13 ; DVs
 	db 15, 10, 10, 5 ; PP
 	db 100 ; Happiness
@@ -1242,11 +1242,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 55000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
+	bigdw 37000
+	bigdw 37700
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 11, 14, 15 ; DVs
 	db 15, 15, 15, 10 ; PP
 	db 100 ; Happiness
@@ -1268,11 +1268,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
+	bigdw 37000
+	bigdw 37700
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 13, 13, 13, 14 ; DVs
 	db 5, 20, 10, 10 ; PP
 	db 100 ; Happiness
@@ -1294,11 +1294,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 14, 15 ; DVs
 	db 15, 5, 15, 10 ; PP
 	db 100 ; Happiness
@@ -1320,11 +1320,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 13, 13, 15, 13 ; DVs
 	db 10, 20, 15, 20 ; PP
 	db 100 ; Happiness
@@ -1346,11 +1346,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 45000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 14, 13 ; DVs
 	db 20, 20, 5, 25 ; PP
 	db 100 ; Happiness
@@ -1372,11 +1372,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
-	bigdw 45000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 13, 13 ; DVs
 	db 5, 20, 10, 25 ; PP
 	db 100 ; Happiness
@@ -1398,11 +1398,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 40000
-	bigdw 50000
-	bigdw 45000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 13, 13, 15, 13 ; DVs
 	db 5, 15, 15, 15 ; PP
 	db 100 ; Happiness
@@ -1424,11 +1424,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 14, 15 ; DVs
 	db 10, 5, 10, 20 ; PP
 	db 100 ; Happiness
@@ -1450,11 +1450,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 40000
-	bigdw 55000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 13, 14, 13 ; DVs
 	db 15, 15, 5, 15 ; PP
 	db 100 ; Happiness
@@ -1476,11 +1476,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 11, 14, 11 ; DVs
 	db 25, 15, 10, 10 ; PP
 	db 100 ; Happiness
@@ -1502,11 +1502,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 11, 12, 13 ; DVs
 	db 10, 10, 10, 10 ; PP
 	db 100 ; Happiness
@@ -1528,11 +1528,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 10, 15, 12 ; DVs
 	db 10, 15, 15, 10 ; PP
 	db 100 ; Happiness
@@ -1554,11 +1554,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 40000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 13, 15, 14, 13 ; DVs
 	db 15, 10, 10, 20 ; PP
 	db 100 ; Happiness
@@ -1580,11 +1580,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 15, 14, 11 ; DVs
 	db 5, 10, 15, 15 ; PP
 	db 100 ; Happiness
@@ -1606,11 +1606,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 14, 15, 14 ; DVs
 	db 15, 10, 40, 5 ; PP
 	db 100 ; Happiness
@@ -1632,11 +1632,11 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
 	dn 15, 11, 15, 10 ; DVs
 	db 10, 15, 15, 10 ; PP
 	db 100 ; Happiness
@@ -1658,12 +1658,12 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 11, 7, 6, 7 ; DVs
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	dn 13, 13, 12, 12 ; DVs
 	db 10, 20, 5, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1684,12 +1684,12 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 6, 6, 5, 15 ; DVs
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	dn 13, 13, 12, 12 ; DVs
 	db 15, 5, 5, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1710,12 +1710,12 @@ BattleTowerMons6:
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 5, 7 ; DVs
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	bigdw 37500
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 10, 15, 20 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1741,7 +1741,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1767,7 +1767,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1793,7 +1793,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1819,7 +1819,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1845,7 +1845,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1871,7 +1871,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1897,7 +1897,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1923,7 +1923,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1949,7 +1949,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -1975,7 +1975,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2001,7 +2001,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2027,7 +2027,7 @@ BattleTowerMons6:
 	bigdw 37500
 	bigdw 37500
 	bigdw 37500
-	dn 12, 12, 12, 12 ; DVs
+	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2050,11 +2050,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 56000
-	bigdw 55000
-	bigdw 50000
-	bigdw 60000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 15, 11, 14, 15 ; DVs
 	db 15, 5, 15, 20 ; PP
 	db 100 ; Happiness
@@ -2076,11 +2076,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 60000
-	bigdw 60000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 11, 15, 14, 15 ; DVs
 	db 5, 15, 15, 10 ; PP
 	db 100 ; Happiness
@@ -2102,11 +2102,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 54000
-	bigdw 60000
-	bigdw 55000
-	bigdw 50000
-	bigdw 58000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 13, 13, 13, 13 ; DVs
 	db 20, 5, 10, 10 ; PP
 	db 100 ; Happiness
@@ -2128,11 +2128,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 55000
-	bigdw 55000
-	bigdw 58000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 13, 15, 14, 13 ; DVs
 	db 20, 10, 15, 15 ; PP
 	db 100 ; Happiness
@@ -2154,11 +2154,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 13, 13, 13, 13 ; DVs
 	db 10, 10, 5, 15 ; PP
 	db 100 ; Happiness
@@ -2180,11 +2180,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 58000
-	bigdw 50000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 13, 13, 12, 13 ; DVs
 	db 15, 15, 20, 20 ; PP
 	db 100 ; Happiness
@@ -2206,10 +2206,10 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 50000
 	bigdw 45000
 	bigdw 45000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
 	bigdw 45000
 	dn 13, 11, 13, 15 ; DVs
 	db 10, 15, 10, 5 ; PP
@@ -2233,8 +2233,8 @@ BattleTowerMons7:
 	dt 343000 ; Exp
 	; Stat exp
 	bigdw 45000
-	bigdw 50000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
 	bigdw 45000
 	bigdw 45000
 	dn 13, 11, 13, 15 ; DVs
@@ -2259,9 +2259,9 @@ BattleTowerMons7:
 	dt 343000 ; Exp
 	; Stat exp
 	bigdw 45000
-	bigdw 50000
-	bigdw 40000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	bigdw 45000
 	dn 13, 13, 14, 13 ; DVs
 	db 10, 5, 10, 5 ; PP
@@ -2440,11 +2440,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 15, 14, 15, 13 ; DVs
 	db 30, 40, 15, 10 ; PP
 	db 100 ; Happiness
@@ -2466,11 +2466,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 15, 14, 15, 14 ; DVs
 	db 15, 10, 15, 5 ; PP
 	db 100 ; Happiness
@@ -2492,11 +2492,11 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
 	dn 15, 7, 15, 10 ; DVs
 	db 15, 10, 10, 10 ; PP
 	db 100 ; Happiness
@@ -2518,12 +2518,12 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 12, 12, 12, 4 ; DVs
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 10, 5, 5 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2544,12 +2544,12 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 5, 6, 4, 4 ; DVs
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	dn 13, 13, 12, 12 ; DVs
 	db 20, 10, 5, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2570,12 +2570,12 @@ BattleTowerMons7:
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 6, 4 ; DVs
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	bigdw 45000
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 15, 5, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -2910,11 +2910,11 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
-	bigdw 55000
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
 	dn 15, 13, 14, 11 ; DVs
 	db 20, 15, 15, 20 ; PP
 	db 100 ; Happiness
@@ -2936,11 +2936,11 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 55000
-	bigdw 50000
-	bigdw 55500
-	bigdw 60000
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
 	dn 13, 11, 14, 13 ; DVs
 	db 10, 10, 15, 10 ; PP
 	db 100 ; Happiness
@@ -2988,11 +2988,11 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 30000
-	bigdw 50000
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
 	dn 15, 13, 13, 14 ; DVs
 	db 10, 15, 15, 5 ; PP
 	db 100 ; Happiness
@@ -3378,12 +3378,12 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 6, 5, 6, 5 ; DVs
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 10, 5, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -3404,12 +3404,12 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 4, 6, 4 ; DVs
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 25, 15, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -3430,12 +3430,12 @@ BattleTowerMons8:
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 5, 7 ; DVs
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	bigdw 49500
+	dn 13, 13, 12, 12 ; DVs
 	db 20, 15, 5, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -3771,11 +3771,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 60000
-	bigdw 55000
-	bigdw 60000
-	bigdw 55000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 13, 14, 13 ; DVs
 	db 20, 10, 5, 10 ; PP
 	db 100 ; Happiness
@@ -3849,11 +3849,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 11, 13, 15 ; DVs
 	db 5, 5, 15, 15 ; PP
 	db 100 ; Happiness
@@ -3875,11 +3875,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 13, 12, 15 ; DVs
 	db 35, 30, 5, 5 ; PP
 	db 100 ; Happiness
@@ -3901,11 +3901,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 13, 14, 13 ; DVs
 	db 10, 10, 20, 10 ; PP
 	db 100 ; Happiness
@@ -3927,11 +3927,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
-	bigdw 45000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 15, 13, 14 ; DVs
 	db 20, 15, 5, 5 ; PP
 	db 100 ; Happiness
@@ -3953,11 +3953,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 15, 13, 14 ; DVs
 	db 5, 15, 10, 10 ; PP
 	db 100 ; Happiness
@@ -3979,11 +3979,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 11, 13, 14, 15 ; DVs
 	db 10, 15, 15, 10 ; PP
 	db 100 ; Happiness
@@ -4005,11 +4005,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 13, 15, 14 ; DVs
 	db 10, 15, 5, 5 ; PP
 	db 100 ; Happiness
@@ -4057,11 +4057,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 14, 15, 13 ; DVs
 	db 5, 15, 10, 5 ; PP
 	db 100 ; Happiness
@@ -4083,11 +4083,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 45000
-	bigdw 55000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 15, 13, 14 ; DVs
 	db 5, 15, 5, 10 ; PP
 	db 100 ; Happiness
@@ -4109,11 +4109,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 11, 13, 15, 14 ; DVs
 	db 10, 5, 10, 5 ; PP
 	db 100 ; Happiness
@@ -4135,11 +4135,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 40000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 13, 11, 15, 14 ; DVs
 	db 15, 15, 5, 10 ; PP
 	db 100 ; Happiness
@@ -4161,11 +4161,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 14, 15, 15, 7 ; DVs
 	db 10, 25, 10, 20 ; PP
 	db 255 ; Happiness
@@ -4187,11 +4187,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 14, 15, 14 ; DVs
 	db 10, 20, 10, 5 ; PP
 	db 100 ; Happiness
@@ -4213,11 +4213,11 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
 	dn 15, 7, 15, 7 ; DVs
 	db 5, 15, 15, 20 ; PP
 	db 100 ; Happiness
@@ -4239,12 +4239,12 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 4, 7, 5, 7 ; DVs
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	dn 13, 13, 12, 12 ; DVs
 	db 10, 10, 15, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -4265,12 +4265,12 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 6, 5, 7, 6 ; DVs
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	dn 13, 13, 12, 12 ; DVs
 	db 15, 5, 15, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -4291,12 +4291,12 @@ BattleTowerMons9:
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 5, 4, 4, 4 ; DVs
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	bigdw 54000
+	dn 13, 13, 12, 12 ; DVs
 	db 10, 10, 15, 5 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -4631,11 +4631,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 14, 13 ; DVs
 	db 15, 15, 20, 10 ; PP
 	db 100 ; Happiness
@@ -4657,11 +4657,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 14, 15 ; DVs
 	db 5, 10, 5, 10 ; PP
 	db 100 ; Happiness
@@ -4683,11 +4683,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
-	bigdw 60000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 15, 15, 14 ; DVs
 	db 15, 20, 10, 10 ; PP
 	db 100 ; Happiness
@@ -4709,11 +4709,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 30000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 15, 14 ; DVs
 	db 15, 20, 20, 15 ; PP
 	db 100 ; Happiness
@@ -4735,11 +4735,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 14, 15 ; DVs
 	db 5, 10, 15, 15 ; PP
 	db 100 ; Happiness
@@ -4761,11 +4761,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 14, 15 ; DVs
 	db 15, 5, 15, 5 ; PP
 	db 100 ; Happiness
@@ -4787,11 +4787,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 55000
-	bigdw 55000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 14, 13, 15 ; DVs
 	db 15, 10, 20, 15 ; PP
 	db 100 ; Happiness
@@ -4813,11 +4813,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
-	bigdw 45000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 11, 14, 15 ; DVs
 	db 20, 15, 5, 20 ; PP
 	db 100 ; Happiness
@@ -4839,11 +4839,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
-	bigdw 45000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 14, 15 ; DVs
 	db 15, 10, 5, 10 ; PP
 	db 100 ; Happiness
@@ -4865,11 +4865,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 60000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 13, 14 ; DVs
 	db 10, 5, 15, 15 ; PP
 	db 100 ; Happiness
@@ -4891,11 +4891,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 55000
-	bigdw 50000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 12, 15 ; DVs
 	db 20, 25, 5, 10 ; PP
 	db 100 ; Happiness
@@ -4917,11 +4917,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 45000
-	bigdw 50000
-	bigdw 55000
-	bigdw 50000
-	bigdw 55000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 11, 13, 14, 15 ; DVs
 	db 5, 5, 20, 15 ; PP
 	db 100 ; Happiness
@@ -4943,11 +4943,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 48000
-	bigdw 45000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 13, 14, 15 ; DVs
 	db 20, 5, 15, 20 ; PP
 	db 100 ; Happiness
@@ -4969,11 +4969,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 45000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 11, 15, 14 ; DVs
 	db 25, 5, 20, 10 ; PP
 	db 100 ; Happiness
@@ -4995,11 +4995,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 40000
-	bigdw 50000
-	bigdw 30000
-	bigdw 30000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 15, 14 ; DVs
 	db 15, 5, 5, 10 ; PP
 	db 100 ; Happiness
@@ -5021,11 +5021,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 14, 15, 7 ; DVs
 	db 10, 5, 5, 10 ; PP
 	db 100 ; Happiness
@@ -5047,11 +5047,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 14, 15, 14 ; DVs
 	db 10, 10, 5, 5 ; PP
 	db 100 ; Happiness
@@ -5073,11 +5073,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 15, 11, 14, 7 ; DVs
 	db 15, 5, 5, 10 ; PP
 	db 100 ; Happiness
@@ -5099,12 +5099,12 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 4, 4, 6 ; DVs
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	dn 13, 13, 12, 12 ; DVs
 	db 5, 10, 10, 5 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -5125,12 +5125,12 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 6, 7, 7, 6 ; DVs
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	dn 13, 13, 12, 12 ; DVs
 	db 20, 15, 15, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -5151,12 +5151,12 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 5, 7 ; DVs
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	dn 13, 13, 12, 12 ; DVs
 	db 15, 5, 5, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -5177,12 +5177,12 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 5, 7 ; DVs
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	dn 13, 13, 12, 12 ; DVs
 	db 15, 5, 5, 10 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
@@ -5203,11 +5203,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5229,11 +5229,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5255,11 +5255,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5281,11 +5281,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5307,11 +5307,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5333,11 +5333,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5359,11 +5359,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5385,11 +5385,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5411,11 +5411,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5437,11 +5437,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5463,11 +5463,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
@@ -5489,11 +5489,11 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
-	bigdw 58500
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
+	bigdw 63000
 	dn 13, 13, 12, 12 ; DVs
 	db 11, 11, 11, 11 ; PP
 	db 100 ; Happiness
