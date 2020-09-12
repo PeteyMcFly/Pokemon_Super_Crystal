@@ -149,19 +149,13 @@ CeladonCityYoungster2Text:
 
 CeladonCityTeacher2Text:
 	text "CELADON DEPT.STORE"
-	line "has the biggest"
+	line "has a bunch of"
 
-	para "and best selection"
-	line "of merchandise."
+	para "rare and powerful"
+	line "items for sale."
 
-	para "If you can't get"
-	line "it there, you"
-
-	para "can't get it any-"
-	line "where."
-
-	para "Gee… I sound like"
-	line "a sales clerk."
+	para "You should really"
+	line "check it out!"
 	done
 
 CeladonCityLassText_Mobile:
