@@ -429,14 +429,17 @@ Text_BattleTowerIntroduction_2:
 	line "facility made for"
 	cont "#MON battles."
 
-	para "Countless #MON"
-	line "trainers gather"
+	para "Lvl 10 - 50"
+	line "brackets are"
+	cont "just warmups."
 
-	para "from all over to"
-	line "hold battles in"
+	para "Lvl 60 - 100"
+	line "brackets are"
+	cont "the real deal."
 
-	para "specially designed"
-	line "BATTLE ROOMS."
+	para "However, you must"
+	line "Defeat the Elite 4"
+	cont "to unlock them."
 
 	para "There are many"
 	line "BATTLE ROOMS in"
@@ -595,10 +598,10 @@ Text_ReadBattleTowerRules:
 	done
 
 Text_BattleTowerRules:
-	text "Three #MON may"
+	text "Six #MON may"
 	line "enter battles."
 
-	para "All three must be"
+	para "All Six must be"
 	line "different."
 
 	para "The items they"
