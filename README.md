@@ -10,11 +10,12 @@ Major changes include:
 3. No need to trade to evolve
 4. Pokemon available earlier on in a playthrough. All Pokemon except legendaries can be obtained before the Elite 4.
 5. Many moves are only accessible via TM in gen 1, or through breeding. Everyone's level-up learnset is going to be altered to give them their strong egg moves, and many TMs from Gen 1 will be brought over like Swords Dance, Ice Beam, etc.
-6. Trainers and Bosses will be significantly tougher.
-7. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
-8. Male and Female Pokemon are equally strong now.
-9. Infinitely Reusable TMs
-10. HMs can be overwritten
+6. You no longer need to wait to evolve a pokemon to learn a certain move. ALL evolved pokemon can learn the same moves that their pre-evolutions can learn.
+7. Trainers and Bosses will be significantly tougher.
+8. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
+9. Male and Female Pokemon are equally strong now.
+10. Infinitely Reusable TMs
+11. HMs can be overwritten
 
 For all listed changes, please see:
 https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit#gid=442710120
