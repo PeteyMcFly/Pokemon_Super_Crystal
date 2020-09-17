@@ -3380,7 +3380,7 @@ SageGroup:
 	db "EDMOND@", TRAINERTYPE_NORMAL
 	db 4, BELLSPROUT
 	db 4, BELLSPROUT
-	db 14, FEAROW
+	db 11, FEAROW
 	db -1 ; end
 	
 	; SAGE (8)
