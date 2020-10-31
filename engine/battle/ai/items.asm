@@ -16,7 +16,7 @@ AI_SwitchOrTryItem:
 	and a
 	jr z, .not_player_switch
 	call BattleRandom
-	cp 75 percent
+	cp 85 percent
 	jr c, DontSwitch
 .not_player_switch
 
@@ -63,7 +63,7 @@ SwitchOften:
 	cp $10
 	jr nz, .not_10
 	call Random
-	cp 70 percent + 1
+	cp 60 percent + 1
 	jr c, .switch
 	jp DontSwitch
 .not_10
@@ -71,14 +71,14 @@ SwitchOften:
 	cp $20
 	jr nz, .not_20
 	call Random
-	cp 99 percent - 1
+	cp 89 percent - 1
 	jr c, .switch
 	jp DontSwitch
 .not_20
 
 	; $30
 	call Random
-	cp 1 percent
+	cp 2 percent
 	jp c, DontSwitch
 
 .switch
@@ -102,7 +102,7 @@ SwitchRarely:
 	cp $10
 	jr nz, .not_10
 	call Random
-	cp 28 percent
+	cp 15 percent
 	jr c, .switch
 	jp DontSwitch
 .not_10
@@ -110,7 +110,7 @@ SwitchRarely:
 	cp $20
 	jr nz, .not_20
 	call Random
-	cp 32 percent
+	cp 30 percent
 	jr c, .switch
 	jp DontSwitch
 .not_20
@@ -140,7 +140,7 @@ SwitchSometimes:
 	cp $10
 	jr nz, .not_10
 	call Random
-	cp 40 percent - 1
+	cp 30 percent - 1
 	jr c, .switch
 	jp DontSwitch
 .not_10
@@ -148,7 +148,7 @@ SwitchSometimes:
 	cp $20
 	jr nz, .not_20
 	call Random
-	cp 70 percent + 1
+	cp 60 percent + 1
 	jr c, .switch
 	jp DontSwitch
 .not_20
