@@ -6119,7 +6119,7 @@ LoadEnemyMon:
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6205,10 +6205,35 @@ LoadEnemyMon:
 
 .GenerateDVs:
 ; Generate new random DVs
+	push de
+.retryDVs
 	call BattleRandom
 	ld b, a
+	and $0f
+	jr z, .retryDVs
+	ld d, a
+	ld a, b
+	and $f0
+	jr z, .retryDVs
+	swap a
+	add d
+	ld d, a
+
+.retrySecondDVs
 	call BattleRandom
 	ld c, a
+	and $0f
+	jr z, .retrySecondDVs
+	add d
+	ld d, a
+	ld a, c
+	and $f0
+	jr z, .retryDVs
+	swap a
+	add d
+	cp 21
+	jr c, .retryDVs
+	pop de
 
 .UpdateDVs:
 ; Input DVs in register bc
@@ -6292,7 +6317,7 @@ LoadEnemyMon:
 ; Try again if length < 1024 mm (i.e. if HIGH(length) < 3 feet)
 	ld a, [wMagikarpLength]
 	cp HIGH(1024) ; should be "cp 3", since 1024 mm = 3'4", but HIGH(1024) = 4
-	jr c, .GenerateDVs ; try again
+	jp c, .GenerateDVs ; try again
 
 ; Finally done with DVs
 

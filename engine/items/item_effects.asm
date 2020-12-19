@@ -703,6 +703,7 @@ PokeBallEffect:
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
+	dbw POKE_BALL,   PokeBallMultiplier
 	dbw ULTRA_BALL,  UltraBallMultiplier
 	dbw GREAT_BALL,  GreatBallMultiplier
 	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
@@ -717,21 +718,32 @@ BallMultiplierFunctionTable:
 	dbw EN_BALL,     EightyNineBallMultiplier
 	db -1 ; end
 
-UltraBallMultiplier:
-; multiply catch rate by 2
-	sla b
+PokeBallMultiplier:
+; multiply catch rate by 1.5
+	ld a, b
+	srl a
+	add b
+	ld b, a
 	ret nc
+	ld b, $ff
+	ret
+
+UltraBallMultiplier:
+; multiply catch rate by 3
+	ld a, b
+	sla b
+	jr c, .overflow
+	add b
+	ret nc
+.overflow
 	ld b, $ff
 	ret
 
 SafariBallMultiplier:
 GreatBallMultiplier:
 ParkBallMultiplier:
-; multiply catch rate by 1.5
-	ld a, b
-	srl a
-	add b
-	ld b, a
+; multiply catch rate by 2
+	sla b
 	ret nc
 	ld b, $ff
 	ret
