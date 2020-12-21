@@ -1,4 +1,15 @@
-# Pokémon Super Crystal: 
+# How To Play
+You will need a Pokemon Crystal rom (.gbc file). Please support the official release of pokemon and buy Pokemon Crystal. We can distribute the IPS patch for **Pokemon Super Crystal**, but not the rom.
+
+1. Download the ips patch for **Pokemon Super Crystal** here: https://github.com/peterjtalen/Pokemon_Super_Crystal/releases/tag/rc1 An IPS patch is a set of instructions on how to alter a rom file from its base form to the hacked form.
+2. Download WinRAR.
+3. Download Lunar IPS. This is an application that will take the **Pokemon Super Crystal** IPS file and use it to change a vanilla Pokemon Crystal rom into **Pokemon Super Crystal**.
+4. Open and run Lunar IPS and click 'Apply Patch'
+5. Select the supercrystal.ips file
+6. Select the Pokemon Crystal rom (.gbc file)
+7. Your Pokemon Crystal rom is now patched to be a **Pokemon Super Crystal**  Rom. Load Pokemon Super Crystal with your emulator of choice (we recommend bgb). Enjoy!
+
+# Pokémon Super Crystal Overview: 
 For a complete description of the game and a list of changes, please visit:
 https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit?usp=sharing
 
