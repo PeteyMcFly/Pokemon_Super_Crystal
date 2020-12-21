@@ -798,6 +798,7 @@ HeavyBallMultiplier:
 ; else add 20 to catch rate if weight < 307.2 kg
 ; else add 30 to catch rate if weight < 409.6 kg
 ; else add 40 to catch rate (never happens)
+; PSC adds an extra 10 to all heavy cases
 	ld a, [wEnemyMonSpecies]
 	ld hl, PokedexDataPointerTable
 	dec a
@@ -888,26 +889,23 @@ endr
 .WeightsTable:
 ; weight factor, boost
 	db HIGH(2048),   0
-	db HIGH(3072),  20
-	db HIGH(4096),  30
+	db HIGH(3072),  30
+	db HIGH(4096),  40
 	db HIGH(65280), 40
 
 LureBallMultiplier:
-; multiply catch rate by 3 if this is a fishing rod battle
+; multiply catch rate by 4 if this is a fishing rod battle
 	ld a, [wBattleType]
 	cp BATTLETYPE_FISH
 	ret nz
 
-	ld a, b
-	add a
+	sla b
 	jr c, .max
 
-	add b
-	jr nc, .done
+	sla b
+	ret nc
 .max
-	ld a, $ff
-.done
-	ld b, a
+	ld b, $ff
 	ret
 
 MoonBallMultiplier:
