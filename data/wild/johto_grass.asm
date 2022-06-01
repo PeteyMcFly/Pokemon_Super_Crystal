@@ -574,7 +574,7 @@ JohtoGrassWildMons:
 	; morn
 	db 14, SLUGMA
 	db 13, MANKEY
-	db 14, MACHOP
+	db 14, CUBONE
 	db 13, CLEFAIRY
 	db 14, GEODUDE
 	db 16, TEDDIURSA
@@ -600,7 +600,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, SWINUB
-	db 13, MANKEY
+	db 13, CUBONE
 	db 14, MACHOP
 	db 13, CLEFAIRY
 	db 14, GEODUDE
@@ -626,7 +626,7 @@ JohtoGrassWildMons:
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 31, GRAVELER
+	db 31, MAROWAK
 	db 32, MACHOKE
 	db 31, CLEFAIRY
 	db 30, RATICATE
@@ -645,9 +645,9 @@ JohtoGrassWildMons:
 	db 31, GRAVELER
 	db 32, MACHOKE
 	db 31, CLEFAIRY
-	db 30, RATICATE
-	db 18, OMANYTE
-	db 20, KABUTO
+	db 30, SNEASEL
+	db 18, KABUTO
+	db 20, OMANYTE
 	db 17, LARVITAR
 
 	map_id MOUNT_MORTAR_B1F
@@ -658,7 +658,7 @@ JohtoGrassWildMons:
 	db 17, SWINUB
 	db 16, MACHOP
 	db 16, KABUTO
-	db 12, LARVITAR
+	db 12, OMANYTE
 	db 12, LARVITAR
 	; day
 	db 15, ZUBAT
@@ -740,7 +740,7 @@ JohtoGrassWildMons:
 	db 23, SWINUB
 	db 24, SNEASEL
 	db 22, JYNX
-	db 22, JYNX
+	db 20, LAPRAS
 	; day
 	db 21, SWINUB
 	db 22, SEEL
@@ -783,7 +783,7 @@ JohtoGrassWildMons:
 	db 23, SWINUB
 	db 24, SNEASEL
 	db 22, JYNX
-	db 22, JYNX
+	db 20, LAPRAS
 
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1141,11 +1141,11 @@ JohtoGrassWildMons:
 	; morn
 	db 3, GEODUDE
 	db 4, DUNSPARCE
-	db 4, MACHOP
+	db 4, CUBONE
 	db 4, DROWZEE
 	db 6, MURKROW
 	db 4, HOUNDOUR
-	db 4, HOUNDOUR
+	db 5, SNEASEL
 	; day
 	db 3, GEODUDE
 	db 4, DUNSPARCE
@@ -1153,15 +1153,15 @@ JohtoGrassWildMons:
 	db 4, DROWZEE
 	db 6, MURKROW
 	db 4, HOUNDOUR
-	db 4, HOUNDOUR
+	db 5, SNEASEL
 	; nite
 	db 3, GEODUDE
-	db 4, DUNSPARCE
+	db 4, HOUNDOUR
 	db 4, MACHOP
 	db 4, DROWZEE
 	db 6, MURKROW
-	db 4, HOUNDOUR
-	db 4, HOUNDOUR
+	db 5, SNEASEL
+	db 6, SNEASEL
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
