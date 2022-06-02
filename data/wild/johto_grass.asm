@@ -1195,7 +1195,7 @@ JohtoGrassWildMons:
 	; morn
 	db 2, PIDGEY
 	db 3, SENTRET
-	db 3, JIGGLYPUFF
+	db 3, VENONAT
 	db 3, MARILL
 	db 2, SUNKERN
 	db 5, HOOTHOOT
@@ -1212,7 +1212,7 @@ JohtoGrassWildMons:
 	db 2, PIDGEY
 	db 3, SENTRET
 	db 3, JIGGLYPUFF
-	db 3, MARILL
+	db 3, WEEDLE
 	db 2, SUNKERN
 	db 5, HOOTHOOT
 	db 3, EXEGGCUTE
@@ -1226,7 +1226,7 @@ JohtoGrassWildMons:
 	db 4, MARILL
 	db 3, ABRA
 	db 4, EXEGGCUTE
-	db 4, EXEGGCUTE
+	db 4, DODUO
 	; day
 	db 5, LEDYBA
 	db 5, CATERPIE
@@ -1242,7 +1242,7 @@ JohtoGrassWildMons:
 	db 4, MARILL
 	db 3, ABRA
 	db 4, EXEGGCUTE
-	db 4, EXEGGCUTE
+	db 4, CLEFFA
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1257,7 +1257,7 @@ JohtoGrassWildMons:
 	; day
 	db 5, SPINARAK
 	db 4, GROWLITHE
-	db 5, MANKEY
+	db 5, WEEDLE
 	db 5, MARILL
 	db 3, JIGGLYPUFF
 	db 4, ABRA
@@ -1266,7 +1266,7 @@ JohtoGrassWildMons:
 	db 5, SPINARAK
 	db 4, GROWLITHE
 	db 5, MANKEY
-	db 5, MARILL
+	db 5, WEEDLE
 	db 3, JIGGLYPUFF
 	db 4, ABRA
 	db 4, EXEGGCUTE
@@ -1280,7 +1280,7 @@ JohtoGrassWildMons:
 	db 6, WOOPER
 	db 7, MEOWTH
 	db 7, ELEKID
-	db 7, ELEKID
+	db 7, MAGBY
 	; day
 	db 7, EKANS
 	db 6, MAREEP
@@ -1296,31 +1296,31 @@ JohtoGrassWildMons:
 	db 6, WOOPER
 	db 7, MEOWTH
 	db 7, ELEKID
-	db 7, ELEKID
+	db 9, SCYTHER
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 7, GROWLITHE
 	db 7, SPEAROW
-	db 7, EXEGGCUTE
-	db 7, MANKEY
+	db 7, NIDORAN_F
+	db 7, NIDORAN_M
 	db 7, EKANS
 	db 7, HOPPIP
 	db 7, DITTO
 	; day
 	db 7, GROWLITHE
 	db 7, SPEAROW
-	db 7, EXEGGCUTE
-	db 7, MANKEY
+	db 7, NIDORAN_M
+	db 7, NIDORAN_F
 	db 7, EKANS
 	db 7, HOPPIP
 	db 7, DITTO
 	; nite
 	db 7, GROWLITHE
 	db 7, SPEAROW
-	db 7, EXEGGCUTE
-	db 7, MANKEY
+	db 7, NIDORAN_M
+	db 7, NIDORAN_F
 	db 7, EKANS
 	db 7, HOPPIP
 	db 7, DITTO
@@ -1334,7 +1334,7 @@ JohtoGrassWildMons:
 	db 12, KRABBY
 	db 12, MANKEY
 	db 10, PONYTA
-	db 11, PONYTA
+	db 11, PORYGON
 	; day
 	db 12, SNUBBULL
 	db 12, DROWZEE
@@ -1350,7 +1350,7 @@ JohtoGrassWildMons:
 	db 12, KRABBY
 	db 12, MANKEY
 	db 10, PONYTA
-	db 11, PONYTA
+	db 11, PORYGON
 
 	map_id ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

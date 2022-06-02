@@ -5,7 +5,7 @@ JohtoWaterWildMons:
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 2 percent ; encounter rate
 	db 15, WOOPER
-	db 20, HORSEA
+	db 20, REMORAID
 	db 15, QUAGSIRE
 
 	map_id UNION_CAVE_1F
@@ -47,19 +47,19 @@ JohtoWaterWildMons:
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
 	db 15, GOLDEEN
-	db 20, MARILL
+	db 20, REMORAID
 	db 20, SEAKING
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
 	db 20, GOLDEEN
-	db 25, MARILL
+	db 25, REMORAID
 	db 25, SEAKING
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
 	db 15, GOLDEEN
-	db 20, MARILL
+	db 20, REMORAID
 	db 20, SEAKING
 
 	map_id WHIRL_ISLAND_SW
@@ -70,33 +70,33 @@ JohtoWaterWildMons:
 
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
-	db 15, HORSEA
+	db 15, REMORAID
 	db 20, HORSEA
 	db 20, TENTACRUEL
 
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 4 percent ; encounter rate
-	db 20, HORSEA
-	db 20, TENTACRUEL
+	db 20, DRATINI
 	db 20, SEADRA
+	db 30, FERALIGATR
 
 	map_id SILVER_CAVE_ROOM_2
 	db 2 percent ; encounter rate
-	db 35, SEAKING
-	db 35, GOLDUCK
-	db 35, GOLDEEN
+	db 35, SEADRA
+	db 35, DRAGONAIR
+	db 35, BLASTOISE
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 2 percent ; encounter rate
 	db 15, MAGIKARP
-	db 10, MAGIKARP
-	db 5, MAGIKARP
+	db 10, HORSEA
+	db 5, TENTACOOL
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 2 percent ; encounter rate
-	db 15, MAGIKARP
-	db 10, MAGIKARP
-	db 5, MAGIKARP
+	db 15, HORSEA
+	db 10, TENTACOOL
+	db 5, DRATINI
 
 	map_id DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
@@ -124,7 +124,7 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_32
 	db 6 percent ; encounter rate
-	db 15, TENTACOOL
+	db 15, CORSOLA
 	db 20, QUAGSIRE
 	db 20, TENTACRUEL
 
@@ -155,7 +155,7 @@ JohtoWaterWildMons:
 	map_id ROUTE_42
 	db 4 percent ; encounter rate
 	db 20, QWILFISH
-	db 15, GOLDEEN
+	db 15, HORSEA
 	db 20, SEAKING
 
 	map_id ROUTE_43
@@ -172,7 +172,7 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_45
 	db 2 percent ; encounter rate
-	db 20, MAGIKARP
+	db 20, REMORAID
 	db 15, KRABBY
 	db 20, SEADRA
 
@@ -202,7 +202,7 @@ JohtoWaterWildMons:
 
 	map_id OLIVINE_CITY
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, REMORAID
 	db 15, MARILL
 	db 20, TENTACRUEL
 
