@@ -740,7 +740,7 @@ JohtoGrassWildMons:
 	db 23, SWINUB
 	db 24, SNEASEL
 	db 22, JYNX
-	db 20, LAPRAS
+	db 20, PILOSWINE
 	; day
 	db 21, SWINUB
 	db 22, SEEL
@@ -783,7 +783,7 @@ JohtoGrassWildMons:
 	db 23, SWINUB
 	db 24, SNEASEL
 	db 22, JYNX
-	db 20, LAPRAS
+	db 20, PILOSWINE
 
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
