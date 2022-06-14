@@ -334,13 +334,9 @@ CherrygroveCity_RivalExitsStageLeft:
 	step_end
 
 GuideGentIntroText:
-	text "You're a rookie"
-	line "trainer, aren't"
-	cont "you? I can tell!"
-
-	para "That's OK! Every-"
-	line "one is a rookie"
-	cont "at some point!"
+	text "PLEASE READ THIS!"
+	line "do you want tips"
+	cont "about this game?"
 
 	para "If you'd like, I"
 	line "can teach you a"
@@ -353,48 +349,66 @@ GuideGentTourText1:
 	done
 
 GuideGentPokecenterText:
-	text "This is a #MON"
-	line "CENTER. They heal"
+	text "In Super Crystal"
+	line "you can catch"
+	cont "every #MON."
 
-	para "your #MON in no"
-	line "time at all."
+	para "You don't need to"
+	line "trade to evolve or"
+	cont "from other games"
 
-	para "You'll be relying"
-	line "on them a lot, so"
+	para "in order to catch"
+	line "em all."
 
-	para "you better learn"
-	line "about them."
+	para "You must explore,"
+	line "because there are"
+	cont "new #MON everywhere"
 	done
 
 GuideGentMartText:
-	text "This is a #MON"
-	line "MART."
+	text "Many MARTS have"
+	line "new items."
 
-	para "They sell BALLS"
-	line "for catching wild"
+	para "Celadon Mart in"
+	line "Kanto is said to"
+	cont "sell many rare ones."
 
-	para "#MON and other"
-	line "useful items."
+	para "Items on the"
+	line "ground are better"
+	cont "now as well."
 	done
 
 GuideGentRoute30Text:
-	text "ROUTE 30 is out"
-	line "this way."
+	text "Some #MON"
+	line "have new types."
 
-	para "Trainers will be"
-	line "battling their"
+	para "Many moves have"
+	line "been buffed or"
+	cont "improved."
 
-	para "prized #MON"
-	line "there."
+
+	para "You should look"
+	line "at moves in the"
+	
+	para "#MON menu to learn"
+	line "about the changes!"
 	done
 
 GuideGentSeaText:
-	text "This is the sea,"
-	line "as you can see."
+	text "This game is much"
+	line "harder than the"
+	cont "the original."
 
-	para "Some #MON are"
-	line "found only in"
-	cont "water."
+	para "Gym Leaders and"
+	line "other bosses have"
+	cont "much stronger teams,"
+
+	para "and behave more"
+	cont "intelligently."
+
+	para "Only true #MON"
+	line "masters can beat"
+	cont "this game."
 	done
 
 GuideGentGiftText:
