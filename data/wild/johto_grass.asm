@@ -1307,7 +1307,7 @@ JohtoGrassWildMons:
 	db 7, NIDORAN_M
 	db 7, EKANS
 	db 7, HOPPIP
-	db 7, DITTO
+	db 7, MR__MIME
 	; day
 	db 7, GROWLITHE
 	db 7, SPEAROW
@@ -1315,15 +1315,15 @@ JohtoGrassWildMons:
 	db 7, NIDORAN_F
 	db 7, EKANS
 	db 7, HOPPIP
-	db 7, DITTO
+	db 7, MR__MIME
 	; nite
 	db 7, GROWLITHE
 	db 7, SPEAROW
 	db 7, NIDORAN_M
 	db 7, NIDORAN_F
-	db 7, EKANS
-	db 7, HOPPIP
 	db 7, DITTO
+	db 7, DITTO
+	db 8, DITTO
 
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1396,15 +1396,15 @@ JohtoGrassWildMons:
 	db 7, GROWLITHE
 	db 5, AIPOM
 	db 6, FARFETCH_D
-	db 6, FARFETCH_D
+	db 6, TANGELA
 	; nite
 	db 6, LEDYBA
 	db 6, GROWLITHE
-	db 5, PHANPY
+	db 5, VENONAT
 	db 7, GROWLITHE
 	db 5, AIPOM
 	db 6, FARFETCH_D
-	db 6, FARFETCH_D
+	db 6, TANGELA
 
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1600,7 +1600,7 @@ JohtoGrassWildMons:
 	; morn
 	db 2, GEODUDE
 	db 2, SPEAROW
-	db 3, MACHOP
+	db 3, MEOWTH
 	db 3, NIDORAN_F
 	db 2, PHANPY
 	db 2, NIDORAN_M
@@ -1615,7 +1615,7 @@ JohtoGrassWildMons:
 	db 2, TYROGUE
 	; nite
 	db 2, GEODUDE
-	db 2, SPEAROW
+	db 2, DROWZEE
 	db 3, MACHOP
 	db 3, NIDORAN_F
 	db 2, PHANPY
