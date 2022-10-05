@@ -29,7 +29,6 @@ Major changes include:
 11. HMs moves can be overwritten
 
 For all listed changes, please see:
-https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit#gid=442710120
 https://docs.google.com/spreadsheets/d/1WtUM1VQbPSdDESuNMYJPpupwrSgFVcDa-DC3ZWKORfU/edit?usp=sharing
 
 
