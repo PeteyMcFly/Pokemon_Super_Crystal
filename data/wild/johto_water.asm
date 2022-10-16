@@ -48,19 +48,19 @@ JohtoWaterWildMons:
 	db 4 percent ; encounter rate
 	db 15, GOLDEEN
 	db 20, REMORAID
-	db 20, SEAKING
+	db 20, OMANYTE
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
 	db 20, GOLDEEN
 	db 25, REMORAID
-	db 25, SEAKING
+	db 25, KABUTO
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
 	db 15, GOLDEEN
 	db 20, REMORAID
-	db 20, SEAKING
+	db 20, SEADRA
 
 	map_id WHIRL_ISLAND_SW
 	db 4 percent ; encounter rate
