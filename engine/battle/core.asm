@@ -2043,6 +2043,8 @@ UpdateHPBar:
 
 HandleEnemyMonFaint:
 	call FaintEnemyPokemon
+	xor a
+	ld [wAISwitchedInLock], a
 	ld hl, wBattleMonHP
 	ld a, [hli]
 	or [hl]
@@ -2641,6 +2643,8 @@ INCLUDE "data/trainers/leaders.asm"
 
 HandlePlayerMonFaint:
 	call FaintYourPokemon
+	xor a
+	ld [wAISwitchedInLock], a
 	ld hl, wEnemyMonHP
 	ld a, [hli]
 	or [hl]

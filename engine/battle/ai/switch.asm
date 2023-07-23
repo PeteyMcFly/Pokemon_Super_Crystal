@@ -103,6 +103,7 @@ CheckBaseMatchup:
 	push de
 	push bc
 ; Player's pokemon types loaded to E
+; Player attacking AI
 	ld a, [wBattleMonType1]
 	ld b, a
 	ld hl, wEnemyMonType1
@@ -125,6 +126,7 @@ CheckBaseMatchup:
 	ld e, a
 .type2found_1
 ; Enemy pokemon types loaded to D
+; AI attacking player
 	ld a, [wEnemyMonType1]
 	ld b, a
 	ld hl, wBattleMonType1
@@ -146,20 +148,20 @@ CheckBaseMatchup:
 	add d
 	ld d, a
 .type2found_2
-	ld a, e
-	cp d ; Carry flag is set if enemy type combo is overall more effective
+	ld a, d
+	cp e ; Carry flag is set if enemy type combo is overall more effective
 	pop hl
 	pop de
 	pop bc
-	ret c
+	ret c ; if AI effectiveness > Player effectiveness, return TRUE
 	jr z, .okay
 .possible_bad
 	call EnemyMonHasSuperEffectiveMove
 	jr z, .okay
-	ccf
+	ccf ; Return FALSE if Player Effectiveness > AI Effectivness, unless SE move
 	ret
 .okay
-	scf
+	scf ; Return true if equal matchup
 	ret
 
 CheckPlayerMoveTypeMatchups:
@@ -347,7 +349,9 @@ CheckAbleToSwitch:
 	bit SUBSTATUS_SUBSTITUTE, a
 	jr z, .no_sub
 	call EnemyMonHasSuperEffectiveMove
-	jp nz, .bad_matchup
+	jr z, .no_sub
+	call CheckBaseMatchup
+	jp nc, .bad_matchup
 .no_sub
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_PERISH, a
@@ -391,15 +395,14 @@ CheckAbleToSwitch:
 
 .no_perish
 	call CheckUndesirableStatus
-	jr z, .not_undesirable
-	ld a, [wAISwitchedInLock]
-	and a
-	jr z, .bad_matchup
-.not_undesirable
-	call CheckBaseMatchup
-	jr c, .no_bad_matchup
-	call EnemyMonHasSuperEffectiveMove
 	jp nz, .bad_matchup
+	; do hardcore logic here if enemy mon has near full hp
+	callfar AICheckPlayerHalfHP
+	jr nc, .no_bad_matchup
+	callfar AICheckEnemyQuarterHP ; Don't aggro switch if low HP
+	jr nc, .no_bad_matchup
+	call CheckBaseMatchup
+	jr nc, .bad_matchup
 
 .no_bad_matchup
 	call CheckPlayerMoveTypeMatchups
@@ -493,6 +496,8 @@ CheckAbleToSwitch:
 	jr nc, .nothing
 	add $20
 	ld [wEnemySwitchMonParam], a
+	ld a, 1
+	ld [wAISwitchedInLock], a
 	ret
 
 .nothing

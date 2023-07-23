@@ -19,6 +19,9 @@ AI_SwitchOrTryItem:
 	cp 85 percent
 	jr c, DontSwitch
 .not_player_switch
+	ld a, [wAISwitchedInLock]
+	and a
+	jr nz, DontSwitch
 
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
