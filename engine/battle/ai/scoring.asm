@@ -584,10 +584,14 @@ AI_Smart_Selfdestruct:
 	inc [hl]
 	ret
 
+AI_Smart_Nightmare:
 AI_Smart_DreamEater:
 ; 90% chance to greatly encourage this move.
 ; The AI_Basic layer will make sure that
 ; Dream Eater is only used against sleeping targets.
+	ld a, [wBattleMonStatus]
+	and SLP
+	ret z
 	call Random
 	cp 10 percent
 	ret c
@@ -1832,16 +1836,6 @@ AICheckLastPlayerMon:
 	dec b
 	jr nz, .loop
 
-	ret
-
-AI_Smart_Nightmare:
-; 50% chance to encourage this move.
-; The AI_Basic layer will make sure that
-; Dream Eater is only used against sleeping targets.
-
-	call AI_50_50
-	ret c
-	dec [hl]
 	ret
 
 AI_Smart_FlameWheel:
