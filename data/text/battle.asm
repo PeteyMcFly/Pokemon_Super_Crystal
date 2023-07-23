@@ -1116,3 +1116,11 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+
+RestFailedText:
+	text "<USER>"
+	line "tried to rest"
+
+	para "but is already"
+	line "asleep!"
+	prompt
