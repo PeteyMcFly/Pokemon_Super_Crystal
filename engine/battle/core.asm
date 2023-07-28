@@ -7155,6 +7155,10 @@ GiveExperiencePoints:
 	bit 0, a
 	ret nz
 
+	farcall GetHardModeLevelCap
+	ld a, c
+	ld [wLevelCap], a
+
 	call .EvenlyDivideExpAmongParticipants
 	xor a
 	ld [wCurPartyMon], a
@@ -7167,6 +7171,22 @@ GiveExperiencePoints:
 	or [hl]
 	jp z, .next_mon ; fainted
 
+	ld hl, MON_LEVEL
+	add hl, bc
+	ld d, [hl]
+	ld a, [wLevelCap]
+	cp d
+	jr nc, .no_level_cap
+	push bc
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonNicknames
+	call GetNick
+	ld hl, LevelCapText
+	call BattleTextbox
+	pop bc
+	jp .next_mon
+
+.no_level_cap
 	push bc
 	ld hl, wBattleParticipantsNotFainted
 	ld a, [wCurPartyMon]
@@ -7588,6 +7608,10 @@ Text_MonGainedExpPoint:
 
 	ld hl, BoostedExpPointsText
 	ret
+
+LevelCapText:
+	text_far _LevelCapText
+	text_end
 
 BoostedExpPointsText:
 	text_far _BoostedExpPointsText

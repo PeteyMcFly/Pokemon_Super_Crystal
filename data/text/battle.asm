@@ -1119,3 +1119,9 @@ RestFailedText:
 	para "but is already"
 	line "asleep!"
 	prompt
+
+_LevelCapText::
+	text_ram wStringBuffer1
+	text "'s"
+	line "level is capped!"
+	prompt
