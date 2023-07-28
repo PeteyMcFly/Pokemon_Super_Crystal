@@ -1648,6 +1648,7 @@ wTempDVSpc:: db ; cfdd
 
 wRandomFailure:: db ; cfde
 wAISwitchedInLock:: db ; cfdf
+wLevelCap:: db ; cfe0
 
 SECTION "WRAM 1", WRAMX
 
