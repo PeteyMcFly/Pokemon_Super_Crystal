@@ -1650,6 +1650,7 @@ wRandomFailure:: db ; cfde
 wAISwitchedInLock:: db ; cfdf
 wFarArrayBank:: db ; cfe0
 wEnemyPreviousStatus:: db ; cfe1
+wLevelCap:: db ; cfe2
 
 SECTION "WRAM 1", WRAMX
 
