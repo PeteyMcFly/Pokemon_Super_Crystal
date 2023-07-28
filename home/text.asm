@@ -213,8 +213,8 @@ ENDM
 	dict "<ROUTE>",   PlaceJPRoute
 	dict "<WATASHI>", PlaceWatashi
 	dict "<KOKO_WA>", PlaceKokoWa
-	dict "<RED>",     PrintRedsName
-	dict "<GREEN>",   PrintGreensName
+	dict "<RED>",     PlaceEnemysName
+	dict "<GREEN>",   PlaceEnemysName
 	dict "#",         PlacePOKe
 	dict "<PC>",      PCChar
 	dict "<ROCKET>",  RocketChar
@@ -294,8 +294,8 @@ ENDM
 PrintMomsName:   print_name wMomsName
 PrintPlayerName: print_name wPlayerName
 PrintRivalName:  print_name wRivalName
-PrintRedsName:   print_name wRedsName
-PrintGreensName: print_name wGreensName
+;PrintRedsName:   print_name wRedsName
+;PrintGreensName: print_name wGreensName
 
 TrainerChar:  print_name TrainerCharText
 TMChar:       print_name TMCharText

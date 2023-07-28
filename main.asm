@@ -669,6 +669,9 @@ INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
 
+SECTION "SuperCrystalRoutines", ROMX
+
+INCLUDE "engine/supercrystal/psc.asm"
 
 SECTION "bank77", ROMX
 
