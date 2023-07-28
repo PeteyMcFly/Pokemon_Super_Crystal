@@ -230,6 +230,9 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .catch_without_fail
 
+	farcall IsLegendaryPokemon
+	jr z, .nuzlocke_ok
+
 ; Nuzlocke: Prevent catching when mon has already been seen in area
 	push bc
 	push de
