@@ -8382,6 +8382,7 @@ Unreferenced_Function3f662:
 	ret
 
 ExitBattle:
+	farcall UpdateNuzlockeRestrictions
 	call .HandleEndOfBattle
 	call CleanUpBattleRAM
 	ret

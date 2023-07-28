@@ -1400,6 +1400,11 @@ _BallDontBeAThiefText::
 	text "Don't be a thief!"
 	prompt
 
+_NuzlockeBlockText::
+	text "Nuzlocke rules"
+	line "prevent the catch"
+	prompt
+
 _NoCyclingText::
 	text "Cycling isn't"
 	line "allowed here."
