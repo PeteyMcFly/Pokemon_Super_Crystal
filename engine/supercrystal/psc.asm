@@ -106,3 +106,37 @@ HardModeLevelCapTable:
 	db 67
 	db 69
 	db 74 ; last badge to go
+
+IsLegendaryPokemon::
+; Result in Zero flag, ZF = TRUE
+	push bc
+	ld a, [wEnemyMon] ; Assumes WRAMX bank == 1!
+	ld b, a
+	ld hl, LegendaryPokemonTable
+.next_legendary
+	ld a, [hli]
+	cp -1
+	jr z, .no
+	cp b
+	jr nz, .next_legendary
+	pop bc
+	ret
+
+.no
+	pop bc
+	rra ; clear zero flag
+	ret
+
+LegendaryPokemonTable:
+	db RAIKOU
+	db ENTEI
+	db SUICUNE
+	db HO_OH
+	db LUGIA
+	db CELEBI
+	db ARTICUNO
+	db ZAPDOS
+	db MOLTRES
+	db MEWTWO
+	db MEW
+	db -1
