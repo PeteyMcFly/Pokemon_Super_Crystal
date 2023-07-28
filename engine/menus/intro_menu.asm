@@ -279,12 +279,13 @@ InitializeNPCNames:
 	ld de, wMomsName
 	call .Copy
 
-	ld hl, .Red
-	ld de, wRedsName
+; Jankness: re-purpose unused fields for Red and Green's names
+	ld hl, .Zeroes
+	ld de, wNuzlockeCatchForbidden
 	call .Copy
 
-	ld hl, .Green
-	ld de, wGreensName
+	ld hl, .Zeroes
+	ld de, wNuzlockeCatchForbidden + NAME_LENGTH
 
 .Copy:
 	ld bc, NAME_LENGTH
@@ -292,8 +293,7 @@ InitializeNPCNames:
 	ret
 
 .Rival:  db "???@"
-.Red:    db "RED@"
-.Green:  db "GREEN@"
+.Zeroes: ds NAME_LENGTH
 .Mom:    db "MOM@"
 
 InitializeWorld:
