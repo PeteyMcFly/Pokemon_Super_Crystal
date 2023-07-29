@@ -1195,9 +1195,19 @@ BattleCommand_Critical:
 	call GetBattleVar
 	bit SUBSTATUS_FOCUS_ENERGY, a
 	jr z, .CheckCritical
-
-; +1 critical level
-	inc c
+; ALWAYS crit when high-crit + Focus Energy
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld de, 1
+	ld hl, CriticalHitMoves
+	push bc
+	call IsInArray
+	pop bc
+	inc c ; +1 critical level, if not guaranteed crit
+	jr nc, .ScopeLens
+	ld a, 1
+	ld [wCriticalHit], a
+	ret
 
 .CheckCritical:
 	ld a, BATTLE_VARS_MOVE_ANIM
