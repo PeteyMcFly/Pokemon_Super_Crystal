@@ -230,7 +230,7 @@ BattleAnimations::
 	dw BattleAnim_Encore
 	dw BattleAnim_Pursuit
 	dw BattleAnim_RapidSpin
-	dw BattleAnim_SweetScent
+	dw BattleAnim_SignalBeam
 	dw BattleAnim_IronTail
 	dw BattleAnim_MetalClaw
 	dw BattleAnim_VitalThrow
@@ -255,7 +255,7 @@ BattleAnimations::
 	dw BattleAnim_252
 	dw BattleAnim_253
 	dw BattleAnim_254
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_SignalBeam
 ; $100
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
@@ -285,19 +285,6 @@ BattleAnim_252:
 BattleAnim_253:
 BattleAnim_254:
 BattleAnim_MirrorMove:
-	anim_ret
-
-BattleAnim_SweetScent2:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
-	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
-	anim_wait 64
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_wait 128
 	anim_ret
 
 BattleAnim_ThrowPokeBall:
@@ -4176,19 +4163,20 @@ BattleAnim_RapidSpin:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_SweetScent:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_sound 0, 0, SFX_SWEET_SCENT
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
+BattleAnim_SignalBeam:
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_BEAM
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMER, 64, 96, $2
 	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
+	anim_obj ANIM_OBJ_GLIMMER, 64, 80, $2
 	anim_wait 96
-	anim_obp0 $54
-	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
-	anim_wait 128
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_wait 64
+	anim_call BattleAnim_AuroraBeam_branch_cbb39
+	anim_wait 48
+	anim_incobj 5
+	anim_wait 64
 	anim_ret
 
 BattleAnim_IronTail:

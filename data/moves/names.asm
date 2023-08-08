@@ -228,7 +228,7 @@ MoveNames::
 	db "ENCORE@"
 	db "PURSUIT@"
 	db "RAPID SPIN@"
-	db "SWEET SCENT@"
+	db "SIGNAL BEAM@"
 	db "IRON TAIL@"
 	db "METAL CLAW@"
 	db "VITAL THROW@"

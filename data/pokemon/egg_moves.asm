@@ -666,7 +666,7 @@ QwilfishEggMoves:
 	db -1 ; end
 
 ShuckleEggMoves:
-	db SWEET_SCENT
+	db SIGNAL_BEAM ; TODO change
 	db -1 ; end
 
 HeracrossEggMoves:

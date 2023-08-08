@@ -27,7 +27,7 @@ BulbasaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 20, RAZOR_LEAF
-	db 25, SWEET_SCENT
+	db 25, SIGNAL_BEAM
 	db 32, GROWTH
 	db 39, SYNTHESIS
 	db 46, SOLARBEAM
@@ -45,7 +45,7 @@ IvysaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, SWEET_SCENT
+	db 29, SIGNAL_BEAM
 	db 38, GROWTH
 	db 47, SYNTHESIS
 	db 56, SOLARBEAM
@@ -58,7 +58,7 @@ VenusaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, SWEET_SCENT
+	db 29, SIGNAL_BEAM
 	db 33, SAFEGUARD
 	db 36, LIGHT_SCREEN
 	db 38, SKULL_BASH
@@ -620,7 +620,7 @@ OddishEvosAttacks:
 	db EVOLVE_LEVEL, 21, GLOOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 7, SWEET_SCENT
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -634,9 +634,9 @@ GloomEvosAttacks:
 	db EVOLVE_ITEM, SUN_STONE, BELLOSSOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 1, SWEET_SCENT
+	db 1, SIGNAL_BEAM
 	db 1, POISONPOWDER
-	db 7, SWEET_SCENT
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -648,7 +648,7 @@ GloomEvosAttacks:
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PETAL_DANCE
-	db 7, SWEET_SCENT
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -1008,7 +1008,7 @@ BellsproutEvosAttacks:
 	db 17, POISONPOWDER
 	db 19, STUN_SPORE
 	db 23, ACID
-	db 30, SWEET_SCENT
+	db 30, SIGNAL_BEAM
 	db 37, RAZOR_LEAF
 	db 45, SLAM
 	db 0 ; no more level-up moves
@@ -1025,7 +1025,7 @@ WeepinbellEvosAttacks:
 	db 17, POISONPOWDER
 	db 19, STUN_SPORE
 	db 24, ACID
-	db 33, SWEET_SCENT
+	db 33, SIGNAL_BEAM
 	db 42, RAZOR_LEAF
 	db 0 ; no more level-up moves
 
@@ -1037,7 +1037,7 @@ VictreebelEvosAttacks:
 	db 19, STUN_SPORE
 	db 24, ACID
 	db 32, ENCORE
-	db 33, SWEET_SCENT
+	db 33, SIGNAL_BEAM
 	db 38, LEECH_LIFE
 	db 40, SWORDS_DANCE
 	db 42, RAZOR_LEAF
