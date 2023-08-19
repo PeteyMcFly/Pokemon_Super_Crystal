@@ -253,7 +253,7 @@ Moves: ; 41afb
 	move TWISTER,      EFFECT_TWISTER,            60, DRAGON,   SPECIAL,  100, 20,  30
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,    STATUS,    90,  5,   0
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,     STATUS,    90,  5,   0
-	move CRUNCH,       EFFECT_DEF_DOWN_HIT,       75, DARK,     PHYSICAL,  90, 15,  20
+	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   75, DARK,     PHYSICAL,  90, 15,  20
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC,  SPECIAL,  100, 20,   0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,   STATUS,   100, 10,   0
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,   PHYSICAL, 100,  5,   0
