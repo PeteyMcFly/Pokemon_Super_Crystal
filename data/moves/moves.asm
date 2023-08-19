@@ -60,7 +60,7 @@ Moves: ; 41afb
 	move ROAR,         EFFECT_FORCE_SWITCH,        0, NORMAL,   STATUS,   100, 20,   0
 	move SING,         EFFECT_SLEEP,               0, NORMAL,   STATUS,    55, 15,   0
 	move SUPERSONIC,   EFFECT_CONFUSE,             0, NORMAL,   STATUS,    55, 20,   0
-	move SONICBOOM,    EFFECT_STATIC_DAMAGE,      20, NORMAL,   SPECIAL,   90, 20,   0
+	move SONICBOOM,    EFFECT_NORMAL_HIT,         50, STEEL,    SPECIAL,   90, 20,   0
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,   STATUS,    55, 20,   0
 	move ACID,         EFFECT_SP_DEF_DOWN_HIT,    60, POISON,   SPECIAL,  100, 30,  10
 	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,     SPECIAL,  100, 25,  10
@@ -86,7 +86,7 @@ Moves: ; 41afb
 	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          55, GRASS,    SPECIAL,  100, 10,   0
 	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,    STATUS,    90, 10,   0
 	move GROWTH,       EFFECT_SP_ATK_UP,           0, NORMAL,   STATUS,   100, 40,   0
-	move RAZOR_LEAF,   EFFECT_NORMAL_HIT,         70, GRASS,    SPECIAL,   95, 25,   0
+	move RAZOR_LEAF,   EFFECT_NORMAL_HIT,         70, GRASS,    PHYSICAL,  95, 25,   0
 	move SOLARBEAM,    EFFECT_SOLARBEAM,         120, GRASS,    SPECIAL,  100, 10,   0
 	move POISONPOWDER, EFFECT_POISON,              0, POISON,   STATUS,    75, 35,   0
 	move STUN_SPORE,   EFFECT_PARALYZE,            0, GRASS,    STATUS,    75, 30,   0
@@ -253,7 +253,7 @@ Moves: ; 41afb
 	move TWISTER,      EFFECT_TWISTER,            60, DRAGON,   SPECIAL,  100, 20,  30
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,    STATUS,    90,  5,   0
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,     STATUS,    90,  5,   0
-	move CRUNCH,       EFFECT_DEF_DOWN_HIT,       75, DARK,     PHYSICAL,  90, 15,  20
+	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   75, DARK,     PHYSICAL,  90, 15,  20
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC,  SPECIAL,  100, 20,   0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,   STATUS,   100, 10,   0
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,   PHYSICAL, 100,  5,   0
