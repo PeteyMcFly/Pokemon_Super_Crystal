@@ -1162,10 +1162,27 @@ BattleCommand_Critical:
 	and a
 	ld hl, wEnemyMonItem
 	ld a, [wEnemyMonSpecies]
-	jr nz, .Item
+	jr nz, .Speed
 	ld hl, wBattleMonItem
 	ld a, [wBattleMonSpecies]
 
+.Speed
+; Do a Gen 1 style speed calculation for crit chance
+	push hl
+	ld d, a ; backup the species
+; Get the mon's base speed
+	ld hl, BaseData + BASE_SPD
+	ld bc, BASE_DATA_SIZE
+	call AddNTimes
+	ld a, BANK(BaseData)
+	call GetFarByte
+	srl a
+	srl a
+	srl a
+	add $10
+	ld [wTempByteValue], a ; store base (speed / 8) + 16
+	pop hl
+	ld a, d
 .Item:
 	ld c, 0
 
@@ -1239,8 +1256,11 @@ BattleCommand_Critical:
 	ld b, 0
 	add hl, bc
 	call BattleRandom
-	cp [hl]
-	ret nc
+	ld d, a
+	ld a, [wTempByteValue]
+	add [hl]
+	cp d
+	ret c
 	ld a, 1
 	ld [wCriticalHit], a
 	ret
