@@ -348,7 +348,6 @@ AI_Smart:
 	dbw EFFECT_SLEEP_TALK,       AI_Smart_SleepTalk
 	dbw EFFECT_DESTINY_BOND,     AI_Smart_DestinyBond
 	dbw EFFECT_REVERSAL,         AI_Smart_Reversal
-	dbw EFFECT_SPITE,            AI_Smart_Spite
 	dbw EFFECT_HEAL_BELL,        AI_Smart_HealBell
 	dbw EFFECT_PRIORITY_HIT,     AI_Smart_PriorityHit
 	dbw EFFECT_THIEF,            AI_Smart_Thief
@@ -1534,62 +1533,6 @@ AI_Smart_DefrostOpponent:
 	and 1 << FRZ
 	ret z
 	dec [hl]
-	dec [hl]
-	dec [hl]
-	ret
-
-AI_Smart_Spite:
-	ld a, [wLastPlayerCounterMove]
-	and a
-	jr nz, .asm_38ce7
-
-	call AICompareSpeed
-	jp c, AIDiscourageMove
-
-	call AI_50_50
-	ret c
-	inc [hl]
-	ret
-
-.asm_38ce7
-	push hl
-	ld b, a
-	ld c, 4
-	ld hl, wBattleMonMoves
-	ld de, wBattleMonPP
-
-.asm_38cf1
-	ld a, [hli]
-	cp b
-	jr z, .asm_38cfb
-
-	inc de
-	dec c
-	jr nz, .asm_38cf1
-
-	pop hl
-	ret
-
-.asm_38cfb
-	pop hl
-	ld a, [de]
-	cp $6
-	jr c, .asm_38d0d
-	cp $f
-	jr nc, .asm_38d0b
-
-	call Random
-	cp 39 percent + 1
-	ret nc
-
-.asm_38d0b
-	inc [hl]
-	ret
-
-.asm_38d0d
-	call Random
-	cp 39 percent + 1
-	ret c
 	dec [hl]
 	dec [hl]
 	ret

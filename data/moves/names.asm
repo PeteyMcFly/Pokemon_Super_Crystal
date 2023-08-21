@@ -178,7 +178,7 @@ MoveNames::
 	db "AEROBLAST@"
 	db "COTTON SPORE@"
 	db "REVERSAL@"
-	db "SPITE@"
+	db "ZEN HEADBUTT@"
 	db "POWDER SNOW@"
 	db "PROTECT@"
 	db "MACH PUNCH@"

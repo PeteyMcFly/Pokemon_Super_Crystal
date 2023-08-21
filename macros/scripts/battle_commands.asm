@@ -78,7 +78,7 @@ ENDM
 	command defrostopponent         ; 47
 	command sleeptalk               ; 48
 	command destinybond             ; 49
-	command spite                   ; 4a
+	command spite                   ; 4a TODO reuse
 	command falseswipe              ; 4b
 	command healbell                ; 4c
 	command kingsrock               ; 4d

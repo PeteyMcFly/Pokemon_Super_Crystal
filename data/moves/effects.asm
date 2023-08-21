@@ -1361,7 +1361,7 @@ DestinyBond:
 	destinybond
 	endmove
 
-Spite:
+Spite: ;Unused TODO repurpose
 	checkobedience
 	usedmovetext
 	doturn

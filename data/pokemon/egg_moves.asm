@@ -65,7 +65,7 @@ SpearowEggMoves:
 EkansEggMoves:
 	db PURSUIT
 	db SLAM
-	db SPITE
+	db ZEN_HEADBUTT
 	db BEAT_UP
 	db CRUNCH
 	db -1 ; end
@@ -102,7 +102,7 @@ VulpixEggMoves:
 	db FAINT_ATTACK
 	db HYPNOSIS
 	db FLAIL
-	db SPITE
+	db ZEN_HEADBUTT
 	db DISABLE
 	db -1 ; end
 
@@ -146,7 +146,7 @@ DiglettEggMoves:
 	db -1 ; end
 
 MeowthEggMoves:
-	db SPITE
+	db ZEN_HEADBUTT
 	db CHARM
 	db HYPNOSIS
 	db AMNESIA
@@ -585,7 +585,7 @@ AipomEggMoves:
 	db SCREECH
 	db PURSUIT
 	db AGILITY
-	db SPITE
+	db ZEN_HEADBUTT
 	db SLAM
 	db DOUBLESLAP
 	db BEAT_UP
@@ -677,7 +677,7 @@ HeracrossEggMoves:
 
 SneaselEggMoves:
 	db COUNTER
-	db SPITE
+	db ZEN_HEADBUTT
 	db FORESIGHT
 	db REFLECT
 	db BITE
@@ -747,7 +747,7 @@ HoundourEggMoves:
 	db RAGE
 	db PURSUIT
 	db COUNTER
-	db SPITE
+	db ZEN_HEADBUTT
 	db REVERSAL
 	db BEAT_UP
 	db -1 ; end
@@ -761,7 +761,7 @@ PhanpyEggMoves:
 
 StantlerEggMoves:
 	db REFLECT
-	db SPITE
+	db ZEN_HEADBUTT
 	db DISABLE
 	db LIGHT_SCREEN
 	db BITE

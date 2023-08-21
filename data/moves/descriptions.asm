@@ -179,7 +179,7 @@ MoveDescriptions::
 	dw AeroblastDescription
 	dw CottonSporeDescription
 	dw ReversalDescription
-	dw SpiteDescription
+	dw ZenHeadbuttDescription
 	dw PowderSnowDescription
 	dw ProtectDescription
 	dw MachPunchDescription
@@ -980,9 +980,9 @@ ReversalDescription:
 	db   "Stronger if the"
 	next "user's HP is low.@"
 
-SpiteDescription:
-	db   "Cuts the PP of the"
-	next "foe's last move.@"
+ZenHeadbuttDescription:
+	db   "A psychic hit that"
+	next "causes flinching.@"
 
 PowderSnowDescription:
 	db   "An attack that may"
