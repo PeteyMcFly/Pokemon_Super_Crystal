@@ -250,7 +250,7 @@ MoveDescriptions::
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
+	dw FocusBlastDescription
 	dw MoveFCDescription
 	dw MoveFDDescription
 	dw MoveFEDescription
@@ -1264,6 +1264,6 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Deals 2-5 hits"
-	next "of damage.@"
+FocusBlastDescription:
+	db   "Unleash a #MON's"
+	next "mental focus.@"

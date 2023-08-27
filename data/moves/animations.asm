@@ -251,7 +251,7 @@ BattleAnimations::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_BeatUp
+	dw BattleAnim_FocusBlast
 	dw BattleAnim_252
 	dw BattleAnim_253
 	dw BattleAnim_254
@@ -4599,13 +4599,26 @@ BattleAnim_Whirlpool:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_BeatUp:
+BattleAnim_FocusBlast:
 	anim_1gfx ANIM_GFX_HIT
-	anim_sound 0, 1, SFX_BEAT_UP
-	anim_obj ANIM_OBJ_06, 144, 48, $0
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_1A, $0, $1, $20
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_wait 72
+	anim_incbgeffect ANIM_BG_1A
+	anim_call BattleAnim_ShowMon_0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_MOVE_PUZZLE_PIECE
+	anim_obj ANIM_OBJ_00, 120, 72, $0
 	anim_wait 6
-	anim_obj ANIM_OBJ_01, 144, 48, $0
+.loop
+	anim_sound 0, 0, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_00, 136, 56, $0
 	anim_wait 8
+	anim_loop 8, .loop
+	anim_ret
+	anim_obj ANIM_OBJ_00, 152, 40, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

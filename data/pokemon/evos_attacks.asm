@@ -3172,7 +3172,7 @@ SneaselEvosAttacks:
 	db 32, FORESIGHT
 	db 34, SLASH
 	db 35, BITE
-	db 37, BEAT_UP
+	;db 37, BEAT_UP
 	db 39, REFLECT
 	db 40, TWINEEDLE
 	db 42, COUNTER
