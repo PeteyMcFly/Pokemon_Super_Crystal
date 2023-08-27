@@ -1361,12 +1361,23 @@ DestinyBond:
 	destinybond
 	endmove
 
-Spite: ;Unused TODO repurpose
+BrickBreak:
 	checkobedience
 	usedmovetext
 	doturn
 	checkhit
-	spite
+	brickbreak
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
 	endmove
 
 FalseSwipe:

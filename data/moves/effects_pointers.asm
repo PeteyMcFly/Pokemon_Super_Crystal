@@ -100,7 +100,7 @@ MoveEffectsPointers:
 	dw SleepTalk
 	dw DestinyBond
 	dw Reversal
-	dw Spite ; TODO reuse for something else
+	dw BrickBreak
 	dw FalseSwipe
 	dw HealBell
 	dw NormalHit

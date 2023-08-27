@@ -26,7 +26,7 @@ BattleAnimations::
 	dw BattleAnim_Stomp
 	dw BattleAnim_DoubleKick
 	dw BattleAnim_MegaKick
-	dw BattleAnim_JumpKick
+	dw BattleAnim_BrickBreak
 	dw BattleAnim_RollingKick
 	dw BattleAnim_SandAttack
 	dw BattleAnim_Headbutt
@@ -753,25 +753,32 @@ BattleAnim_DoubleKick_branch_c96bd:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_JumpKick:
-	anim_1gfx ANIM_GFX_HIT
-	anim_if_param_equal $1, BattleAnim_JumpKick_branch_c96f1
-	anim_sound 0, 1, SFX_JUMP_KICK
-	anim_obj ANIM_OBJ_07, 112, 72, $0
-	anim_obj ANIM_OBJ_07, 100, 60, $0
-	anim_setobj $1, $2
-	anim_setobj $2, $2
-	anim_wait 24
-	anim_sound 0, 1, SFX_DOUBLE_KICK
-	anim_obj ANIM_OBJ_04, 136, 48, $0
-	anim_wait 16
-	anim_ret
-
-BattleAnim_JumpKick_branch_c96f1:
-	anim_wait 8
-	anim_sound 0, 0, SFX_DOUBLE_KICK
-	anim_obj ANIM_OBJ_04, 44, 88, $0
-	anim_wait 16
+BattleAnim_BrickBreak:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_08, 136, 40, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $10
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $e8
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $d0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $1c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $50
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $dc
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HiJumpKick:

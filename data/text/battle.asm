@@ -881,6 +881,11 @@ ReflectEffectText:
 	line "DEFENSE rose!"
 	prompt
 
+BrickBreakEffectText:
+	text "The wall"
+	line "shattered!"
+	prompt
+
 NothingHappenedText:
 	text "But nothing"
 	line "happened."

@@ -24,7 +24,7 @@ MoveNames::
 	db "STOMP@"
 	db "DOUBLE KICK@"
 	db "MEGA KICK@"
-	db "JUMP KICK@"
+	db "BRICK BREAK@"
 	db "ROLLING KICK@"
 	db "SAND-ATTACK@"
 	db "HEADBUTT@"

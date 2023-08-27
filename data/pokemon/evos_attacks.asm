@@ -1564,7 +1564,7 @@ HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
 	db 11, ROLLING_KICK
-	db 16, JUMP_KICK
+	;db 16, JUMP_KICK TODO replace
 	db 21, FOCUS_ENERGY
 	db 26, HI_JUMP_KICK
 	db 31, MIND_READER

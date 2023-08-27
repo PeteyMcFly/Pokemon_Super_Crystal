@@ -77,7 +77,7 @@ BattleCommandPointers:
 	dw BattleCommand_DefrostOpponent
 	dw BattleCommand_SleepTalk
 	dw BattleCommand_DestinyBond
-	dw BattleCommand3c ; Formerly SPITE TODO reuse
+	dw BattleCommand_BrickBreak
 	dw BattleCommand_FalseSwipe
 	dw BattleCommand_HealBell
 	dw BattleCommand_HeldFlinch
