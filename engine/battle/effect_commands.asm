@@ -1179,8 +1179,8 @@ BattleCommand_Critical:
 	srl a
 	srl a
 	srl a
-	add $10
-	ld [wTempByteValue], a ; store base (speed / 8) + 16
+	add $C
+	ld [wTempByteValue], a ; store base (speed / 8) + 12
 	pop hl
 	ld a, d
 .Item:
@@ -1213,7 +1213,8 @@ BattleCommand_Critical:
 	bit SUBSTATUS_FOCUS_ENERGY, a
 	jr z, .CheckCritical
 
-; +1 critical level
+; +2 critical level
+	inc c
 	inc c
 
 .CheckCritical:

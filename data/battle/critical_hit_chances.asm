@@ -6,3 +6,4 @@ CriticalHitChances:
 	db 50 percent + 1 ; +4
 	db 50 percent + 1 ; +5
 	db 50 percent + 1 ; +6
+	db 50 percent + 1 ; +7
