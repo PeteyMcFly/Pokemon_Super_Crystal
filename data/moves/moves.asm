@@ -150,7 +150,7 @@ Moves: ; 41afb
 	move HI_JUMP_KICK, EFFECT_JUMP_KICK,          95, FIGHTING, PHYSICAL,  90, 20,   0
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,   STATUS,    85, 30,   0
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       110, PSYCHIC,  SPECIAL,  100, 15,   0
-	move POISON_GAS,   EFFECT_POISON,              0, POISON,   STATUS,    55, 40,   0
+	move EARTH_POWER,  EFFECT_SP_DEF_DOWN_HIT,    90, GROUND,   SPECIAL,  100, 10,  10
 	move BARRAGE,      EFFECT_MULTI_HIT,          18, NORMAL,   PHYSICAL,  85, 20,   0
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          65, BUG,      SPECIAL,  100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,   STATUS,    75, 10,   0

@@ -33,6 +33,7 @@ MoveGrammar:
 	db HIDDEN_POWER
 	db PSYCH_UP
 	db EXTREMESPEED
+	db EARTH_POWER
 	db 0 ; end set
 
 ; 1: originally "[mon]の¯[move]した!" ("[mon]¯did [move]!")
@@ -84,7 +85,6 @@ MoveGrammar:
 	db LICK
 	db CLAMP
 	db CONSTRICT
-	db POISON_GAS
 	db BUBBLE
 	db SLASH
 	db SPIDER_WEB

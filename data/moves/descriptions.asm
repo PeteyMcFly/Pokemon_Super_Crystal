@@ -138,7 +138,7 @@ MoveDescriptions::
 	dw HiJumpKickDescription
 	dw GlareDescription
 	dw DreamEaterDescription
-	dw PoisonGasDescription
+	dw EarthPowerDescription
 	dw BarrageDescription
 	dw LeechLifeDescription
 	dw LovelyKissDescription
@@ -816,9 +816,9 @@ DreamEaterDescription:
 	db   "Steals HP from a"
 	next "sleeping victim.@"
 
-PoisonGasDescription:
-	db   "A move that may"
-	next "poison the foe.@"
+EarthPowerDescription:
+	db   "An eruption that"
+	next "can lower SpDef.@"
 
 BarrageDescription:
 	db   "Throws orbs to hit"

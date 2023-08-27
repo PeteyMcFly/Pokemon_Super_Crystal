@@ -139,7 +139,7 @@ BattleAnimations::
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_Glare
 	dw BattleAnim_DreamEater
-	dw BattleAnim_PoisonGas
+	dw BattleAnim_EarthPower
 	dw BattleAnim_Barrage
 	dw BattleAnim_LeechLife
 	dw BattleAnim_LovelyKiss
@@ -2221,14 +2221,32 @@ BattleAnim_Smog:
 	anim_wait 96
 	anim_ret
 
-BattleAnim_PoisonGas:
-	anim_1gfx ANIM_GFX_HAZE
-	anim_sound 16, 2, SFX_BUBBLEBEAM
+BattleAnim_EarthPower:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_1F, $60, $4, $10
 .loop
-	anim_obj ANIM_OBJ_POISON_GAS, 44, 80, $2
-	anim_wait 8
-	anim_loop 10, .loop
-	anim_wait 128
+	anim_sound 0, 1, SFX_EMBER
+	anim_wait 24
+	anim_loop 2, .loop
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $10
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $e8
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $d0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $1c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $50
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $dc
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HornAttack:

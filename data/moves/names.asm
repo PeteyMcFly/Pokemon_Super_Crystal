@@ -137,7 +137,7 @@ MoveNames::
 	db "HI JUMP KICK@"
 	db "GLARE@"
 	db "DREAM EATER@"
-	db "POISON GAS@"
+	db "EARTH POWER@"
 	db "BARRAGE@"
 	db "LEECH LIFE@"
 	db "LOVELY KISS@"

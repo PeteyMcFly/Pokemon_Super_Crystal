@@ -144,7 +144,7 @@
 	const HI_JUMP_KICK ; 88
 	const GLARE        ; 89
 	const DREAM_EATER  ; 8a
-	const POISON_GAS   ; 8b
+	const EARTH_POWER  ; 8b
 	const BARRAGE      ; 8c
 	const LEECH_LIFE   ; 8d
 	const LOVELY_KISS  ; 8e

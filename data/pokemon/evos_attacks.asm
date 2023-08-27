@@ -1293,7 +1293,7 @@ DewgongEvosAttacks:
 GrimerEvosAttacks:
 	db EVOLVE_LEVEL, 38, MUK
 	db 0 ; no more evolutions
-	db 1, POISON_GAS
+	;db 1, POISON_GAS
 	db 1, POUND
 	db 5, HARDEN
 	db 10, DISABLE
@@ -1306,7 +1306,7 @@ GrimerEvosAttacks:
 
 MukEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_GAS
+	;db 1, POISON_GAS
 	db 1, POUND
 	db 1, HARDEN
 	db 33, HARDEN
@@ -1417,7 +1417,7 @@ DrowzeeEvosAttacks:
 	db 10, DISABLE
 	db 18, CONFUSION
 	db 25, HEADBUTT
-	db 31, POISON_GAS
+	;db 31, POISON_GAS
 	db 36, MEDITATE
 	db 40, PSYCHIC_M
 	db 43, PSYCH_UP
@@ -1430,7 +1430,7 @@ HypnoEvosAttacks:
 	db 10, DISABLE
 	db 18, CONFUSION
 	db 25, HEADBUTT
-	db 33, POISON_GAS
+	;db 33, POISON_GAS
 	db 34, BARRIER
 	db 37, LIGHT_SCREEN
 	db 40, MEDITATE
@@ -1611,7 +1611,7 @@ LickitungEvosAttacks:
 KoffingEvosAttacks:
 	db EVOLVE_LEVEL, 35, WEEZING
 	db 0 ; no more evolutions
-	db 1, POISON_GAS
+	;db 1, POISON_GAS
 	db 1, TACKLE
 	db 9, SMOG
 	db 17, SELFDESTRUCT
