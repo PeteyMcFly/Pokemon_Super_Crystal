@@ -13,7 +13,7 @@ MoveGrammar:
 	db WITHDRAW
 	db DEFENSE_CURL
 	db EGG_BOMB
-	db SMOG
+	db POWER_GEM
 	db BONE_CLUB
 	db FLASH
 	db SPLASH

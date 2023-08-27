@@ -122,7 +122,7 @@ MoveDescriptions::
 	dw SelfdestructDescription
 	dw EggBombDescription
 	dw LickDescription
-	dw SmogDescription
+	dw PowerGemDescription
 	dw SludgeDescription
 	dw BoneClubDescription
 	dw FireBlastDescription
@@ -752,9 +752,9 @@ LickDescription:
 	db   "An attack that may"
 	next "cause paralysis.@"
 
-SmogDescription:
-	db   "An attack that may"
-	next "poison the foe.@"
+PowerGemDescription:
+	db   "A gem attack with"
+	next "rays of light.@"
 
 SludgeDescription:
 	db   "An attack that may"

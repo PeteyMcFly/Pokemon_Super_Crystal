@@ -123,7 +123,7 @@ BattleAnimations::
 	dw BattleAnim_Selfdestruct
 	dw BattleAnim_EggBomb
 	dw BattleAnim_Lick
-	dw BattleAnim_Smog
+	dw BattleAnim_PowerGem
 	dw BattleAnim_Sludge
 	dw BattleAnim_BoneClub
 	dw BattleAnim_FireBlast
@@ -2211,14 +2211,13 @@ BattleAnim_Mist:
 	anim_wait 96
 	anim_ret
 
-BattleAnim_Smog:
-	anim_1gfx ANIM_GFX_HAZE
-	anim_sound 0, 1, SFX_BUBBLEBEAM
+BattleAnim_PowerGem:
+	anim_1gfx ANIM_GFX_ICE
 .loop
-	anim_obj ANIM_OBJ_SMOG, 132, 16, $0
-	anim_wait 8
+	anim_sound 6, 2, SFX_FLASH
+	anim_obj ANIM_OBJ_POWER_GEM, 64, 92, $4
+	anim_wait 4
 	anim_loop 10, .loop
-	anim_wait 96
 	anim_ret
 
 BattleAnim_EarthPower:

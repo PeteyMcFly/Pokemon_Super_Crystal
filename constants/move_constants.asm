@@ -128,7 +128,7 @@
 	const SELFDESTRUCT ; 78
 	const EGG_BOMB     ; 79
 	const LICK         ; 7a
-	const SMOG         ; 7b
+	const POWER_GEM    ; 7b
 	const SLUDGE       ; 7c
 	const BONE_CLUB    ; 7d
 	const FIRE_BLAST   ; 7e

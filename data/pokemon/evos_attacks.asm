@@ -1613,7 +1613,7 @@ KoffingEvosAttacks:
 	db 0 ; no more evolutions
 	;db 1, POISON_GAS
 	db 1, TACKLE
-	db 9, SMOG
+	db 9, TOXIC
 	db 17, SELFDESTRUCT
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
@@ -1625,7 +1625,7 @@ KoffingEvosAttacks:
 WeezingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SELFDESTRUCT
-	db 9, SMOG
+	db 9, TOXIC
 	db 17, SELFDESTRUCT
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
@@ -1876,10 +1876,10 @@ MagmarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, LEER
-	db 1, SMOG
+	;db 1, SMOG
 	db 1, FIRE_PUNCH
 	db 7, LEER
-	db 13, SMOG
+	;db 13, SMOG
 	db 19, FIRE_PUNCH
 	db 25, SMOKESCREEN
 	db 31, BARRIER
@@ -2020,7 +2020,7 @@ FlareonEvosAttacks:
 	db 30, BITE
 	db 36, FIRE_SPIN
 	db 39, FLAME_WHEEL
-	db 42, SMOG
+	;db 42, SMOG
 	db 47, LEER
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -3214,7 +3214,7 @@ UrsaringEvosAttacks:
 SlugmaEvosAttacks:
 	db EVOLVE_LEVEL, 38, MAGCARGO
 	db 0 ; no more evolutions
-	db 1, SMOG
+	;db 1, SMOG
 	db 8, EMBER
 	db 15, ROCK_THROW
 	db 22, HARDEN
@@ -3226,7 +3226,7 @@ SlugmaEvosAttacks:
 
 MagcargoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SMOG
+	;db 1, SMOG
 	db 1, EMBER
 	db 1, ROCK_THROW
 	db 8, EMBER
@@ -3359,7 +3359,7 @@ HoundourEvosAttacks:
 	db 1, LEER
 	db 1, EMBER
 	db 7, ROAR
-	db 13, SMOG
+	;db 13, SMOG
 	db 20, BITE
 	db 27, FAINT_ATTACK
 	db 35, FLAMETHROWER
@@ -3371,7 +3371,7 @@ HoundoomEvosAttacks:
 	db 1, LEER
 	db 1, EMBER
 	db 7, ROAR
-	db 13, SMOG
+	;db 13, SMOG
 	db 20, BITE
 	db 28, PURSUIT
 	db 30, FAINT_ATTACK
@@ -3535,7 +3535,7 @@ MagbyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 7, LEER
-	db 13, SMOG
+	;db 13, SMOG
 	db 19, FIRE_PUNCH
 	db 25, SMOKESCREEN
 	db 31, SUNNY_DAY

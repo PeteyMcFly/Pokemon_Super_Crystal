@@ -121,7 +121,7 @@ MoveNames::
 	db "SELFDESTRUCT@"
 	db "EGG BOMB@"
 	db "LICK@"
-	db "SMOG@"
+	db "POWER GEM@"
 	db "SLUDGE@"
 	db "BONE CLUB@"
 	db "FIRE BLAST@"
