@@ -202,10 +202,39 @@ endr
 	and a
 	jr nz, .copywildmonDVs
 
+	; This appears to be where the starters get their DVs from
+	push de
+.redo
 	call Random
 	ld b, a
+	
 	call Random
 	ld c, a
+	
+	; add lower stat in c
+	and $f
+	ld e, a
+	; add upper stat in c
+	ld a, c
+	swap a
+	and $f
+	add e
+	ld e, a
+	; add lower stat in b
+	ld a, b
+	and $f
+	add e
+	ld e, a
+	; add upper stat in B
+	ld a, b
+	swap a
+	and $f
+	add e
+	; re-roll if average is less than 6
+	cp 24
+	jr c, .redo
+	pop de
+	
 .initializeDVs
 	ld a, b
 	ld [de], a
