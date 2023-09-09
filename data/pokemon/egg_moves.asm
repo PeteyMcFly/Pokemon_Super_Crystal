@@ -135,6 +135,7 @@ VenonatEggMoves:
 	db BATON_PASS
 	db SCREECH
 	db GIGA_DRAIN
+	db SIGNAL_BEAM
 	db -1 ; end
 
 DiglettEggMoves:
@@ -261,6 +262,7 @@ SeelEggMoves:
 	db PECK
 	db SLAM
 	db ENCORE
+	db SIGNAL_BEAM
 	db -1 ; end
 
 GrimerEggMoves:
@@ -372,12 +374,14 @@ HorseaEggMoves:
 	db DISABLE
 	db SPLASH
 	db DRAGON_RAGE
+	db SIGNAL_BEAM
 	db -1 ; end
 
 GoldeenEggMoves:
 	db PSYBEAM
 	db HAZE
 	db HYDRO_PUMP
+	db SIGNAL_BEAM
 	db -1 ; end
 
 MrMimeEggMoves:
@@ -499,12 +503,14 @@ SpinarakEggMoves:
 	db SONICBOOM
 	db BATON_PASS
 	db PURSUIT
+	db SIGNAL_BEAM
 	db -1 ; end
 
 ChinchouEggMoves:
 	db FLAIL
 	db SUPERSONIC
 	db SCREECH
+	db SIGNAL_BEAM
 	db -1 ; end
 
 PichuEggMoves:
@@ -536,6 +542,7 @@ TogepiEggMoves:
 	db PECK
 	db FORESIGHT
 	db FUTURE_SIGHT
+	db SIGNAL_BEAM
 	db -1 ; end
 
 NatuEggMoves:
@@ -595,6 +602,7 @@ YanmaEggMoves:
 	db WHIRLWIND
 	db REVERSAL
 	db LEECH_LIFE
+	db SIGNAL_BEAM
 	db -1 ; end
 
 WooperEggMoves:
@@ -663,10 +671,11 @@ QwilfishEggMoves:
 	db HAZE
 	db BUBBLEBEAM
 	db SUPERSONIC
+	db SIGNAL_BEAM
 	db -1 ; end
 
 ShuckleEggMoves:
-	db SIGNAL_BEAM ; TODO change
+	db MUD_SLAP
 	db -1 ; end
 
 HeracrossEggMoves:
@@ -694,6 +703,7 @@ TeddiursaEggMoves:
 
 SlugmaEggMoves:
 	db ACID_ARMOR
+	db EARTH_POWER
 	db -1 ; end
 
 SwinubEggMoves:
