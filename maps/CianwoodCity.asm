@@ -11,14 +11,16 @@
 	const CIANWOODCITY_POKEFAN_F
 	const CIANWOODCITY_EUSINE
 	const CIANWOODCITY_SUICUNE
+	const CIANWOODCITY_WORKER
 
 CianwoodCity_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_CIANWOODCITY_NOTHING
 	scene_script .DummyScene1 ; SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPointAndSuicune
+	callback MAPCALLBACK_NEWMAP, .RyokanOpen
 
 .DummyScene0:
 	end
@@ -33,6 +35,13 @@ CianwoodCity_MapScripts:
 	iffalse .Done
 	disappear CIANWOODCITY_EUSINE
 .Done:
+	return
+
+.RyokanOpen
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .Closed
+	disappear CIANWOODCITY_WORKER
+.Closed
 	return
 
 CianwoodCitySuicuneAndEusine:
@@ -118,9 +127,8 @@ CianwoodCityPokefanM:
 CianwoodCityLass:
 	jumptextfaceplayer CianwoodCityLassText
 
-CianwoodCityUnusedScript:
-; unreferenced
-	jumptextfaceplayer CianwoodCityUnusedText
+CianwoodCityWorker:
+	jumptext CianwoodCityWorker
 
 CianwoodCitySign:
 	jumptext CianwoodCitySignText
@@ -139,6 +147,9 @@ CianwoodPokeSeerSign:
 
 CianwoodPokecenterSign:
 	jumpstd pokecentersign
+
+CianwoodRyokanSign:
+	jumpstd CianwoodRyokanSignText
 
 CianwoodCityRock:
 	jumpstd smashrock
@@ -265,15 +276,17 @@ CianwoodCityLassText:
 	line "MON."
 	done
 
-CianwoodCityUnusedText:
-; unused
-	text "There are several"
-	line "islands between"
-	cont "here and OLIVINE."
+CianwoodCityWorkerText:
+	text "Our apologies,"
+	line "but the road is"
+	cont "currently closed."
 
-	para "A mythical sea"
-	line "creature supposed-"
-	cont "ly lives there."
+	para "There's been a big"
+	line "landslide, and it"
+	cont "is being cleared."
+
+	para "Please come back"
+	line "later."
 	done
 
 EusineSuicuneText:
@@ -379,6 +392,16 @@ CianwoodPokeSeerSignText:
 	line "AHEAD"
 	done
 
+CianwoodRyokanSignText:
+	text "Come visit the"
+	line "famous"
+
+	para "VINEBRIDGE"
+	line "HOT SPRINGS INN"
+
+	para "Just ahead!"
+	done
+
 CianwoodCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -394,7 +417,7 @@ CianwoodCity_MapEvents:
 	db 1 ; coord events
 	coord_event 11, 16, SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE, CianwoodCitySuicuneAndEusine
 
-	db 8 ; bg events
+	db 9 ; bg events
 	bg_event 20, 34, BGEVENT_READ, CianwoodCitySign
 	bg_event  7, 45, BGEVENT_READ, CianwoodGymSign
 	bg_event 24, 43, BGEVENT_READ, CianwoodPokecenterSign
@@ -403,8 +426,10 @@ CianwoodCity_MapEvents:
 	bg_event  8, 24, BGEVENT_READ, CianwoodPokeSeerSign
 	bg_event  4, 19, BGEVENT_ITEM, CianwoodCityHiddenRevive
 	bg_event  5, 29, BGEVENT_ITEM, CianwoodCityHiddenMaxEther
+	bg_event  2, 26, BGEVENT_READ, CianwoodRyokanSign
 
-	db 12 ; object events
+	db 13 ; object events
+	object_event  1, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CianwoodCityWorker, -1
 	object_event 21, 37, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CianwoodCityYoungster, -1
 	object_event 17, 33, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityPokefanM, -1
 	object_event 14, 42, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityLass, -1
