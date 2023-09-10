@@ -260,6 +260,10 @@ ENDM
 	add_tm FIRE_PUNCH   ; f0
 	add_tm SWORDS_DANCE ; f1
 	add_tm NIGHTMARE    ; f2
+	add_tm BRICK_BREAK ; sequence break
+	add_tm EARTH_POWER ; break
+	add_tm POWER_GEM   ; break
+	add_tm FOCUS_BLAST ; break
 NUM_TMS EQU const_value - TM01 - 2 ; discount ITEM_C3 and ITEM_DC
 
 add_hm: MACRO

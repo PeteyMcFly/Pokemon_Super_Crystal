@@ -81,12 +81,16 @@ MartAzalea:
 	db -1 ; end
 
 MartCianwood:
-	db 5 ; # items
+	db 8 ; # items
 	db SILVERPOWDER
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
+	; For testing, remove these later
+	db TM_EARTH_POWER
+	db TM_POWER_GEM
+	db TM_FOCUS_BLAST
 	db -1 ; end
 
 MartGoldenrod2F1:
@@ -156,12 +160,13 @@ MartGoldenrod5F3:
 	db -1 ; end
 
 MartGoldenrod5F4:
-	db 5 ; # items
+	db 6 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
 	db TM_PSYCH_UP
 	db TM_ROCK_SMASH
+	db TM_BRICK_BREAK
 	db -1 ; end
 
 MartOlivine:

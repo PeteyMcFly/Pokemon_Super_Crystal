@@ -388,6 +388,7 @@ AI_Smart:
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
 	dbw EFFECT_DEFENSE_CURL,     AI_Smart_DefenseCurl
+	dbw EFFECT_BRICK_BREAK,      AI_Smart_BrickBreak
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2644,6 +2645,21 @@ AI_Smart_Thunder:
 	cp 10 percent
 	ret c
 
+	inc [hl]
+	ret
+
+AI_Smart_BrickBreak:
+; Encourage this move if light screen or reflect is active
+
+	push hl
+	ld hl, wPlayerScreens
+	xor a
+	bit SCREENS_LIGHT_SCREEN, [hl]
+	jr nz, .good
+	bit SCREENS_REFLECT, [hl]
+	pop hl
+	ret z
+.good
 	inc [hl]
 	ret
 
