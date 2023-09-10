@@ -10,6 +10,9 @@ RyokanOutside_MapScripts:
 RyokanWorker:
 	jumptextfaceplayer RyokanWorkerText
 
+RyokanWelcomeSign:
+	jumptext RyokanWelcomeSignText
+
 RyokanWorkerText:
 	text "There's still a"
 	line "lot of work to do."
@@ -17,6 +20,18 @@ RyokanWorkerText:
 	para "This road will be"
 	line "closed for the"
 	cont "foreseeable future"
+	done
+
+RyokanWelcomeSignText:
+	text "Welcome to the"
+	line "Vinebridge Inn!"
+
+	para "Unfortunately,"
+	line "We are not taking"
+	cont "reservations."
+
+	para "(Wait for the next"
+	line "release of PSC!)"
 	done
 
 RyokanOutside_MapEvents:
@@ -27,7 +42,8 @@ RyokanOutside_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  5, 15, BGEVENT_READ, RyokanWelcomeSign
 
 	db 2 ; object events
 	object_event  3,  18, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RyokanWorker, -1
