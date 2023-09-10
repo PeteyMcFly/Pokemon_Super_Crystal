@@ -128,7 +128,7 @@ CianwoodCityLass:
 	jumptextfaceplayer CianwoodCityLassText
 
 CianwoodCityWorker:
-	jumptext CianwoodCityWorker
+	jumptextfaceplayer CianwoodCityWorkerText
 
 CianwoodCitySign:
 	jumptext CianwoodCitySignText
@@ -149,7 +149,7 @@ CianwoodPokecenterSign:
 	jumpstd pokecentersign
 
 CianwoodRyokanSign:
-	jumpstd CianwoodRyokanSignText
+	jumptext CianwoodRyokanSignText
 
 CianwoodCityRock:
 	jumpstd smashrock
