@@ -2660,7 +2660,7 @@ AI_Smart_BrickBreak:
 	pop hl
 	ret z
 .good
-	inc [hl]
+	dec [hl]
 	ret
 
 AICompareSpeed:
