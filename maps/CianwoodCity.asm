@@ -20,7 +20,7 @@ CianwoodCity_MapScripts:
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPointAndSuicune
-	callback MAPCALLBACK_NEWMAP, .RyokanOpen
+	callback MAPCALLBACK_OBJECTS, .RyokanOpen
 
 .DummyScene0:
 	end
@@ -41,7 +41,7 @@ CianwoodCity_MapScripts:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iffalse .Closed
 	disappear CIANWOODCITY_WORKER
-.Closed
+.Closed:
 	return
 
 CianwoodCitySuicuneAndEusine:
@@ -429,7 +429,6 @@ CianwoodCity_MapEvents:
 	bg_event  2, 26, BGEVENT_READ, CianwoodRyokanSign
 
 	db 13 ; object events
-	object_event  1, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CianwoodCityWorker, -1
 	object_event 21, 37, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CianwoodCityYoungster, -1
 	object_event 17, 33, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityPokefanM, -1
 	object_event 14, 42, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityLass, -1
@@ -442,3 +441,4 @@ CianwoodCity_MapEvents:
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
 	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
+	object_event  1, 27, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CianwoodCityWorker, EVENT_RYOKAN_BLOCK

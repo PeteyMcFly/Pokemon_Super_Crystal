@@ -29,6 +29,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	dw RyokanSprites
 
 PalletGroupSprites:
 	db SPRITE_SUICUNE
@@ -480,8 +481,11 @@ GoldenrodGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWPOKE
 
+RyokanSprites:
 CianwoodGroupSprites:
 	db SPRITE_SUICUNE
+	db SPRITE_SILVER_TROPHY
+	db SPRITE_POKE_BALL
 	db SPRITE_POKEDEX
 	db SPRITE_WILL
 	db SPRITE_KAREN
@@ -504,6 +508,8 @@ CianwoodGroupSprites:
 
 OlivineGroupSprites:
 	db SPRITE_SUICUNE
+	db SPRITE_SILVER_TROPHY
+	db SPRITE_POKE_BALL
 	db SPRITE_POKEDEX
 	db SPRITE_WILL
 	db SPRITE_KAREN
