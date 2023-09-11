@@ -662,7 +662,7 @@ PinkBowDesc:
 	next "type moves. (HOLD)@"
 
 StickDesc:
-	db   "An ordinary stick."
+	db   "An ordinary leek."
 	next "Sell low.@"
 
 SmokeBallDesc:

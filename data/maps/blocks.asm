@@ -1050,3 +1050,5 @@ SECTION "Map Blocks 4", ROMX
 
 RyokanOutside_Blocks:
 	INCBIN "maps/RyokanOutside.blk"
+Ryokan1F_Blocks:
+	INCBIN "maps/Ryokan1F.blk"

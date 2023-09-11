@@ -37,8 +37,8 @@ RyokanWelcomeSignText:
 RyokanOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
-	; TODO warp inside Ryokan at door
+	db 1 ; warp events
+	warp_event 7, 11, RYOKAN_1F, 1
 
 	db 0 ; coord events
 

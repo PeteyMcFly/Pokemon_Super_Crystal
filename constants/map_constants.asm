@@ -494,4 +494,5 @@ ENDM
 
 	newgroup                                                      ; 27
 	map_const RYOKAN_OUTSIDE,                              15, 15 ;  1
+	map_const RYOKAN_1F,                                   10,  6 ;  2
 
