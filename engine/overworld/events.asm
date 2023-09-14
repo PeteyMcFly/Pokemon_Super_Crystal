@@ -135,11 +135,6 @@ EnterMap:
 	ld [wMapStatus], a
 	ret
 
-UnusedWait30Frames:
-	ld c, 30
-	call DelayFrames
-	ret
-
 HandleMap:
 	call ResetOverworldDelay
 	call HandleMapTimeAndJoypad
@@ -481,11 +476,6 @@ CheckTimeEvents:
 	scf
 	ret
 
-.unused
-	ld a, 8
-	scf
-	ret
-
 OWPlayerInput:
 	call PlayerMovement
 	ret c
@@ -578,9 +568,9 @@ TryObjectEvent:
 	dbw OBJECTTYPE_TRAINER, .trainer
 	; the remaining four are dummy events
 	dbw OBJECTTYPE_3, .three
-	dbw OBJECTTYPE_4, .four
-	dbw OBJECTTYPE_5, .five
-	dbw OBJECTTYPE_6, .six
+	dbw OBJECTTYPE_4, .three
+	dbw OBJECTTYPE_5, .three
+	dbw OBJECTTYPE_6, .three
 	db -1
 
 .script
@@ -614,18 +604,6 @@ TryObjectEvent:
 	ret
 
 .three
-	xor a
-	ret
-
-.four
-	xor a
-	ret
-
-.five
-	xor a
-	ret
-
-.six
 	xor a
 	ret
 
@@ -926,12 +904,6 @@ CountStep:
 	scf
 	ret
 
-; unused
-.unreferenced
-	ld a, PLAYEREVENT_WHITEOUT
-	scf
-	ret
-
 DoRepelStep:
 	ld a, [wRepelEffect]
 	and a
@@ -987,9 +959,6 @@ PlayerEventScriptPointers:
 	dba Invalid_0x96c2d          ; (NUM_PLAYER_EVENTS)
 
 Invalid_0x96c2d:
-	end
-
-; unused
 	end
 
 HatchEggScript:

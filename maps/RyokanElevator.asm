@@ -5,6 +5,7 @@ RyokanElevator_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .RideElevator
 
 .RideElevator
+	applymovement PLAYER, RyokanElevatorWalkIn
 	opentext
 	elevator RyokanElevatorData
 	closetext
@@ -15,6 +16,11 @@ RyokanElevator_MapScripts:
 	waitsfx
 .Done:
 	end
+
+RyokanElevatorWalkIn:
+	step UP
+	turn_head DOWN
+	step_end
 
 RyokanElevatorData:
 	db 1 ; floors

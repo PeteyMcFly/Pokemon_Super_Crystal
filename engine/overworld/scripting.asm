@@ -137,7 +137,6 @@ ScriptCommandTable:
 	dw Script_opentext                   ; 47
 	dw Script_refreshscreen              ; 48
 	dw Script_closetext                  ; 49
-	dw Script_writeunusedbytebuffer      ; 4a
 	dw Script_farwritetext               ; 4b
 	dw Script_writetext                  ; 4c
 	dw Script_repeattext                 ; 4d
@@ -2594,11 +2593,6 @@ Script_warpcheck:
 	farcall EnableEvents
 	ret
 
-Script_enableevents:
-; unused
-	farcall EnableEvents
-	ret
-
 Script_newloadmap:
 ; script command 0x8a
 ; parameters: which_method
@@ -2629,16 +2623,6 @@ Script_refreshscreen:
 	call RefreshScreen
 	call GetScriptByte
 	ret
-
-Script_writeunusedbytebuffer:
-; script command 0x4a
-; parameters: byte
-
-	call GetScriptByte
-	ld [wUnusedScriptByteBuffer], a
-	ret
-
-	db closetext_command ; unused
 
 Script_closetext:
 ; script command 0x49
@@ -2815,11 +2799,3 @@ Script_checksave:
 	ld a, c
 	ld [wScriptVar], a
 	ret
-
-; unused
-	ld a, [.byte]
-	ld [wScriptVar], a
-	ret
-
-.byte
-	db 0
