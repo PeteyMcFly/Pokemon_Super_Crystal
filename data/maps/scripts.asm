@@ -486,3 +486,7 @@ INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/RyokanOutside.asm"
 INCLUDE "maps/Ryokan1F.asm"
+INCLUDE "maps/Ryokan2F.asm"
+INCLUDE "maps/RyokanRooms.asm"
+INCLUDE "maps/RyokanElevator.asm"
+

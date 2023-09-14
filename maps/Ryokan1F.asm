@@ -178,9 +178,10 @@ RyokanReceptionistText_Enjoy:
 Ryokan1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event 3, 11, RYOKAN_OUTSIDE, 1
-	warp_event 4, 11, RYOKAN_OUTSIDE, 1
+	db 3 ; warp events
+	warp_event  3, 11, RYOKAN_OUTSIDE, 1
+	warp_event  4, 11, RYOKAN_OUTSIDE, 1
+	warp_event 10,  1, RYOKAN_ELEVATOR, 1
 	; TODO elevator warp
 
 	db 0 ; coord events
