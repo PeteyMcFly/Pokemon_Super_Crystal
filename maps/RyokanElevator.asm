@@ -23,9 +23,10 @@ RyokanElevatorWalkIn:
 	step_end
 
 RyokanElevatorData:
-	db 1 ; floors
+	db 3 ; floors
 	elevfloor FLOOR_1F, 3, RYOKAN_1F
 	elevfloor FLOOR_2F, 1, RYOKAN_2F
+	elevfloor FLOOR_3F, 1, RYOKAN_3F
 	db -1 ; end
 
 RyokanElevator_MapEvents:

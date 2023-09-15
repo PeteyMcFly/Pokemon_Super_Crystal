@@ -700,5 +700,7 @@ ENDM
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes Ryokan1F, RYOKAN_1F, $00, 0
 	map_attributes Ryokan2F, RYOKAN_2F, $00, 0
+	map_attributes Ryokan3F, RYOKAN_3F, $00, 0
 	map_attributes RyokanRooms, RYOKAN_ROOMS, $00, 0
+	map_attributes RyokanOnsen, RYOKAN_ONSEN, $0a, 0
 	map_attributes RyokanElevator, RYOKAN_ELEVATOR, $00, 0

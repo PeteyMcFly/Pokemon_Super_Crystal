@@ -496,5 +496,7 @@ ENDM
 	map_const RYOKAN_OUTSIDE,                              15, 15 ;  1
 	map_const RYOKAN_1F,                                   10,  6 ;  2
 	map_const RYOKAN_2F,                                   10,  4 ;  3
-	map_const RYOKAN_ROOMS,                                 4, 16 ;  4
-	map_const RYOKAN_ELEVATOR,                              1,  2 ;  5
+	map_const RYOKAN_3F,                                    8,  4 ;  4
+	map_const RYOKAN_ROOMS,                                 4, 16 ;  5
+	map_const RYOKAN_ONSEN,                                14, 12 ;  6
+	map_const RYOKAN_ELEVATOR,                              1,  2 ;  7

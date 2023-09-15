@@ -1055,8 +1055,12 @@ Ryokan1F_Blocks:
 	INCBIN "maps/Ryokan1F.blk"
 Ryokan2F_Blocks:
 	INCBIN "maps/Ryokan2F.blk"
+Ryokan3F_Blocks:
+	INCBIN "maps/Ryokan3F.blk"
 RyokanRooms_Blocks:
 	INCBIN "maps/RyokanRooms.blk"
+RyokanOnsen_Blocks:
+	INCBIN "maps/RyokanOnsen.blk"
 RyokanElevator_Blocks:
 	INCBIN "maps/RyokanElevator.blk"
 

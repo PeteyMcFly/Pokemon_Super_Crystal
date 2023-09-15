@@ -487,6 +487,8 @@ INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/RyokanOutside.asm"
 INCLUDE "maps/Ryokan1F.asm"
 INCLUDE "maps/Ryokan2F.asm"
+INCLUDE "maps/Ryokan3F.asm"
 INCLUDE "maps/RyokanRooms.asm"
+INCLUDE "maps/RyokanOnsen.asm"
 INCLUDE "maps/RyokanElevator.asm"
 
