@@ -81,4 +81,5 @@ MapScenes::
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var RYOKAN_3F,                                   wRyokan3FSceneID
+	scene_var RYOKAN_ONSEN,                                wRyokanOnsenSceneID
 	db -1 ; end

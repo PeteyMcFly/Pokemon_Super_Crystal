@@ -17,7 +17,7 @@ Ryokan3F_CheckPass:
 	opentext
 	checkitem ONSEN_PASS
 	iffalse Ryokan3F_CheckPassNone
-	writetext Ryokan3F_HavePass
+	writetext Ryokan3F_HavePassText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
@@ -28,12 +28,6 @@ Ryokan3F_CheckPassNone:
 	waitbutton
 	closetext
 	applymovement PLAYER, PlayerWalkAwayOnsen
-	end
-
-Ryokan3F_HavePass:
-	writetext Ryokan3F_HavePassText
-	waitbutton
-	closetext
 	end
 
 PlayerWalkAwayOnsen:

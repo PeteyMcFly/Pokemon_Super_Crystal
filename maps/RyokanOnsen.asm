@@ -1,9 +1,13 @@
 	object_const_def ; object_event constants
 
 RyokanOnsen_MapScripts:
-	db 0 ; scene scripts
+	db 1 ; scene scripts
+	scene_script .DummyScene ; SCENE_DEFAULT	
 
 	db 0 ; callbacks
+
+.DummyScene:
+	end
 
 OnsenDirectionSign:
 	jumptext OnsenDirectionSignText
@@ -13,6 +17,52 @@ OnsenHotSpringsSign:
 
 OnsenFootBathSign:
 	jumptext OnsenFootBathSignText
+
+RyokanOnsenBathe:
+	opentext
+	writetext WantToUseOnsen
+	yesorno
+	iffalse RyokanOnsenBatheDone
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	special HealParty
+	playsound SFX_TINGLE
+	waitsfx
+	playsound SFX_FULL_HEAL
+	waitsfx
+	special FadeInQuickly
+	writetext OnsenFeelLikeNew
+	readmem wUsedOnsenToday
+	ifnotequal 0, RyokanOnsenBatheDone
+	special OnsenStatExpBoost
+	writetext OnsenExtraEnergeticText
+RyokanOnsenBatheDone:
+	closetext
+	applymovement PLAYER, PlayerWalkAwaySprings
+	end
+
+PlayerWalkAwaySprings:
+	turn_head UP
+	step UP
+	step UP
+	step_end
+
+OnsenExtraEnergeticText:
+	text "Your #MON"
+	line "feel extra"
+	cont "energetic!"
+	done
+
+WantToUseOnsen:
+	text "Get in the"
+	line "hot springs?"
+	done
+
+OnsenFeelLikeNew:
+	text "You and your"
+	line "#MON all"
+	cont "feel refreshed!"
+	done
 
 OnsenDirectionSignText:
 	text "Welcome to the"
@@ -50,7 +100,8 @@ RyokanOnsen_MapEvents:
 	db 1 ; warp events
 	warp_event 15,  5, RYOKAN_3F, 2
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event  8,  9, SCENE_DEFAULT, RyokanOnsenBathe
 
 	db 3 ; bg events
 	bg_event 14,  6, BGEVENT_READ, OnsenDirectionSign

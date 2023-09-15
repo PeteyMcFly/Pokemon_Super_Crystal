@@ -96,6 +96,8 @@ CheckDailyResetTimer::
 	ld [hli], a ; wDailyFlags2
 	ld [hli], a ; wSwarmFlags
 	ld [hl], a  ; wSwarmFlags + 1
+	ld hl, wUsedOnsenToday
+	ld [hl], a ; For Ryokan Onsen bonus
 	ld hl, wDailyRematchFlags
 rept 4
 	ld [hli], a

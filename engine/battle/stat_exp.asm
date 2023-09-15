@@ -44,9 +44,9 @@ GenerateLeveledStatExp:
 	; load value to all 5 stat exp slots
 	ld a, 5
 .loadloop
-	ld [hl], c
-	inc hl
 	ld [hl], b
+	inc hl
+	ld [hl], c
 	inc hl
 	dec a
 	jr nz, .loadloop

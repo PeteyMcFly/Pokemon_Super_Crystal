@@ -1648,6 +1648,7 @@ wTempDVSpc:: db ; cfdd
 
 wRandomFailure:: db ; cfde
 wAISwitchedInLock:: db ; cfdf
+wUsedOnsenToday:: db ; cfe0
 
 SECTION "WRAM 1", WRAMX
 
@@ -2702,8 +2703,9 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wRyokan3FSceneID::                                db ; d9c1
+wRyokanOnsenSceneID::                             db ; d9c2
 
-	ds 48
+	ds 47
 
 ; fight counts
 wJackFightCount::    db ; d9f2
