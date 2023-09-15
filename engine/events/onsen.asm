@@ -9,7 +9,7 @@ OnsenStatExpBoost:
 	call Random
 	cp 20 percent
 	ld bc, MON_HP_EXP
-	jr nc, .start
+	jr c, .start
 	and $3
 	ld bc, MON_ATK_EXP
 	jr z, .start
