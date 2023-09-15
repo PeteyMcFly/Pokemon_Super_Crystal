@@ -1063,4 +1063,6 @@ RyokanOnsen_Blocks:
 	INCBIN "maps/RyokanOnsen.blk"
 RyokanElevator_Blocks:
 	INCBIN "maps/RyokanElevator.blk"
+RyokanDiningHall_Blocks:
+	INCBIN "maps/RyokanDiningHall.blk"
 

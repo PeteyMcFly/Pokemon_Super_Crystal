@@ -1096,8 +1096,6 @@ RandomEncounter::
 
 	call CheckWildEncounterCooldown
 	jr c, .nope
-	call CanUseSweetScent
-	jr nc, .nope
 	ld hl, wStatusFlags2
 	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
 	jr nz, .bug_contest
@@ -1135,29 +1133,6 @@ WildBattleScript:
 	startbattle
 	reloadmapafterbattle
 	end
-
-CanUseSweetScent::
-	ld hl, wStatusFlags
-	bit STATUSFLAGS_NO_WILD_ENCOUNTERS_F, [hl]
-	jr nz, .no
-	ld a, [wEnvironment]
-	cp CAVE
-	jr z, .ice_check
-	cp DUNGEON
-	jr z, .ice_check
-	farcall CheckGrassCollision
-	jr nc, .no
-
-.ice_check
-	ld a, [wPlayerStandingTile]
-	call CheckIceTile
-	jr z, .no
-	scf
-	ret
-
-.no
-	and a
-	ret
 
 _TryWildEncounter_BugContest:
 	call TryWildEncounter_BugContest
@@ -1338,14 +1313,6 @@ HandleCmdQueue::
 	inc a
 	cp CMDQUEUE_CAPACITY
 	jr nz, .loop
-	ret
-
-Unreferenced_GetNthCmdQueueEntry:
-	ld hl, wCmdQueue
-	ld bc, CMDQUEUE_ENTRY_SIZE
-	call AddNTimes
-	ld b, h
-	ld c, l
 	ret
 
 WriteCmdQueue::

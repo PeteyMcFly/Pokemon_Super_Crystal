@@ -7,9 +7,15 @@ RYOKAN_ONSEN_PASS_PRICE EQU 10000
 	const RYOKAN1F_RECEPTIONIST
 
 Ryokan1F_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script .DummyScene2
 
 	db 0 ; callbacks
+
+.DummyScene2:
+.DummyScene:
+	end
 
 RyokanSouvenirScript:
 	faceplayer
@@ -79,6 +85,42 @@ RyokanReceptionistScript_NoMoney:
 	waitbutton
 	closetext
 	end
+
+Ryokan1F_CheckLock:
+	opentext
+	checkitem RYOKAN_KEY
+	iffalse Ryokan1F_CantPass
+	playsound SFX_ENTER_DOOR
+	waitsfx
+	writetext Ryokan1F_UnlockedText
+	waitbutton
+	closetext
+	setscene SCENE_FINISHED
+	end
+
+Ryokan1F_CantPass:
+	writetext RyokanDiningHallLockedText
+	waitbutton
+	closetext
+	applymovement PLAYER, PlayerWalkAwayDiningHall
+	end
+
+PlayerWalkAwayDiningHall:
+	turn_head RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+Ryokan1F_UnlockedText:
+	text "Used the"
+	line "RYOKAN KEY."
+	done
+
+RyokanDiningHallLockedText:
+	text "Can't get in."
+	line "The dining hall"
+	cont "is locked."
+	done
 
 RyokanSouvenirShopText:
 	text "Care to buy a"
@@ -178,13 +220,17 @@ RyokanReceptionistText_Enjoy:
 Ryokan1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 5 ; warp events
 	warp_event  3, 11, RYOKAN_OUTSIDE, 1
 	warp_event  4, 11, RYOKAN_OUTSIDE, 1
 	warp_event 10,  1, RYOKAN_ELEVATOR, 1
+	warp_event  0,  8, RYOKAN_DINING_HALL, 1
+	warp_event  0,  9, RYOKAN_DINING_HALL, 2
 	; TODO elevator warp
 
-	db 0 ; coord events
+	db 2 ; coord events
+	coord_event 0, 8, SCENE_DEFAULT, Ryokan1F_CheckLock
+	coord_event 0, 9, SCENE_DEFAULT, Ryokan1F_CheckLock
 
 	db 0 ; bg events
 

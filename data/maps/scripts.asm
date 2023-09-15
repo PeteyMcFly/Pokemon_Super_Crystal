@@ -491,4 +491,5 @@ INCLUDE "maps/Ryokan3F.asm"
 INCLUDE "maps/RyokanRooms.asm"
 INCLUDE "maps/RyokanOnsen.asm"
 INCLUDE "maps/RyokanElevator.asm"
+INCLUDE "maps/RyokanDiningHall.asm"
 

@@ -500,3 +500,4 @@ ENDM
 	map_const RYOKAN_ROOMS,                                 4, 16 ;  5
 	map_const RYOKAN_ONSEN,                                14, 12 ;  6
 	map_const RYOKAN_ELEVATOR,                              1,  2 ;  7
+	map_const RYOKAN_DINING_HALL,                           7,  4 ;  8

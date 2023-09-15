@@ -82,4 +82,5 @@ MapScenes::
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var RYOKAN_3F,                                   wRyokan3FSceneID
 	scene_var RYOKAN_ONSEN,                                wRyokanOnsenSceneID
+	scene_var RYOKAN_1F,                                   wRyokan1FSceneID
 	db -1 ; end
