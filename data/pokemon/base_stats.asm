@@ -25,7 +25,7 @@ rept 3 ; TM25-TM48 (24/24)
 	db _tms2 & $ff
 _tms2 = _tms2 >> 8
 endr
-rept 2 ; TM49-TM50 + HM01-HM07 + MT01-MT03 (12/16)
+rept 3 ; TM49-TM50 + HM01-HM07 + MT01-MT03 (12/24)
 	db _tms3 & $ff
 _tms3 = _tms3 >> 8
 endr
