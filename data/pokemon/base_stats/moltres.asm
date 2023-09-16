@@ -8,9 +8,7 @@
 	db 217 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
-	db 100 ; unknown 1
 	db 80 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/moltres/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate

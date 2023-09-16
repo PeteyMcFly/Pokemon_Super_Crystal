@@ -2255,9 +2255,7 @@ wBaseItems:: ; d241
 wBaseItem1:: db ; d241
 wBaseItem2:: db ; d242
 wBaseGender:: db ; d243
-wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245
-wBaseUnknown2:: db ; d246
 wBasePicSize:: db ; d247
 wBasePadding:: ds 4 ; d248
 wBaseGrowthRate:: db ; d24c
@@ -2267,7 +2265,7 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256
 
-	ds 2
+	ds 6
 
 wMornEncounterRate::  db ; d25a
 wDayEncounterRate::   db ; d25b
