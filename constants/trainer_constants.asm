@@ -708,5 +708,7 @@ KRIS EQU __enum__
 
 	trainerclass TRAVELER ; 45
 	const CHRISTIAN
+	const LUKE
+	const ALEX2
 
 NUM_TRAINER_CLASSES EQU __enum__

@@ -31,8 +31,36 @@ RyokanSouvenirScript:
 OkamiSanScript:
 	faceplayer
 	opentext
-	; TODO check event beat all guests
+	; check event beat all guests
+	checkevent EVENT_BEAT_RYOKAN_ONSEN_TRAINER
+	iffalse .BeforeBeat
+	checkevent EVENT_BEAT_RYOKAN_ROOM1_TRAINER
+	iffalse .BeforeBeat
+	checkevent EVENT_BEAT_RYOKAN_ROOM2_TRAINER
+	iffalse .BeforeBeat
+	checkevent EVENT_BEAT_RYOKAN_ROOM3_TRAINER
+	iffalse .BeforeBeat
+	checkitem RYOKAN_KEY
+	iffalse .GiveRyokanKey
+	checkevent EVENT_BEAT_RYOKAN_BOSS
+	iffalse .HasChallenged
+	writetext OkamiSanBeatText
+	promptbutton
+	closetext
+	end
+.GiveRyokanKey
+	writetext OkamiSanChallengeText
+	promptbutton
+	giveitem RYOKAN_KEY
+	closetext
+	end
+.BeforeBeat
 	writetext OkamiSanWelcomeText
+	promptbutton
+	closetext
+	end
+.HasChallenged
+	writetext OkamiSanWaitingText
 	promptbutton
 	closetext
 	end
@@ -110,6 +138,53 @@ PlayerWalkAwayDiningHall:
 	step RIGHT
 	step RIGHT
 	step_end
+
+OkamiSanChallengeText:
+	text "I heard you"
+	line "managed to beat"
+
+	para "all of our"
+	line "distinguished"
+	
+	para "guests in"
+	line "#MON battles."
+
+	para "This is highly"
+	line "impressive."
+
+	para "My father requests"
+	line "a private match"
+	cont "with you."
+
+	para "He is waiting to"
+	line "meet you in the"
+	cont "Dining Hall."
+
+	para "Here's a key"
+	line "that will let"
+	cont "you in."
+	done
+
+OkamiSanBeatText:
+	text "You managed to"
+	line "defeat the best"
+
+	para "of the Ishikawa"
+	line "clan."
+
+	para "Your skills are"
+	line "nothing short of"
+	cont "stellar."
+
+	para "You honor us with"
+	line "your presence."
+	done
+
+OkamiSanWaitingText:
+	text "My father humbly"
+	line "awaits your"
+	cont "presence."
+	done
 
 Ryokan1F_UnlockedText:
 	text "Used the"

@@ -2817,9 +2817,6 @@ wSpecialPhoneCallID:: db ; dc31
 	ds 3
 wBugContestStartTime:: ds 4 ; day, hour, min, sec ; dc35
 wUsedOnsenToday:: db ; dc39
-wNumRyokanTrainersBeaten:: db ; dc40
-wUnusedTwoDayTimerStartDate:: db
-	ds 4
 wMobileOrCable_LastSelection:: db
 wdc41:: ds 1
 wdc42:: ds 8
