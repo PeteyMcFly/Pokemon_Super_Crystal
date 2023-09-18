@@ -70,3 +70,4 @@ TrainerGroups:
 	dw GruntFGroup
 	dw MysticalmanGroup
 	dw PKMNMasterGroup
+	dw TravelerGroup

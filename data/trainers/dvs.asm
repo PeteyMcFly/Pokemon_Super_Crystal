@@ -69,3 +69,4 @@ TrainerClassDVs:
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn 13, 13, 13, 13 ; PKMNMASTER
+	dn 10,  9,  9, 10 ; TRAVELER

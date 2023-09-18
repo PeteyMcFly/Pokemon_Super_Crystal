@@ -68,3 +68,4 @@ TrainerClassNames::
 	db "ROCKET@"
 	db "MYSTICALMAN@"
 	db "<PKMN> MASTER@"
+	db "TRAVELER@"

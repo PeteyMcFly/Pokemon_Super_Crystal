@@ -187,6 +187,7 @@ INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 INCLUDE "engine/pokemon/mail.asm"
 INCLUDE "engine/battle/stat_exp.asm"
+INCLUDE "engine/battle/smart_ai_table.asm"
 
 
 SECTION "Crystal Features 1", ROMX

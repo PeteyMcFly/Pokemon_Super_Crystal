@@ -706,4 +706,7 @@ KRIS EQU __enum__
 	const DYLAN
 	const PETER
 
+	trainerclass TRAVELER ; 45
+	const CHRISTIAN
+
 NUM_TRAINER_CLASSES EQU __enum__
