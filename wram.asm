@@ -1648,7 +1648,6 @@ wTempDVSpc:: db ; cfdd
 
 wRandomFailure:: db ; cfde
 wAISwitchedInLock:: db ; cfdf
-wUsedOnsenToday:: db ; cfe0
 
 SECTION "WRAM 1", WRAMX
 
@@ -2816,8 +2815,8 @@ wLuckyNumberDayBuffer:: dw ; dc2d
 wSpecialPhoneCallID:: db ; dc31
 	ds 3
 wBugContestStartTime:: ds 4 ; day, hour, min, sec ; dc35
-wUnusedTwoDayTimerOn:: db ; dc39
-wUnusedTwoDayTimer:: db
+wUsedOnsenToday:: db ; dc39
+wNumRyokanTrainersBeaten:: db ; dc40
 wUnusedTwoDayTimerStartDate:: db
 	ds 4
 wMobileOrCable_LastSelection:: db

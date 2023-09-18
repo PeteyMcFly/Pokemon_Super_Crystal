@@ -236,6 +236,7 @@ KRIS EQU __enum__
 	const REENA2
 	const REENA3
 	const CARA
+	const LINDA2
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA

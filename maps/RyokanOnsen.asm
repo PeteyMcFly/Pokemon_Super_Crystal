@@ -35,6 +35,7 @@ RyokanOnsenBathe:
 	waitsfx
 	special FadeInQuickly
 	writetext OnsenFeelLikeNew
+	waitbutton
 	readmem wUsedOnsenToday
 	ifnotequal 0, RyokanOnsenBatheDone
 	special OnsenStatExpBoost
@@ -50,14 +51,40 @@ OnsenOldManScript:
 OnsenGrannyScript:
 	jumptextfaceplayer OnsenGrannyText
 
-OnsenWomanScript:
-	jumptextfaceplayer OnsenWomanText
+TrainerOnsenWoman:
+	trainer COOLTRAINERF, LINDA2, EVENT_BEAT_RYOKAN_ONSEN_TRAINER, CoolTrainerFLindaSeenText, CoolTrainerFLindaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext OnsenWomanText
+	waitbutton
+	closetext
+	end
 
 PlayerWalkAwaySprings:
 	turn_head UP
 	step UP
 	step UP
 	step_end
+
+CoolTrainerFLindaSeenText:
+	text "Hello, there."
+	line "I'm visiting from"
+	cont "far away."
+
+	para "Let's see what the"
+	line "local trainers are"
+	cont "made of!"
+	done
+
+CoolTrainerFLindaBeatenText:
+	text "Wow! I'll tell"
+	line "stories of your"
+	
+	para "skills back in"
+	line "Hoenn!"
+	done
 
 OnsenOldManText:
 	text "Hello, sonny!"
@@ -161,4 +188,4 @@ RyokanOnsen_MapEvents:
 	db 3 ; object events
 	object_event 15, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OnsenOldManScript, -1
 	object_event 19, 16, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OnsenGrannyScript, -1
-	object_event 20, 16, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OnsenWomanScript, -1
+	object_event 20, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerOnsenWoman, -1
