@@ -47,10 +47,10 @@ RyokanAlexText:
 	line "battle isn't so"
 	cont "bad."
 
-	text "I could be at"
+	para "I could be at"
 	line "work instead."
 
-	text "Thank God I'm"
+	para "Thank God I'm"
 	line "on vacation."
 	done
 
