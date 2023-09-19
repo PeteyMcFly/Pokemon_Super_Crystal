@@ -151,7 +151,7 @@ TrainerType2:
 	ld d, h
 	ld e, l
 	farcall GenerateLeveledStatExp
-	call RecalcStats
+	farcall RecalcStats
 	ld hl, MON_PP
 	add hl, de
 	push hl
@@ -272,7 +272,7 @@ TrainerType4:
 	ld d, h
 	ld e, l
 	farcall GenerateLeveledStatExp
-	call RecalcStats
+	farcall RecalcStats
 	ld hl, MON_PP
 	add hl, de
 
@@ -397,36 +397,7 @@ GetCurrentMonAndGenStats:
 	ld e, l
 	farcall GenerateLeveledStatExp
 	pop de
-	; fallthrough
-RecalcStats:
-	push de
-	; recalc stats so HP is in sync with new max HP after stat boost
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1MaxHP
-	call GetPartyLocation
-	ld d, h
-	ld e, l
-
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1StatExp - 1
-	call GetPartyLocation
-
-	ld b, TRUE
-	push de
-	predef CalcMonStats
-	pop hl
-
-	inc hl
-	ld c, [hl]
-	dec hl
-	ld b, [hl]
-	dec hl
-	ld [hl], c
-	dec hl
-	ld [hl], b
-	pop de
+	farcall RecalcStats
 	ret
 
 INCLUDE "data/trainers/parties.asm"

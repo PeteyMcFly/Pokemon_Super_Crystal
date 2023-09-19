@@ -70,3 +70,4 @@ TrainerPicPointers::
 	dba_pic GruntfPic
 	dba_pic MysticalmanPic
 	dba_pic PKMNMasterPic
+	dba_pic TravelerPic

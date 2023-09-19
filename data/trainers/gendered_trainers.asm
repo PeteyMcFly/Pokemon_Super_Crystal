@@ -27,6 +27,7 @@ MaleTrainers:
 	db BIKER
 	db SCIENTIST
 	db PKMNMASTER
+	db TRAVELER
 .End
 
 FemaleTrainers:

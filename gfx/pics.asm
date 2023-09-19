@@ -555,6 +555,7 @@ CaterpieFrontpic:    INCBIN "gfx/pokemon/caterpie/front.animated.2bpp.lz"
 HoppipBackpic:       INCBIN "gfx/pokemon/hoppip/back.2bpp.lz"
 BluePic:             INCBIN "gfx/trainers/blue.2bpp.lz"
 GranbullBackpic:     INCBIN "gfx/pokemon/granbull/back.2bpp.lz"
+TravelerPic:
 GentlemanPic:        INCBIN "gfx/trainers/gentleman.2bpp.lz"
 ExecutivemPic:       INCBIN "gfx/trainers/executive_m.2bpp.lz"
 SpearowBackpic:      INCBIN "gfx/pokemon/spearow/back.2bpp.lz"

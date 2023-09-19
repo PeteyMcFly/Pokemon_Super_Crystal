@@ -70,3 +70,4 @@ BTTrainerClassGenders:
 	db FEMALE ; GRUNTF
 	db MALE   ; EUSINE
 	db MALE   ; PKMNMaster
+	db MALE   ; Traveler
