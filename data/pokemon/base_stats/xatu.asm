@@ -1,6 +1,6 @@
 	db XATU ; 178
 
-	db  67,  78,  70,  95,  95,  70
+	db  70,  78,  70,  95,  95,  70
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC, FLYING ; type

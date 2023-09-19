@@ -1,6 +1,6 @@
 	db SMEARGLE ; 235
 
-	db  60,  20,  47,  75,  55,  45
+	db  62,  30,  47,  75,  30,  45
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

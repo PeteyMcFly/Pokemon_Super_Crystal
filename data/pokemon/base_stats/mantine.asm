@@ -1,6 +1,6 @@
 	db MANTINE ; 226
 
-	db  75,  40,  70,  70,  80, 140
+	db  75,  50,  70,  70,  80, 140
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, FLYING ; type

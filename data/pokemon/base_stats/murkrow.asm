@@ -1,6 +1,6 @@
 	db MURKROW ; 198
 
-	db  62,  85,  62,  91,  85,  62
+	db  62,  85,  65,  96,  85,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, FLYING ; type
