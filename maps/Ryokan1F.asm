@@ -51,7 +51,7 @@ OkamiSanScript:
 .GiveRyokanKey
 	writetext OkamiSanChallengeText
 	promptbutton
-	giveitem RYOKAN_KEY
+	verbosegiveitem RYOKAN_KEY
 	closetext
 	end
 .BeforeBeat

@@ -5,6 +5,87 @@ RyokanDiningHall_MapScripts:
 
 	db 0 ; callbacks
 
+IshikawaScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_RYOKAN_BOSS
+	iftrue .FightDone
+	writetext IshikawaSeenText
+	waitbutton
+	closetext
+	winlosstext IshikawaBeatenText, 0
+	loadtrainer OUTLAW, ISHIKAWA
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_RYOKAN_BOSS
+	opentext
+	writetext GetFocusBlastText
+	promptbutton
+	verbosegiveitem TM_FOCUS_BLAST
+	waitbutton
+	closetext
+	end
+
+.FightDone
+	writetext IshikawaAfterFightText
+	waitbutton
+	closetext
+	end
+	
+
+IshikawaSeenText:
+	text "Thank you for"
+	line "coming here."
+
+	para "I've heard all"
+	line "about your"
+	cont "exploits"
+
+	para "throughout my"
+	line "storied"
+	cont "establishment,"
+
+	para "passed down"
+	line "through"
+	cont "generations"
+
+	para "of my family."
+
+	para "I don't normally"
+	line "show my face"
+	cont "around here,"
+
+	para "But I just had"
+	line "to meet you."
+
+	para "Show me the real"
+	line "power of Johto's"
+	cont "trainers!"
+	done
+
+IshikawaBeatenText:
+	text "Incredible."
+	done
+
+GetFocusBlastText:
+	text "Well done."
+
+	para "Please take this"
+	line "as a gift."
+
+	para "It is a rare TM"
+	line "that unleashes"
+
+	para "the full focus of"
+	line "your #MON."
+	done
+
+IshikawaAfterFightText:
+	text "It was an honor"
+	line "to battle someone"
+	cont "of your skill."
+	done
+	
 
 RyokanDiningHall_MapEvents:
 	db 0, 0 ; filler
@@ -17,4 +98,5 @@ RyokanDiningHall_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 1, 4, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IshikawaScript, -1

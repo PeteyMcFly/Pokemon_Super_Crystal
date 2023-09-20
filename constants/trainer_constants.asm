@@ -711,4 +711,7 @@ KRIS EQU __enum__
 	const LUKE
 	const ALEX2
 
+	trainerclass OUTLAW ; 46
+	const ISHIKAWA
+
 NUM_TRAINER_CLASSES EQU __enum__

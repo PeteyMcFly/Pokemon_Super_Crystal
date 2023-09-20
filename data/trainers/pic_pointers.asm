@@ -71,3 +71,4 @@ TrainerPicPointers::
 	dba_pic MysticalmanPic
 	dba_pic PKMNMasterPic
 	dba_pic TravelerPic
+	dba_pic OutlawPic

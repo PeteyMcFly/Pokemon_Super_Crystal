@@ -70,3 +70,4 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn 13, 13, 13, 13 ; PKMNMASTER
 	dn 10,  9,  9, 10 ; TRAVELER
+	dn 12, 11, 13, 11 ; OUTLAW

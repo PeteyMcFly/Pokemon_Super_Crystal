@@ -28,6 +28,7 @@ MaleTrainers:
 	db SCIENTIST
 	db PKMNMASTER
 	db TRAVELER
+	db OUTLAW
 .End
 
 FemaleTrainers:

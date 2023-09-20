@@ -71,3 +71,4 @@ TrainerGroups:
 	dw MysticalmanGroup
 	dw PKMNMasterGroup
 	dw TravelerGroup
+	dw OutlawGroup

@@ -71,3 +71,4 @@ BTTrainerClassGenders:
 	db MALE   ; EUSINE
 	db MALE   ; PKMNMaster
 	db MALE   ; Traveler
+	db MALE   ; Outlaw
