@@ -2061,17 +2061,18 @@ Teleport:
 	teleport
 	endmove
 
-BeatUp:
+MultiHitFlinch:
 	checkobedience
 	usedmovetext
-	movedelay
 	doturn
 	startloop
 	lowersub
 	checkhit
+	effectchance
 	critical
-	beatup
+	damagestats
 	damagecalc
+	stab
 	damagevariation
 	clearmissdamage
 	moveanimnosub
@@ -2079,11 +2080,11 @@ BeatUp:
 	applydamage
 	criticaltext
 	cleartext
-	supereffectivetext
+	supereffectivelooptext
 	checkfaint
 	buildopponentrage
+	flinchtarget
 	endloop
-	beatupfailtext
 	raisesub
 	kingsrock
 	endmove

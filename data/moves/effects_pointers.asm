@@ -154,6 +154,6 @@ MoveEffectsPointers:
 	dw Solarbeam
 	dw Thunder
 	dw Teleport
-	dw BeatUp
+	dw MultiHitFlinch
 	dw Fly
 	dw DefenseCurl
