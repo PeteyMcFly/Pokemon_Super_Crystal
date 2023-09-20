@@ -43,13 +43,14 @@ IshikawaSeenText:
 
 	para "throughout my"
 	line "storied"
-	cont "establishment,"
+	cont "establishment."
 
-	para "passed down"
-	line "through"
-	cont "generations"
+	para "This place has"
+	line "been passed down"
 
-	para "of my family."
+	para "through"
+	line "generations of"
+	cont "my clan."
 
 	para "I don't normally"
 	line "show my face"
@@ -58,9 +59,11 @@ IshikawaSeenText:
 	para "But I just had"
 	line "to meet you."
 
-	para "Show me the real"
-	line "power of Johto's"
-	cont "trainers!"
+	para "You have spirit."
+
+	para "Now show me the"
+	line "true spirit of"
+	cont "Johto's trainers!"
 	done
 
 IshikawaBeatenText:
@@ -91,8 +94,8 @@ RyokanDiningHall_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 13,  4, RYOKAN_1F, 1
-	warp_event 13,  5, RYOKAN_1F, 1
+	warp_event 13,  4, RYOKAN_1F, 4
+	warp_event 13,  5, RYOKAN_1F, 5
 
 	db 0 ; coord events
 

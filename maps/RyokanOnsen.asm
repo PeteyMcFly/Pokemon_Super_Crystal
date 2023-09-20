@@ -12,6 +12,9 @@ RyokanOnsen_MapScripts:
 .DummyScene:
 	end
 
+OnsenHiddenRevivalHerb:
+	hiddenitem REVIVAL_HERB, EVENT_ONSEN_HIDDEN_REVIVAL_HERB
+
 OnsenDirectionSign:
 	jumptext OnsenDirectionSignText
 
@@ -40,10 +43,76 @@ RyokanOnsenBathe:
 	ifnotequal 0, RyokanOnsenBatheDone
 	special OnsenStatExpBoost
 	writetext OnsenExtraEnergeticText
+	waitbutton
 RyokanOnsenBatheDone:
 	closetext
 	applymovement PLAYER, PlayerWalkAwaySprings
 	end
+
+RyokanFootBath:
+	opentext
+	readmem wUsedOnsenToday
+	ifequal 1, NoFootBathToday
+	writetext WantToUseFootBath
+	yesorno
+	iffalse FootBathDone
+	writetext FootBathAskWhichMon
+	promptbutton
+	special OlderHaircutBrother
+	ifequal 0, FootBathDone
+	ifequal 1, FootBathDone
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	playsound SFX_TINGLE
+	waitsfx
+	special FadeInQuickly
+	writetext FootBathLooksHappier
+	special PlayCurMonCry
+	waitbutton
+	readmem wUsedOnsenToday
+	addval 1
+	writemem wUsedOnsenToday
+	sjump FootBathDone
+NoFootBathToday:
+	writetext NoFootBathTodayText
+FootBathDone:
+	closetext
+	applymovement PLAYER, PlayerWalkAwayFootBath
+	end
+
+PlayerWalkAwayFootBath:
+	turn_head DOWN
+	step DOWN
+	step_end
+
+FootBathLooksHappier:
+	text_ram wStringBuffer3
+	text " looks"
+	line "very relaxed!"
+	done
+
+WantToUseFootBath:
+	text "Would you like"
+	line "to use the foot"
+
+	para "bath with one of"
+	line "your #MON?"
+	done
+
+FootBathAskWhichMon:
+	text "Which #MON"
+	line "would you like to"
+	cont "get in with?"
+	done
+
+NoFootBathTodayText:
+	text "Your #MON"
+	line "don't look"
+
+	para "interested in"
+	line "using the foot"
+	cont "bath today."
+	done
 
 OnsenOldManScript:
 	jumptextfaceplayer OnsenOldManText
@@ -177,13 +246,15 @@ RyokanOnsen_MapEvents:
 	db 1 ; warp events
 	warp_event 15,  5, RYOKAN_3F, 2
 
-	db 1 ; coord events
+	db 2 ; coord events
 	coord_event  8,  9, SCENE_DEFAULT, RyokanOnsenBathe
+	coord_event 21, 16, SCENE_DEFAULT, RyokanFootBath
 
-	db 3 ; bg events
+	db 4 ; bg events
 	bg_event 14,  6, BGEVENT_READ, OnsenDirectionSign
 	bg_event  9,  9, BGEVENT_READ, OnsenHotSpringsSign
 	bg_event 18, 16, BGEVENT_READ, OnsenFootBathSign
+	bg_event 15, 16, BGEVENT_ITEM, OnsenHiddenRevivalHerb
 
 	db 3 ; object events
 	object_event 15, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OnsenOldManScript, -1

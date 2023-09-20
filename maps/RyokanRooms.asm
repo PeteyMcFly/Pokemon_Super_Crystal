@@ -8,6 +8,8 @@ RyokanRooms_MapScripts:
 
 	db 0 ; callbacks
 
+RyokanRoomsHiddenLightBall:
+	hiddenitem LIGHT_BALL, EVENT_RYOKAN_HIDDEN_LIGHT_BALL
 
 TrainerRyokanChristian:
 	trainer TRAVELER, CHRISTIAN, EVENT_BEAT_RYOKAN_ROOM3_TRAINER, RyokanChristianSeenText, RyokanChristianBeatenText, 0, .Script
@@ -129,7 +131,8 @@ RyokanRooms_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  1, 13, BGEVENT_ITEM, RyokanRoomsHiddenLightBall
 
 	db 3 ; object events
 	object_event  4, 29, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerRyokanChristian, -1
