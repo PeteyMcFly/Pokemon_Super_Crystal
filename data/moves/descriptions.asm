@@ -277,8 +277,8 @@ DoubleslapDescription:
 	next "2-5 times.@"
 
 CometPunchDescription:
-	db   "Repeatedly punches"
-	next "2-5 times.@"
+	db   "2-5 punches"
+	next "that can flinch@"
 
 MegaPunchDescription:
 	db   "A powerful punch"
@@ -313,7 +313,7 @@ GuillotineDescription:
 	next "pincer attack.@"
 
 RazorWindDescription:
-	db   "1st turn: Prepare"
+	db   "1st turn: Defend"
 	next "2nd turn: Attack@"
 
 SwordsDanceDescription:
@@ -366,7 +366,7 @@ MegaKickDescription:
 
 BrickBreakDescription:
 	db   "An attack that can"
-	next "smash a wall.@"
+	next "smash defenses.@"
 
 RollingKickDescription:
 	db   "A fast, spinning"
@@ -457,8 +457,8 @@ SupersonicDescription:
 	next "cause confusion.@"
 
 SonicboomDescription:
-	db   "Always inflicts"
-	next "20HP damage.@"
+	db   "Loud strike"
+	next "that deals damage"
 
 DisableDescription:
 	db   "Disables the foe's"
@@ -725,8 +725,8 @@ ReflectDescription:
 	next "with a barrier.@"
 
 FocusEnergyDescription:
-	db   "Raises the criti-"
-	next "cal hit ratio.@"
+	db   "Raises critical"
+	next "hit stage by 2.@"
 
 BideDescription:
 	db   "Waits 2-3 turns &"
@@ -1065,8 +1065,8 @@ OutrageDescription:
 	next "and confuses user.@"
 
 SandstormDescription:
-	db   "Inflicts damage"
-	next "every turn.@"
+	db   "Damage each turn and"
+	next "Boosts rock/ground.@"
 
 GigaDrainDescription:
 	db   "Steals 1/2 of the"
@@ -1130,11 +1130,11 @@ ReturnDescription:
 
 PresentDescription:
 	db   "A bomb that may"
-	next "restore HP.@"
+	next "damage or heal.@"
 
 FrustrationDescription:
-	db   "An attack based on"
-	next "lack of loyalty.@"
+	db   "Deal double damage"
+	next "when PSN/PRZ/BRN.@"
 
 SafeguardDescription:
 	db   "Prevents all"
@@ -1230,7 +1230,7 @@ SunnyDayDescription:
 
 CrunchDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower DEF.@"
 
 MirrorCoatDescription:
 	db   "Counters a SPCL."
