@@ -205,18 +205,12 @@ BugsyText_HiveBadgeSpeech:
 
 BugsyText_FuryCutterSpeech:
 	text "TM49 contains"
-	line "SWORDS DANCE."
+	line "FURY CUTTER."
 
-	para "It doubles your,"
-	line "pokemon's attack"
-	cont "when used"
+	para "Each time you,"
+	line "use it, it's "
+	cont "power doubles!"
 
-	para "Use it when"
-	line "you want to "
-	cont "setup a sweep."
-
-	para "Let it rip"
-	line "on Psychic types"
 	done
 
 BugsyText_BugMonsAreDeep:
