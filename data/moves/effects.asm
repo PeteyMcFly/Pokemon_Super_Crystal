@@ -2061,6 +2061,19 @@ Teleport:
 	teleport
 	endmove
 
+DefenseCurl:
+	checkobedience
+	usedmovetext
+	doturn
+	defenseup
+	curl
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
 MultiHitFlinch:
 	checkobedience
 	usedmovetext
@@ -2068,7 +2081,6 @@ MultiHitFlinch:
 	startloop
 	lowersub
 	checkhit
-	effectchance
 	critical
 	damagestats
 	damagecalc
@@ -2082,22 +2094,10 @@ MultiHitFlinch:
 	cleartext
 	supereffectivelooptext
 	checkfaint
-	buildopponentrage
+	effectchance
 	flinchtarget
+	buildopponentrage
 	endloop
 	raisesub
 	kingsrock
-	endmove
-
-DefenseCurl:
-	checkobedience
-	usedmovetext
-	doturn
-	defenseup
-	curl
-	lowersub
-	statupanim
-	raisesub
-	statupmessage
-	statupfailtext
 	endmove

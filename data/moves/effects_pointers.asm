@@ -157,3 +157,4 @@ MoveEffectsPointers:
 	dw MultiHitFlinch
 	dw Fly
 	dw DefenseCurl
+	dw MultiHitFlinch
