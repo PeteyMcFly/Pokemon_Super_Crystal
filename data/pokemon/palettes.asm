@@ -519,7 +519,7 @@ INCLUDE "gfx/pokemon/celebi/shiny.pal"
 	RGB 23, 16, 00
 PAL_SUPER_SHINY::
 ; 252 shiny
-	RGB 00, 00, 00
+	RGB 10, 07, 11
 	RGB 00, 00, 00
 
 INCBIN "gfx/pokemon/egg/front.gbcpal", middle_colors
