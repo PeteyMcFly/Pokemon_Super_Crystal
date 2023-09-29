@@ -173,6 +173,7 @@
 	charmap "'s",        $d4
 	charmap "'t",        $d5
 	charmap "'v",        $d6
+	charmap "<SS>",      $da
 
 	charmap "←",         $df
 	charmap "'",         $e0
