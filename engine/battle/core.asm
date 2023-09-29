@@ -6152,11 +6152,21 @@ LoadEnemyMon:
 ; Get back the result of our check
 	pop af
 ; If the RoamMon struct has already been initialized, we're done
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; If it hasn't, we need to initialize the DVs
 ; (HP is initialized at the end of the battle)
 	call GetRoamMonDVs
+;Extra shiny chance
+	call BattleRandom
+	cp 2 percent
+	jr nc, .normal_roam
+	call BattleRandom
+	cp $ff
+	jr z, .super_shiny_roam
+	cp 2 percent
+	jr c, .shiny_roam
+.normal_roam
 	inc hl
 	call BattleRandom
 	ld [hld], a
@@ -6165,6 +6175,19 @@ LoadEnemyMon:
 	ld [hl], a
 	ld b, a
 ; We're done with DVs
+	jr .UpdateDVs
+.super_shiny_roam
+	ld b, $ff
+	ld c, $ff
+	jr .apply_roam
+.shiny_roam
+	ld b, ATKDEFDV_SHINY
+	ld c, SPDSPCDV_SHINY
+.apply_roam
+	ld [hl], b
+	inc hl
+	ld [hl], c
+	dec hl
 	jr .UpdateDVs
 
 .NotRoaming:
