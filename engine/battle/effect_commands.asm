@@ -1213,7 +1213,7 @@ BattleCommand_Critical:
 	bit SUBSTATUS_FOCUS_ENERGY, a
 	jr nz, .inc_focus
 	bit SUBSTATUS_DIRE_HIT, a
-	jr nz, .CheckCritical
+	jr z, .CheckCritical
 	jr .inc_dire
 
 .inc_focus
