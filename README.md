@@ -1,13 +1,13 @@
 # How To Play
 
 ## Automatic Setup
-If you have [Docker](https://docs.docker.com/get-docker/) installed on your system, you can run a script to automatically install the custom tool chaining needed and generate a .gbc file.
+If you have [Docker](https://docs.docker.com/get-docker/) installed and running on your system, you can run a script to automatically install the custom tool chaining needed and generate a `.gbc` file.
 
 ```
 chmod +x ./automate.sh; ./automate.sh
 ```
 
-This will create a `pokecrystal.gbc` file that can be used in any emulator.
+This will create a `pokecrystal.gbc` file in the root of the repository that can be used in any emulator.
 
 ## Manual Setup
 You will need a Pokemon Crystal ROM (.gbc file). Please support the official release of pokemon and buy Pokemon Crystal. We can distribute the IPS patch for **Pokemon Super Crystal**, but not the ROM.
