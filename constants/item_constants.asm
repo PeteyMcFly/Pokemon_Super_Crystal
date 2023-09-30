@@ -154,7 +154,6 @@
 	const LEFTOVERS    ; 92
 	const ITEM_93      ; 93
 	const ITEM_94      ; 94
-	const ITEM_95      ; 95
 	const MYSTERYBERRY ; 96
 	const DRAGON_SCALE ; 97
 	const BERSERK_GENE ; 98
@@ -244,7 +243,7 @@ ENDM
 	add_tm THUNDER_WAVE  ; e0
 	add_tm ICE_PUNCH    ; e1
 	add_tm SWAGGER      ; e2
-	add_tm BODY_SLAM  ; e3
+	add_tm SLEEP_TALK  ; e3
 	add_tm SLUDGE_BOMB  ; e4
 	add_tm SKY_ATTACK   ; e5
 	add_tm FIRE_BLAST   ; e6
@@ -265,6 +264,7 @@ ENDM
 	add_tm POWER_GEM   ; break
 	add_tm FOCUS_BLAST ; break
 	add_tm SWORDS_DANCE ; break
+	add_tm BODY_SLAM ; break
 NUM_TMS EQU const_value - TM01 - 2 ; discount ITEM_C3 and ITEM_DC
 
 add_hm: MACRO

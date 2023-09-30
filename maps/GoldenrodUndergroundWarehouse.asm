@@ -90,7 +90,7 @@ GoldenrodUndergroundWarehouseMaxEther:
 	itemball CALCIUM
 
 GoldenrodUndergroundWarehouseTMSleepTalk:
-	itemball TM_BODY_SLAM
+	itemball TM_SLEEP_TALK
 
 GoldenrodUndergroundWarehouseUltraBall:
 	itemball ULTRA_BALL
