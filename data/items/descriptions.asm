@@ -148,7 +148,6 @@ ItemDescriptions:
 	dw LeftoversDesc
 	dw TeruSama15Desc
 	dw TeruSama16Desc
-	dw TeruSama17Desc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
@@ -828,8 +827,6 @@ TeruSama15Desc:
 TeruSama16Desc:
 	db   "?@"
 
-TeruSama17Desc:
-	db   "?@"
 
 MysteryBerryDesc:
 	db   "A self-restore"

@@ -335,7 +335,7 @@ CherrygroveCity_RivalExitsStageLeft:
 
 GuideGentIntroText:
 	text "PLEASE READ THIS!"
-	line "do you want tips"
+	line "Do you want tips"
 	cont "about this game?"
 
 	para "If you'd like, I"
@@ -362,7 +362,8 @@ GuideGentPokecenterText:
 
 	para "You must explore,"
 	line "because there are"
-	cont "new #MON everywhere"
+	cont "new #MON"
+	cont "everywhere
 	done
 
 GuideGentMartText:
@@ -390,8 +391,8 @@ GuideGentRoute30Text:
 	para "You should look"
 	line "at moves in the"
 	
-	para "#MON menu to learn"
-	line "about the changes!"
+	para "#MON menu to"
+	line "learn more!"
 	done
 
 GuideGentSeaText:
@@ -401,13 +402,13 @@ GuideGentSeaText:
 
 	para "Gym Leaders and"
 	line "other bosses have"
-	cont "much stronger teams,"
+	cont "stronger teams,"
 
 	para "and behave more"
-	cont "intelligently."
+	line "intelligently."
 
 	para "Only true #MON"
-	line "masters can beat"
+	line "Masters can beat"
 	cont "this game."
 	done
 
