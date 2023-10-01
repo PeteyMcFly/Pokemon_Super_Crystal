@@ -362,8 +362,9 @@ GuideGentPokecenterText:
 
 	para "You must explore,"
 	line "because there are"
-	cont "new #MON"
-	cont "everywhere
+
+	para "new #MON"
+	cont "everywhere!"
 	done
 
 GuideGentMartText:
