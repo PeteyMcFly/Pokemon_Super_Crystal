@@ -1,3 +1,6 @@
+# automated gbc file generation
+pokecrystal.gbc
+
 # generated
 *.tx
 *.o

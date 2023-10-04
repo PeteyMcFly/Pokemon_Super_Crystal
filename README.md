@@ -1,4 +1,15 @@
 # How To Play
+
+## Automatic Setup
+If you have [Docker](https://docs.docker.com/get-docker/) installed and running on your system, you can run a script to automatically install the custom tool chaining needed and generate a `.gbc` file.
+
+```
+chmod +x ./automate.sh; ./automate.sh
+```
+
+This will create a `pokecrystal.gbc` file in the root of the repository that can be used in any emulator.
+
+## Manual Setup
 You will need a Pokemon Crystal ROM (.gbc file). Please support the official release of pokemon and buy Pokemon Crystal. We can distribute the IPS patch for **Pokemon Super Crystal**, but not the ROM.
 
 1. Download the IPS patch for **Pokemon Super Crystal** here: https://github.com/peterjtalen/Pokemon_Super_Crystal/releases/tag/rc1 An IPS patch is a set of instructions on how to alter a ROM file from its base form to the hacked form.
