@@ -705,3 +705,4 @@ ENDM
 	map_attributes RyokanOnsen, RYOKAN_ONSEN, $0a, 0
 	map_attributes RyokanElevator, RYOKAN_ELEVATOR, $00, 0
 	map_attributes RyokanDiningHall, RYOKAN_DINING_HALL, $00, 0
+	map_attributes SeafoamCave, SEAFOAM_CAVE, $00, 0
