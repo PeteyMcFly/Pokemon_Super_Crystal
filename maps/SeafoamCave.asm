@@ -5,10 +5,24 @@ SeafoamGym_MapScripts:
 	db 1 ; scene scripts
 	scene_script .DummyScene
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Articuno
 
 .DummyScene:
 	end
+
+.Articuno:
+	checkevent EVENT_FOUGHT_ARTICUNO
+	iftrue .NoAppear
+	sjump .Appear
+
+.Appear:
+	appear SEAFOAM_ISLAND_ARTICUNO
+	return
+
+.NoAppear:
+	disappear SEAFOAM_ISLAND_ARTICUNO
+	return
 
 Articuno:
 	faceplayer

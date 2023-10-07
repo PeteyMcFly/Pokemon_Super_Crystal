@@ -182,6 +182,7 @@ ENDM
 	map_const ROUTE_20,                                    30,  9 ;  6
 	map_const ROUTE_21,                                    10, 18 ;  7
 	map_const CINNABAR_ISLAND,                             10,  9 ;  8
+	map_const SEAFOAM_CAVE,                                 4,  4 ;  9
 
 
 	newgroup                                                      ;  7
@@ -502,4 +503,3 @@ ENDM
 	map_const RYOKAN_ONSEN,                                14, 12 ;  6
 	map_const RYOKAN_ELEVATOR,                              1,  2 ;  7
 	map_const RYOKAN_DINING_HALL,                           7,  4 ;  8
-	map_const SEAFOAM_CAVE,                                 4,  4 ;  9
