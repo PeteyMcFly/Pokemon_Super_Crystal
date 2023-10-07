@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const SEAFOAM_ISLAND_ARTICUNO
 
-SeafoamGym_MapScripts:
+SeafoamCave_MapScripts:
 	db 1 ; scene scripts
 	scene_script .DummyScene
 
@@ -44,7 +44,7 @@ ArticunoText:
 	done
 
 
-SeafoamGym_MapEvents:
+SeafoamCave_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
