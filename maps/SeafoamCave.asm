@@ -48,11 +48,11 @@ SeafoamCave_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  5,  7, ROUTE_20, 1
+	warp_event  4,  6, ROUTE_20, 1
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 4,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLAND_ARTICUNO_ARTICUNO
+	object_event 3,  1, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLAND_ARTICUNO_ARTICUNO
