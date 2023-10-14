@@ -1067,3 +1067,7 @@ RyokanDiningHall_Blocks:
 	INCBIN "maps/RyokanDiningHall.blk"
 SeafoamCave_Blocks:
 	INCBIN "maps/SeafoamCave.blk"
+CeruleanCave1F_Blocks
+	INCBIN "maps/CeruleanCave1F.blk"
+CeruleanCave2F_Blocks
+	INCBIN "maps/CeruleanCave2F.blk"
