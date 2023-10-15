@@ -20,11 +20,11 @@ CeruleanCave2F_MapScripts:
 	disappear CERULEAN_CAVE_MEWTWO
 	return
 
-Mewtwo:
+CeruleanCaveMewtwo:
 	faceplayer
 	opentext
-	writetext MewtwoText
-	cry Mewtwo
+	writetext CeruleanCaveMewtwoText
+	cry MEWTWO
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEWTWO
@@ -35,7 +35,7 @@ Mewtwo:
 	reloadmapafterbattle
 	end
 
-MewtwoText:
+CeruleanCaveMewtwoText:
 	text "... !?"
 	done
 
@@ -43,11 +43,11 @@ CeruleanCave2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  3, 3, CERULEAN_CAVE1F, 2
+	warp_event  3, 3, CERULEAN_CAVE_1F, 2
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 4,  9, SPRITE_RHYDON, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Mewtwo, EVENT_CERULEAN_CAVE_MEWTWO_MEWTWO
+	object_event 4,  9, SPRITE_RHYDON, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCaveMewtwo, EVENT_CERULEAN_CAVE_MEWTWO_MEWTWO

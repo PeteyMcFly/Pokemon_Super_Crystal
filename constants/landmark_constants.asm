@@ -103,8 +103,7 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_28          ; 5e
 	const FAST_SHIP         ; 5f
 	const SEAFOAM_CAVE      ; 60
-	const CERULEAN_CAVE_1F  ; 61
-	const CERULEAN_CAVE_2F  ; 62
+	const CERULEAN_CAVE     ; 61
 
 ; used in CaughtData
 GIFT_LOCATION  EQU $7e

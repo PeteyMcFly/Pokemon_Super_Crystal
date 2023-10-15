@@ -95,7 +95,7 @@ endc
 endc
 ENDM
 
-
+SECTION "Map Attributes", ROMX
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
@@ -706,5 +706,5 @@ ENDM
 	map_attributes RyokanElevator, RYOKAN_ELEVATOR, $00, 0
 	map_attributes RyokanDiningHall, RYOKAN_DINING_HALL, $00, 0
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $00, 0
-	map_attributes CeruleanCave1F, CERUELEAN_CAVE_1F, $00, 0
-	map_attributes CeruleanCave2F, CERUELEAN_CAVE_2F, $00, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $00, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $00, 0

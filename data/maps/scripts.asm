@@ -492,6 +492,9 @@ INCLUDE "maps/RyokanRooms.asm"
 INCLUDE "maps/RyokanOnsen.asm"
 INCLUDE "maps/RyokanElevator.asm"
 INCLUDE "maps/RyokanDiningHall.asm"
+
+SECTION "Map Scripts 26", ROMX
+
 INCLUDE "maps/SeafoamCave.asm"
 INCLUDE "maps/CeruleanCave1F.asm"
 INCLUDE "maps/CeruleanCave2F.asm"
