@@ -104,6 +104,8 @@ Landmarks:
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
 	landmark  68, 132, SeafoamCaveName
+	landmark  68, 132, CeruleanCave1FName
+	landmark  68, 132, CeruleanCave2FName
 
 NewBarkTownName:     db "NEW BARK¯TOWN@"
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"
@@ -208,4 +210,6 @@ UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
 RyokanName:          db "VINEBRIDGE INN@"
-SeafoamCaveName:     db "SEAFOAM CAVE@"
+SeafoamCaveName:     db "SEAFOAM ICE@"
+CeruleanCave1FName:  db "CERULEAN CAVE@"
+CeruleanCave2FName:  db "MYSTERIOUS CAVE@"

@@ -493,4 +493,6 @@ INCLUDE "maps/RyokanOnsen.asm"
 INCLUDE "maps/RyokanElevator.asm"
 INCLUDE "maps/RyokanDiningHall.asm"
 INCLUDE "maps/SeafoamCave.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
 

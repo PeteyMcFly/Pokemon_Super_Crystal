@@ -43,7 +43,7 @@ CeruleanCave2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  3, 3, CERULEAN_CAVE1F, 10
+	warp_event  3, 3, CERULEAN_CAVE1F, 2
 
 	db 0 ; coord events
 
