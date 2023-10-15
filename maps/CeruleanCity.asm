@@ -283,7 +283,7 @@ CeruleanCity_MapEvents:
 	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
 	warp_event 30, 23, CERULEAN_GYM, 1
 	warp_event 25, 29, CERULEAN_MART, 2
-	warp_event  2, 11, CERULEAN_CAVE1F, 1
+	warp_event  2, 11, CERULEAN_CAVE_1F, 1
 
 	db 0 ; coord events
 

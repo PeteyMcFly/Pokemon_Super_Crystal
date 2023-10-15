@@ -146,7 +146,7 @@ KantoWaterWildMons:
 	db 30, TENTACOOL
 	db 35, TENTACRUEL
 
-	map_id CERULEAN_CAVE2F
+	map_id CERULEAN_CAVE_2F
 	db 6 percent ; encounter rate
 	db 35, STARYU
 	db 30, TENTACRUEL

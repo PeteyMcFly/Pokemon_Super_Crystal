@@ -1065,9 +1065,12 @@ RyokanElevator_Blocks:
 	INCBIN "maps/RyokanElevator.blk"
 RyokanDiningHall_Blocks:
 	INCBIN "maps/RyokanDiningHall.blk"
+
+SECTION "Map Blocks 5", ROMX
+
 SeafoamCave_Blocks:
 	INCBIN "maps/SeafoamCave.blk"
-CeruleanCave1F_Blocks
+CeruleanCave1F_Blocks:
 	INCBIN "maps/CeruleanCave1F.blk"
-CeruleanCave2F_Blocks
+CeruleanCave2F_Blocks:
 	INCBIN "maps/CeruleanCave2F.blk"

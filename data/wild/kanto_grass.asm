@@ -812,7 +812,7 @@ KantoGrassWildMons:
 	db 24, BAYLEEF
 	db 24, BAYLEEF
 
-	map_id CERULEAN_CAVE2F
+	map_id CERULEAN_CAVE_2F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 39, CLEFABLE
