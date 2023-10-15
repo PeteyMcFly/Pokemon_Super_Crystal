@@ -26,12 +26,20 @@ RyokanWelcomeSignText:
 	text "Welcome to the"
 	line "Vinebridge Inn!"
 
-	para "Unfortunately,"
-	line "We are not taking"
-	cont "reservations."
+	para "Rest away your"
+	line "weariness in our"
+	cont "natural baths."
 
-	para "(Wait for the next"
-	line "release of PSC!)"
+	para "A special welcome"
+	line "to our overnight"
+	cont "guests:"
+
+	para "ALEX-SAMA"
+
+	para "LUKE-SAMA"
+
+	para "CHRISTIAN-SAMA"
+
 	done
 
 RyokanOutside_MapEvents:
