@@ -9,8 +9,8 @@ CeruleanCave1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3, 6, CERULEAN_CITY, 1
-	warp_event  3, 3, CERULEAN_CAVE_2F, 2
+	warp_event  3, 5, CERULEAN_CITY, 7
+	warp_event  3, 3, CERULEAN_CAVE_2F, 1
 
 	db 0 ; coord events
 
