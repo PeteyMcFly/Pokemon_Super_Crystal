@@ -33,9 +33,8 @@ ReadTrainerParty:
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld a, BANK(TrainerGroups)
+	call GetFarHalfword
 
 	ld a, [wOtherTrainerID]
 	ld b, a
@@ -43,18 +42,24 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp -1
 	jr nz, .loop
 	jr .skip_trainer
 .got_trainer
 
 .skip_name
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp "@"
 	jr nz, .skip_name
 
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld c, a
 	ld b, 0
 	ld d, h
@@ -92,7 +97,9 @@ TrainerType1:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
@@ -112,7 +119,9 @@ TrainerType2:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
@@ -135,7 +144,9 @@ TrainerType2:
 
 	ld b, NUM_MOVES
 .copy_moves
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	inc de
 	dec b
@@ -190,12 +201,16 @@ TrainerType3:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -210,7 +225,9 @@ TrainerType3:
 	ld e, l
 	call GetCurrentMonAndGenStats
 	pop hl
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	jr .loop
 
@@ -219,12 +236,16 @@ TrainerType4:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 
 	ld a, OTPARTYMON
@@ -241,7 +262,9 @@ TrainerType4:
 	ld e, l
 	pop hl
 
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 
 	push hl
@@ -256,7 +279,9 @@ TrainerType4:
 
 	ld b, NUM_MOVES
 .copy_moves
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	inc de
 	dec b
@@ -363,9 +388,8 @@ GetTrainerName::
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld a, BANK(TrainerGroups)
+	call GetFarHalfword
 	pop bc
 
 .loop
@@ -373,7 +397,9 @@ GetTrainerName::
 	jr z, CopyTrainerName
 
 .skip
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	jr nz, .skip
 	jr .loop
@@ -382,7 +408,8 @@ CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	ld a, BANK(TrainerGroups)
+	call FarCopyBytes
 	pop de
 	ret
 
