@@ -394,6 +394,25 @@ CheckAbleToSwitch:
 	ret
 
 .no_perish
+	; first, check to see if the AI is hopelessly outmatched by level.
+	; don't bother switching if that's the case.
+	ld a, [wBattleMonLevel]
+	push hl
+	ld hl, wEnemyMonLevel
+	sub [hl]
+	pop hl
+	jr c, .ai_higher_level
+	cp 10
+	jp nc, .nothing ; don't bother if it's >= 10 levels higher
+	push bc
+	ld b, a
+	ld a, [wEnemyMonLevel]
+	srl a
+	cp b ; extra check for lower levels. If player lvl >= (AI lvl * 3) / 2, don't bother.
+	pop bc
+	jp c, .nothing ; if half - diff < 0, don't bother
+
+.ai_higher_level
 	call CheckUndesirableStatus
 	jp nz, .bad_matchup
 	; do hardcore logic here if enemy mon has near full hp
