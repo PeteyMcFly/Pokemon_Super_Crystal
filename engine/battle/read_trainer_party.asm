@@ -104,7 +104,9 @@ TrainerType1:
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -126,7 +128,9 @@ TrainerType2:
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -194,7 +198,7 @@ TrainerType2:
 .copied_pp
 
 	pop hl
-	jr .loop
+	jp .loop
 
 TrainerType3:
 ; item
