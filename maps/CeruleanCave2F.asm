@@ -9,16 +9,23 @@ CeruleanCave2F_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Mewtwo
 
 .Mewtwo:
+	disappear CERULEAN_CAVE_GIOVANNI
 	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
-	sjump .Appear
+	iftrue .NoAppearMewtwo
+	sjump .AppearMewtwo
 
-.Appear:
+.AppearMewtwo:
 	appear CERULEAN_CAVE_MEWTWO
 	return
 
-.NoAppear:
+.NoAppearMewtwo:
 	disappear CERULEAN_CAVE_MEWTWO
+	checkevent EVENT_BEAT_BLUE
+	iftrue .AppearGiovanni
+	return
+
+.AppearGiovanni:
+	appear CERULEAN_CAVE_GIOVANNI
 	return
 
 Mewtwo:
@@ -44,25 +51,12 @@ TrainerExileGiovanni:
 	trainer EXILE, GIOVANNI, EVENT_BEAT_EXILE_GIOVANNI, ExileGiovanniSeenText, ExileGiovanniBeatenText, 0, .Script
 
 .Script:
-	checkevent EVENT_BEAT_BLUE
-	iftrue .Appear
-	sjump .NoAppear
-
-.Appear:
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
-	appear CERULEAN_CAVE_GIOVANNI
-	return
 	endifjustbattled
 	opentext
 	writetext ExileGiovanniAfterBattleText
 	waitbutton
 	closetext
 	end
-
-.NoAppear:
-	disappear CERULEAN_CAVE_GIOVANNI
-	return
 
 ExileGiovanniSeenText:
 	text "Hello there,"
@@ -107,5 +101,5 @@ CeruleanCave2F_MapEvents:
 
 	db 2 ; object events
 	object_event 4,  9, SPRITE_RHYDON, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Mewtwo, EVENT_CERULEAN_CAVE_MEWTWO_MEWTWO
-	object_event 2,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerExileGiovanni, -1
+	object_event 2,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerExileGiovanni, EVENT_GIOVANNI_IN_CERULEAN_CAVE
 
