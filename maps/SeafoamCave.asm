@@ -9,6 +9,19 @@ SeafoamCave_MapScripts:
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .Articuno
 
+.Articuno:
+	checkevent EVENT_FOUGHT_ARTICUNO
+	iftrue .NoAppear
+	sjump .Appear
+
+.Appear:
+	appear SEAFOAM_ISLAND_ARTICUNO
+	return
+
+.NoAppear:
+	disappear SEAFOAM_ISLAND_ARTICUNO
+	return
+
 .DummyScene:
 	end
 
@@ -59,18 +72,6 @@ LadyLoreleiAfterBattleText:
 	cont "ARTICUNO."
 	done
 
-.Articuno:
-	checkevent EVENT_FOUGHT_ARTICUNO
-	iftrue .NoAppear
-	sjump .Appear
-
-.Appear:
-	appear SEAFOAM_ISLAND_ARTICUNO
-	return
-
-.NoAppear:
-	disappear SEAFOAM_ISLAND_ARTICUNO
-	return
 
 Articuno:
 	faceplayer
