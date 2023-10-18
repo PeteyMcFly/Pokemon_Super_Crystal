@@ -71,3 +71,6 @@ TrainerClassDVs:
 	dn 13, 13, 13, 13 ; PKMNMASTER
 	dn 10,  9,  9, 10 ; TRAVELER
 	dn 12, 11, 13, 11 ; OUTLAW
+	dn 13, 13, 11, 13 ; EXILE
+	dn 11, 11, 13, 14 ; CRONE
+	dn 11, 11, 13, 14 ; LADY

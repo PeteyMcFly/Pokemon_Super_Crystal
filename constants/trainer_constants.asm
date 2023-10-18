@@ -714,4 +714,13 @@ KRIS EQU __enum__
 	trainerclass OUTLAW ; 46
 	const ISHIKAWA
 
+	trainerclass EXILE ; 47
+	const GIOVANNI
+
+	trainerclass CRONE ; 48
+	const AGATHA
+
+	trainerclass LADY ; 49
+	const LORELEI
+
 NUM_TRAINER_CLASSES EQU __enum__
