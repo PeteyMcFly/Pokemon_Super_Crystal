@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const SEAFOAM_ISLAND_ARTICUNO
+	const SEAFOAM_CAVE_LORELEI
 
 SeafoamCave_MapScripts:
 	db 1 ; scene scripts
@@ -10,6 +11,53 @@ SeafoamCave_MapScripts:
 
 .DummyScene:
 	end
+
+TrainerLadyLorelei:
+	trainer LADY, LORELEI, EVENT_BEAT_LADY_LORELEI, LadyLoreleiSeenText, LadyLoreleiBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext LadyLoreleiAfterBattleText
+	waitbutton
+	closetext
+	end
+
+LadyLoreleiSeenText:
+	text "Hey you!"
+	line "Back off!"
+
+	para "I have dibs on"
+	line "this legendary"
+	cont "Ice type Pokemon"
+
+	para "... Okay, let's"
+	line "battle for the"
+	cont "right to catch"
+
+	para "ARTICUNO!"
+	line "Get ready!"
+	done
+
+LadyLoreleiBeatenText:
+	text "Agh!"
+	line "Too hot!"
+	done
+
+LadyLoreleiAfterBattleText:
+	text "I used to be"
+	line "a member of the"
+
+	para "ELITE FOUR,"
+	line "But I've retired."
+
+	para "You're a gifted"
+	line "trainer though."
+
+	para "You've earned the"
+	line "right to battle"
+	cont "ARTICUNO."
+	done
 
 .Articuno:
 	checkevent EVENT_FOUGHT_ARTICUNO
@@ -56,3 +104,5 @@ SeafoamCave_MapEvents:
 
 	db 1 ; object events
 	object_event 3,  1, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLAND_ARTICUNO_ARTICUNO
+	object_event 2,  4, SPRITE_DAISY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerLadyLorelei, -1
+

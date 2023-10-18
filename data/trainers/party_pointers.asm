@@ -72,3 +72,6 @@ TrainerGroups:
 	dw PKMNMasterGroup
 	dw TravelerGroup
 	dw OutlawGroup
+	dw ExileGroup
+	dw CroneGroup
+	dw LadyGroup
