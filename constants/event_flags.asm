@@ -1562,6 +1562,8 @@
 	const EVENT_BEAT_SAGE_GAKU
 	const EVENT_BEAT_SAGE_MASA
 	const EVENT_BEAT_SAGE_KOJI
+; PSC exclusiive trainer flags
+    const EVENT_BEAT_LADY_LORELEI
 ; ???
 	const EVENT_5CC
 	const EVENT_5CD

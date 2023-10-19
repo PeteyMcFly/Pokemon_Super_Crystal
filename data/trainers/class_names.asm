@@ -70,6 +70,5 @@ TrainerClassNames::
 	db "<PKMN> MASTER@"
 	db "TRAVELER@"
 	db "OUTLAW@"
-	db "EXILE@"
 	db "CRONE@"
 	db "LADY@"

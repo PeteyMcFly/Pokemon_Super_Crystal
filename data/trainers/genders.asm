@@ -72,3 +72,5 @@ BTTrainerClassGenders:
 	db MALE   ; PKMNMaster
 	db MALE   ; Traveler
 	db MALE   ; Outlaw
+	db FEMALE ; Crone
+	db FEMALE ; Lady

@@ -72,6 +72,5 @@ TrainerPicPointers::
 	dba_pic PKMNMasterPic
 	dba_pic TravelerPic
 	dba_pic OutlawPic
-	dba_pic ExilePic
 	dba_pic CronePic
 	dba_pic LadyPic
