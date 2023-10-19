@@ -25,7 +25,7 @@ Mewtwo:
 	faceplayer
 	opentext
 	writetext MewtwoText
-	cry Mewtwo
+	cry MEWTWO
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEWTWO
