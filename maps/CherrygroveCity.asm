@@ -373,7 +373,7 @@ GuideGentMartText:
 
 	para "Celadon Mart in"
 	line "Kanto is said to"
-	cont "sell many rare ones."
+	cont "sell rare items."
 
 	para "Items on the"
 	line "ground are better"
