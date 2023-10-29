@@ -3173,6 +3173,8 @@ EnemySwitch:
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
 	jr c, .skip
+	ld a, 1
+	ld [wAISwitchedInLock], a
 	call FindMonInOTPartyToSwitchIntoBattle
 .skip
 	; 'b' contains the PartyNr of the mon the AI will switch to
@@ -3198,6 +3200,8 @@ EnemySwitch_SetMode:
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
 	jr c, .skip
+	ld a, 1
+	ld [wAISwitchedInLock], a
 	call FindMonInOTPartyToSwitchIntoBattle
 .skip
 	; 'b' contains the PartyNr of the mon the AI will switch to
@@ -3594,22 +3598,22 @@ Function_SetEnemyMonAndSendOutAnimation:
 
 	call ApplyStatusEffectOnEnemyStats
 	; set flag to not switch if statused
-	ld a, [wEnemyMonStatus]
-	and SLP
-	jr nz, .status
-	ld a, [wEnemyMonStatus]
-	and FRZ
-	jr z, .nostatus
-.status
-	ld a, 1
-	ld [wAISwitchedInLock], a
-	xor a
-	jr .status_done
+	;ld a, [wEnemyMonStatus]
+	;and SLP
+	;jr nz, .status
+	;ld a, [wEnemyMonStatus]
+	;and FRZ
+	;jr z, .nostatus
+;.status
+	;ld a, 1
+	;ld [wAISwitchedInLock], a
+	;xor a
+	;jr .status_done
 
-.nostatus
-	xor a
-	ld [wAISwitchedInLock], a
-.status_done
+;.nostatus
+	;xor a
+	;ld [wAISwitchedInLock], a
+;.status_done
 	ld [wNumHits], a
 	ld [wBattleAnimParam], a
 	call SetEnemyTurn
