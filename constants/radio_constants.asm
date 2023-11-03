@@ -15,6 +15,7 @@
 	const POKE_FLUTE_RADIO       ; 08
 	const UNOWN_RADIO            ; 09
 	const EVOLUTION_RADIO        ; 0a
+	const LAVENDER_RADIO         ; 0b sequence break following this line
 ; internal indexes for channel segments
 	const OAKS_POKEMON_TALK_2    ; 0b
 	const OAKS_POKEMON_TALK_3    ; 0c
@@ -105,6 +106,7 @@
 	const MAPRADIO_PLACES_PEOPLE
 	const MAPRADIO_LETS_ALL_SING
 	const MAPRADIO_ROCKET
+	const MAPRADIO_LAVENDER
 
 ; These tables in engine/pokegear/radio.asm are all sized to a power of 2
 ; so there's no need for a rejection sampling loop

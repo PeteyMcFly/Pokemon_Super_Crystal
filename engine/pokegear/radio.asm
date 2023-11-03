@@ -40,6 +40,7 @@ RadioJumptable:
 	dw PokeFluteRadio ; $08
 	dw UnownRadio ; $09
 	dw EvolutionRadio ; $0a
+	dw LavenderTownRadio ; $0b SEQUENCE BREAK
 ; OaksPKMNTalk
 	dw OaksPKMNTalk2  ; $0b
 	dw OaksPKMNTalk3  ; $0c
@@ -1417,6 +1418,12 @@ UnownRadio:
 	ret
 
 EvolutionRadio:
+	call StartRadioStation
+	ld a, 1
+	ld [wNumRadioLinesPrinted], a
+	ret
+
+LavenderTownRadio:
 	call StartRadioStation
 	ld a, 1
 	ld [wNumRadioLinesPrinted], a
