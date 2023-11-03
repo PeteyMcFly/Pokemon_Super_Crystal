@@ -1467,6 +1467,7 @@ RadioChannels:
 	dbw 28, .PokemonMusic
 	dbw 32, .LuckyChannel
 	dbw 40, .BuenasPassword
+	dbw 50, .LavenderTownRadio
 	dbw 52, .RuinsOfAlphRadio
 	dbw 64, .PlacesAndPeople
 	dbw 72, .LetsAllSing
@@ -1499,6 +1500,12 @@ RadioChannels:
 	call .InJohto
 	jr nc, .NoSignal
 	jp LoadStation_BuenasPassword
+
+.LavenderTownRadio
+	ld a, [wPokegearMapPlayerIconLandmark]
+	cp LAVENDER_TOWN
+	jr nz, .NoSignal
+	jp LoadStation_LavenderRadio
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
@@ -1626,6 +1633,17 @@ LoadStation_BuenasPassword:
 
 BuenasPasswordName:    db "BUENA'S PASSWORD@"
 NotBuenasPasswordName: db "@"
+
+LoadStation_LavenderRadio:
+	ld a, LAVENDER_RADIO
+	ld [wCurRadioLine], a
+	xor a
+	ld [wNumRadioLinesPrinted], a
+	ld a, BANK(PlayRadioShow)
+	ld hl, PlayRadioShow
+	call Radio_BackUpFarCallParams
+	ld de, LavenderStationName
+	ret
 
 LoadStation_UnownRadio:
 	ld a, UNOWN_RADIO
@@ -1760,6 +1778,7 @@ OaksPKMNTalkName:     db "OAK's <PK><MN> Talk@"
 PokedexShowName:      db "#DEX Show@"
 PokemonMusicName:     db "#MON Music@"
 LuckyChannelName:     db "Lucky Channel@"
+LavenderStationName:  db "?????@"
 UnownStationName:     db "?????@"
 
 PlacesAndPeopleName:  db "Places & People@"
@@ -2006,6 +2025,7 @@ PlayRadio:
 	dw LoadStation_PlacesAndPeople
 	dw LoadStation_LetsAllSing
 	dw LoadStation_RocketRadio
+	dw LoadStation_LavenderRadio
 
 .OakOrPnP:
 	call IsInJohto

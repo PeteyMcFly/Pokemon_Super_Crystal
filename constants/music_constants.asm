@@ -95,6 +95,7 @@
 	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a
 	const MUSIC_PRINTER                      ; 5b
 	const MUSIC_POST_CREDITS                 ; 5c
+	const MUSIC_LAVENDER_TOWN_RADIO          ; 5d SEQUENCE BREAK
 
 ; new to Crystal
 	const MUSIC_CLAIR                        ; 5d
