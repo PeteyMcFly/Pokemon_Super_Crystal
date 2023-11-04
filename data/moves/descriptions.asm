@@ -1250,7 +1250,7 @@ AncientpowerDescription:
 
 ShadowBallDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower DEF.@"
 
 FutureSightDescription:
 	db   "An attack that"
