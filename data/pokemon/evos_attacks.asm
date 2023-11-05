@@ -2908,6 +2908,7 @@ YanmaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, FORESIGHT
 	db 7, QUICK_ATTACK
+	db 19, SONICBOOM
 	db 22, TWISTER
 	db 25, DETECT
 	db 26, LEECH_LIFE
