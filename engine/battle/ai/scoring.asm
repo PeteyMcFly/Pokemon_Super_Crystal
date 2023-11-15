@@ -315,6 +315,24 @@ AI_Smart_Sleep:
 ; Greatly encourage sleep inducing moves if the enemy has either Dream Eater or Nightmare.
 ; 50% chance to greatly encourage sleep inducing moves otherwise.
 
+; Take status clause into account first:
+
+; if the current player mon is asleep, neither encourage nor discourage
+; maybe it will wake up and we can gank it again.
+	ld a, [wBattleMonStatus]
+	and SLP
+	ret nz
+
+; otherwise, let's not do that...
+	ld a, SLP
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall CheckPartyHasStatus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	and a
+	jr nz, .sleep_clause
+
 	ld b, EFFECT_DREAM_EATER
 	call AIHasMoveEffect
 	jr c, .asm_387f0
@@ -328,6 +346,11 @@ AI_Smart_Sleep:
 	ret c
 	dec [hl]
 	dec [hl]
+	ret
+.sleep_clause
+; strongly discourage if sleep clause is in effect on a different party mon
+	inc [hl]
+	inc [hl]
 	ret
 
 AI_Smart_LeechHit:
