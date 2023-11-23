@@ -59,13 +59,20 @@ EnemyMonHasSuperEffectiveMove:
 CheckUndesirableStatus:
 ; Check for undesirable substatuses that would go away if we switched
 ; Returns Z if status is OK, NZ if undesirable
+	push bc
+	ld b, EFFECT_SLEEP_TALK
+	farcall AIHasMoveEffect
+	pop bc
+	jr c, .skip_sleep
+
 	ld a, [wEnemyMonStatus]
 	and SLP
+	and %100
 	ret nz
 	ld a, [wEnemyMonStatus]
 	and (1 << FRZ)
 	ret nz
-
+.skip_sleep
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	ret nz
@@ -344,6 +351,19 @@ CheckAbleToSwitch:
 	ld [wEnemySwitchMonParam], a
 	call FindAliveEnemyMons
 	ret c
+
+	push bc
+	ld a, [wEnemyPreviousStatus]
+	ld b, a
+	ld a, [wEnemyMonStatus]
+	xor b
+	jr z, .no_status_change
+	xor a
+	ld [wAISwitchedInLock], a
+	ld a, b
+	ld [wEnemyPreviousStatus], a
+.no_status_change
+	pop bc
 
 	ld a, [wPlayerSubStatus4]
 	bit SUBSTATUS_SUBSTITUTE, a

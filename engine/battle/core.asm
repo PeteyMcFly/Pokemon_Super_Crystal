@@ -5300,6 +5300,9 @@ PlayerSwitch:
 EnemyMonEntrance:
 	callfar AI_Switch
 	call SetEnemyTurn
+	ld hl, wEnemyPreviousStatus
+	ld a, [wEnemyMonStatus]
+	ld [hl], a
 	jp SpikesDamage
 
 BattleMonEntrance:
@@ -7007,19 +7010,19 @@ _LoadHPBar:
 	callfar LoadHPBar
 	ret
 
-Unreferenced_LoadHPExpBarGFX:
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
+;Unreferenced_LoadHPExpBarGFX:
+;	ld de, EnemyHPBarBorderGFX
+;	ld hl, vTiles2 tile $6c
+;	lb bc, BANK(EnemyHPBarBorderGFX), 4
+;	call Get1bpp
+;	ld de, HPExpBarBorderGFX
+;	ld hl, vTiles2 tile $73
+;	lb bc, BANK(HPExpBarBorderGFX), 6
+;	call Get1bpp
+;	ld de, ExpBarGFX
+;	ld hl, vTiles2 tile $55
+;	lb bc, BANK(ExpBarGFX), 8
+;	jp Get2bpp
 
 EmptyBattleTextbox:
 	ld hl, .empty
