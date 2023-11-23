@@ -63,7 +63,7 @@ CheckUndesirableStatus:
 	and SLP
 	ret nz
 	ld a, [wEnemyMonStatus]
-	and FRZ
+	and (1 << FRZ)
 	ret nz
 
 	ld a, [wEnemySubStatus1]
