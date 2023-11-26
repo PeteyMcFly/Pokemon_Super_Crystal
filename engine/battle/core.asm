@@ -537,6 +537,16 @@ DetermineMoveOrder:
 	ld a, b
 	cp HELD_QUICK_CLAW
 	jr z, .both_have_quick_claw
+; additional chance boost for slower mons
+	ld a, [wBattleMonSpecies]
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add e
+	ld e, a
+
 	call BattleRandom
 	cp e
 	jr nc, .speed_check
@@ -546,6 +556,16 @@ DetermineMoveOrder:
 	ld a, b
 	cp HELD_QUICK_CLAW
 	jr nz, .speed_check
+; additional chance boost for slower mons
+	ld a, [wEnemyMonSpecies]
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add c
+	ld c, a
+
 	call BattleRandom
 	cp c
 	jr nc, .speed_check

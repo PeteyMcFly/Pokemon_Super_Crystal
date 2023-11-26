@@ -722,3 +722,6 @@ INCBIN "mobile/stadium/stadium2_11.bin"
 else
 INCBIN "mobile/stadium/stadium2.bin"
 endc
+
+SECTION "SuperCrystal Misc", ROMX
+INCLUDE "engine/battle/psc_misc.asm"

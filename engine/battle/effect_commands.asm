@@ -2198,8 +2198,24 @@ BattleCommand_ApplyDamage:
 	ld b, 0
 	jr nz, .damage
 
+	ldh a, [hBattleTurn]
+	and a
+	jr nz, .enemy
+	ld a, [wBattleMonSpecies]
+	jr .player
+.enemy
+	ld a, [wEnemyMonSpecies]
+.player
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add c
+	ld c, a
 	call BattleRandom
 	cp c
+	ld b, 0
 	jr nc, .damage
 	call BattleCommand_FalseSwipe
 	ld b, 0
