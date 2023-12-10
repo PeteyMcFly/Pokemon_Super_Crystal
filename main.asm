@@ -168,9 +168,9 @@ INCLUDE "engine/battle/read_trainer_party.asm"
 
 SECTION "Battle Core", ROMX
 
-INCLUDE "engine/battle/status_clauses.asm"
 INCLUDE "engine/battle/core.asm"
 INCLUDE "data/battle/effect_command_pointers.asm"
+INCLUDE "engine/battle/status_clauses.asm"
 
 
 SECTION "bank10", ROMX
