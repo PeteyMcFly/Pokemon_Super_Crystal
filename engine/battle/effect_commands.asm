@@ -5409,31 +5409,31 @@ BattleCommand_EndLoop:
 	ld [bc], a
 	jr .done_loop
 
-.beat_up
-	ldh a, [hBattleTurn]
-	and a
-	jr nz, .check_ot_beat_up
-	ld a, [wPartyCount]
-	cp 1
-	jp z, .only_one_beatup
-	dec a
-	jr .double_hit
-
-.check_ot_beat_up
-	ld a, [wBattleMode]
-	cp WILD_BATTLE
-	jp z, .only_one_beatup
-	ld a, [wOTPartyCount]
-	cp 1
-	jp z, .only_one_beatup
-	dec a
-	jr .double_hit
-
-.only_one_beatup
-	ld a, BATTLE_VARS_SUBSTATUS3
-	call GetBattleVarAddr
-	res SUBSTATUS_IN_LOOP, [hl]
-	ret
+;.beat_up
+;	ldh a, [hBattleTurn]
+;	and a
+;	jr nz, .check_ot_beat_up
+;	ld a, [wPartyCount]
+;	cp 1
+;	jp z, .only_one_beatup
+;	dec a
+;	jr .double_hit
+;
+;.check_ot_beat_up
+;	ld a, [wBattleMode]
+;	cp WILD_BATTLE
+;	jp z, .only_one_beatup
+;	ld a, [wOTPartyCount]
+;	cp 1
+;	jp z, .only_one_beatup
+;	dec a
+;	jr .double_hit
+;
+;.only_one_beatup
+;	ld a, BATTLE_VARS_SUBSTATUS3
+;	call GetBattleVarAddr
+;	res SUBSTATUS_IN_LOOP, [hl]
+;	ret
 
 .not_triple_kick
 	call BattleRandom

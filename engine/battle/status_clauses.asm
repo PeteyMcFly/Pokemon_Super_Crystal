@@ -1,3 +1,5 @@
+SECTION "Status Clauses", ROMX
+
 ; Code for handling freeze/sleep status clauses
 ; Moved to the battle core memory bank for space reasons
 
