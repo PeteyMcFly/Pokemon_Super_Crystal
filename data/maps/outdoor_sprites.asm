@@ -502,21 +502,22 @@ GoldenrodGroupSprites:
 RyokanSprites:
 CianwoodGroupSprites:
 OlivineGroupSprites:
-	db SPRITE_SUICUNE
-	db SPRITE_STANDING_YOUNGSTER
-	db SPRITE_BIG_ONIX
+	; walking sprites 9 out of 9 used
 	db SPRITE_OLIVINE_RIVAL
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
+	db SPRITE_BUENA
 	db SPRITE_SWIMMER_GIRL
 	db SPRITE_SAILOR
 	db SPRITE_POKEFAN_F
 	db SPRITE_SUPER_NERD
 	db SPRITE_OFFICER
-	db SPRITE_BUENA
+	; still sprites
 	db SPRITE_TAUROS
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
+	db SPRITE_STANDING_YOUNGSTER
+	db SPRITE_SUICUNE
 	db 0
 
 LakeOfRageGroupSprites:
