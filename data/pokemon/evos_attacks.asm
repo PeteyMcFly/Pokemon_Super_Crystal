@@ -433,7 +433,7 @@ NidoranFEvosAttacks:
 	db 23, TAIL_WHIP
 	db 30, BITE
 	db 38, FURY_SWIPES
-	db 55, EARTH_POWER
+	db 45, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidorinaEvosAttacks:
@@ -447,7 +447,7 @@ NidorinaEvosAttacks:
 	db 27, TAIL_WHIP
 	db 36, BITE
 	db 46, FURY_SWIPES
-	db 71, EARTH_POWER
+	db 51, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidoqueenEvosAttacks:
@@ -462,8 +462,8 @@ NidoqueenEvosAttacks:
 	db 34, COUNTER
 	db 36, BITE
 	db 40, CHARM
-	db 43, EARTH_POWER
 	db 46, EARTHQUAKE
+	db 63, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidoranMEvosAttacks:
@@ -477,7 +477,7 @@ NidoranMEvosAttacks:
 	db 23, FOCUS_ENERGY
 	db 30, FURY_ATTACK
 	db 38, HORN_DRILL
-	db 55, EARTH_POWER
+	db 45, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
@@ -491,7 +491,7 @@ NidorinoEvosAttacks:
 	db 27, FOCUS_ENERGY
 	db 36, FURY_ATTACK
 	db 46, HORN_DRILL
-	db 71, EARTH_POWER
+	db 51, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
@@ -507,8 +507,8 @@ NidokingEvosAttacks:
 	db 36, FURY_ATTACK
 	db 40, AMNESIA
 	db 42, COUNTER
-	db 43, EARTH_POWER
 	db 46, HORN_DRILL
+	db 63, EARTH_POWER
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
@@ -632,7 +632,7 @@ OddishEvosAttacks:
 	db EVOLVE_LEVEL, 21, GLOOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	;db 7, SIGNAL_BEAM
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -646,9 +646,9 @@ GloomEvosAttacks:
 	db EVOLVE_ITEM, SUN_STONE, BELLOSSOM
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	;db 1, SIGNAL_BEAM
+	db 1, SIGNAL_BEAM
 	db 1, POISONPOWDER
-	;db 7, SIGNAL_BEAM
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -660,7 +660,7 @@ GloomEvosAttacks:
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PETAL_DANCE
-	;db 7, SIGNAL_BEAM
+	db 7, SIGNAL_BEAM
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
 	db 18, SLEEP_POWDER
@@ -907,7 +907,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_LEVEL, 40, POLITOED
+	db EVOLVE_LEVEL, 38, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, HYPNOSIS
@@ -1037,7 +1037,7 @@ BellsproutEvosAttacks:
 	db 17, POISONPOWDER
 	db 19, STUN_SPORE
 	db 23, ACID
-	;db 30, SIGNAL_BEAM
+	db 30, SIGNAL_BEAM
 	db 37, RAZOR_LEAF
 	db 45, SLAM
 	db 0 ; no more level-up moves
@@ -1054,7 +1054,7 @@ WeepinbellEvosAttacks:
 	db 17, POISONPOWDER
 	db 19, STUN_SPORE
 	db 24, ACID
-	;db 33, SIGNAL_BEAM
+	db 33, SIGNAL_BEAM
 	db 42, RAZOR_LEAF
 	db 0 ; no more level-up moves
 
@@ -1066,7 +1066,7 @@ VictreebelEvosAttacks:
 	db 19, STUN_SPORE
 	db 24, ACID
 	db 32, ENCORE
-	;db 33, SIGNAL_BEAM
+	db 33, SIGNAL_BEAM
 	db 38, LEECH_LIFE
 	db 40, SWORDS_DANCE
 	db 42, RAZOR_LEAF
@@ -2805,7 +2805,7 @@ PolitoedEvosAttacks:
 	db 13, WATER_GUN
 	db 27, RAIN_DANCE
 	db 35, BODY_SLAM
-	db 36, PERISH_SONG
+	db 38, PERISH_SONG
 	db 39, HAZE
 	db 41, SWEET_KISS
 	db 43, BELLY_DRUM
