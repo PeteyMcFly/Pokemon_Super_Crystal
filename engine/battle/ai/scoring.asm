@@ -2600,9 +2600,11 @@ AI_Smart_BrickBreak:
 	bit SCREENS_LIGHT_SCREEN, [hl]
 	jr nz, .good
 	bit SCREENS_REFLECT, [hl]
+	jr nz, .good
 	pop hl
-	ret z
+	ret
 .good
+	pop hl
 	dec [hl]
 	ret
 
