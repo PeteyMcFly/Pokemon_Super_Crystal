@@ -1,12 +1,12 @@
 BattleCommand_BrickBreak:
 	; Make Light Screen end
-	ld hl, wPlayerScreens
-	ld bc, wPlayerLightScreenCount
+	ld hl, wEnemyScreens
+	ld bc, wEnemyLightScreenCount
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .target
-	ld hl, wEnemyScreens
-	ld bc, wEnemyLightScreenCount
+	ld hl, wPlayerScreens
+	ld bc, wPlayerLightScreenCount
 
 .target
 	xor a
