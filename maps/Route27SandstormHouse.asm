@@ -20,7 +20,7 @@ SandstormHouseWoman:
 .Loyal:
 	writetext SandstormHouseWomanLoyalText
 	promptbutton
-	verbosegiveitem TM_SKY_ATTACK
+	verbosegiveitem TM_SANDSTORM
 	iffalse .Done
 	setevent EVENT_GOT_TM37_SANDSTORM
 .AlreadyGotItem:
@@ -66,14 +66,14 @@ SandstormHouseWomanLoyalText:
 
 SandstormHouseSandstormDescription:
 	text "TM37 happens to be"
-	line "SKY ATTACK."
+	line "SANDSTORM"
 
-	para "It's a move that"
-	line "deals heavy dmg"
-	cont "after one turn."
+	para "It's BOOSTS "
+	line "GROUND/ROCK moves"
+	cont "for 5 turns."
 
-	para "It's for advanced"
-	line "trainers only."
+	para "But deals dmg"
+	line "every turn..."
 
 	para "Use it if you"
 	line "dare. Good luck!"

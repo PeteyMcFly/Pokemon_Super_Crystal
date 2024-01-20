@@ -245,7 +245,7 @@ ENDM
 	add_tm SWAGGER      ; e2
 	add_tm SLEEP_TALK  ; e3
 	add_tm SLUDGE_BOMB  ; e4
-	add_tm SKY_ATTACK   ; e5
+	add_tm SANDSTORM   ; e5
 	add_tm FIRE_BLAST   ; e6
 	add_tm ROCK_SLIDE        ; e7
 	add_tm SUBSTITUTE ; e8
