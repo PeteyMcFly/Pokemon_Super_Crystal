@@ -1065,8 +1065,8 @@ OutrageDescription:
 	next "and confuses user.@"
 
 SandstormDescription:
-	db   "Damage each turn and"
-	next "Boosts rock/ground.@"
+	db   "Damage every turn "
+	next "Boosts ROCK/GROUND@"
 
 GigaDrainDescription:
 	db   "Steals 1/2 of the"
