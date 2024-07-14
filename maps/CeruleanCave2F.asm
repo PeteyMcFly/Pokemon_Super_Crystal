@@ -10,11 +10,13 @@ CeruleanCave2F_MapScripts:
 
 .Mewtwo:
 	disappear CERULEAN_CAVE_GIOVANNI
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppearMewtwo
-	sjump .AppearMewtwo
+	checkevent EVENT_BEAT_EXILE_GIOVANNI
+	iftrue .AppearMewtwo
+	sjump .NoAppearMewtwo
 
 .AppearMewtwo:
+	checkevent EVENT_FOUGHT_MEWTWO
+	iftrue .Done
 	appear CERULEAN_CAVE_MEWTWO
 	return
 
@@ -26,6 +28,9 @@ CeruleanCave2F_MapScripts:
 
 .AppearGiovanni:
 	appear CERULEAN_CAVE_GIOVANNI
+	return
+
+.Done:
 	return
 
 Mewtwo:
