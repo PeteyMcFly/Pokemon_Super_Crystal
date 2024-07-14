@@ -6230,20 +6230,20 @@ LoadEnemyMon:
 	jr .UpdateDVs
 
 ; Increase the chance of getting a Shiny
-; Force a 1/256 chance of generating a PKMN with all DVs set to 10
+; Force a 1/512 chance of generating a PKMN with all DVs set to 10
 .TryExtraShinyChance
 	call BattleRandom
-	cp $a
+	cp 16
 	jr nc, .GenerateDVs
 	call BattleRandom
-	cp $20
+	cp 8
 	jr nc, .GenerateDVs
 ; shiny
 	ldh a, [hSeconds] ; Get current number of seconds for MOAR ENTROPY
 	swap a
 	ld c, a
 	call BattleRandom
-	cp 2 percent
+	cp 6 percent
 	jr c, .super_shiny
 	xor c ; Modify the RNG value with the exclusive-or of the last 4 bits of timer seconds
 	or 1 << SHINY_ATK_BIT ; random number with shiny bit set
