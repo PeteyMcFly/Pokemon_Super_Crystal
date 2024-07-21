@@ -183,7 +183,7 @@ Moves: ; 41afb
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,      STATUS,   100, 10,   0
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,   STATUS,   100,  5,   0
 	move NIGHTMARE,    EFFECT_NIGHTMARE,          50, GHOST,    SPECIAL,  100, 15,   0
-	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        75, FIRE,     PHYSICAL, 100, 25,  10
+	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        80, FIRE,     PHYSICAL, 100, 25,  10
 	move SNORE,        EFFECT_SNORE,              40, NORMAL,   SPECIAL,  100, 15,  30
 	move CURSE,        EFFECT_CURSE,               0, GHOST,    STATUS,   100, 10,   0
 	move FLAIL,        EFFECT_REVERSAL,            1, NORMAL,   PHYSICAL, 100, 15,   0
