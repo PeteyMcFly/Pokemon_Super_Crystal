@@ -2452,7 +2452,11 @@ BattleCommand_CheckFaint:
 ; Fainted if we made it here
 
 ; Remove Hyper Beam delay to make Tauros go BRRRRRR
-	call EndRechargeOpp
+	push hl
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	res SUBSTATUS_RECHARGE, [hl]
+	pop hl
 
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVar
