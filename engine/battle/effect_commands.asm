@@ -2437,6 +2437,8 @@ BattleCommand_CheckFaint:
 ;  and faint the user along with it if it used Destiny Bond.
 ; Ends the move effect if the opponent faints.
 
+; Additionally, remove the Hyper Beam recharge delay.
+
 	ld hl, wEnemyMonHP
 	ldh a, [hBattleTurn]
 	and a
@@ -2447,6 +2449,10 @@ BattleCommand_CheckFaint:
 	ld a, [hli]
 	or [hl]
 	ret nz
+; Fainted if we made it here
+
+; Remove Hyper Beam delay to make Tauros go BRRRRRR
+	call EndRechargeOpp
 
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVar
