@@ -535,8 +535,6 @@ CheckAbleToSwitch:
 	jr nc, .nothing
 	add $20
 	ld [wEnemySwitchMonParam], a
-	ld a, 1
-	ld [wAISwitchedInLock], a
 	ret
 
 .nothing

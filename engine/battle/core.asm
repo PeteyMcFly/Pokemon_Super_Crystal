@@ -2063,7 +2063,7 @@ UpdateHPBar:
 
 HandleEnemyMonFaint:
 	call FaintEnemyPokemon
-	xor a
+	ld a, 1
 	ld [wAISwitchedInLock], a
 	ld hl, wBattleMonHP
 	ld a, [hli]
@@ -3193,8 +3193,6 @@ EnemySwitch:
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
 	jr c, .skip
-	ld a, 1
-	ld [wAISwitchedInLock], a
 	call FindMonInOTPartyToSwitchIntoBattle
 .skip
 	; 'b' contains the PartyNr of the mon the AI will switch to
@@ -3220,8 +3218,6 @@ EnemySwitch_SetMode:
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
 	jr c, .skip
-	ld a, 1
-	ld [wAISwitchedInLock], a
 	call FindMonInOTPartyToSwitchIntoBattle
 .skip
 	; 'b' contains the PartyNr of the mon the AI will switch to

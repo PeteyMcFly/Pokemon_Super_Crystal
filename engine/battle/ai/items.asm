@@ -683,10 +683,13 @@ AI_TrySwitch:
 
 	ld a, d
 	cp 2
-	jp nc, AI_Switch
+	jp nc, AI_Switch_Lock
 	and a
 	ret
 
+AI_Switch_Lock:
+	ld a, 1
+	ld [wAISwitchedInLock], a
 AI_Switch:
 	ld hl, wTimesUsedSwitch
 	inc [hl]
