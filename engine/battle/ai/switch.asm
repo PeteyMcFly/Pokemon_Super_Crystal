@@ -155,8 +155,8 @@ CheckBaseMatchup:
 	add d
 	ld d, a
 .type2found_2
-	ld a, d
-	cp e ; Carry flag is set if enemy type combo is overall more effective
+	ld a, e
+	cp d ; Carry flag is set if enemy type combo is overall more effective
 	pop hl
 	pop de
 	pop bc
