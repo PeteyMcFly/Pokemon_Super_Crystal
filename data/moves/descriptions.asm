@@ -513,8 +513,8 @@ AuroraBeamDescription:
 	next "lower ATTACK.@"
 
 HyperBeamDescription:
-	db   "1st turn: Attack"
-	next "2nd turn: Rest@"
+	db   "A powerful strike"
+	next "No recharge on KO.@"
 
 PeckDescription:
 	db   "Jabs the foe with"
