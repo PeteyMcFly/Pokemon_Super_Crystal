@@ -2889,7 +2889,8 @@ AI_Aggressive:
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
 	and a
 	jr z, .nodamage
-	call AIDamageCalc
+	call AIAccuracyAdjustDamageCalc
+	;call AIDamageCalc
 	pop bc
 	pop de
 	pop hl
@@ -2984,6 +2985,21 @@ AIDamageCalc:
 	callfar BattleCommand_DamageCalc
 	callfar BattleCommand_Stab
 	ret
+
+AIAccuracyAdjustDamageCalc:
+	call AIDamageCalc
+	ld a, [wCurDamage]
+	ld h, a
+	ld a, [wCurDamage + 1]
+	ld l, a
+	ld a, [wEnemyMoveStruct + MOVE_ACC]
+	call ApproxPercentage
+	ld a, h
+	ld [wCurDamage], a
+	ld a, l
+	ld [wCurDamage + 1], a
+	ret
+	
 
 INCLUDE "data/battle/ai/constant_damage_effects.asm"
 
@@ -3198,3 +3214,70 @@ AI_50_50:
 	call Random
 	cp 50 percent + 1
 	ret
+
+ApproxPercentage:
+; percentage in A
+; value to take in HL, return in HL
+; Returns HL * A%
+; 100 ->  0
+cp 95 percent
+ret nc ; Near 100%, just return the value
+
+cp 91 percent
+jr c, .onetenth
+ld a, 20
+jr .divide_and_subtract
+
+.onetenth
+cp 81 percent
+jr c, .onefifth
+ld a, 10
+jr .divide_and_subtract
+ 
+.onefifth
+cp 76 percent
+jr c, .threequarters
+ld a, 5
+jr .divide_and_subtract
+
+.threequarters
+cp 66 percent
+jr c, .twothirds
+ld a, 4
+jr .divide_and_subtract
+
+.twothirds
+cp 51 percent
+jr c, .onehalf
+ld a, 3
+jr .divide_and_subtract
+
+.onehalf
+; So far there is no need for precise calculations less than 1/2
+; Everything below that will be halved as a gross approximation
+; 50 -> 2
+ld a, 2
+
+.divide_and_subtract
+ldh [hDivisor], a
+ld b, 2 ; 2 bytes
+ld a, h
+ldh [hDividend], a
+ld a, l
+ldh [hDividend + 1], a
+
+call Divide
+ldh a, [hQuotient + 2]
+ld b, a
+ldh a, [hQuotient + 3]
+ld c, a
+; divided part is stored in BC
+
+; subtract BC from HL via reg A
+ld a, l
+sub c
+ld l, a
+ld a, h
+sbc b
+ld h, a
+ret
