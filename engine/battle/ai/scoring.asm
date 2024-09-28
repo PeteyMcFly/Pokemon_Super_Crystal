@@ -3162,9 +3162,16 @@ AI_Risky:
 	jr nc, .nextmove
 
 	pop hl
-rept 5
+	
+	ld a, [wEnemyMoveStruct + MOVE_ACC]
+	cp 94 percent
+	jr c, .low_accuracy
 	dec [hl]
-endr
+	dec [hl]
+.low_accuracy
+	dec [hl]
+	dec [hl]
+	dec [hl]
 	push hl
 
 .nextmove
