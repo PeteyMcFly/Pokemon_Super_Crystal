@@ -2199,7 +2199,7 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld a, [wWhichMonFaintedFirst]
 	and a
 	jr nz, .player_mon_did_not_faint
-	call UpdateFaintedPlayerMon
+	;call UpdateFaintedPlayerMon
 
 .player_mon_did_not_faint
 	call CheckPlayerPartyForFitMon
@@ -2671,7 +2671,10 @@ HandlePlayerMonFaint:
 	call z, FaintEnemyPokemon
 	ld a, $1
 	ld [wWhichMonFaintedFirst], a
-	call UpdateFaintedPlayerMon
+	;call UpdateFaintedPlayerMon
+	xor a
+	ld [wPokemonWithdrawDepositParameter], a
+	callfar RemoveMonFromPartyOrBox
 	call CheckPlayerPartyForFitMon
 	ld a, d
 	and a
@@ -2712,30 +2715,30 @@ HandlePlayerMonFaint:
 	jp z, WildFled_EnemyFled_LinkBattleCanceled
 	jp DoubleSwitch
 
-UpdateFaintedPlayerMon:
-	ld a, [wCurBattleMon]
-	ld c, a
-	ld hl, wBattleParticipantsNotFainted
-	ld b, RESET_FLAG
-	predef SmallFarFlagAction
-	ld hl, wEnemySubStatus3
-	res SUBSTATUS_IN_LOOP, [hl]
-	xor a
-	ld [wLowHealthAlarm], a
-	ld hl, wPlayerDamageTaken
-	ld [hli], a
-	ld [hl], a
-	ld [wBattleMonStatus], a
-	call UpdateBattleMonInParty
-	ld c, HAPPINESS_FAINTED
-	; If TheirLevel > (YourLevel + 30), use a different parameter
-	ld a, [wBattleMonLevel]
-	add 30
-	ld b, a
-	ld a, [wEnemyMonLevel]
-	cp b
-	jr c, .got_param
-	ld c, HAPPINESS_BEATENBYSTRONGFOE
+;UpdateFaintedPlayerMon:
+;	ld a, [wCurBattleMon]
+;	ld c, a
+;	ld hl, wBattleParticipantsNotFainted
+;	ld b, RESET_FLAG
+;	predef SmallFarFlagAction
+;	ld hl, wEnemySubStatus3
+;	res SUBSTATUS_IN_LOOP, [hl]
+;	xor a
+;	ld [wLowHealthAlarm], a
+;	ld hl, wPlayerDamageTaken
+;	ld [hli], a
+;	ld [hl], a
+;	ld [wBattleMonStatus], a
+;	call UpdateBattleMonInParty
+;	ld c, HAPPINESS_FAINTED
+;	; If TheirLevel > (YourLevel + 30), use a different parameter
+;	ld a, [wBattleMonLevel]
+;	add 30
+;	ld b, a
+;	ld a, [wEnemyMonLevel]
+;	cp b
+;	jr c, .got_param
+;	ld c, HAPPINESS_BEATENBYSTRONGFOE
 
 .got_param
 	ld a, [wCurBattleMon]
@@ -2971,6 +2974,11 @@ ForcePickSwitchMonInBattle:
 	ret
 
 LostBattle:
+	ld hl, HardmodeGameOverText
+	call StdBattleTextbox
+	farcall EmptyAllSRAMBanks ; delete save file
+	call Reset
+
 	ld a, 1
 	ld [wBattleEnded], a
 

@@ -1125,3 +1125,7 @@ _LevelCapText::
 	text "'s"
 	line "level is capped!"
 	prompt
+
+HardmodeGameOverText:
+	text "GAME OVER!!!"
+	prompt
