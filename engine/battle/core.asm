@@ -7179,6 +7179,18 @@ GiveExperiencePoints:
 	or [hl]
 	jp z, .next_mon ; fainted
 
+	push bc
+	ld hl, wBattleParticipantsNotFainted
+	ld a, [wCurPartyMon]
+	ld c, a
+	ld b, CHECK_FLAG
+	ld d, FALSE
+	predef SmallFarFlagAction
+	ld a, c
+	and a
+	pop bc
+	jp z, .next_mon
+
 	ld hl, MON_LEVEL
 	add hl, bc
 	ld d, [hl]
@@ -7195,17 +7207,6 @@ GiveExperiencePoints:
 	jp .next_mon
 
 .no_level_cap
-	push bc
-	ld hl, wBattleParticipantsNotFainted
-	ld a, [wCurPartyMon]
-	ld c, a
-	ld b, CHECK_FLAG
-	ld d, FALSE
-	predef SmallFarFlagAction
-	ld a, c
-	and a
-	pop bc
-	jp z, .next_mon
 
 ; give stat exp
 	ld hl, MON_STAT_EXP + 1
