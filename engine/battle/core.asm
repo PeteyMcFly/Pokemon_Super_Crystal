@@ -537,6 +537,16 @@ DetermineMoveOrder:
 	ld a, b
 	cp HELD_QUICK_CLAW
 	jr z, .both_have_quick_claw
+; additional chance boost for slower mons
+	ld a, [wBattleMonSpecies]
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add e
+	ld e, a
+
 	call BattleRandom
 	cp e
 	jr nc, .speed_check
@@ -546,6 +556,16 @@ DetermineMoveOrder:
 	ld a, b
 	cp HELD_QUICK_CLAW
 	jr nz, .speed_check
+; additional chance boost for slower mons
+	ld a, [wEnemyMonSpecies]
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add c
+	ld c, a
+
 	call BattleRandom
 	cp c
 	jr nc, .speed_check
@@ -2043,7 +2063,7 @@ UpdateHPBar:
 
 HandleEnemyMonFaint:
 	call FaintEnemyPokemon
-	xor a
+	ld a, 1
 	ld [wAISwitchedInLock], a
 	ld hl, wBattleMonHP
 	ld a, [hli]
@@ -3594,22 +3614,22 @@ Function_SetEnemyMonAndSendOutAnimation:
 
 	call ApplyStatusEffectOnEnemyStats
 	; set flag to not switch if statused
-	ld a, [wEnemyMonStatus]
-	and SLP
-	jr nz, .status
-	ld a, [wEnemyMonStatus]
-	and FRZ
-	jr z, .nostatus
-.status
-	ld a, 1
-	ld [wAISwitchedInLock], a
-	xor a
-	jr .status_done
+	;ld a, [wEnemyMonStatus]
+	;and SLP
+	;jr nz, .status
+	;ld a, [wEnemyMonStatus]
+	;and FRZ
+	;jr z, .nostatus
+;.status
+	;ld a, 1
+	;ld [wAISwitchedInLock], a
+	;xor a
+	;jr .status_done
 
-.nostatus
-	xor a
-	ld [wAISwitchedInLock], a
-.status_done
+;.nostatus
+	;xor a
+	;ld [wAISwitchedInLock], a
+;.status_done
 	ld [wNumHits], a
 	ld [wBattleAnimParam], a
 	call SetEnemyTurn
@@ -5296,6 +5316,9 @@ PlayerSwitch:
 EnemyMonEntrance:
 	callfar AI_Switch
 	call SetEnemyTurn
+	ld hl, wEnemyPreviousStatus
+	ld a, [wEnemyMonStatus]
+	ld [hl], a
 	jp SpikesDamage
 
 BattleMonEntrance:
@@ -6152,11 +6175,21 @@ LoadEnemyMon:
 ; Get back the result of our check
 	pop af
 ; If the RoamMon struct has already been initialized, we're done
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; If it hasn't, we need to initialize the DVs
 ; (HP is initialized at the end of the battle)
 	call GetRoamMonDVs
+;Extra shiny chance
+	call BattleRandom
+	cp 2 percent
+	jr nc, .normal_roam
+	call BattleRandom
+	cp $ff
+	jr z, .super_shiny_roam
+	cp 2 percent
+	jr c, .shiny_roam
+.normal_roam
 	inc hl
 	call BattleRandom
 	ld [hld], a
@@ -6165,6 +6198,19 @@ LoadEnemyMon:
 	ld [hl], a
 	ld b, a
 ; We're done with DVs
+	jr .UpdateDVs
+.super_shiny_roam
+	ld b, $ff
+	ld c, $ff
+	jr .apply_roam
+.shiny_roam
+	ld b, ATKDEFDV_SHINY
+	ld c, SPDSPCDV_SHINY
+.apply_roam
+	ld [hl], b
+	inc hl
+	ld [hl], c
+	dec hl
 	jr .UpdateDVs
 
 .NotRoaming:
@@ -6180,20 +6226,20 @@ LoadEnemyMon:
 	jr .UpdateDVs
 
 ; Increase the chance of getting a Shiny
-; Force a 1/256 chance of generating a PKMN with all DVs set to 10
+; Force a 1/512 chance of generating a PKMN with all DVs set to 10
 .TryExtraShinyChance
 	call BattleRandom
-	cp $a
+	cp 16
 	jr nc, .GenerateDVs
 	call BattleRandom
-	cp $20
+	cp 8
 	jr nc, .GenerateDVs
 ; shiny
 	ldh a, [hSeconds] ; Get current number of seconds for MOAR ENTROPY
 	swap a
 	ld c, a
 	call BattleRandom
-	cp 2 percent
+	cp 6 percent
 	jr c, .super_shiny
 	xor c ; Modify the RNG value with the exclusive-or of the last 4 bits of timer seconds
 	or 1 << SHINY_ATK_BIT ; random number with shiny bit set
@@ -6980,19 +7026,19 @@ _LoadHPBar:
 	callfar LoadHPBar
 	ret
 
-Unreferenced_LoadHPExpBarGFX:
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
+;Unreferenced_LoadHPExpBarGFX:
+;	ld de, EnemyHPBarBorderGFX
+;	ld hl, vTiles2 tile $6c
+;	lb bc, BANK(EnemyHPBarBorderGFX), 4
+;	call Get1bpp
+;	ld de, HPExpBarBorderGFX
+;	ld hl, vTiles2 tile $73
+;	lb bc, BANK(HPExpBarBorderGFX), 6
+;	call Get1bpp
+;	ld de, ExpBarGFX
+;	ld hl, vTiles2 tile $55
+;	lb bc, BANK(ExpBarGFX), 8
+;	jp Get2bpp
 
 EmptyBattleTextbox:
 	ld hl, .empty

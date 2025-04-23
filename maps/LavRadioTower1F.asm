@@ -4,6 +4,7 @@
 	const LAVRADIOTOWER1F_SUPER_NERD1
 	const LAVRADIOTOWER1F_GENTLEMAN
 	const LAVRADIOTOWER1F_SUPER_NERD2
+	const LAVRADIOTOWER1F_CRONE_AGATHA
 
 LavRadioTower1F_MapScripts:
 	db 0 ; scene scripts
@@ -65,6 +66,54 @@ LavRadioTower1FSuperNerd2Script:
 	waitbutton
 	closetext
 	end
+
+TrainerCroneAgatha:
+	trainer CRONE, AGATHA, EVENT_BEAT_CRONE_AGATHA, CroneAgathaSeenText, CroneAgathaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CroneAgathaAfterBattleText
+	waitbutton
+	closetext
+	end
+CroneAgathaSeenText:
+	text "You there!"
+	line "tell me child..."
+
+	para "do you believe"
+	line "in ghosts?"
+	done
+
+CroneAgathaBeatenText:
+	text "Very well."
+	line "Listen child..."
+	done
+
+CroneAgathaAfterBattleText:
+	text "You're a very"
+	line "capable trainer."
+
+	para "Let me tell you"
+	line "A secret..."
+
+	para "This whole place!"
+	line "It's haunted!"
+
+	para "This tower was"
+	line "Built upon an"
+
+	para "old and ancient"
+	line "#MON burial"
+	cont "ground."
+
+	para "The upper floors"
+	line "of this place"
+	cont "are cursed!"
+
+	para "You can hear it"
+	line "on the radio..."
+	done
 
 LavRadioTower1FDirectory:
 	jumptext LavRadioTower1FDirectoryText
@@ -233,9 +282,11 @@ LavRadioTower1F_MapEvents:
 	bg_event 11,  0, BGEVENT_READ, LavRadioTower1FDirectory
 	bg_event  5,  0, BGEVENT_READ, LavRadioTower1FPokeFluteSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  6,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FReceptionistScript, -1
 	object_event 15,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FOfficerScript, -1
 	object_event  1,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd1Script, -1
 	object_event  9,  1, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FGentlemanScript, -1
 	object_event 14,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd2Script, -1
+	object_event 13,  1, SPRITE_KAREN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerCroneAgatha, -1
+

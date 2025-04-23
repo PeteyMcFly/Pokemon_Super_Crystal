@@ -664,16 +664,6 @@ DestinyBondEffectText:
 	cont "opponent with it!"
 	prompt
 
-SpiteEffectText:
-	text "<TARGET>'s"
-	line "@"
-	text_ram wStringBuffer1
-	text " was"
-	cont "reduced by @"
-	text_decimal wDeciramBuffer, 1, 1
-	text "!"
-	prompt
-
 BellChimedText:
 	text "A bell chimed!"
 	line ""
@@ -889,6 +879,11 @@ LightScreenEffectText:
 ReflectEffectText:
 	text "<USER>'s"
 	line "DEFENSE rose!"
+	prompt
+
+BrickBreakEffectText:
+	text "The wall"
+	line "shattered!"
 	prompt
 
 NothingHappenedText:

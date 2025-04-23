@@ -555,6 +555,7 @@ CaterpieFrontpic:    INCBIN "gfx/pokemon/caterpie/front.animated.2bpp.lz"
 HoppipBackpic:       INCBIN "gfx/pokemon/hoppip/back.2bpp.lz"
 BluePic:             INCBIN "gfx/trainers/blue.2bpp.lz"
 GranbullBackpic:     INCBIN "gfx/pokemon/granbull/back.2bpp.lz"
+TravelerPic:
 GentlemanPic:        INCBIN "gfx/trainers/gentleman.2bpp.lz"
 ExecutivemPic:       INCBIN "gfx/trainers/executive_m.2bpp.lz"
 SpearowBackpic:      INCBIN "gfx/pokemon/spearow/back.2bpp.lz"
@@ -714,8 +715,11 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
-; Seems to be an accidental copy of the previous bank
 OmastarBackpic:      INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
+OutlawPic:           INCBIN "gfx/trainers/ishikawa.2bpp.lz"
+ExilePic:           INCBIN "gfx/trainers/giovanni.2bpp.lz"
+CronePic:           INCBIN "gfx/trainers/agatha.2bpp.lz"
+LadyPic:           INCBIN "gfx/trainers/lorelei.2bpp.lz"
 
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,

@@ -2,50 +2,16 @@
 	const ROUTE20_SWIMMER_GIRL1
 	const ROUTE20_SWIMMER_GIRL2
 	const ROUTE20_SWIMMER_GUY
-	const SEAFOAM_ISLAND_ARTICUNO
 
 Route20_MapScripts:
 	db 0 ; scene scripts
 
-	db 2 ; callbacks
+	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .ClearRocks
-	callback MAPCALLBACK_OBJECTS, .Articuno
 
 .ClearRocks:
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
 	return
-
-.Articuno:
-	checkevent EVENT_FOUGHT_ARTICUNO
-	iftrue .NoAppear
-	sjump .Appear
-
-.Appear:
-	appear SEAFOAM_ISLAND_ARTICUNO
-	return
-
-.NoAppear:
-	disappear SEAFOAM_ISLAND_ARTICUNO
-	return
-
-Articuno:
-	faceplayer
-	opentext
-	writetext ArticunoText
-	cry ARTICUNO
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_ARTICUNO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ARTICUNO, 50
-	startbattle
-	disappear SEAFOAM_ISLAND_ARTICUNO
-	reloadmapafterbattle
-	end
-
-ArticunoText:
-	text "Gyaoo!"
-	done
 
 TrainerSwimmerfNicole:
 	trainer SWIMMERF, NICOLE, EVENT_BEAT_SWIMMERF_NICOLE, SwimmerfNicoleSeenText, SwimmerfNicoleBeatenText, 0, .Script
@@ -147,8 +113,9 @@ CinnabarGymSignText:
 Route20_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
+	db 2 ; warp events
 	warp_event 38,  7, SEAFOAM_GYM, 1
+	warp_event 30,  5, SEAFOAM_CAVE, 1
 
 	db 0 ; coord events
 
@@ -159,4 +126,3 @@ Route20_MapEvents:
 	object_event 52,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNicole, -1
 	object_event 45, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfLori, -1
 	object_event 12, 13, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCameron, -1
-	object_event 30,  7, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLAND_ARTICUNO_ARTICUNO

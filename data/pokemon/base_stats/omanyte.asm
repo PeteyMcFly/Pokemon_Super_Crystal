@@ -8,14 +8,12 @@
 	db 120 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
-	db 100 ; unknown 1
 	db 30 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/omanyte/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_WATER_1, EGG_WATER_3 ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, RETURN, SWAGGER, REST, ATTRACT, THIEF, SURF, WHIRLPOOL, ICE_BEAM
+	tmhm HEADBUTT, SANDSTORM, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, RETURN, SWAGGER, REST, SLEEP_TALK, ATTRACT, THIEF, SURF, WHIRLPOOL, ICE_BEAM, EARTH_POWER, POWER_GEM
 	; end

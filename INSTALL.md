@@ -1,6 +1,6 @@
 # Instructions
 
-These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds**](https://github.com/rednex/rgbds), which assembles the source files into a ROM.
+These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds for PSC**](https://github.com/landesherr/rgbds_psc), which assembles the source files into a ROM.
 
 If you run into trouble, ask for help on IRC or Discord (see [README.md](README.md)).
 
@@ -36,7 +36,7 @@ Run setup and leave the default settings. At the "**Select Packages**" step, cho
 
 Double click on the text that says "**Skip**" next to each package to select the most recent version to install.
 
-Then download [**rgbds**](https://github.com/rednex/rgbds/releases/): the latest **win64.zip** or **win32.zip** release. Extract it and put all the `exe` and `dll` files individually in **C:\cygwin64\usr\local\bin**.
+Download a release of the PSC version of rgbds from releases, or build it according to the "Other Distros" section at the bottom of this guide.
 
 **Note: If you already have an older rgbds, you will need to update to 0.3.9.** Ignore this if you have never installed rgbds before. If a version newer than 0.3.9 does not work, try downloading 0.3.9.
 
@@ -68,7 +68,7 @@ xcode-select --install
 To install **rgbds**:
 
 ```bash
-git clone --depth=1 https://github.com/rednex/rgbds
+git clone --depth=1 https://github.com/landesherr/rgbds_psc.git
 sudo make -C rgbds CFLAGS=-O2 install
 ```
 
@@ -91,7 +91,7 @@ To install **rgbds**:
 
 ```bash
 sudo apt-get install pkg-config flex bison libpng-dev
-git clone --depth=1 https://github.com/rednex/rgbds
+git clone --depth=1 https://github.com/landesherr/rgbds_psc.git
 sudo make -C rgbds CFLAGS=-O2 install
 ```
 
@@ -107,7 +107,7 @@ To install **rgbds**:
 
 ```bash
 sudo zypper install pkg-config flex bison libpng16-devel
-git clone --depth=1 https://github.com/rednex/rgbds
+git clone --depth=1 https://github.com/landesherr/rgbds_psc.git
 sudo make -C rgbds CFLAGS=-O2 install
 ```
 
@@ -119,28 +119,10 @@ To install the software required for **pokecrystal**:
 sudo pacman -S make gcc git
 ```
 
-**rgbds** is available on the [AUR](https://aur.archlinux.org/packages/rgbds/).
-
-Alternatively, to install **rgbds** manually:
-
 ```bash
 sudo pacman -S pkg-config flex bison libpng
-git clone --depth=1 https://github.com/rednex/rgbds
+git clone --depth=1 https://github.com/landesherr/rgbds_psc.git
 sudo make -C rgbds CFLAGS=-O2 install
-```
-
-### Termux
-
-To install the software required for **pokecrystal**:
-
-```bash
-sudo apt install make clang git sed
-```
-
-To install **rgbds**:
-
-```bash
-sudo apt install rgbds
 ```
 
 ### Other distros
@@ -150,7 +132,6 @@ If your distro is not listed here, try to find the required software in its repo
 - `make`
 - `gcc` (or `clang`)
 - `git`
-- `rgbds`
 
 If `rgbds` is not available, you'll also need these:
 
@@ -162,7 +143,7 @@ If `rgbds` is not available, you'll also need these:
 To install **rgbds**:
 
 ```bash
-git clone --depth=1 https://github.com/rednex/rgbds
+git clone --depth=1 https://github.com/landesherr/rgbds_psc.git
 sudo make -C rgbds CFLAGS=-O2 install
 ```
 
@@ -174,8 +155,8 @@ Now you're ready to [build **pokecrystal**](#build-pokecrystal).
 To download the **pokecrystal** source files:
 
 ```bash
-git clone https://github.com/pret/pokecrystal
-cd pokecrystal
+git clone https://github.com/PeteyMcFly/Pokemon_Super_Crystal.git
+cd Pokemon_Super_Crystal
 ```
 
 To build **pokecrystal.gbc**:

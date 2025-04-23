@@ -43,6 +43,7 @@ INCLUDE "engine/events/bug_contest/caught_mon.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
+INCLUDE "engine/events/onsen.asm"
 
 
 SECTION "bank4", ROMX
@@ -186,6 +187,7 @@ INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 INCLUDE "engine/pokemon/mail.asm"
 INCLUDE "engine/battle/stat_exp.asm"
+INCLUDE "engine/battle/smart_ai_table.asm"
 
 
 SECTION "Crystal Features 1", ROMX
@@ -246,7 +248,6 @@ SECTION "bank14", ROMX
 
 INCLUDE "engine/pokemon/party_menu.asm"
 INCLUDE "engine/events/poisonstep.asm"
-INCLUDE "engine/events/sweet_scent.asm"
 INCLUDE "engine/events/squirtbottle.asm"
 INCLUDE "engine/events/card_key.asm"
 INCLUDE "engine/events/basement_key.asm"
@@ -721,3 +722,6 @@ INCBIN "mobile/stadium/stadium2_11.bin"
 else
 INCBIN "mobile/stadium/stadium2.bin"
 endc
+
+SECTION "SuperCrystal Misc", ROMX
+INCLUDE "engine/battle/psc_misc.asm"

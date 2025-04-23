@@ -196,7 +196,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_A1
 	const ANIM_OBJ_SANDSTORM
 	const ANIM_OBJ_ZAP_CANNON
-	const ANIM_OBJ_SPITE
+	const ANIM_OBJ_POWER_GEM
 	const ANIM_OBJ_CURSE
 	const ANIM_OBJ_PERISH_SONG
 	const ANIM_OBJ_FORESIGHT

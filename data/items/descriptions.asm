@@ -49,7 +49,7 @@ ItemDescriptions:
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw OnsenPassDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -148,7 +148,6 @@ ItemDescriptions:
 	dw LeftoversDesc
 	dw TeruSama15Desc
 	dw TeruSama16Desc
-	dw TeruSama17Desc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
@@ -450,8 +449,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+OnsenPassDesc:
+	db   "Lets you use the"
+	next "onsen.@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -662,7 +662,7 @@ PinkBowDesc:
 	next "type moves. (HOLD)@"
 
 StickDesc:
-	db   "An ordinary stick."
+	db   "An ordinary leek."
 	next "Sell low.@"
 
 SmokeBallDesc:
@@ -827,8 +827,6 @@ TeruSama15Desc:
 TeruSama16Desc:
 	db   "?@"
 
-TeruSama17Desc:
-	db   "?@"
 
 MysteryBerryDesc:
 	db   "A self-restore"

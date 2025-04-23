@@ -95,7 +95,7 @@ endc
 endc
 ENDM
 
-
+SECTION "Map Attributes", ROMX
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
@@ -113,8 +113,12 @@ ENDM
 	connection west, Route34, ROUTE_34, -18
 	connection east, Route33, ROUTE_33, 0
 
-	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
+	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST | WEST
+	connection west, RyokanOutside, RYOKAN_OUTSIDE, 2
 	connection east, Route41, ROUTE_41, 0
+
+	map_attributes RyokanOutside, RYOKAN_OUTSIDE, $05, EAST
+	connection east, CianwoodCity, CIANWOOD_CITY, -2
 
 	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH
 	connection north, Route35, ROUTE_35, 5
@@ -694,3 +698,13 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Ryokan1F, RYOKAN_1F, $00, 0
+	map_attributes Ryokan2F, RYOKAN_2F, $00, 0
+	map_attributes Ryokan3F, RYOKAN_3F, $00, 0
+	map_attributes RyokanRooms, RYOKAN_ROOMS, $00, 0
+	map_attributes RyokanOnsen, RYOKAN_ONSEN, $0a, 0
+	map_attributes RyokanElevator, RYOKAN_ELEVATOR, $00, 0
+	map_attributes RyokanDiningHall, RYOKAN_DINING_HALL, $00, 0
+	map_attributes SeafoamCave, SEAFOAM_CAVE, $00, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $00, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $00, 0

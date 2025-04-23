@@ -70,4 +70,9 @@ TrainerEncounterMusic::
 	db MUSIC_HIKER_ENCOUNTER       ; officer
 	db MUSIC_ROCKET_ENCOUNTER      ; gruntf
 	db MUSIC_HIKER_ENCOUNTER       ; mysticalman
-	db MUSIC_KIMONO_ENCOUNTER	   ; pkmnmaster
+	db MUSIC_KIMONO_ENCOUNTER      ; pkmnmaster
+	db MUSIC_HIKER_ENCOUNTER       ; traveler
+	db MUSIC_SAGE_ENCOUNTER        ; outlaw
+	db MUSIC_ROCKET_ENCOUNTER      ; exile
+	db MUSIC_SAGE_ENCOUNTER        ; crone
+	db MUSIC_LASS_ENCOUNTER        ; lady

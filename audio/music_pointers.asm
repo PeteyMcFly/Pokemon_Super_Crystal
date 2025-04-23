@@ -95,6 +95,7 @@ Music:
 	dba Music_LakeOfRageRocketRadio
 	dba Music_Printer
 	dba Music_PostCredits
+	dba Music_LavenderTownRadio
 ; new to Crystal
 	dba Music_Clair
 	dba Music_MobileAdapterMenu

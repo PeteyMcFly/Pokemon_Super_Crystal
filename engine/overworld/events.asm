@@ -135,11 +135,6 @@ EnterMap:
 	ld [wMapStatus], a
 	ret
 
-UnusedWait30Frames:
-	ld c, 30
-	call DelayFrames
-	ret
-
 HandleMap:
 	call ResetOverworldDelay
 	call HandleMapTimeAndJoypad
@@ -481,11 +476,6 @@ CheckTimeEvents:
 	scf
 	ret
 
-.unused
-	ld a, 8
-	scf
-	ret
-
 OWPlayerInput:
 	call PlayerMovement
 	ret c
@@ -578,9 +568,9 @@ TryObjectEvent:
 	dbw OBJECTTYPE_TRAINER, .trainer
 	; the remaining four are dummy events
 	dbw OBJECTTYPE_3, .three
-	dbw OBJECTTYPE_4, .four
-	dbw OBJECTTYPE_5, .five
-	dbw OBJECTTYPE_6, .six
+	dbw OBJECTTYPE_4, .three
+	dbw OBJECTTYPE_5, .three
+	dbw OBJECTTYPE_6, .three
 	db -1
 
 .script
@@ -614,18 +604,6 @@ TryObjectEvent:
 	ret
 
 .three
-	xor a
-	ret
-
-.four
-	xor a
-	ret
-
-.five
-	xor a
-	ret
-
-.six
 	xor a
 	ret
 
@@ -926,12 +904,6 @@ CountStep:
 	scf
 	ret
 
-; unused
-.unreferenced
-	ld a, PLAYEREVENT_WHITEOUT
-	scf
-	ret
-
 DoRepelStep:
 	ld a, [wRepelEffect]
 	and a
@@ -987,9 +959,6 @@ PlayerEventScriptPointers:
 	dba Invalid_0x96c2d          ; (NUM_PLAYER_EVENTS)
 
 Invalid_0x96c2d:
-	end
-
-; unused
 	end
 
 HatchEggScript:
@@ -1127,7 +1096,7 @@ RandomEncounter::
 
 	call CheckWildEncounterCooldown
 	jr c, .nope
-	call CanUseSweetScent
+	call CheckWildEncounterTile
 	jr nc, .nope
 	ld hl, wStatusFlags2
 	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
@@ -1166,29 +1135,6 @@ WildBattleScript:
 	startbattle
 	reloadmapafterbattle
 	end
-
-CanUseSweetScent::
-	ld hl, wStatusFlags
-	bit STATUSFLAGS_NO_WILD_ENCOUNTERS_F, [hl]
-	jr nz, .no
-	ld a, [wEnvironment]
-	cp CAVE
-	jr z, .ice_check
-	cp DUNGEON
-	jr z, .ice_check
-	farcall CheckGrassCollision
-	jr nc, .no
-
-.ice_check
-	ld a, [wPlayerStandingTile]
-	call CheckIceTile
-	jr z, .no
-	scf
-	ret
-
-.no
-	and a
-	ret
 
 _TryWildEncounter_BugContest:
 	call TryWildEncounter_BugContest
@@ -1369,14 +1315,6 @@ HandleCmdQueue::
 	inc a
 	cp CMDQUEUE_CAPACITY
 	jr nz, .loop
-	ret
-
-Unreferenced_GetNthCmdQueueEntry:
-	ld hl, wCmdQueue
-	ld bc, CMDQUEUE_ENTRY_SIZE
-	call AddNTimes
-	ld b, h
-	ld c, l
 	ret
 
 WriteCmdQueue::

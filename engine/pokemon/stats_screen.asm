@@ -484,7 +484,7 @@ StatsScreen_PlaceShinyIcon:
 	ret
 .super_shiny
 	hlcoord 19, 0
-	ld [hl], "!"
+	ld [hl], "<SS>"
 	ret
 
 StatsScreen_LoadGFX:

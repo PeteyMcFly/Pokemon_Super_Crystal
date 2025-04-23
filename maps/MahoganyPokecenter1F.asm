@@ -32,14 +32,14 @@ MahoganyPokecenter1FPokefanMText:
 	done
 
 MahoganyPokecenter1FYoungsterText:
-	text "I stop my #MON"
-	line "from evolving too"
+	text "I rush #MON"
+	line "to evolve them"
 	cont "early."
 
-	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	cont "evolve."
+	para "In Super Crystal"
+	line "evolved #MON"
+	cont "can still learn"
+	cont "all it's moves"
 	done
 
 MahoganyPokecenter1FCooltrainerFText:

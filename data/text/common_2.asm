@@ -570,17 +570,6 @@ _PoisonWhiteoutText::
 	line "out!"
 	prompt
 
-_UseSweetScentText::
-	text_ram wStringBuffer3
-	text " used"
-	line "SWEET SCENT!"
-	done
-
-_SweetScentNothingText::
-	text "Looks like there's"
-	line "nothing here…"
-	done
-
 _SquirtbottleNothingText::
 	text "<PLAYER> sprinkled"
 	line "water."

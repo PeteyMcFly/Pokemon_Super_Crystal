@@ -128,15 +128,18 @@ AddOutdoorSprites:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld c, MAX_OUTDOOR_SPRITES
+	;ld c, MAX_OUTDOOR_SPRITES
 .loop
-	push bc
+	;push bc
 	ld a, [hli]
+	and a
+	ret z
 	call AddSpriteGFX
-	pop bc
-	dec c
-	jr nz, .loop
-	ret
+	;pop bc
+	;dec c
+	;jr nz, .loop
+	;ret
+	jr .loop
 
 LoadUsedSpritesGFX:
 	ld a, MAPCALLBACK_SPRITES

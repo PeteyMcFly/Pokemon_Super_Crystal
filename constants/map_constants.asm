@@ -182,6 +182,8 @@ ENDM
 	map_const ROUTE_20,                                    30,  9 ;  6
 	map_const ROUTE_21,                                    10, 18 ;  7
 	map_const CINNABAR_ISLAND,                             10,  9 ;  8
+	map_const SEAFOAM_CAVE,                                 4,  4 ;  9
+
 
 	newgroup                                                      ;  7
 
@@ -202,6 +204,8 @@ ENDM
 	map_const ROUTE_24,                                    10,  9 ; 15
 	map_const ROUTE_25,                                    30,  9 ; 16
 	map_const CERULEAN_CITY,                               20, 18 ; 17
+	map_const CERULEAN_CAVE_1F,                             4,  4 ; 18
+	map_const CERULEAN_CAVE_2F,                             4,  8 ; 19
 
 	newgroup                                                      ;  8
 
@@ -491,3 +495,13 @@ ENDM
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+
+	newgroup                                                      ; 27
+	map_const RYOKAN_OUTSIDE,                              15, 15 ;  1
+	map_const RYOKAN_1F,                                   10,  6 ;  2
+	map_const RYOKAN_2F,                                   10,  4 ;  3
+	map_const RYOKAN_3F,                                    8,  4 ;  4
+	map_const RYOKAN_ROOMS,                                 4, 16 ;  5
+	map_const RYOKAN_ONSEN,                                14, 12 ;  6
+	map_const RYOKAN_ELEVATOR,                              1,  2 ;  7
+	map_const RYOKAN_DINING_HALL,                           7,  4 ;  8

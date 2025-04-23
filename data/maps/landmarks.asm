@@ -53,6 +53,7 @@ Landmarks:
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
 	landmark 148,  68, SilverCaveName
+	landmark  12, 100, RyokanName
 	landmark  52, 108, PalletTownName
 	landmark  52,  92, Route1Name
 	landmark  52,  76, ViridianCityName
@@ -102,6 +103,8 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
+	landmark  68, 132, SeafoamCaveName
+	landmark  98,  50, CeruleanCaveName
 
 NewBarkTownName:     db "NEW BARK¯TOWN@"
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"
@@ -205,3 +208,5 @@ TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
+RyokanName:          db "VINEBRIDGE INN@"
+SeafoamCaveName:     db "SEAFOAM ICE@"

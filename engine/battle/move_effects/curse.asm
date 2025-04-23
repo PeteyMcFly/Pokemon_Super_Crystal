@@ -69,6 +69,12 @@ BattleCommand_Curse:
 	jr nz, .failed
 
 	set SUBSTATUS_CURSE, [hl]
+
+	; New feature: trap cursed enemy w/ ghost type curse
+	ld a, BATTLE_VARS_SUBSTATUS5
+	call GetBattleVarAddr
+	set SUBSTATUS_CANT_RUN, [hl]
+
 	call AnimateCurrentMove
 	ld hl, GetHalfMaxHP
 	call CallBattleCore

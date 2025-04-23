@@ -3,45 +3,11 @@
 	const ROUTE4_LASS1
 	const ROUTE4_LASS2
 	const ROUTE4_POKE_BALL
-	const CERULEAN_CAVE_MEWTWO
 
 Route4_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .Mewtwo
-
-.Mewtwo:
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
-	sjump .Appear
-
-.Appear:
-	appear CERULEAN_CAVE_MEWTWO
-	return
-
-.NoAppear:
-	disappear CERULEAN_CAVE_MEWTWO
-	return
-
-Mewtwo:
-	faceplayer
-	opentext
-	writetext MewtwoText
-	cry Mewtwo
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MEWTWO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MEWTWO, 70
-	startbattle
-	disappear CERULEAN_CAVE_MEWTWO
-	reloadmapafterbattle
-	end
-
-MewtwoText:
-	text "... !?"
-	done
+	db 0 ; callbacks
 
 TrainerBirdKeeperHank:
 	trainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, BirdKeeperHankSeenText, BirdKeeperHankBeatenText, 0, .Script
@@ -164,9 +130,8 @@ Route4_MapEvents:
 	bg_event  3,  7, BGEVENT_READ, MtMoonSquareSign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 
-	db 5 ; object events
+	db 4 ; object events
 	object_event 17,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event  9,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
 	object_event 21,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
-	object_event 35,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Mewtwo, EVENT_CERULEAN_CAVE_MEWTWO_MEWTWO

@@ -26,7 +26,7 @@ BattleAnimations::
 	dw BattleAnim_Stomp
 	dw BattleAnim_DoubleKick
 	dw BattleAnim_MegaKick
-	dw BattleAnim_JumpKick
+	dw BattleAnim_BrickBreak
 	dw BattleAnim_RollingKick
 	dw BattleAnim_SandAttack
 	dw BattleAnim_Headbutt
@@ -123,7 +123,7 @@ BattleAnimations::
 	dw BattleAnim_Selfdestruct
 	dw BattleAnim_EggBomb
 	dw BattleAnim_Lick
-	dw BattleAnim_Smog
+	dw BattleAnim_PowerGem
 	dw BattleAnim_Sludge
 	dw BattleAnim_BoneClub
 	dw BattleAnim_FireBlast
@@ -139,7 +139,7 @@ BattleAnimations::
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_Glare
 	dw BattleAnim_DreamEater
-	dw BattleAnim_PoisonGas
+	dw BattleAnim_EarthPower
 	dw BattleAnim_Barrage
 	dw BattleAnim_LeechLife
 	dw BattleAnim_LovelyKiss
@@ -180,7 +180,7 @@ BattleAnimations::
 	dw BattleAnim_Aeroblast
 	dw BattleAnim_CottonSpore
 	dw BattleAnim_Reversal
-	dw BattleAnim_Spite
+	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_PowderSnow
 	dw BattleAnim_Protect
 	dw BattleAnim_MachPunch
@@ -230,7 +230,7 @@ BattleAnimations::
 	dw BattleAnim_Encore
 	dw BattleAnim_Pursuit
 	dw BattleAnim_RapidSpin
-	dw BattleAnim_SweetScent
+	dw BattleAnim_SignalBeam
 	dw BattleAnim_IronTail
 	dw BattleAnim_MetalClaw
 	dw BattleAnim_VitalThrow
@@ -251,11 +251,11 @@ BattleAnimations::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_BeatUp
+	dw BattleAnim_FocusBlast
 	dw BattleAnim_252
 	dw BattleAnim_253
 	dw BattleAnim_254
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_SignalBeam
 ; $100
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
@@ -285,19 +285,6 @@ BattleAnim_252:
 BattleAnim_253:
 BattleAnim_254:
 BattleAnim_MirrorMove:
-	anim_ret
-
-BattleAnim_SweetScent2:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
-	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
-	anim_wait 64
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_wait 128
 	anim_ret
 
 BattleAnim_ThrowPokeBall:
@@ -766,25 +753,32 @@ BattleAnim_DoubleKick_branch_c96bd:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_JumpKick:
-	anim_1gfx ANIM_GFX_HIT
-	anim_if_param_equal $1, BattleAnim_JumpKick_branch_c96f1
-	anim_sound 0, 1, SFX_JUMP_KICK
-	anim_obj ANIM_OBJ_07, 112, 72, $0
-	anim_obj ANIM_OBJ_07, 100, 60, $0
-	anim_setobj $1, $2
-	anim_setobj $2, $2
-	anim_wait 24
-	anim_sound 0, 1, SFX_DOUBLE_KICK
-	anim_obj ANIM_OBJ_04, 136, 48, $0
-	anim_wait 16
-	anim_ret
-
-BattleAnim_JumpKick_branch_c96f1:
-	anim_wait 8
-	anim_sound 0, 0, SFX_DOUBLE_KICK
-	anim_obj ANIM_OBJ_04, 44, 88, $0
-	anim_wait 16
+BattleAnim_BrickBreak:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_08, 136, 40, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $10
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $e8
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $d0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $1c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $50
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $dc
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HiJumpKick:
@@ -2217,24 +2211,41 @@ BattleAnim_Mist:
 	anim_wait 96
 	anim_ret
 
-BattleAnim_Smog:
-	anim_1gfx ANIM_GFX_HAZE
-	anim_sound 0, 1, SFX_BUBBLEBEAM
+BattleAnim_PowerGem:
+	anim_1gfx ANIM_GFX_ICE
 .loop
-	anim_obj ANIM_OBJ_SMOG, 132, 16, $0
-	anim_wait 8
+	anim_sound 6, 2, SFX_FLASH
+	anim_obj ANIM_OBJ_POWER_GEM, 64, 92, $4
+	anim_wait 4
 	anim_loop 10, .loop
-	anim_wait 96
 	anim_ret
 
-BattleAnim_PoisonGas:
-	anim_1gfx ANIM_GFX_HAZE
-	anim_sound 16, 2, SFX_BUBBLEBEAM
+BattleAnim_EarthPower:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_1F, $60, $4, $10
 .loop
-	anim_obj ANIM_OBJ_POISON_GAS, 44, 80, $2
-	anim_wait 8
-	anim_loop 10, .loop
-	anim_wait 128
+	anim_sound 0, 1, SFX_EMBER
+	anim_wait 24
+	anim_loop 2, .loop
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $10
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $e8
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $d0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $1c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $50
+	anim_sound 0, 1, SFX_SPARK
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $dc
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HornAttack:
@@ -2962,12 +2973,41 @@ BattleAnim_Waterfall:
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
 	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_wait 16
+	anim_bgeffect ANIM_BG_30, $0, $0, $0
+	anim_1gfx ANIM_GFX_WATER
+	anim_call BattleAnim_UserObj_2Row
+	anim_sound 0, 1, SFX_HYDRO_PUMP
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 132, 72, $0
+	anim_bgeffect ANIM_BG_31, $8, $0, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HYDRO_PUMP
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 140, 72, $0
+	anim_bgeffect ANIM_BG_31, $30, $0, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HYDRO_PUMP
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 148, 72, $0
+	anim_bgeffect ANIM_BG_31, $1c, $0, $0
+	anim_wait 16
+	anim_call BattleAnim_ShowMon_1
+	anim_bgeffect ANIM_BG_32, $0, $0, $0
+	anim_wait 16
+	anim_1gfx ANIM_GFX_WATER
+	anim_call BattleAnim_ShowMon_0
+	anim_sound 0, 1, SFX_LICK
+	anim_obj ANIM_OBJ_01, 136, 20, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 32, $0
+	anim_obj ANIM_OBJ_01, 136, 30, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 24, $0
+	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_LICK
+	anim_obj ANIM_OBJ_01, 136, 50, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_LICK
+	anim_obj ANIM_OBJ_01, 136, 60, $0
 	anim_wait 8
 	anim_ret
 
@@ -3360,11 +3400,20 @@ BattleAnim_Reversal:
 	anim_wait 24
 	anim_ret
 
-BattleAnim_Spite:
-	anim_1gfx ANIM_GFX_ANGELS
-	anim_obj ANIM_OBJ_SPITE, 132, 16, $0
-	anim_sound 0, 1, SFX_SPITE
-	anim_wait 96
+BattleAnim_ZenHeadbutt:
+	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
+	anim_sound 6, 2, SFX_PSYBEAM
+	anim_wait 16
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 32
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 8
+	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_PowderSnow:
@@ -4176,19 +4225,20 @@ BattleAnim_RapidSpin:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_SweetScent:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_sound 0, 0, SFX_SWEET_SCENT
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
+BattleAnim_SignalBeam:
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_BEAM
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMER, 64, 96, $2
 	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
+	anim_obj ANIM_OBJ_GLIMMER, 64, 80, $2
 	anim_wait 96
-	anim_obp0 $54
-	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
-	anim_wait 128
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_wait 64
+	anim_call BattleAnim_AuroraBeam_branch_cbb39
+	anim_wait 48
+	anim_incobj 5
+	anim_wait 64
 	anim_ret
 
 BattleAnim_IronTail:
@@ -4578,13 +4628,26 @@ BattleAnim_Whirlpool:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_BeatUp:
+BattleAnim_FocusBlast:
 	anim_1gfx ANIM_GFX_HIT
-	anim_sound 0, 1, SFX_BEAT_UP
-	anim_obj ANIM_OBJ_06, 144, 48, $0
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_1A, $0, $1, $20
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_wait 72
+	anim_incbgeffect ANIM_BG_1A
+	anim_call BattleAnim_ShowMon_0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_MOVE_PUZZLE_PIECE
+	anim_obj ANIM_OBJ_00, 120, 72, $0
 	anim_wait 6
-	anim_obj ANIM_OBJ_01, 144, 48, $0
+.loop
+	anim_sound 0, 0, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_00, 136, 56, $0
 	anim_wait 8
+	anim_loop 8, .loop
+	anim_ret
+	anim_obj ANIM_OBJ_00, 152, 40, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

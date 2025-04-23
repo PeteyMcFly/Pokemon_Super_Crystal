@@ -1648,6 +1648,8 @@ wTempDVSpc:: db ; cfdd
 
 wRandomFailure:: db ; cfde
 wAISwitchedInLock:: db ; cfdf
+wFarArrayBank:: db ; cfe0
+wEnemyPreviousStatus:: db ; cfe1
 
 SECTION "WRAM 1", WRAMX
 
@@ -2255,9 +2257,7 @@ wBaseItems:: ; d241
 wBaseItem1:: db ; d241
 wBaseItem2:: db ; d242
 wBaseGender:: db ; d243
-wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245
-wBaseUnknown2:: db ; d246
 wBasePicSize:: db ; d247
 wBasePadding:: ds 4 ; d248
 wBaseGrowthRate:: db ; d24c
@@ -2267,7 +2267,7 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256
 
-	ds 2
+	ds 6
 
 wMornEncounterRate::  db ; d25a
 wDayEncounterRate::   db ; d25b
@@ -2703,8 +2703,11 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
+wRyokan3FSceneID::                                db ; d9c1
+wRyokanOnsenSceneID::                             db ; d9c2
+wRyokan1FSceneID::                                db ; d9c3
 
-	ds 49
+	ds 46
 
 ; fight counts
 wJackFightCount::    db ; d9f2
@@ -2814,10 +2817,7 @@ wLuckyNumberDayBuffer:: dw ; dc2d
 wSpecialPhoneCallID:: db ; dc31
 	ds 3
 wBugContestStartTime:: ds 4 ; day, hour, min, sec ; dc35
-wUnusedTwoDayTimerOn:: db ; dc39
-wUnusedTwoDayTimer:: db
-wUnusedTwoDayTimerStartDate:: db
-	ds 4
+wUsedOnsenToday:: db ; dc39
 wMobileOrCable_LastSelection:: db
 wdc41:: ds 1
 wdc42:: ds 8

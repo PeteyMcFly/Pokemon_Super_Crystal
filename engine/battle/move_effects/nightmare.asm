@@ -7,5 +7,5 @@ BattleCommand_Nightmare:
 	and SLP
 	ret z
 	ld de, ANIM_IN_NIGHTMARE
-	call Call_PlayBattleAnim
+	farcall Call_PlayBattleAnim
 	jp DoubleDamage

@@ -70,3 +70,8 @@ TrainerGroups:
 	dw GruntFGroup
 	dw MysticalmanGroup
 	dw PKMNMasterGroup
+	dw TravelerGroup
+	dw OutlawGroup
+	dw ExileGroup
+	dw CroneGroup
+	dw LadyGroup

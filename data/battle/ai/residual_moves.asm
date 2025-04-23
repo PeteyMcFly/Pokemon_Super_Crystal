@@ -8,7 +8,6 @@ ResidualMoves:
 	db THUNDER_WAVE
 	db FOCUS_ENERGY
 	db BIDE
-	db POISON_GAS
 	db TRANSFORM
 	db CONVERSION
 	db SUBSTITUTE

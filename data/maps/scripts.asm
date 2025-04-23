@@ -484,3 +484,18 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/RyokanOutside.asm"
+INCLUDE "maps/Ryokan1F.asm"
+INCLUDE "maps/Ryokan2F.asm"
+INCLUDE "maps/Ryokan3F.asm"
+INCLUDE "maps/RyokanRooms.asm"
+INCLUDE "maps/RyokanOnsen.asm"
+INCLUDE "maps/RyokanElevator.asm"
+INCLUDE "maps/RyokanDiningHall.asm"
+
+SECTION "Map Scripts 26", ROMX
+
+INCLUDE "maps/SeafoamCave.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
+

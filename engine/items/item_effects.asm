@@ -62,7 +62,7 @@ ItemEffects:
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
 	dw XItemEffect         ; X_ATTACK
-	dw NoEffect            ; ITEM_32
+	dw NoEffect            ; ONSEN_PASS
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
 	dw XItemEffect         ; X_SPECIAL
@@ -102,7 +102,7 @@ ItemEffects:
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
 	dw NoEffect            ; BLU_APRICORN
-	dw NoEffect            ; ITEM_5A
+	dw NoEffect            ; RYOKAN_KEY
 	dw NoEffect            ; AMULET_COIN
 	dw NoEffect            ; YLW_APRICORN
 	dw NoEffect            ; GRN_APRICORN
@@ -161,7 +161,6 @@ ItemEffects:
 	dw NoEffect            ; LEFTOVERS
 	dw NoEffect            ; ITEM_93
 	dw NoEffect            ; ITEM_94
-	dw NoEffect            ; ITEM_95
 	dw RestorePPEffect     ; MYSTERYBERRY
 	dw NoEffect            ; DRAGON_SCALE
 	dw NoEffect            ; BERSERK_GENE
@@ -2168,9 +2167,11 @@ GuardSpecEffect:
 
 DireHitEffect:
 	ld hl, wPlayerSubStatus4
+	bit SUBSTATUS_DIRE_HIT, [hl]
+	jp nz, WontHaveAnyEffect_NotUsedMessage
 	bit SUBSTATUS_FOCUS_ENERGY, [hl]
 	jp nz, WontHaveAnyEffect_NotUsedMessage
-	set SUBSTATUS_FOCUS_ENERGY, [hl]
+	set SUBSTATUS_DIRE_HIT, [hl]
 	jp UseItemText
 
 XItemEffect:

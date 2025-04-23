@@ -1,6 +1,6 @@
 	db MAGNETON ; 082
 
-	db  57,  60,  95,  70, 120,  70
+	db  60,  60,  95,  70, 120,  72
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, STEEL ; type
@@ -8,14 +8,12 @@
 	db 161 ; base exp
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_UNKNOWN ; gender ratio
-	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/magneton/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 
 	; tm/hm learnset
-	tmhm CURSE, TRI_ATTACK, THUNDER_WAVE, SUBSTITUTE, EXPLOSION, TOXIC, ZAP_CANNON, HIDDEN_POWER, HYPER_BEAM, PROTECT, RAIN_DANCE, THUNDER, RETURN, SWAGGER, REST, FLASH, THUNDERBOLT
+	tmhm CURSE, TRI_ATTACK, THUNDER_WAVE, SUBSTITUTE, EXPLOSION, TOXIC, ZAP_CANNON, HIDDEN_POWER, HYPER_BEAM, PROTECT, RAIN_DANCE, THUNDER, RETURN, SWAGGER, REST, SLEEP_TALK, FLASH, THUNDERBOLT
 	; end

@@ -5,6 +5,7 @@ Marts:
 	dw MartViolet
 	dw MartAzalea
 	dw MartCianwood
+	dw MartRyokan
 	dw MartGoldenrod2F1
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
@@ -81,13 +82,25 @@ MartAzalea:
 	db -1 ; end
 
 MartCianwood:
-	db 5 ; # items
+	db 8 ; # items
 	db SILVERPOWDER
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
+	; For testing, remove these later
+	db TM_EARTH_POWER
+	db TM_POWER_GEM
+	db TM_FOCUS_BLAST
 	db -1 ; end
+
+MartRyokan:
+	db 3 ; # items
+	db AMULET_COIN
+	db MIRACLEBERRY
+	db STICK
+	db -1 ; end
+	; TODO add Soothe Bell
 
 MartGoldenrod2F1:
 	db 7 ; # items
@@ -156,12 +169,13 @@ MartGoldenrod5F3:
 	db -1 ; end
 
 MartGoldenrod5F4:
-	db 5 ; # items
+	db 6 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
 	db TM_PSYCH_UP
 	db TM_ROCK_SMASH
+	db TM_BRICK_BREAK
 	db -1 ; end
 
 MartOlivine:
@@ -200,13 +214,12 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 9 ; # items
+	db 8 ; # items
 	db BERRY
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
 	db GOLD_BERRY
-	db MIRACLEBERRY
 	db SUPER_REPEL
 	db REVIVE
 	db FLOWER_MAIL
@@ -343,13 +356,11 @@ MartCeladon5F1:
 	db -1 ; end
 
 MartCeladon5F2:
-	db 7 ; # items
+	db 5 ; # items
 	db THICK_CLUB
-	db STICK
 	db POLKADOT_BOW
 	db LUCKY_EGG
 	db SACRED_ASH
-	db AMULET_COIN
 	db EXP_SHARE
 	db -1 ; end
 

@@ -236,6 +236,7 @@ KRIS EQU __enum__
 	const REENA2
 	const REENA3
 	const CARA
+	const LINDA2
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -704,5 +705,22 @@ KRIS EQU __enum__
 	const NOLAN
 	const DYLAN
 	const PETER
+
+	trainerclass TRAVELER ; 45
+	const CHRISTIAN
+	const LUKE
+	const ALEX2
+
+	trainerclass OUTLAW ; 46
+	const ISHIKAWA
+
+	trainerclass EXILE ; 47
+	const GIOVANNI
+
+	trainerclass CRONE ; 48
+	const AGATHA
+
+	trainerclass LADY ; 49
+	const LORELEI
 
 NUM_TRAINER_CLASSES EQU __enum__

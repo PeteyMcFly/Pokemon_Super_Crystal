@@ -31,7 +31,7 @@
 	const STOMP        ; 17
 	const DOUBLE_KICK  ; 18
 	const MEGA_KICK    ; 19
-	const JUMP_KICK    ; 1a
+	const BRICK_BREAK  ; 1a
 	const ROLLING_KICK ; 1b
 	const SAND_ATTACK  ; 1c
 	const HEADBUTT     ; 1d
@@ -128,7 +128,7 @@
 	const SELFDESTRUCT ; 78
 	const EGG_BOMB     ; 79
 	const LICK         ; 7a
-	const SMOG         ; 7b
+	const POWER_GEM    ; 7b
 	const SLUDGE       ; 7c
 	const BONE_CLUB    ; 7d
 	const FIRE_BLAST   ; 7e
@@ -144,7 +144,7 @@
 	const HI_JUMP_KICK ; 88
 	const GLARE        ; 89
 	const DREAM_EATER  ; 8a
-	const POISON_GAS   ; 8b
+	const EARTH_POWER  ; 8b
 	const BARRAGE      ; 8c
 	const LEECH_LIFE   ; 8d
 	const LOVELY_KISS  ; 8e
@@ -185,7 +185,7 @@
 	const AEROBLAST    ; b1
 	const COTTON_SPORE ; b2
 	const REVERSAL     ; b3
-	const SPITE        ; b4
+	const ZEN_HEADBUTT ; b4
 	const POWDER_SNOW  ; b5
 	const PROTECT      ; b6
 	const MACH_PUNCH   ; b7
@@ -235,7 +235,7 @@
 	const ENCORE       ; e3
 	const PURSUIT      ; e4
 	const RAPID_SPIN   ; e5
-	const SWEET_SCENT  ; e6
+	const SIGNAL_BEAM  ; e6
 	const IRON_TAIL    ; e7
 	const METAL_CLAW   ; e8
 	const VITAL_THROW  ; e9
@@ -256,7 +256,7 @@
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
-	const BEAT_UP      ; fb
+	const FOCUS_BLAST  ; fb
 NUM_ATTACKS EQU const_value + -1
 
 	const MOVE_OR_ANIM_FC ; fc

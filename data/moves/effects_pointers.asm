@@ -100,7 +100,7 @@ MoveEffectsPointers:
 	dw SleepTalk
 	dw DestinyBond
 	dw Reversal
-	dw Spite
+	dw BrickBreak
 	dw FalseSwipe
 	dw HealBell
 	dw NormalHit
@@ -154,6 +154,7 @@ MoveEffectsPointers:
 	dw Solarbeam
 	dw Thunder
 	dw Teleport
-	dw BeatUp
+	dw MultiHitFlinch
 	dw Fly
 	dw DefenseCurl
+	dw MultiHitFlinch

@@ -1361,12 +1361,23 @@ DestinyBond:
 	destinybond
 	endmove
 
-Spite:
+BrickBreak:
 	checkobedience
 	usedmovetext
 	doturn
 	checkhit
-	spite
+	brickbreak
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
 	endmove
 
 FalseSwipe:
@@ -2050,33 +2061,6 @@ Teleport:
 	teleport
 	endmove
 
-BeatUp:
-	checkobedience
-	usedmovetext
-	movedelay
-	doturn
-	startloop
-	lowersub
-	checkhit
-	critical
-	beatup
-	damagecalc
-	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	endloop
-	beatupfailtext
-	raisesub
-	kingsrock
-	endmove
-
 DefenseCurl:
 	checkobedience
 	usedmovetext
@@ -2088,4 +2072,32 @@ DefenseCurl:
 	raisesub
 	statupmessage
 	statupfailtext
+	endmove
+
+MultiHitFlinch:
+	checkobedience
+	usedmovetext
+	doturn
+	startloop
+	lowersub
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	moveanimnosub
+	failuretext
+	applydamage
+	criticaltext
+	cleartext
+	supereffectivelooptext
+	checkfaint
+	effectchance
+	flinchtarget
+	buildopponentrage
+	endloop
+	raisesub
+	kingsrock
 	endmove

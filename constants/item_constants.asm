@@ -55,7 +55,7 @@
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
 	const X_ATTACK     ; 31
-	const ITEM_32      ; 32
+	const ONSEN_PASS   ; 32
 	const X_DEFEND     ; 33
 	const X_SPEED      ; 34
 	const X_SPECIAL    ; 35
@@ -95,7 +95,7 @@
 	const BIG_MUSHROOM ; 57
 	const SILVERPOWDER ; 58
 	const BLU_APRICORN ; 59
-	const ITEM_5A      ; 5a
+	const RYOKAN_KEY   ; 5a
 	const AMULET_COIN  ; 5b
 	const YLW_APRICORN ; 5c
 	const GRN_APRICORN ; 5d
@@ -154,7 +154,6 @@
 	const LEFTOVERS    ; 92
 	const ITEM_93      ; 93
 	const ITEM_94      ; 94
-	const ITEM_95      ; 95
 	const MYSTERYBERRY ; 96
 	const DRAGON_SCALE ; 97
 	const BERSERK_GENE ; 98
@@ -244,9 +243,9 @@ ENDM
 	add_tm THUNDER_WAVE  ; e0
 	add_tm ICE_PUNCH    ; e1
 	add_tm SWAGGER      ; e2
-	add_tm BODY_SLAM  ; e3
+	add_tm SLEEP_TALK  ; e3
 	add_tm SLUDGE_BOMB  ; e4
-	add_tm SKY_ATTACK   ; e5
+	add_tm SANDSTORM   ; e5
 	add_tm FIRE_BLAST   ; e6
 	add_tm ROCK_SLIDE        ; e7
 	add_tm SUBSTITUTE ; e8
@@ -258,8 +257,14 @@ ENDM
 	add_tm THIEF        ; ee
 	add_tm STEEL_WING   ; ef
 	add_tm FIRE_PUNCH   ; f0
-	add_tm SWORDS_DANCE ; f1
+	add_tm FURY_CUTTER ; f1
 	add_tm NIGHTMARE    ; f2
+	add_tm BRICK_BREAK ; sequence break
+	add_tm EARTH_POWER ; break
+	add_tm POWER_GEM   ; break
+	add_tm FOCUS_BLAST ; break
+	add_tm SWORDS_DANCE ; break
+	add_tm BODY_SLAM ; break
 NUM_TMS EQU const_value - TM01 - 2 ; discount ITEM_C3 and ITEM_DC
 
 add_hm: MACRO

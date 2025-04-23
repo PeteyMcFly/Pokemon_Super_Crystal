@@ -1045,3 +1045,32 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+
+SECTION "Map Blocks 4", ROMX
+
+RyokanOutside_Blocks:
+	INCBIN "maps/RyokanOutside.blk"
+Ryokan1F_Blocks:
+	INCBIN "maps/Ryokan1F.blk"
+Ryokan2F_Blocks:
+	INCBIN "maps/Ryokan2F.blk"
+Ryokan3F_Blocks:
+	INCBIN "maps/Ryokan3F.blk"
+RyokanRooms_Blocks:
+	INCBIN "maps/RyokanRooms.blk"
+RyokanOnsen_Blocks:
+	INCBIN "maps/RyokanOnsen.blk"
+RyokanElevator_Blocks:
+	INCBIN "maps/RyokanElevator.blk"
+RyokanDiningHall_Blocks:
+	INCBIN "maps/RyokanDiningHall.blk"
+
+SECTION "Map Blocks 5", ROMX
+
+SeafoamCave_Blocks:
+	INCBIN "maps/SeafoamCave.blk"
+CeruleanCave1F_Blocks:
+	INCBIN "maps/CeruleanCave1F.blk"
+CeruleanCave2F_Blocks:
+	INCBIN "maps/CeruleanCave2F.blk"

@@ -44,15 +44,46 @@ GenerateLeveledStatExp:
 	; load value to all 5 stat exp slots
 	ld a, 5
 .loadloop
-	ld [hl], c
-	inc hl
 	ld [hl], b
+	inc hl
+	ld [hl], c
 	inc hl
 	dec a
 	jr nz, .loadloop
 
 	pop hl
 	pop bc
+	pop de
+	ret
+
+RecalcStats:
+	push de
+	; recalc stats so HP is in sync with new max HP after stat boost
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1MaxHP
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1StatExp - 1
+	call GetPartyLocation
+
+	ld b, TRUE
+	push de
+	predef CalcMonStats
+	pop hl
+
+	inc hl
+	ld c, [hl]
+	dec hl
+	ld b, [hl]
+	dec hl
+	ld [hl], c
+	dec hl
+	ld [hl], b
 	pop de
 	ret
 

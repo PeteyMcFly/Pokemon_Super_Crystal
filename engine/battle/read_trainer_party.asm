@@ -33,9 +33,8 @@ ReadTrainerParty:
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld a, BANK(TrainerGroups)
+	call GetFarHalfword
 
 	ld a, [wOtherTrainerID]
 	ld b, a
@@ -43,18 +42,24 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp -1
 	jr nz, .loop
 	jr .skip_trainer
 .got_trainer
 
 .skip_name
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp "@"
 	jr nz, .skip_name
 
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld c, a
 	ld b, 0
 	ld d, h
@@ -92,12 +97,16 @@ TrainerType1:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -112,12 +121,16 @@ TrainerType2:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -135,7 +148,9 @@ TrainerType2:
 
 	ld b, NUM_MOVES
 .copy_moves
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	inc de
 	dec b
@@ -151,7 +166,7 @@ TrainerType2:
 	ld d, h
 	ld e, l
 	farcall GenerateLeveledStatExp
-	call RecalcStats
+	farcall RecalcStats
 	ld hl, MON_PP
 	add hl, de
 	push hl
@@ -183,19 +198,23 @@ TrainerType2:
 .copied_pp
 
 	pop hl
-	jr .loop
+	jp .loop
 
 TrainerType3:
 ; item
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -210,7 +229,9 @@ TrainerType3:
 	ld e, l
 	call GetCurrentMonAndGenStats
 	pop hl
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	jr .loop
 
@@ -219,12 +240,16 @@ TrainerType4:
 	ld h, d
 	ld l, e
 .loop
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	ret z
 
 	ld [wCurPartyLevel], a
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [wCurPartySpecies], a
 
 	ld a, OTPARTYMON
@@ -241,7 +266,9 @@ TrainerType4:
 	ld e, l
 	pop hl
 
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 
 	push hl
@@ -256,7 +283,9 @@ TrainerType4:
 
 	ld b, NUM_MOVES
 .copy_moves
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	ld [de], a
 	inc de
 	dec b
@@ -272,7 +301,7 @@ TrainerType4:
 	ld d, h
 	ld e, l
 	farcall GenerateLeveledStatExp
-	call RecalcStats
+	farcall RecalcStats
 	ld hl, MON_PP
 	add hl, de
 
@@ -363,9 +392,8 @@ GetTrainerName::
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld a, BANK(TrainerGroups)
+	call GetFarHalfword
 	pop bc
 
 .loop
@@ -373,7 +401,9 @@ GetTrainerName::
 	jr z, CopyTrainerName
 
 .skip
-	ld a, [hli]
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	inc hl
 	cp $ff
 	jr nz, .skip
 	jr .loop
@@ -382,7 +412,8 @@ CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	ld a, BANK(TrainerGroups)
+	call FarCopyBytes
 	pop de
 	ret
 
@@ -397,36 +428,7 @@ GetCurrentMonAndGenStats:
 	ld e, l
 	farcall GenerateLeveledStatExp
 	pop de
-	; fallthrough
-RecalcStats:
-	push de
-	; recalc stats so HP is in sync with new max HP after stat boost
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1MaxHP
-	call GetPartyLocation
-	ld d, h
-	ld e, l
-
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1StatExp - 1
-	call GetPartyLocation
-
-	ld b, TRUE
-	push de
-	predef CalcMonStats
-	pop hl
-
-	inc hl
-	ld c, [hl]
-	dec hl
-	ld b, [hl]
-	dec hl
-	ld [hl], c
-	dec hl
-	ld [hl], b
-	pop de
+	farcall RecalcStats
 	ret
 
 INCLUDE "data/trainers/parties.asm"

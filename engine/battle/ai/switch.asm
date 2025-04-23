@@ -59,13 +59,20 @@ EnemyMonHasSuperEffectiveMove:
 CheckUndesirableStatus:
 ; Check for undesirable substatuses that would go away if we switched
 ; Returns Z if status is OK, NZ if undesirable
+	push bc
+	ld b, EFFECT_SLEEP_TALK
+	farcall AIHasMoveEffect
+	pop bc
+	jr c, .skip_sleep
+
 	ld a, [wEnemyMonStatus]
 	and SLP
+	and %100
 	ret nz
 	ld a, [wEnemyMonStatus]
-	and FRZ
+	and (1 << FRZ)
 	ret nz
-
+.skip_sleep
 	ld a, [wEnemySubStatus1]
 	bit SUBSTATUS_CURSE, a
 	ret nz
@@ -148,8 +155,8 @@ CheckBaseMatchup:
 	add d
 	ld d, a
 .type2found_2
-	ld a, d
-	cp e ; Carry flag is set if enemy type combo is overall more effective
+	ld a, e
+	cp d ; Carry flag is set if enemy type combo is overall more effective
 	pop hl
 	pop de
 	pop bc
@@ -345,6 +352,19 @@ CheckAbleToSwitch:
 	call FindAliveEnemyMons
 	ret c
 
+	push bc
+	ld a, [wEnemyPreviousStatus]
+	ld b, a
+	ld a, [wEnemyMonStatus]
+	xor b
+	jr z, .no_status_change
+	xor a
+	ld [wAISwitchedInLock], a
+	ld a, b
+	ld [wEnemyPreviousStatus], a
+.no_status_change
+	pop bc
+
 	ld a, [wPlayerSubStatus4]
 	bit SUBSTATUS_SUBSTITUTE, a
 	jr z, .no_sub
@@ -394,6 +414,25 @@ CheckAbleToSwitch:
 	ret
 
 .no_perish
+	; first, check to see if the AI is hopelessly outmatched by level.
+	; don't bother switching if that's the case.
+	ld a, [wBattleMonLevel]
+	push hl
+	ld hl, wEnemyMonLevel
+	sub [hl]
+	pop hl
+	jr c, .ai_higher_level
+	cp 10
+	jp nc, .nothing ; don't bother if it's >= 10 levels higher
+	push bc
+	ld b, a
+	ld a, [wEnemyMonLevel]
+	srl a
+	cp b ; extra check for lower levels. If player lvl >= (AI lvl * 3) / 2, don't bother.
+	pop bc
+	jp c, .nothing ; if half - diff < 0, don't bother
+
+.ai_higher_level
 	call CheckUndesirableStatus
 	jp nz, .bad_matchup
 	; do hardcore logic here if enemy mon has near full hp
@@ -496,8 +535,6 @@ CheckAbleToSwitch:
 	jr nc, .nothing
 	add $20
 	ld [wEnemySwitchMonParam], a
-	ld a, 1
-	ld [wAISwitchedInLock], a
 	ret
 
 .nothing

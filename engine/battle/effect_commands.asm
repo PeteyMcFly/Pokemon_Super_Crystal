@@ -1162,10 +1162,27 @@ BattleCommand_Critical:
 	and a
 	ld hl, wEnemyMonItem
 	ld a, [wEnemyMonSpecies]
-	jr nz, .Item
+	jr nz, .Speed
 	ld hl, wBattleMonItem
 	ld a, [wBattleMonSpecies]
 
+.Speed
+; Do a Gen 1 style speed calculation for crit chance
+	push hl
+	ld d, a ; backup the species
+; Get the mon's base speed
+	ld hl, BaseData + BASE_SPD
+	ld bc, BASE_DATA_SIZE
+	call AddNTimes
+	ld a, BANK(BaseData)
+	call GetFarByte
+	srl a
+	srl a
+	srl a
+	add $C
+	ld [wTempByteValue], a ; store base (speed / 8) + 12
+	pop hl
+	ld a, d
 .Item:
 	ld c, 0
 
@@ -1194,20 +1211,16 @@ BattleCommand_Critical:
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVar
 	bit SUBSTATUS_FOCUS_ENERGY, a
+	jr nz, .inc_focus
+	bit SUBSTATUS_DIRE_HIT, a
 	jr z, .CheckCritical
-; ALWAYS crit when high-crit + Focus Energy
-	ld a, BATTLE_VARS_MOVE_ANIM
-	call GetBattleVar
-	ld de, 1
-	ld hl, CriticalHitMoves
-	push bc
-	call IsInArray
-	pop bc
-	inc c ; +1 critical level, if not guaranteed crit
-	jr nc, .ScopeLens
-	ld a, 1
-	ld [wCriticalHit], a
-	ret
+	jr .inc_dire
+
+.inc_focus
+; +2 critical level
+	inc c
+.inc_dire
+	inc c
 
 .CheckCritical:
 	ld a, BATTLE_VARS_MOVE_ANIM
@@ -1239,8 +1252,11 @@ BattleCommand_Critical:
 	ld b, 0
 	add hl, bc
 	call BattleRandom
-	cp [hl]
-	ret nc
+	ld d, a
+	ld a, [wTempByteValue]
+	add [hl]
+	cp d
+	ret c
 	ld a, 1
 	ld [wCriticalHit], a
 	ret
@@ -2182,8 +2198,24 @@ BattleCommand_ApplyDamage:
 	ld b, 0
 	jr nz, .damage
 
+	ldh a, [hBattleTurn]
+	and a
+	jr nz, .enemy
+	ld a, [wBattleMonSpecies]
+	jr .player
+.enemy
+	ld a, [wEnemyMonSpecies]
+.player
+	ld [wCheckStatusReturn], a
+	push hl
+	farcall GetQuickClawBonus
+	pop hl
+	ld a, [wCheckStatusReturn]
+	add c
+	ld c, a
 	call BattleRandom
 	cp c
+	ld b, 0
 	jr nc, .damage
 	call BattleCommand_FalseSwipe
 	ld b, 0
@@ -2405,6 +2437,8 @@ BattleCommand_CheckFaint:
 ;  and faint the user along with it if it used Destiny Bond.
 ; Ends the move effect if the opponent faints.
 
+; Additionally, remove the Hyper Beam recharge delay.
+
 	ld hl, wEnemyMonHP
 	ldh a, [hBattleTurn]
 	and a
@@ -2415,6 +2449,14 @@ BattleCommand_CheckFaint:
 	ld a, [hli]
 	or [hl]
 	ret nz
+; Fainted if we made it here
+
+; Remove Hyper Beam delay to make Tauros go BRRRRRR
+	push hl
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	res SUBSTATUS_RECHARGE, [hl]
+	pop hl
 
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVar
@@ -3400,7 +3442,7 @@ INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
 INCLUDE "engine/battle/move_effects/destiny_bond.asm"
 
-INCLUDE "engine/battle/move_effects/spite.asm"
+INCLUDE "engine/battle/move_effects/brick_break.asm"
 
 INCLUDE "engine/battle/move_effects/false_swipe.asm"
 

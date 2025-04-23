@@ -41,7 +41,7 @@ MountMortar1FBoulder:
 	jumpstd strengthboulder
 
 MountMortar1FInsideEscapeRope:
-	itemball ESCAPE_ROPE
+	itemball NUGGET
 
 MountMortar1FInsideMaxRevive:
 	itemball MAX_REVIVE
@@ -53,7 +53,7 @@ MountMortar1FInsideMaxPotion:
 	itemball PROTEIN
 
 MountMortar1FInsideNugget:
-	itemball NUGGET
+	itemball TM_SWORDS_DANCE
 
 MountMortar1FInsideIron:
 	itemball IRON
