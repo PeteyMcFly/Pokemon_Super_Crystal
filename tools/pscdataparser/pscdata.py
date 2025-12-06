@@ -18,6 +18,7 @@ def group_by_position(lst, group_size):
 #################### Moves learned by leveling up
 
 def levelup_learnset_data():
+    print('generating levelup learnset data...')
     path = "../../data/pokemon/evos_attacks.asm"
 
     with open(path, "r", encoding="utf-8") as f:
@@ -30,8 +31,6 @@ def levelup_learnset_data():
 
     del secondlist[0]
     secondlist[0] = secondlist[0].replace('INCLUDE "data/pokemon/evos_attacks_pointers.asm"', '')
-    for i in range (0, 5):
-        print(secondlist[i])
 
     move_dict = {}
     ## Process the list for name and moves
@@ -47,14 +46,14 @@ def levelup_learnset_data():
         move_dict[pokemon_name] = third_entry
 
     move_dict.popitem()
-    print(move_dict)
     move_learnset_df = pd.DataFrame(list(move_dict.items()), columns=['Pokemon_Name', 'Levelup_Learnset'])
     move_learnset_df.to_csv("leveluplearnset.csv", index=False)
+    print("leveluplearnset.csv generated! Complete!")
 
 ######################### Pokemon Stats
 
 def pokemon_stats_data():
-
+    print('generating pokemon stats data...')
     firstpath = "../../data/pokemon/base_stats/"
     final_data = []
     for filename in os.listdir(firstpath):
@@ -118,11 +117,12 @@ def pokemon_stats_data():
 
     pokemon_stats_df = pd.DataFrame(final_data)
     pokemon_stats_df.to_csv('pokemon_stats.csv', index=False)
+    print('pokemon_stats.csv generated! Complete!')
 
 ################## Move Data
 
 def move_data():
-
+    print('generating move data...')
     path = "../../data/moves/moves.asm"
 
     with open(path, "r", encoding="utf-8") as f:
@@ -178,6 +178,7 @@ def move_data():
     move_desc_data_df['Desc_Name'] = move_desc_data_df['Desc_Name'].astype(str)
     move_data_df = pd.merge(move_data_df, move_desc_data_df, on='Desc_Name')
     move_data_df.to_csv('move_data.csv')
+    print('move_data.csv generated! Complete!')
 
 def main():
     ## Control reports here
