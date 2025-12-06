@@ -1,6 +1,8 @@
 
 import os
 import pandas as pd
+import requests
+import tempfile
 
 ## basic parsing functions
 def to_camel_case(s: str) -> str:
@@ -15,11 +17,59 @@ def group_by_position(lst, group_size):
         groups[i % group_size].append(item.replace('\tnext', '').replace('\tdb', '').replace('@', '').replace('"', '').replace('Description:', '').strip())
     return groups
 
+## Function to pull original Crystal game data
+
+def get_og_files():
+
+    dirname = 'og_tmp_directory'
+    os.makedirs(dirname, exist_ok=True)
+
+    ## URLs to pull og data
+    urls = ["https://raw.githubusercontent.com/pret/pokecrystal/refs/heads/master/data/moves/moves.asm",
+            "https://raw.githubusercontent.com/pret/pokecrystal/refs/heads/master/data/pokemon/evos_attacks.asm",
+            "https://raw.githubusercontent.com/pret/pokecrystal/refs/heads/master/data/moves/descriptions.asm"]
+
+    # Step 1: Download each file
+    downloaded_files = []
+    for url in urls:
+        filename =  url.split("/")[-1]
+        filepath = os.path.join(dirname, filename)
+        response = requests.get(url)
+        response.raise_for_status()
+        with open(filepath, "wb") as f:
+            f.write(response.content)
+        downloaded_files.append(filename)
+        print(f"Downloaded {filename}")
+    
+    # Step 2: Download the base stats files to directory
+    basestatsdirname = 'og_tmp_directory/base_stats/'
+    os.makedirs(basestatsdirname, exist_ok=True)
+
+    dir_url = f"https://api.github.com/repos/pret/pokecrystal/contents/data/pokemon/base_stats?ref=master"
+    response = requests.get(dir_url)
+    response.raise_for_status()
+    print(response.status_code)
+    print(response.text[:200])
+    files = response.json()
+
+    downloaded_files = []
+    for file in files:
+        if file["name"].endswith(".asm"):
+            raw_url = file["download_url"]  # direct link to file contents
+            fname = file["name"]
+            filepath = os.path.join(basestatsdirname, fname)
+            r = requests.get(raw_url)
+            r.raise_for_status()
+            with open(filepath, "wb") as f:
+                f.write(r.content)
+            downloaded_files.append(fname)
+            print(f"Downloaded {fname}")
+
 #################### Moves learned by leveling up
 
-def levelup_learnset_data():
+def levelup_learnset_data(pathvar: str, version: str):
     print('generating levelup learnset data...')
-    path = "../../data/pokemon/evos_attacks.asm"
+    path = pathvar
 
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
@@ -47,14 +97,14 @@ def levelup_learnset_data():
 
     move_dict.popitem()
     move_learnset_df = pd.DataFrame(list(move_dict.items()), columns=['Pokemon_Name', 'Levelup_Learnset'])
-    move_learnset_df.to_csv("leveluplearnset.csv", index=False)
+    move_learnset_df.to_csv("leveluplearnset" + version +".csv", index=False)
     print("leveluplearnset.csv generated! Complete!")
 
 ######################### Pokemon Stats
 
-def pokemon_stats_data():
+def pokemon_stats_data(pathvar: str, version: str):
     print('generating pokemon stats data...')
-    firstpath = "../../data/pokemon/base_stats/"
+    firstpath = pathvar
     final_data = []
     for filename in os.listdir(firstpath):
         path = os.path.join(firstpath, filename)
@@ -116,47 +166,89 @@ def pokemon_stats_data():
         final_data.append(pokemon_data)
 
     pokemon_stats_df = pd.DataFrame(final_data)
-    pokemon_stats_df.to_csv('pokemon_stats.csv', index=False)
+    pokemon_stats_df.to_csv('pokemon_stats' + version +'.csv', index=False)
     print('pokemon_stats.csv generated! Complete!')
 
 ################## Move Data
 
-def move_data():
+def move_data(pathvar: str, desc_path: str, version: str):
     print('generating move data...')
-    path = "../../data/moves/moves.asm"
+    movepath = pathvar
 
-    with open(path, "r", encoding="utf-8") as f:
-        lines = f.read().splitlines()
+    with open(movepath, "r", encoding="utf-8") as f:
+        lines = f.read().splitlines()    
+    if version == '_psc':
+        move_lines = lines[14:len(lines)-1]
+    else:
+        move_lines = lines[16:len(lines)-1]
 
-    move_lines = lines[14:len(lines)-1]
+    og_category_dict = {
+    "NORMAL": "PHYSICAL",
+    "FIGHTING": "PHYSICAL",
+    "FLYING": "PHYSICAL",
+    "POISON": "PHYSICAL",
+    "GROUND": "PHYSICAL",
+    "ROCK": "PHYSICAL",
+    "BUG": "PHYSICAL",
+    "GHOST": "PHYSICAL",
+    "STEEL": "PHYSICAL",
+    "FIRE": "SPECIAL",
+    "WATER": "SPECIAL",
+    "GRASS": "SPECIAL",
+    "ELECTRIC": "SPECIAL",
+    "PSYCHIC": "SPECIAL",
+    "ICE": "SPECIAL",
+    "DRAGON": "SPECIAL",
+    "DARK": "SPECIAL",
+    "CURSE": "CURSE_TYPE"
+    }
 
     final_move_data_list = []
+    if version == "_psc":
+        for i in move_lines:
+            final_move_data = {}
+            move_data = i.split(",")
+            move_data_len = len(move_data)
+            final_move_data["Move_Name"] = move_data[0].replace('\tmove ', '').strip()
+            final_move_data["Move_Effect"] = move_data[1].strip()
+            final_move_data["Move_Accuracy"] = move_data[2].strip()
+            final_move_data["Move_Type"] = move_data[3].strip()
+            final_move_data["Move_Category"] = move_data[4].strip()
+            final_move_data["Move_Power"] = move_data[5].strip()
+            final_move_data["Move_PP"] = move_data[6].strip()
+            final_move_data["Move_Effect_Proc_Chance"] = move_data[7].strip()
+            final_move_data["Desc_Name"] = to_camel_case(move_data[0].replace('\tmove ', '').strip())
 
-    for i in move_lines:
-        final_move_data = {}
-        move_data = i.split(",")
-        final_move_data["Move_Name"] = move_data[0].replace('\tmove ', '').strip()
-        final_move_data["Move_Effect"] = move_data[1].strip()
-        final_move_data["Move_Accuracy"] = move_data[2].strip()
-        final_move_data["Move_Type"] = move_data[3].strip()
-        final_move_data["Move_Category"] = move_data[4].strip()
-        final_move_data["Move_Power"] = move_data[5].strip()
-        final_move_data["Move_PP"] = move_data[6].strip()
-        final_move_data["Move_Effect_Proc_Chance"] = move_data[7].strip()
-        final_move_data["Desc_Name"] = to_camel_case(move_data[0].replace('\tmove ', '').strip())
+            final_move_data_list.append(final_move_data)
+    else:
+        for i in move_lines:
+            final_move_data = {}
+            move_data = i.split(",")
+            move_data_len = len(move_data)
+            final_move_data["Move_Name"] = move_data[0].replace('\tmove ', '').strip()
+            final_move_data["Move_Effect"] = move_data[1].strip()
+            final_move_data["Move_Accuracy"] = move_data[2].strip()
+            final_move_data["Move_Type"] = move_data[3].replace('_TYPE', '').strip()
+            final_move_data["Move_Category"] = og_category_dict[move_data[3].replace('_TYPE', '').strip()]
+            final_move_data["Move_Power"] = move_data[4].strip()
+            final_move_data["Move_PP"] = move_data[5].strip()
+            final_move_data["Move_Effect_Proc_Chance"] = move_data[6].strip()
+            final_move_data["Desc_Name"] = to_camel_case(move_data[0].replace('\tmove ', '').strip())
 
-        final_move_data_list.append(final_move_data)
+            final_move_data_list.append(final_move_data)
 
     move_data_df = pd.DataFrame(final_move_data_list)
 
     ############### Move description Data
 
-    path = "../../data/moves/descriptions.asm"
+    path = desc_path
 
     with open(path, "r", encoding="utf-8") as f:
         lines = f.read().splitlines()
-
-    desc_lines = lines[266:]
+    if version == "_psc":
+        desc_lines = lines[266:]
+    else:
+        desc_lines = lines[269:]
     desc_lines.append('')
 
 
@@ -177,14 +269,37 @@ def move_data():
     move_data_df['Desc_Name'] = move_data_df['Desc_Name'].astype(str)
     move_desc_data_df['Desc_Name'] = move_desc_data_df['Desc_Name'].astype(str)
     move_data_df = pd.merge(move_data_df, move_desc_data_df, on='Desc_Name')
-    move_data_df.to_csv('move_data.csv')
+    move_data_df.to_csv('move_data' + version + '.csv')
     print('move_data.csv generated! Complete!')
 
 def main():
-    ## Control reports here
-    levelup_learnset_data()
-    pokemon_stats_data()
-    move_data()
+    ## Paths to pull data
+    movepath = "../../data/moves/moves.asm"
+    statspath = "../../data/pokemon/base_stats/"
+    learnsetpath = "../../data/pokemon/evos_attacks.asm"
+    descpath = "../../data/moves/descriptions.asm"
+
+    ## Downloads a copy of all the og Vanilla Crystal Files
+    # get_og_files()
+
+    ## PSC data here
+
+    levelup_learnset_data(learnsetpath, '_psc')
+    pokemon_stats_data(statspath, '_psc')
+    move_data(movepath, descpath, '_psc')
+
+    # Paths to pull Vanilla Crystal data from OG directory created by get_og_files()
+    ogmovepath = "og_tmp_directory/moves.asm"
+    ogstatspath = "og_tmp_directory/base_stats/"
+    oglearnsetpath = "og_tmp_directory/evos_attacks.asm"
+    ogdescpath = "og_tmp_directory/descriptions.asm"
+
+    ## OG data here
+
+    levelup_learnset_data(oglearnsetpath, '_og')
+    pokemon_stats_data(ogstatspath, '_og')
+    move_data(ogmovepath, ogdescpath, '_og')
+
 
 if __name__ == "__main__":
     main()

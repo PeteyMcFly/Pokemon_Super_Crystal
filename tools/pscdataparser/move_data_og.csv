@@ -1,0 +1,252 @@
+,Move_Name,Move_Effect,Move_Accuracy,Move_Type,Move_Category,Move_Power,Move_PP,Move_Effect_Proc_Chance,Desc_Name,Move_Description
+0,POUND,EFFECT_NORMAL_HIT,40,NORMAL,PHYSICAL,100,35,0,Pound,Pounds with fore- legs or tail.
+1,KARATE_CHOP,EFFECT_NORMAL_HIT,50,FIGHTING,PHYSICAL,100,25,0,KarateChop,Has a high criti- cal hit ratio.
+2,DOUBLESLAP,EFFECT_MULTI_HIT,15,NORMAL,PHYSICAL,85,10,0,Doubleslap,Repeatedly slaps 2-5 times.
+3,COMET_PUNCH,EFFECT_MULTI_HIT,18,NORMAL,PHYSICAL,85,15,0,CometPunch,Repeatedly punches 2-5 times.
+4,MEGA_PUNCH,EFFECT_NORMAL_HIT,80,NORMAL,PHYSICAL,85,20,0,MegaPunch,A powerful punch thrown very hard.
+5,PAY_DAY,EFFECT_PAY_DAY,40,NORMAL,PHYSICAL,100,20,0,PayDay,Throws coins. Gets them back later.
+6,FIRE_PUNCH,EFFECT_BURN_HIT,75,FIRE,SPECIAL,100,15,10,FirePunch,A fiery punch. May cause a burn.
+7,ICE_PUNCH,EFFECT_FREEZE_HIT,75,ICE,SPECIAL,100,15,10,IcePunch,An icy punch. May cause freezing.
+8,THUNDERPUNCH,EFFECT_PARALYZE_HIT,75,ELECTRIC,SPECIAL,100,15,10,Thunderpunch,An electric punch. It may paralyze.
+9,SCRATCH,EFFECT_NORMAL_HIT,40,NORMAL,PHYSICAL,100,35,0,Scratch,Scratches with sharp claws.
+10,VICEGRIP,EFFECT_NORMAL_HIT,55,NORMAL,PHYSICAL,100,30,0,Vicegrip,Grips with power- ful pincers.
+11,GUILLOTINE,EFFECT_OHKO,0,NORMAL,PHYSICAL,30,5,0,Guillotine,"A one-hit KO, pincer attack."
+12,RAZOR_WIND,EFFECT_RAZOR_WIND,80,NORMAL,PHYSICAL,75,10,0,RazorWind,1st turn: Prepare 2nd turn: Attack
+13,SWORDS_DANCE,EFFECT_ATTACK_UP_2,0,NORMAL,PHYSICAL,100,30,0,SwordsDance,A dance that in- creases ATTACK.
+14,CUT,EFFECT_NORMAL_HIT,50,NORMAL,PHYSICAL,95,30,0,Cut,"Cuts using claws, scythes, etc."
+15,GUST,EFFECT_GUST,40,FLYING,PHYSICAL,100,35,0,Gust,Whips up a strong gust of wind.
+16,WING_ATTACK,EFFECT_NORMAL_HIT,60,FLYING,PHYSICAL,100,35,0,WingAttack,Strikes the target with wings.
+17,WHIRLWIND,EFFECT_FORCE_SWITCH,0,NORMAL,PHYSICAL,100,20,0,Whirlwind,Blows away the foe & ends battle.
+18,FLY,EFFECT_FLY,70,FLYING,PHYSICAL,95,15,0,Fly,1st turn: Fly 2nd turn: Attack
+19,BIND,EFFECT_TRAP_TARGET,15,NORMAL,PHYSICAL,75,20,0,Bind,Binds the target for 2-5 turns.
+20,SLAM,EFFECT_NORMAL_HIT,80,NORMAL,PHYSICAL,75,20,0,Slam,"Slams the foe with a tail, vine, etc."
+21,VINE_WHIP,EFFECT_NORMAL_HIT,35,GRASS,SPECIAL,100,10,0,VineWhip,Whips the foe with slender vines.
+22,STOMP,EFFECT_STOMP,65,NORMAL,PHYSICAL,100,20,30,Stomp,An attack that may cause flinching.
+23,DOUBLE_KICK,EFFECT_DOUBLE_HIT,30,FIGHTING,PHYSICAL,100,30,0,DoubleKick,A double kicking attack.
+24,MEGA_KICK,EFFECT_NORMAL_HIT,120,NORMAL,PHYSICAL,75,5,0,MegaKick,A powerful kicking attack.
+25,JUMP_KICK,EFFECT_JUMP_KICK,70,FIGHTING,PHYSICAL,95,25,0,JumpKick,"May miss, damaging the user."
+26,ROLLING_KICK,EFFECT_FLINCH_HIT,60,FIGHTING,PHYSICAL,85,15,30,RollingKick,"A fast, spinning kick."
+27,SAND_ATTACK,EFFECT_ACCURACY_DOWN,0,GROUND,PHYSICAL,100,15,0,SandAttack,Reduces accuracy by throwing sand.
+28,HEADBUTT,EFFECT_FLINCH_HIT,70,NORMAL,PHYSICAL,100,15,30,Headbutt,An attack that may make foe flinch.
+29,HORN_ATTACK,EFFECT_NORMAL_HIT,65,NORMAL,PHYSICAL,100,25,0,HornAttack,An attack using a horn to jab.
+30,FURY_ATTACK,EFFECT_MULTI_HIT,15,NORMAL,PHYSICAL,85,20,0,FuryAttack,Jabs the target 2-5 times.
+31,HORN_DRILL,EFFECT_OHKO,1,NORMAL,PHYSICAL,30,5,0,HornDrill,"A one-hit KO, drill attack."
+32,TACKLE,EFFECT_NORMAL_HIT,35,NORMAL,PHYSICAL,95,35,0,Tackle,A full-body charge attack.
+33,BODY_SLAM,EFFECT_PARALYZE_HIT,85,NORMAL,PHYSICAL,100,15,30,BodySlam,An attack that may cause paralysis.
+34,WRAP,EFFECT_TRAP_TARGET,15,NORMAL,PHYSICAL,85,20,0,Wrap,Squeezes the foe for 2-5 turns.
+35,TAKE_DOWN,EFFECT_RECOIL_HIT,90,NORMAL,PHYSICAL,85,20,0,TakeDown,A tackle that also hurts the user.
+36,THRASH,EFFECT_RAMPAGE,90,NORMAL,PHYSICAL,100,20,0,Thrash,Works 2-3 turns and confuses user.
+37,DOUBLE_EDGE,EFFECT_RECOIL_HIT,120,NORMAL,PHYSICAL,100,15,0,DoubleEdge,A tackle that also hurts the user.
+38,TAIL_WHIP,EFFECT_DEFENSE_DOWN,0,NORMAL,PHYSICAL,100,30,0,TailWhip,Lowers the foe's DEFENSE.
+39,POISON_STING,EFFECT_POISON_HIT,15,POISON,PHYSICAL,100,35,30,PoisonSting,An attack that may poison the target.
+40,TWINEEDLE,EFFECT_POISON_MULTI_HIT,25,BUG,PHYSICAL,100,20,20,Twineedle,Jabs the foe twice using stingers.
+41,PIN_MISSILE,EFFECT_MULTI_HIT,14,BUG,PHYSICAL,85,20,0,PinMissile,Fires pins that strike 2-5 times.
+42,LEER,EFFECT_DEFENSE_DOWN,0,NORMAL,PHYSICAL,100,30,0,Leer,Reduces the foe's DEFENSE.
+43,BITE,EFFECT_FLINCH_HIT,60,DARK,SPECIAL,100,25,30,Bite,An attack that may cause flinching.
+44,GROWL,EFFECT_ATTACK_DOWN,0,NORMAL,PHYSICAL,100,40,0,Growl,Reduces the foe's ATTACK.
+45,ROAR,EFFECT_FORCE_SWITCH,0,NORMAL,PHYSICAL,100,20,0,Roar,Scares wild foes to end battle.
+46,SING,EFFECT_SLEEP,0,NORMAL,PHYSICAL,55,15,0,Sing,May cause the foe to fall asleep.
+47,SUPERSONIC,EFFECT_CONFUSE,0,NORMAL,PHYSICAL,55,20,0,Supersonic,Sound waves that cause confusion.
+48,SONICBOOM,EFFECT_STATIC_DAMAGE,20,NORMAL,PHYSICAL,90,20,0,Sonicboom,Always inflicts 20HP damage.
+49,DISABLE,EFFECT_DISABLE,0,NORMAL,PHYSICAL,55,20,0,Disable,Disables the foe's most recent move.
+50,ACID,EFFECT_DEFENSE_DOWN_HIT,40,POISON,PHYSICAL,100,30,10,Acid,An attack that may lower DEFENSE.
+51,EMBER,EFFECT_BURN_HIT,40,FIRE,SPECIAL,100,25,10,Ember,An attack that may inflict a burn.
+52,FLAMETHROWER,EFFECT_BURN_HIT,95,FIRE,SPECIAL,100,15,10,Flamethrower,An attack that may inflict a burn.
+53,MIST,EFFECT_MIST,0,ICE,SPECIAL,100,30,0,Mist,Prevents stat reduction.
+54,WATER_GUN,EFFECT_NORMAL_HIT,40,WATER,SPECIAL,100,25,0,WaterGun,Squirts water to attack.
+55,HYDRO_PUMP,EFFECT_NORMAL_HIT,120,WATER,SPECIAL,80,5,0,HydroPump,A powerful water- type attack.
+56,SURF,EFFECT_NORMAL_HIT,95,WATER,SPECIAL,100,15,0,Surf,A strong water- type attack.
+57,ICE_BEAM,EFFECT_FREEZE_HIT,95,ICE,SPECIAL,100,10,10,IceBeam,An attack that may freeze the foe.
+58,BLIZZARD,EFFECT_FREEZE_HIT,120,ICE,SPECIAL,70,5,10,Blizzard,An attack that may freeze the foe.
+59,PSYBEAM,EFFECT_CONFUSE_HIT,65,PSYCHIC,SPECIAL,100,20,10,Psybeam,An attack that may confuse the foe.
+60,BUBBLEBEAM,EFFECT_SPEED_DOWN_HIT,65,WATER,SPECIAL,100,20,10,Bubblebeam,An attack that may lower SPEED.
+61,AURORA_BEAM,EFFECT_ATTACK_DOWN_HIT,65,ICE,SPECIAL,100,20,10,AuroraBeam,An attack that may lower ATTACK.
+62,HYPER_BEAM,EFFECT_HYPER_BEAM,150,NORMAL,PHYSICAL,90,5,0,HyperBeam,1st turn: Attack 2nd turn: Rest
+63,PECK,EFFECT_NORMAL_HIT,35,FLYING,PHYSICAL,100,35,0,Peck,"Jabs the foe with a beak, etc."
+64,DRILL_PECK,EFFECT_NORMAL_HIT,80,FLYING,PHYSICAL,100,20,0,DrillPeck,"A strong, spin- ning-peck attack."
+65,SUBMISSION,EFFECT_RECOIL_HIT,80,FIGHTING,PHYSICAL,80,25,0,Submission,An attack that al- so hurts the user.
+66,LOW_KICK,EFFECT_FLINCH_HIT,50,FIGHTING,PHYSICAL,90,20,30,LowKick,An attack that may cause flinching.
+67,COUNTER,EFFECT_COUNTER,1,FIGHTING,PHYSICAL,100,20,0,Counter,Returns a physical blow double.
+68,SEISMIC_TOSS,EFFECT_LEVEL_DAMAGE,1,FIGHTING,PHYSICAL,100,20,0,SeismicToss,The user's level equals damage HP.
+69,STRENGTH,EFFECT_NORMAL_HIT,80,NORMAL,PHYSICAL,100,15,0,Strength,A powerful physi- cal attack.
+70,ABSORB,EFFECT_LEECH_HIT,20,GRASS,SPECIAL,100,20,0,Absorb,Steals 1/2 of the damage inflicted.
+71,MEGA_DRAIN,EFFECT_LEECH_HIT,40,GRASS,SPECIAL,100,10,0,MegaDrain,Steals 1/2 of the damage inflicted.
+72,LEECH_SEED,EFFECT_LEECH_SEED,0,GRASS,SPECIAL,90,10,0,LeechSeed,Steals HP from the foe on every turn.
+73,GROWTH,EFFECT_SP_ATK_UP,0,NORMAL,PHYSICAL,100,40,0,Growth,Raises the SPCL. ATK rating.
+74,RAZOR_LEAF,EFFECT_NORMAL_HIT,55,GRASS,SPECIAL,95,25,0,RazorLeaf,Has a high criti- cal hit ratio.
+75,SOLARBEAM,EFFECT_SOLARBEAM,120,GRASS,SPECIAL,100,10,0,Solarbeam,1st turn: Prepare 2nd turn: Attack
+76,POISONPOWDER,EFFECT_POISON,0,POISON,PHYSICAL,75,35,0,Poisonpowder,A move that may poison the foe.
+77,STUN_SPORE,EFFECT_PARALYZE,0,GRASS,SPECIAL,75,30,0,StunSpore,A move that may paralyze the foe.
+78,SLEEP_POWDER,EFFECT_SLEEP,0,GRASS,SPECIAL,75,15,0,SleepPowder,May cause the foe to fall asleep.
+79,PETAL_DANCE,EFFECT_RAMPAGE,70,GRASS,SPECIAL,100,20,0,PetalDance,Works 2-3 turns and confuses user.
+80,STRING_SHOT,EFFECT_SPEED_DOWN,0,BUG,PHYSICAL,95,40,0,StringShot,A move that lowers the foe's SPEED.
+81,DRAGON_RAGE,EFFECT_STATIC_DAMAGE,40,DRAGON,SPECIAL,100,10,0,DragonRage,Always inflicts 40HP damage.
+82,FIRE_SPIN,EFFECT_TRAP_TARGET,15,FIRE,SPECIAL,70,15,0,FireSpin,Traps foe in fire for 2-5 turns.
+83,THUNDERSHOCK,EFFECT_PARALYZE_HIT,40,ELECTRIC,SPECIAL,100,30,10,Thundershock,An attack that may cause paralysis.
+84,THUNDERBOLT,EFFECT_PARALYZE_HIT,95,ELECTRIC,SPECIAL,100,15,10,Thunderbolt,An attack that may cause paralysis.
+85,THUNDER_WAVE,EFFECT_PARALYZE,0,ELECTRIC,SPECIAL,100,20,0,ThunderWave,A move that may cause paralysis.
+86,THUNDER,EFFECT_THUNDER,120,ELECTRIC,SPECIAL,70,10,30,Thunder,An attack that may cause paralysis.
+87,ROCK_THROW,EFFECT_NORMAL_HIT,50,ROCK,PHYSICAL,90,15,0,RockThrow,Drops rocks on the enemy.
+88,EARTHQUAKE,EFFECT_EARTHQUAKE,100,GROUND,PHYSICAL,100,10,0,Earthquake,Tough but useless vs. flying foes.
+89,FISSURE,EFFECT_OHKO,1,GROUND,PHYSICAL,30,5,0,Fissure,"A ground-type, one-hit KO attack."
+90,DIG,EFFECT_FLY,60,GROUND,PHYSICAL,100,10,0,Dig,1st turn: Burrow 2nd turn: Attack
+91,TOXIC,EFFECT_TOXIC,0,POISON,PHYSICAL,85,10,0,Toxic,A poison move with increasing damage.
+92,CONFUSION,EFFECT_CONFUSE_HIT,50,PSYCHIC,SPECIAL,100,25,10,Confusion,An attack that may cause confusion.
+93,PSYCHIC_M,EFFECT_SP_DEF_DOWN_HIT,90,PSYCHIC,SPECIAL,100,10,10,PsychicM,An attack that may lower SPCL.DEF.
+94,HYPNOSIS,EFFECT_SLEEP,0,PSYCHIC,SPECIAL,60,20,0,Hypnosis,May put the foe to sleep.
+95,MEDITATE,EFFECT_ATTACK_UP,0,PSYCHIC,SPECIAL,100,40,0,Meditate,Raises the user's ATTACK.
+96,AGILITY,EFFECT_SPEED_UP_2,0,PSYCHIC,SPECIAL,100,30,0,Agility,Sharply increases the user's SPEED.
+97,QUICK_ATTACK,EFFECT_PRIORITY_HIT,40,NORMAL,PHYSICAL,100,30,0,QuickAttack,Lets the user get in the first hit.
+98,RAGE,EFFECT_RAGE,20,NORMAL,PHYSICAL,100,20,0,Rage,Raises ATTACK if the user is hit.
+99,TELEPORT,EFFECT_TELEPORT,0,PSYCHIC,SPECIAL,100,20,0,Teleport,A move for fleeing from battle.
+100,NIGHT_SHADE,EFFECT_LEVEL_DAMAGE,1,GHOST,PHYSICAL,100,15,0,NightShade,The user's level equals damage HP.
+101,MIMIC,EFFECT_MIMIC,0,NORMAL,PHYSICAL,100,10,0,Mimic,Copies a move used by the foe.
+102,SCREECH,EFFECT_DEFENSE_DOWN_2,0,NORMAL,PHYSICAL,85,40,0,Screech,Sharply reduces the foe's DEFENSE.
+103,DOUBLE_TEAM,EFFECT_EVASION_UP,0,NORMAL,PHYSICAL,100,15,0,DoubleTeam,Heightens evasive- ness.
+104,RECOVER,EFFECT_HEAL,0,NORMAL,PHYSICAL,100,20,0,Recover,Restores HP by 1/2 the max HP.
+105,HARDEN,EFFECT_DEFENSE_UP,0,NORMAL,PHYSICAL,100,30,0,Harden,Raises the user's DEFENSE.
+106,MINIMIZE,EFFECT_EVASION_UP,0,NORMAL,PHYSICAL,100,20,0,Minimize,Heightens evasive- ness.
+107,SMOKESCREEN,EFFECT_ACCURACY_DOWN,0,NORMAL,PHYSICAL,100,20,0,Smokescreen,Lowers the foe's accuracy.
+108,CONFUSE_RAY,EFFECT_CONFUSE,0,GHOST,PHYSICAL,100,10,0,ConfuseRay,A move that causes confusion.
+109,WITHDRAW,EFFECT_DEFENSE_UP,0,WATER,SPECIAL,100,40,0,Withdraw,Heightens the user's DEFENSE.
+110,DEFENSE_CURL,EFFECT_DEFENSE_CURL,0,NORMAL,PHYSICAL,100,40,0,DefenseCurl,Heightens the user's DEFENSE.
+111,BARRIER,EFFECT_DEFENSE_UP_2,0,PSYCHIC,SPECIAL,100,30,0,Barrier,Sharply increases user's DEFENSE.
+112,LIGHT_SCREEN,EFFECT_LIGHT_SCREEN,0,PSYCHIC,SPECIAL,100,30,0,LightScreen,Ups SPCL.DEF with a wall of light.
+113,HAZE,EFFECT_RESET_STATS,0,ICE,SPECIAL,100,30,0,Haze,Eliminates all stat changes.
+114,REFLECT,EFFECT_REFLECT,0,PSYCHIC,SPECIAL,100,20,0,Reflect,Raises DEFENSE with a barrier.
+115,FOCUS_ENERGY,EFFECT_FOCUS_ENERGY,0,NORMAL,PHYSICAL,100,30,0,FocusEnergy,Raises the criti- cal hit ratio.
+116,BIDE,EFFECT_BIDE,0,NORMAL,PHYSICAL,100,10,0,Bide,Waits 2-3 turns & hits back double.
+117,METRONOME,EFFECT_METRONOME,0,NORMAL,PHYSICAL,100,10,0,Metronome,Randomly uses any #MON move.
+118,MIRROR_MOVE,EFFECT_MIRROR_MOVE,0,FLYING,PHYSICAL,100,20,0,MirrorMove,Counters with the same move.
+119,SELFDESTRUCT,EFFECT_SELFDESTRUCT,200,NORMAL,PHYSICAL,100,5,0,Selfdestruct,Powerful but makes the user faint.
+120,EGG_BOMB,EFFECT_NORMAL_HIT,100,NORMAL,PHYSICAL,75,10,0,EggBomb,Eggs are hurled at the foe.
+121,LICK,EFFECT_PARALYZE_HIT,20,GHOST,PHYSICAL,100,30,30,Lick,An attack that may cause paralysis.
+122,SMOG,EFFECT_POISON_HIT,20,POISON,PHYSICAL,70,20,40,Smog,An attack that may poison the foe.
+123,SLUDGE,EFFECT_POISON_HIT,65,POISON,PHYSICAL,100,20,30,Sludge,An attack that may poison the foe.
+124,BONE_CLUB,EFFECT_FLINCH_HIT,65,GROUND,PHYSICAL,85,20,10,BoneClub,An attack that may cause flinching.
+125,FIRE_BLAST,EFFECT_BURN_HIT,120,FIRE,SPECIAL,85,5,10,FireBlast,An attack that may cause a burn.
+126,WATERFALL,EFFECT_NORMAL_HIT,80,WATER,SPECIAL,100,15,0,Waterfall,An aquatic charge attack.
+127,CLAMP,EFFECT_TRAP_TARGET,35,WATER,SPECIAL,75,10,0,Clamp,Traps the foe for 2-5 turns.
+128,SWIFT,EFFECT_ALWAYS_HIT,60,NORMAL,PHYSICAL,100,20,0,Swift,An attack that never misses.
+129,SKULL_BASH,EFFECT_SKULL_BASH,100,NORMAL,PHYSICAL,100,15,0,SkullBash,1st turn: Prepare 2nd turn: Attack
+130,SPIKE_CANNON,EFFECT_MULTI_HIT,20,NORMAL,PHYSICAL,100,15,0,SpikeCannon,Fires spikes to hit 2-5 times.
+131,CONSTRICT,EFFECT_SPEED_DOWN_HIT,10,NORMAL,PHYSICAL,100,35,10,Constrict,An attack that may lower SPEED.
+132,AMNESIA,EFFECT_SP_DEF_UP_2,0,PSYCHIC,SPECIAL,100,20,0,Amnesia,Sharply raises the user's SPCL.DEF.
+133,KINESIS,EFFECT_ACCURACY_DOWN,0,PSYCHIC,SPECIAL,80,15,0,Kinesis,Reduces the foe's accuracy.
+134,SOFTBOILED,EFFECT_HEAL,0,NORMAL,PHYSICAL,100,10,0,Softboiled,Restores HP by 1/2 the user's max HP.
+135,HI_JUMP_KICK,EFFECT_JUMP_KICK,85,FIGHTING,PHYSICAL,90,20,0,HiJumpKick,May miss and hurt the user.
+136,GLARE,EFFECT_PARALYZE,0,NORMAL,PHYSICAL,75,30,0,Glare,A move that may cause paralysis.
+137,DREAM_EATER,EFFECT_DREAM_EATER,100,PSYCHIC,SPECIAL,100,15,0,DreamEater,Steals HP from a sleeping victim.
+138,POISON_GAS,EFFECT_POISON,0,POISON,PHYSICAL,55,40,0,PoisonGas,A move that may poison the foe.
+139,BARRAGE,EFFECT_MULTI_HIT,15,NORMAL,PHYSICAL,85,20,0,Barrage,Throws orbs to hit 2-5 times.
+140,LEECH_LIFE,EFFECT_LEECH_HIT,20,BUG,PHYSICAL,100,15,0,LeechLife,Steals 1/2 of the damage inflicted.
+141,LOVELY_KISS,EFFECT_SLEEP,0,NORMAL,PHYSICAL,75,10,0,LovelyKiss,May cause the foe to fall asleep.
+142,SKY_ATTACK,EFFECT_SKY_ATTACK,140,FLYING,PHYSICAL,90,5,0,SkyAttack,1st turn: Prepare 2nd turn: Attack
+143,TRANSFORM,EFFECT_TRANSFORM,0,NORMAL,PHYSICAL,100,10,0,Transform,The user assumes the foe's guise.
+144,BUBBLE,EFFECT_SPEED_DOWN_HIT,20,WATER,SPECIAL,100,30,10,Bubble,An attack that may reduce SPEED.
+145,DIZZY_PUNCH,EFFECT_CONFUSE_HIT,70,NORMAL,PHYSICAL,100,10,20,DizzyPunch,An attack that may cause confusion.
+146,SPORE,EFFECT_SLEEP,0,GRASS,SPECIAL,100,15,0,Spore,A move that induces sleep.
+147,FLASH,EFFECT_ACCURACY_DOWN,0,NORMAL,PHYSICAL,70,20,0,Flash,Blinds the foe to reduce accuracy.
+148,PSYWAVE,EFFECT_PSYWAVE,1,PSYCHIC,SPECIAL,80,15,0,Psywave,An attack with variable power.
+149,SPLASH,EFFECT_SPLASH,0,NORMAL,PHYSICAL,100,40,0,Splash,Has no effect whatsoever.
+150,ACID_ARMOR,EFFECT_DEFENSE_UP_2,0,POISON,PHYSICAL,100,40,0,AcidArmor,Sharply raises the user's DEFENSE.
+151,CRABHAMMER,EFFECT_NORMAL_HIT,90,WATER,SPECIAL,85,10,0,Crabhammer,Has a high criti- cal hit ratio.
+152,EXPLOSION,EFFECT_SELFDESTRUCT,250,NORMAL,PHYSICAL,100,5,0,Explosion,Very powerful but makes user faint.
+153,FURY_SWIPES,EFFECT_MULTI_HIT,18,NORMAL,PHYSICAL,80,15,0,FurySwipes,Quickly scratches 2-5 times.
+154,BONEMERANG,EFFECT_DOUBLE_HIT,50,GROUND,PHYSICAL,90,10,0,Bonemerang,An attack that strikes twice.
+155,REST,EFFECT_HEAL,0,PSYCHIC,SPECIAL,100,10,0,Rest,Sleep for 2 turns to fully recover.
+156,ROCK_SLIDE,EFFECT_FLINCH_HIT,75,ROCK,PHYSICAL,90,10,30,RockSlide,An attack that may cause flinching.
+157,HYPER_FANG,EFFECT_FLINCH_HIT,80,NORMAL,PHYSICAL,90,15,10,HyperFang,An attack that may cause flinching.
+158,SHARPEN,EFFECT_ATTACK_UP,0,NORMAL,PHYSICAL,100,30,0,Sharpen,A move that raises the user's ATTACK.
+159,CONVERSION,EFFECT_CONVERSION,0,NORMAL,PHYSICAL,100,30,0,Conversion,Change user's type to a move's type.
+160,TRI_ATTACK,EFFECT_TRI_ATTACK,80,NORMAL,PHYSICAL,100,10,20,TriAttack,Fires three kinds of beams at once.
+161,SUPER_FANG,EFFECT_SUPER_FANG,1,NORMAL,PHYSICAL,90,10,0,SuperFang,Cuts the foe's HP by 1/2.
+162,SLASH,EFFECT_NORMAL_HIT,70,NORMAL,PHYSICAL,100,20,0,Slash,Has a high criti- cal hit ratio.
+163,SUBSTITUTE,EFFECT_SUBSTITUTE,0,NORMAL,PHYSICAL,100,10,0,Substitute,Makes a decoy with 1/4 user's max HP.
+164,STRUGGLE,EFFECT_RECOIL_HIT,50,NORMAL,PHYSICAL,100,1,0,Struggle,Used only if all PP are exhausted.
+165,SKETCH,EFFECT_SKETCH,0,NORMAL,PHYSICAL,100,1,0,Sketch,Copies the foe's move permanently.
+166,TRIPLE_KICK,EFFECT_TRIPLE_KICK,10,FIGHTING,PHYSICAL,90,10,0,TripleKick,Hits three times with rising power.
+167,THIEF,EFFECT_THIEF,40,DARK,SPECIAL,100,10,100,Thief,An attack that may steal a held item.
+168,SPIDER_WEB,EFFECT_MEAN_LOOK,0,BUG,PHYSICAL,100,10,0,SpiderWeb,Prevents fleeing or switching.
+169,MIND_READER,EFFECT_LOCK_ON,0,NORMAL,PHYSICAL,100,5,0,MindReader,Ensures the next attack will hit.
+170,NIGHTMARE,EFFECT_NIGHTMARE,0,GHOST,PHYSICAL,100,15,0,Nightmare,A sleeper loses 1/4 HP every turn.
+171,FLAME_WHEEL,EFFECT_FLAME_WHEEL,60,FIRE,SPECIAL,100,25,10,FlameWheel,An attack that may cause a burn.
+172,SNORE,EFFECT_SNORE,40,NORMAL,PHYSICAL,100,15,30,Snore,An attack useable only while asleep.
+173,CURSE,EFFECT_CURSE,0,CURSE,CURSE_TYPE,100,10,0,Curse,Works differently for ghost-types.
+174,FLAIL,EFFECT_REVERSAL,1,NORMAL,PHYSICAL,100,15,0,Flail,Stronger if the user's HP is low.
+175,CONVERSION2,EFFECT_CONVERSION2,0,NORMAL,PHYSICAL,100,30,0,Conversion2,The user's type is made resistant.
+176,AEROBLAST,EFFECT_NORMAL_HIT,100,FLYING,PHYSICAL,95,5,0,Aeroblast,Has a high criti- cal hit ratio.
+177,COTTON_SPORE,EFFECT_SPEED_DOWN_2,0,GRASS,SPECIAL,85,40,0,CottonSpore,Sharply reduces the foe's SPEED.
+178,REVERSAL,EFFECT_REVERSAL,1,FIGHTING,PHYSICAL,100,15,0,Reversal,Stronger if the user's HP is low.
+179,SPITE,EFFECT_SPITE,0,GHOST,PHYSICAL,100,10,0,Spite,Cuts the PP of the foe's last move.
+180,POWDER_SNOW,EFFECT_FREEZE_HIT,40,ICE,SPECIAL,100,25,10,PowderSnow,An attack that may cause freezing.
+181,PROTECT,EFFECT_PROTECT,0,NORMAL,PHYSICAL,100,10,0,Protect,Foils attack that turn. It may fail.
+182,MACH_PUNCH,EFFECT_PRIORITY_HIT,40,FIGHTING,PHYSICAL,100,30,0,MachPunch,A fast punch that lands first.
+183,SCARY_FACE,EFFECT_SPEED_DOWN_2,0,NORMAL,PHYSICAL,90,10,0,ScaryFace,Sharply reduces the foe's SPEED.
+184,FAINT_ATTACK,EFFECT_ALWAYS_HIT,60,DARK,SPECIAL,100,20,0,FaintAttack,An attack that never misses.
+185,SWEET_KISS,EFFECT_CONFUSE,0,NORMAL,PHYSICAL,75,10,0,SweetKiss,A move that causes confusion.
+186,BELLY_DRUM,EFFECT_BELLY_DRUM,0,NORMAL,PHYSICAL,100,10,0,BellyDrum,Reduces own HP to maximize ATTACK.
+187,SLUDGE_BOMB,EFFECT_POISON_HIT,90,POISON,PHYSICAL,100,10,30,SludgeBomb,An attack that may poison the foe.
+188,MUD_SLAP,EFFECT_ACCURACY_DOWN_HIT,20,GROUND,PHYSICAL,100,10,100,MudSlap,Reduces the foe's accuracy.
+189,OCTAZOOKA,EFFECT_ACCURACY_DOWN_HIT,65,WATER,SPECIAL,85,10,50,Octazooka,An attack that may reduce accuracy.
+190,SPIKES,EFFECT_SPIKES,0,GROUND,PHYSICAL,100,20,0,Spikes,Hurts foes when they switch out.
+191,ZAP_CANNON,EFFECT_PARALYZE_HIT,100,ELECTRIC,SPECIAL,50,5,100,ZapCannon,An attack that always paralyzes.
+192,FORESIGHT,EFFECT_FORESIGHT,0,NORMAL,PHYSICAL,100,40,0,Foresight,Negates accuracy reduction moves.
+193,DESTINY_BOND,EFFECT_DESTINY_BOND,0,GHOST,PHYSICAL,100,5,0,DestinyBond,The foe faints if the user does.
+194,PERISH_SONG,EFFECT_PERISH_SONG,0,NORMAL,PHYSICAL,100,5,0,PerishSong,Both user and foe faint in 3 turns.
+195,ICY_WIND,EFFECT_SPEED_DOWN_HIT,55,ICE,SPECIAL,95,15,100,IcyWind,An icy attack that lowers SPEED.
+196,DETECT,EFFECT_PROTECT,0,FIGHTING,PHYSICAL,100,5,0,Detect,Evades attack that turn. It may fail.
+197,BONE_RUSH,EFFECT_MULTI_HIT,25,GROUND,PHYSICAL,80,10,0,BoneRush,An attack that hits 2-5 times.
+198,LOCK_ON,EFFECT_LOCK_ON,0,NORMAL,PHYSICAL,100,5,0,LockOn,Ensures the next attack will hit.
+199,OUTRAGE,EFFECT_RAMPAGE,90,DRAGON,SPECIAL,100,15,0,Outrage,Works 2-3 turns and confuses user.
+200,SANDSTORM,EFFECT_SANDSTORM,0,ROCK,PHYSICAL,100,10,0,Sandstorm,Inflicts damage every turn.
+201,GIGA_DRAIN,EFFECT_LEECH_HIT,60,GRASS,SPECIAL,100,5,0,GigaDrain,Steals 1/2 of the damage inflicted.
+202,ENDURE,EFFECT_ENDURE,0,NORMAL,PHYSICAL,100,10,0,Endure,Always leaves at least 1HP.
+203,CHARM,EFFECT_ATTACK_DOWN_2,0,NORMAL,PHYSICAL,100,20,0,Charm,Sharply lowers the foe's ATTACK.
+204,ROLLOUT,EFFECT_ROLLOUT,30,ROCK,PHYSICAL,90,20,0,Rollout,Attacks 5 turns with rising power.
+205,FALSE_SWIPE,EFFECT_FALSE_SWIPE,40,NORMAL,PHYSICAL,100,40,0,FalseSwipe,Leaves the foe with at least 1HP.
+206,SWAGGER,EFFECT_SWAGGER,0,NORMAL,PHYSICAL,90,15,100,Swagger,Causes confusion and raises ATTACK.
+207,MILK_DRINK,EFFECT_HEAL,0,NORMAL,PHYSICAL,100,10,0,MilkDrink,Restores HP by 1/2 the max HP.
+208,SPARK,EFFECT_PARALYZE_HIT,65,ELECTRIC,SPECIAL,100,20,30,Spark,An attack that may cause paralysis.
+209,FURY_CUTTER,EFFECT_FURY_CUTTER,10,BUG,PHYSICAL,95,20,0,FuryCutter,Successive hits raise power.
+210,STEEL_WING,EFFECT_DEFENSE_UP_HIT,70,STEEL,PHYSICAL,90,25,10,SteelWing,Stiff wings strike the foe.
+211,MEAN_LOOK,EFFECT_MEAN_LOOK,0,NORMAL,PHYSICAL,100,5,0,MeanLook,Prevents fleeing or switching.
+212,ATTRACT,EFFECT_ATTRACT,0,NORMAL,PHYSICAL,100,15,0,Attract,Makes the opposite gender infatuated.
+213,SLEEP_TALK,EFFECT_SLEEP_TALK,0,NORMAL,PHYSICAL,100,10,0,SleepTalk,Randomly attacks while asleep.
+214,HEAL_BELL,EFFECT_HEAL_BELL,0,NORMAL,PHYSICAL,100,5,0,HealBell,Eliminates all status problems.
+215,RETURN,EFFECT_RETURN,1,NORMAL,PHYSICAL,100,20,0,Return,An attack that is based on loyalty.
+216,PRESENT,EFFECT_PRESENT,1,NORMAL,PHYSICAL,90,15,0,Present,A bomb that may restore HP.
+217,FRUSTRATION,EFFECT_FRUSTRATION,1,NORMAL,PHYSICAL,100,20,0,Frustration,An attack based on lack of loyalty.
+218,SAFEGUARD,EFFECT_SAFEGUARD,0,NORMAL,PHYSICAL,100,25,0,Safeguard,Prevents all status problems.
+219,PAIN_SPLIT,EFFECT_PAIN_SPLIT,0,NORMAL,PHYSICAL,100,20,0,PainSplit,Adds user & foe's HPs. Shares total.
+220,SACRED_FIRE,EFFECT_SACRED_FIRE,100,FIRE,SPECIAL,95,5,50,SacredFire,An attack that may inflict a burn.
+221,MAGNITUDE,EFFECT_MAGNITUDE,1,GROUND,PHYSICAL,100,30,0,Magnitude,A ground attack with random power.
+222,DYNAMICPUNCH,EFFECT_CONFUSE_HIT,100,FIGHTING,PHYSICAL,50,5,100,Dynamicpunch,An attack that always confuses.
+223,MEGAHORN,EFFECT_NORMAL_HIT,120,BUG,PHYSICAL,85,10,0,Megahorn,A powerful charge attack.
+224,DRAGONBREATH,EFFECT_PARALYZE_HIT,60,DRAGON,SPECIAL,100,20,30,Dragonbreath,A strong breath attack.
+225,BATON_PASS,EFFECT_BATON_PASS,0,NORMAL,PHYSICAL,100,40,0,BatonPass,Switches while keeping effects.
+226,ENCORE,EFFECT_ENCORE,0,NORMAL,PHYSICAL,100,5,0,Encore,Makes the foe re- peat 2-6 times.
+227,PURSUIT,EFFECT_PURSUIT,40,DARK,SPECIAL,100,20,0,Pursuit,Heavily strikes switching #MON.
+228,RAPID_SPIN,EFFECT_RAPID_SPIN,20,NORMAL,PHYSICAL,100,40,0,RapidSpin,A high-speed spinning attack.
+229,SWEET_SCENT,EFFECT_EVASION_DOWN,0,NORMAL,PHYSICAL,100,20,0,SweetScent,Reduces the foe's evasiveness.
+230,IRON_TAIL,EFFECT_DEFENSE_DOWN_HIT,100,STEEL,PHYSICAL,75,15,30,IronTail,An attack that may reduce DEFENSE.
+231,METAL_CLAW,EFFECT_ATTACK_UP_HIT,50,STEEL,PHYSICAL,95,35,10,MetalClaw,An attack that may up user's ATTACK.
+232,VITAL_THROW,EFFECT_ALWAYS_HIT,70,FIGHTING,PHYSICAL,100,10,0,VitalThrow,A 2nd-strike move that never misses.
+233,MORNING_SUN,EFFECT_MORNING_SUN,0,NORMAL,PHYSICAL,100,5,0,MorningSun,Restores HP (varies by time).
+234,SYNTHESIS,EFFECT_SYNTHESIS,0,GRASS,SPECIAL,100,5,0,Synthesis,Restores HP (varies by time).
+235,MOONLIGHT,EFFECT_MOONLIGHT,0,NORMAL,PHYSICAL,100,5,0,Moonlight,Restores HP (varies by time).
+236,HIDDEN_POWER,EFFECT_HIDDEN_POWER,1,NORMAL,PHYSICAL,100,15,0,HiddenPower,The power varies with the #MON.
+237,CROSS_CHOP,EFFECT_NORMAL_HIT,100,FIGHTING,PHYSICAL,80,5,0,CrossChop,Has a high criti- cal hit ratio.
+238,TWISTER,EFFECT_TWISTER,40,DRAGON,SPECIAL,100,20,20,Twister,Whips up a tornado to attack.
+239,RAIN_DANCE,EFFECT_RAIN_DANCE,0,WATER,SPECIAL,90,5,0,RainDance,Boosts water-type moves for 5 turns.
+240,SUNNY_DAY,EFFECT_SUNNY_DAY,0,FIRE,SPECIAL,90,5,0,SunnyDay,Boosts fire-type moves for 5 turns.
+241,CRUNCH,EFFECT_SP_DEF_DOWN_HIT,80,DARK,SPECIAL,100,15,20,Crunch,An attack that may lower SPCL.DEF.
+242,MIRROR_COAT,EFFECT_MIRROR_COAT,1,PSYCHIC,SPECIAL,100,20,0,MirrorCoat,Counters a SPCL. ATK move double.
+243,PSYCH_UP,EFFECT_PSYCH_UP,0,NORMAL,PHYSICAL,100,10,0,PsychUp,Copies the foe's stat changes.
+244,EXTREMESPEED,EFFECT_PRIORITY_HIT,80,NORMAL,PHYSICAL,100,5,0,Extremespeed,A powerful first- strike move.
+245,ANCIENTPOWER,EFFECT_ALL_UP_HIT,60,ROCK,PHYSICAL,100,5,10,Ancientpower,An attack that may raise all stats.
+246,SHADOW_BALL,EFFECT_SP_DEF_DOWN_HIT,80,GHOST,PHYSICAL,100,15,20,ShadowBall,An attack that may lower SPCL.DEF.
+247,FUTURE_SIGHT,EFFECT_FUTURE_SIGHT,80,PSYCHIC,SPECIAL,90,15,0,FutureSight,An attack that hits on 3rd turn.
+248,ROCK_SMASH,EFFECT_DEFENSE_DOWN_HIT,20,FIGHTING,PHYSICAL,100,15,50,RockSmash,An attack that may lower DEFENSE.
+249,WHIRLPOOL,EFFECT_TRAP_TARGET,15,WATER,SPECIAL,70,15,0,Whirlpool,Traps the foe for 2-5 turns.
+250,BEAT_UP,EFFECT_BEAT_UP,10,DARK,SPECIAL,100,10,0,BeatUp,Party #MON join in the attack.
