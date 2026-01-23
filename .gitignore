@@ -1,3 +1,6 @@
+# automated gbc file generation
+pokecrystal.gbc
+
 # generated
 *.tx
 *.o
@@ -50,3 +53,4 @@ gfx/pokemon/*/bitmask.asm
 gfx/pokemon/*/frames.asm
 !gfx/pokemon/unown/bitmask.asm
 !gfx/pokemon/unown/frames.asm
+tools/pscdataparser/og_tmp_directory/
