@@ -1,6 +1,6 @@
 	db MAGCARGO ; 219
 
-	db  60,  60, 120,  30,  80,  80
+	db  70,  70, 120,  30,  80,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, GROUND ; type

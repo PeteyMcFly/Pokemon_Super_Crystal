@@ -1,6 +1,6 @@
 	db LEDIAN ; 166
 
-	db  65,  65,  55,  95,  55, 110
+	db  75,  65,  60,  95,  65, 110
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type

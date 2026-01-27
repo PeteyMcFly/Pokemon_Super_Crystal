@@ -1,6 +1,6 @@
 	db GIRAFARIG ; 203
 
-	db  78,  80,  70,  85,  90,  70
+	db  80,  80,  70,  85,  90,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, PSYCHIC ; type

@@ -10,6 +10,7 @@
 	const ROUTE44_POKE_BALL1
 	const ROUTE44_POKE_BALL2
 	const ROUTE44_POKE_BALL3
+	const ROUTE44_JUGGLER
 
 Route44_MapScripts:
 	db 0 ; scene scripts
@@ -157,6 +158,18 @@ TrainerPsychicPhil:
 	waitbutton
 	closetext
 	end
+
+TrainerJugglerZandrew:
+	trainer JUGGLER, ZANDREW, EVENT_BEAT_JUGGLER_ZANDREW, JugglerZandrewSeenText, JugglerZandrewBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext JugglerZandrewAfterBattleText
+	waitbutton
+	closetext
+	end
+
 
 TrainerFisherWilton1:
 	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
@@ -415,6 +428,21 @@ PsychicPhilAfterBattleText:
 	cont "on your side."
 	done
 
+JugglerZandrewSeenText:
+	text "My doge!"
+	line "Let's battle!"
+	done
+
+JugglerZandrewBeatenText:
+	text "Arrgh… I'm"
+	line "depressed man…"
+	done
+
+JugglerZandrewAfterBattleText:
+	text "Good luck ahead"
+	line "on the ICY PATH."
+	done
+
 PokemaniacZachSeenText:
 	text "I'll do anything"
 	line "to get my hands on"
@@ -529,3 +557,5 @@ Route44_MapEvents:
 	object_event 30,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRevive, EVENT_ROUTE_44_MAX_REVIVE
 	object_event 45,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44UltraBall, EVENT_ROUTE_44_ULTRA_BALL
 	object_event 14,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRepel, EVENT_ROUTE_44_MAX_REPEL
+	object_event 53,  6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerZandrew, -1
+

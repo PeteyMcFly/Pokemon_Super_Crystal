@@ -1,6 +1,6 @@
 	db KINGLER ; 099
 
-	db  55, 130, 115,  75,  50,  50
+	db  60, 130, 115,  75,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

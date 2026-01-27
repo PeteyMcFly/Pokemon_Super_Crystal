@@ -213,6 +213,7 @@ KRIS EQU __enum__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const BANMAN
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -273,6 +274,7 @@ KRIS EQU __enum__
 	const ZACH
 	const BRENT4
 	const MILLER
+	const FARNSWO
 
 	trainerclass GRUNTM ; 1f
 	const GRUNTM_1
@@ -521,6 +523,7 @@ KRIS EQU __enum__
 	const IRWIN2
 	const IRWIN3
 	const IRWIN4
+	const ZANDREW
 
 	trainerclass BLACKBELT_T ; 32
 	const KENJI1

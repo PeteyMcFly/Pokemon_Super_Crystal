@@ -1,6 +1,6 @@
 	db NIDOQUEEN ; 031
 
-	db  90,  85,  87,  76,  75,  87
+	db  95,  85,  87,  76,  75,  87
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, GROUND ; type

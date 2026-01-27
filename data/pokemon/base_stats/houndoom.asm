@@ -1,6 +1,6 @@
 	db HOUNDOOM ; 229
 
-	db  80,  90,  60,  100, 110,  80
+	db  82,  90,  62,  100, 110,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, FIRE ; type

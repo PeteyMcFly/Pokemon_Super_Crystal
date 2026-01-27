@@ -9,6 +9,7 @@
 	const ROUTE39_PSYCHIC_NORMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
+	const ROUTE39_COOLTRAINER_M
 
 Route39_MapScripts:
 	db 0 ; scene scripts
@@ -165,6 +166,17 @@ TrainerPokefanfJaime:
 	closetext
 	end
 
+TrainerCooltrainerMBanman:
+	trainer COOLTRAINERM, BANMAN, EVENT_BEAT_COOLTRAINERM_BANMAN, CooltrainerMBanmanSeenText, CooltrainerMBanmanBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMBanmanAfterBattleText
+	waitbutton
+	closetext
+	end
+
 Route39Sign:
 	jumptext Route39SignText
 
@@ -277,6 +289,32 @@ PsychicNormanAfterBattleText:
 	cont "potential."
 	done
 
+CooltrainerMBanmanSeenText:
+	text "I'm here to visit"
+	line "The Moomoo farms."
+
+	text "Let me show you"
+	line "what my ungulate"
+	cont "#PKMN are capable of!"
+	done
+
+CooltrainerMBanmanBeatenText:
+	text "What!? Oh no! OW!"
+	line "My hooves!"
+	done
+
+CooltrainerMBanmanAfterBattleText:
+	para "Man, I thought that"
+	line "I was the coolest."
+	cont "But my hooved #MON"
+	cont "couldn't hang with you."
+
+	para "The Miltanks here"
+	line "are sick, and need"
+	cont "berries to return"
+	cont "their health."
+	done
+
 PokefanfJaimeHopeItGetsDarkText:
 	text "Ufufufu… I hope it"
 	line "gets dark soon."
@@ -367,3 +405,4 @@ Route39_MapEvents:
 	object_event 13,  7, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicNorman, -1
 	object_event  9,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FruitTree, -1
 	object_event  4, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	object_event  10, 6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCooltrainerMBanman, -1

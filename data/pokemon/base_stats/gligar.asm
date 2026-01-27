@@ -1,6 +1,6 @@
 	db GLIGAR ; 207
 
-	db  70,  77, 105,  85,  35,  65
+	db  75,  77, 105,  85,  35,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, FLYING ; type
