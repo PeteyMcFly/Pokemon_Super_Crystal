@@ -230,6 +230,12 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .catch_without_fail
 
+
+	ld a, [wCurItem]
+	cp NN_BALL
+	jr z, .nuzlocke_ok
+	cp EN_BALL
+	jr z, .nuzlocke_ok
 	farcall IsLegendaryPokemon
 	jr z, .nuzlocke_ok
 	farcall NuzlockeCheckCatch
