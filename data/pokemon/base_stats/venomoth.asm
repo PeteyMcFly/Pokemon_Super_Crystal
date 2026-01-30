@@ -1,6 +1,6 @@
 	db VENOMOTH ; 049
 
-	db  72,  72,  65,  90,  90,  75
+	db  75,  72,  67,  90,  90,  77
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, PSYCHIC ; type

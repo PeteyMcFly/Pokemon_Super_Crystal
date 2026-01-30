@@ -1,6 +1,6 @@
 	db HITMONLEE ; 106
 
-	db  60, 125,  63,  87,  35, 110
+	db  65, 125,  65,  87,  35, 110
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, FIGHTING ; type

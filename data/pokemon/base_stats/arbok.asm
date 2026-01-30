@@ -1,6 +1,6 @@
 	db ARBOK ; 024
 
-	db  70,  85,  74,  80,  75,  79
+	db  72,  85,  74,  80,  80,  79
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, DRAGON ; type

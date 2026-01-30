@@ -1,6 +1,6 @@
 	db FARFETCH_D ; 083
 
-	db  72,  72,  72,  60,  58,  75
+	db  75,  75,  75,  65,  58,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type

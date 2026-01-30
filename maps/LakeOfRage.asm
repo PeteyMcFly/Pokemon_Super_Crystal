@@ -11,6 +11,7 @@
 	const LAKEOFRAGE_WESLEY
 	const LAKEOFRAGE_POKE_BALL1
 	const LAKEOFRAGE_POKE_BALL2
+	const LAKEOFRAGE_POKEMANIAC
 
 LakeOfRage_MapScripts:
 	db 2 ; scene scripts
@@ -153,6 +154,18 @@ TrainerFisherAndre:
 	waitbutton
 	closetext
 	end
+
+TrainerPokemaniacFarnswo:
+	trainer POKEMANIAC, FARNSWO, EVENT_BEAT_POKEMANIAC_FARNSWO, PokemaniacFarnswoSeenText, PokemaniacFarnswoBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext PokemaniacFarnswoAfterBattleText
+	waitbutton
+	closetext
+	end
+
 
 TrainerFisherRaymond:
 	trainer FISHER, RAYMOND, EVENT_BEAT_FISHER_RAYMOND, FisherRaymondSeenText, FisherRaymondBeatenText, 0, .Script
@@ -375,6 +388,23 @@ FisherAndreAfterBattleText:
 	cont "#MON all day."
 	done
 
+PokemaniacFarnswoSeenText:
+	text "... huh? Wait..."
+	line "I'm here for the"
+	cont "Red Gyarados!"
+	done
+
+PokemaniacFarnswoBeatenText:
+	text "Oh!"
+	line "a quick snooze..."
+	done
+
+PokemaniacFarnswoAfterBattleText:
+	text "I guess I wasn't"
+	line "fast enough to get"
+	cont "Red Gyarados."
+	done
+
 FisherRaymondSeenText:
 	text "No matter what I"
 	line "do, all I catch"
@@ -507,7 +537,7 @@ LakeOfRage_MapEvents:
 	bg_event  4,  4, BGEVENT_ITEM, LakeOfRageHiddenRareCandy
 	bg_event 35,  5, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion
 
-	db 12 ; object events
+	db 13 ; object events
 	object_event 21, 28, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageLanceScript, EVENT_LAKE_OF_RAGE_LANCE
 	object_event 20, 26, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageGrampsScript, -1
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageSuperNerdScript, -1
@@ -520,3 +550,5 @@ LakeOfRage_MapEvents:
 	object_event  4,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
 	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
 	object_event 35,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
+	object_event 18, 31, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacFarnswo, -1
+

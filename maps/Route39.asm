@@ -9,6 +9,7 @@
 	const ROUTE39_PSYCHIC_NORMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
+	const ROUTE39_COOLTRAINER_M
 
 Route39_MapScripts:
 	db 0 ; scene scripts
@@ -165,6 +166,17 @@ TrainerPokefanfJaime:
 	closetext
 	end
 
+TrainerCooltrainerMBanman:
+	trainer COOLTRAINERM, BANMAN, EVENT_BEAT_COOLTRAINERM_BANMAN, CooltrainerMBanmanSeenText, CooltrainerMBanmanBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerMBanmanAfterBattleText
+	waitbutton
+	closetext
+	end
+
 Route39Sign:
 	jumptext Route39SignText
 
@@ -277,6 +289,29 @@ PsychicNormanAfterBattleText:
 	cont "potential."
 	done
 
+CooltrainerMBanmanSeenText:
+	text "I'm here to visit"
+	line "The Moomoo farms."
+	
+	para "Let me show you"
+	line "what my ungulate"
+	cont "#MON can do!"
+	done
+
+CooltrainerMBanmanBeatenText:
+	text "What!? Oh no! OW!"
+	line "My hooves!"
+	done
+
+CooltrainerMBanmanAfterBattleText:
+	text "Man, I thought"
+	line "I was the coolest."
+
+	para "But my hooved"
+	line "#MON couldn't"
+	cont "hang with you."
+	done
+
 PokefanfJaimeHopeItGetsDarkText:
 	text "Ufufufu… I hope it"
 	line "gets dark soon."
@@ -356,7 +391,7 @@ Route39_MapEvents:
 	bg_event 15,  7, BGEVENT_READ, Route39Sign
 	bg_event  5, 13, BGEVENT_ITEM, Route39HiddenNugget
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 13, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSailorEugene, -1
 	object_event 10, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1
 	object_event 11, 19, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanfRuth, -1
@@ -367,3 +402,4 @@ Route39_MapEvents:
 	object_event 13,  7, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicNorman, -1
 	object_event  9,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FruitTree, -1
 	object_event  4, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	object_event  10, 6, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerMBanman, -1
