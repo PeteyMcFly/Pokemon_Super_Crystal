@@ -12,7 +12,7 @@ This will create a `pokecrystal.gbc` file in the root of the repository that can
 ## Manual Setup
 You will need a Pokemon Crystal ROM (.gbc file). Please support the official release of pokemon and buy Pokemon Crystal. We can distribute the IPS patch for **Pokemon Super Crystal**, but not the ROM.
 
-1. Download the IPS patch for **Pokemon Super Crystal** here: https://github.com/peterjtalen/Pokemon_Super_Crystal/releases/tag/rc1 An IPS patch is a set of instructions on how to alter a ROM file from its base form to the hacked form.
+1. Download the IPS patch for **Pokemon Super Crystal** here: https://github.com/PeteyMcFly/Pokemon_Super_Crystal/releases/tag/rc2.1 An IPS patch is a set of instructions on how to alter a ROM file from its base form to the hacked form.
 2. Download and install an archiver program if you don't already have one (Windows: 7Zip or WinRAR) (Mac: Keka) (Linux/BSD users: you know what you're doing).
 3. Download Lunar IPS. This is an application that will take the **Pokemon Super Crystal** IPS file and use it to change a vanilla Pokemon Crystal ROM into **Pokemon Super Crystal**. *Mac users can download the MultiPatch application which does the same thing. Linux and BSD users are advised to use Floating IPS (flips).*
 4. Open and run Lunar IPS and click 'Apply Patch'
@@ -21,23 +21,31 @@ You will need a Pokemon Crystal ROM (.gbc file). Please support the official rel
 7. Your Pokemon Crystal ROM is now patched to be a **Pokemon Super Crystal**  ROM. Load Pokemon Super Crystal with your emulator of choice (we recommend bgb). Enjoy!
 
 # Pokémon Super Crystal Overview: 
-For a complete description of the game and a list of changes, please visit:
+Youtube Video showcasing Pokemon Super Crystal with changes and features:
+https://youtu.be/wOZt7c53DIo
+
+For a description of the game and a list of some changes, please visit:
 https://docs.google.com/spreadsheets/d/1uzHKELHaVP2ImdNMSbwWflOy6FqgCsl4cUvE5kojYYA/edit?usp=sharing
 
 Pokemon Super Crystal is a hack of Pokemon Crystal, built using the pokecrystal disassembly project. Super Crystal introduces many changes to the make the game more fun and challenging, and allows you to capture every pokemon without trading. 
 
 Major changes include:
-1. Can catch every pokemon
+1. Can catch every pokemon, old legendaries readded in Kanto
 2. Physical/Special split
 3. No need to trade to evolve
 4. Pokemon available earlier on in a playthrough. All Pokemon except legendaries can be obtained before the Elite 4.
 5. Many moves are only accessible via TM in gen 1, or through breeding. Everyone's level-up learnset is going to be altered to give them their strong egg moves, and many TMs from Gen 1 will be brought over like Swords Dance, Ice Beam, etc.
 6. You no longer need to wait to evolve a pokemon to learn a certain move. ALL evolved pokemon can learn the same moves that their pre-evolutions can learn.
-7. Trainers and Bosses will be significantly tougher, with stronger parties and smarter AI
+7. Trainers and Bosses will be significantly tougher, with stronger parties and smarter AI. Easier than a Kaizo, but much harder than vanilla Crystal.
 8. Type Matchup Changes: Poison now super effective against Normal, Ice now resists water
 9. Male and Female Pokemon are equally strong now.
 10. Infinitely Reusable TMs
 11. HMs moves can be overwritten
+12. **New Zone West of Cianwood City unlocked after the Elite 4**
+13. New mini-bosses throughout the game, some zones restored in Kanto
+14. Many new move changes, buffs, interesting mechanics and some moves from Gen III and Gen IV ported over. Check move descriptions for info!
+15. Updated Battle Tower for 6v6 battles, lvl 60-100 brackets improved, and improved rewards from Battle Tower
+16. Some new typings for certain Pokemon to add more type variety in the game
 
 For all listed changes, please see:
 https://docs.google.com/spreadsheets/d/1WtUM1VQbPSdDESuNMYJPpupwrSgFVcDa-DC3ZWKORfU/edit?usp=sharing
