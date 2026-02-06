@@ -46,9 +46,7 @@ Major changes include:
 14. Many new move changes, buffs, interesting mechanics and some moves from Gen III and Gen IV ported over. Check move descriptions for info!
 15. Updated Battle Tower for 6v6 battles, lvl 60-100 brackets improved, and improved rewards from Battle Tower
 16. Some new typings for certain Pokemon to add more type variety in the game
-
-For all listed changes, please see:
-https://docs.google.com/spreadsheets/d/1WtUM1VQbPSdDESuNMYJPpupwrSgFVcDa-DC3ZWKORfU/edit?usp=sharing
+17. Many weaker mons in PU, NU, UU and BL have been given buffs to base stats and some new moves to be more fun to use
 
 # PSC Hardmode "Nuzlocke" Overview:
 
