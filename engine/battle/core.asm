@@ -2674,7 +2674,13 @@ HandlePlayerMonFaint:
 	;call UpdateFaintedPlayerMon
 	xor a
 	ld [wPokemonWithdrawDepositParameter], a
+	ld a, [wCurPartyMon]
+	push af
+	ld a, [wCurBattleMon]
+	ld [wCurPartyMon], a
 	callfar RemoveMonFromPartyOrBox
+	pop af
+	ld [wCurPartyMon], a
 	call CheckPlayerPartyForFitMon
 	ld a, d
 	and a
