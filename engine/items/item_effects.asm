@@ -238,6 +238,9 @@ PokeBallEffect:
 	jr z, .nuzlocke_ok
 	farcall IsLegendaryPokemon
 	jr z, .nuzlocke_ok
+	ld a, [wIsShiny]
+	and a
+	jr nz, .nuzlocke_ok
 	farcall NuzlockeCheckCatch
 	jr z, .nuzlocke_ok
 	ld hl, NuzlockeBlockText
