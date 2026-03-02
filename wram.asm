@@ -1651,6 +1651,8 @@ wAISwitchedInLock:: db ; cfdf
 wFarArrayBank:: db ; cfe0
 wEnemyPreviousStatus:: db ; cfe1
 wLevelCap:: db ; cfe2
+wIsShiny:: db ; cfe3
+wIsLegendary:: db ; cfe4
 
 SECTION "WRAM 1", WRAMX
 

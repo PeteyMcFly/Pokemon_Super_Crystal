@@ -8470,7 +8470,17 @@ Unreferenced_Function3f662:
 	ret
 
 ExitBattle:
+	ld a, [wBattleMode]
+	cp 2
+	jr z, .no_update
+	ld a, [wIsShiny]
+	and a
+	jr nz, .no_update
+	ld a, [wIsLegendary]
+	and a
+	jr nz, .no_update
 	farcall UpdateNuzlockeRestrictions
+.no_update
 	call .HandleEndOfBattle
 	call CleanUpBattleRAM
 	ret
@@ -9291,6 +9301,12 @@ BattleStartMessage:
 	jr .PlaceBattleStartText
 
 .wild
+	farcall IsLegendaryPokemon
+	ld a, 1
+	jr z, .legendary
+	dec a
+.legendary
+	ld [wIsLegendary], a
 	call BattleCheckEnemyShininess
 	jr nc, .not_shiny
 
@@ -9298,12 +9314,15 @@ BattleStartMessage:
 	ld [wNumHits], a
 	ld a, 1
 	ldh [hBattleTurn], a
-	ld a, 1
+	ld [wIsShiny], a
 	ld [wBattleAnimParam], a
 	ld de, ANIM_SEND_OUT_MON
 	call Call_PlayBattleAnim
-
+	jr .shiny_cont
 .not_shiny
+	xor a
+	ld [wIsShiny], a
+.shiny_cont
 	farcall CheckSleepingTreeMon
 	jr c, .skip_cry
 
