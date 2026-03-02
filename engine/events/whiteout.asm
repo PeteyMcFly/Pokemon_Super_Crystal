@@ -11,6 +11,7 @@ Script_Whiteout:
 	waitbutton
 	special FadeOutPalettes
 	pause 40
+	callasm OverworldGameOver
 	special HealParty
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .bug_contest
@@ -96,3 +97,7 @@ GetWhiteoutSpawn:
 .yes
 	ld [wDefaultSpawnpoint], a
 	ret
+
+OverworldGameOver:
+	farcall EmptyAllSRAMBanks
+	jp Reset

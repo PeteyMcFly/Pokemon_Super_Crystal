@@ -131,6 +131,9 @@ DoPoisonStep::
 	farcall GetPartyNick
 	ld hl, .PoisonFaintText
 	call PrintText
+	xor a
+	ld [wPokemonWithdrawDepositParameter], a
+	callfar RemoveMonFromPartyOrBox
 
 .mon_not_fainted
 	pop de
