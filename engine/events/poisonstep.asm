@@ -134,6 +134,12 @@ DoPoisonStep::
 	xor a
 	ld [wPokemonWithdrawDepositParameter], a
 	callfar RemoveMonFromPartyOrBox
+	ld a, [wPartyCount]
+	and a
+	jr nz, .mon_not_fainted
+	pop de
+	ld [wScriptVar], a
+	ret
 
 .mon_not_fainted
 	pop de
