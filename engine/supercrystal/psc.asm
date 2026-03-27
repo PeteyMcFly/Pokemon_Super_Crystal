@@ -90,22 +90,22 @@ GetHardModeLevelCap::
 	ret
 
 HardModeLevelCapTable:
-	db 11 ; 0 badges
-	db 19
-	db 25
-	db 29
-	db 37
-	db 39
-	db 43
-	db 49 ; end of Johto
-	db 53
-	db 57
-	db 58
-	db 59
-	db 63
+	db 14 ; 0 badges
+	db 20
+	db 26
+	db 30
+	db 38
+	db 40
+	db 44
+	db 50 ; end of Johto
+	db 60
+	db 62
+	db 64
+	db 65
+	db 66
 	db 67
-	db 69
-	db 74 ; last badge to go
+	db 70
+	db 75 ; last badge to go
 
 IsLegendaryPokemon::
 ; Result in Zero flag, ZF = TRUE

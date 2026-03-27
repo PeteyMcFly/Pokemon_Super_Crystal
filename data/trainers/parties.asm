@@ -3418,7 +3418,7 @@ SageGroup:
 	db "EDMOND@", TRAINERTYPE_NORMAL
 	db 4, BELLSPROUT
 	db 4, BELLSPROUT
-	db 11, FEAROW
+	db 11, SPEAROW
 	db -1 ; end
 	
 	; SAGE (8)
