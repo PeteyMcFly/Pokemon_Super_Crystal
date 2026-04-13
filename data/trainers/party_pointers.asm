@@ -75,3 +75,4 @@ TrainerGroups:
 	dw ExileGroup
 	dw CroneGroup
 	dw LadyGroup
+	dw DetectiveGroup

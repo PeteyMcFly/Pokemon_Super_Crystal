@@ -720,6 +720,7 @@ OutlawPic:           INCBIN "gfx/trainers/ishikawa.2bpp.lz"
 ExilePic:           INCBIN "gfx/trainers/giovanni.2bpp.lz"
 CronePic:           INCBIN "gfx/trainers/agatha.2bpp.lz"
 LadyPic:           INCBIN "gfx/trainers/lorelei.2bpp.lz"
+DetectivePic:           INCBIN "gfx/trainers/columbo.2bpp.lz"
 
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,

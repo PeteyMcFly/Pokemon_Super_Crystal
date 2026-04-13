@@ -75,3 +75,4 @@ TrainerPicPointers::
 	dba_pic ExilePic
 	dba_pic CronePic
 	dba_pic LadyPic
+	dba_pic DetectivePic
