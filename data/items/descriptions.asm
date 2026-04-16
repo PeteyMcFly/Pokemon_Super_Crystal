@@ -134,8 +134,8 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw TeruSama10Desc
+	dw PencilDesc
+	dw ColumboBallDesc
 	dw TeruSama11Desc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
@@ -779,11 +779,13 @@ PassDesc:
 	db   "A ticket for the"
 	next "MAGNET TRAIN.@"
 
-TeruSama9Desc:
-	db   "?@"
+PencilDesc:
+	db   "Columbo lost his"
+	next "PENCIL again...@"
 
-TeruSama10Desc:
-	db   "?@"
+ColumboBallDesc:
+	db   "A special BALL"
+	next "from COLUMBO.@"
 
 TeruSama11Desc:
 	db   "?@"

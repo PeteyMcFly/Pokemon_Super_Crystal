@@ -1,3 +1,4 @@
+SLOWPOKETAIL_PRICE EQU 1000
 	object_const_def ; object_event constants
 	const ROUTE32_FISHER1
 	const ROUTE32_FISHER2
@@ -125,18 +126,47 @@ Route32WannaBuyASlowpokeTailScript:
 SlowpokeTailSalesmanScript:
 	faceplayer
 _OfferToSellSlowpokeTail:
-	setscene SCENE_ROUTE32_NOTHING
-	opentext
-	writetext Text_MillionDollarSlowpokeTail
+	checkevent EVENT_GOT_SLOWPOKETAIL
+	iftrue SlowpokeText_Sold
+	writetext SlowpokeText_BuyTail
+	special PlaceMoneyTopRight
 	yesorno
-	iffalse .refused
-	writetext Text_ThoughtKidsWereLoaded
+	iffalse SlowpokeScript_NoSale
+	checkmoney YOUR_MONEY, SLOWPOKETAIL_PRICE
+	ifequal HAVE_LESS, SlowpokeScript_NoMoney
+	giveitem SLOWPOKETAIL
+	iffalse SlowpokeScript_NoRoom
+	takemoney YOUR_MONEY, SLOWPOKETAIL_PRICE
+	special PlaceMoneyTopRight
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext SlowpokeText_Sold
+	setevent EVENT_GOT_SLOWPOKETAIL
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+SlowpokeScript_NoMoney:
+	writetext SlowpokeText_NoMoney
 	waitbutton
 	closetext
 	end
 
-.refused
-	writetext Text_RefusedToBuySlowpokeTail
+SlowpokeScript_NoRoom:
+	writetext SlowpokeText_NoRoom
+	waitbutton
+	closetext
+	end
+
+SlowpokeScript_NoSale:
+	writetext SlowpokeText_NoSale
+	waitbutton
+	closetext
+	end
+
+SlowpokeScript_Sold:
+	writetext SlowpokeText_Sold
 	waitbutton
 	closetext
 	end
@@ -603,7 +633,7 @@ Route32CooltrainerMText_ExperiencesShouldBeUseful:
 	line "for your journey."
 	done
 
-Text_MillionDollarSlowpokeTail:
+SlowpokeText_BuyTail:
 	text "How would you like"
 	line "to have this"
 
@@ -611,20 +641,30 @@ Text_MillionDollarSlowpokeTail:
 	line "SLOWPOKETAIL?"
 
 	para "For you right now,"
-	line "just ¥1,000,000!"
+	line "just ¥1,000!"
 
 	para "You'll want this!"
 	done
 
-Text_ThoughtKidsWereLoaded:
+SlowpokeText_NoMoney:
 	text "Tch! I thought"
 	line "kids these days"
 	cont "were loaded…"
 	done
 
-Text_RefusedToBuySlowpokeTail:
+SlowpokeText_NoRoom:
+	text "You don't have"
+	line "room for this."
+	done
+
+SlowpokeText_NoSale:
 	text "You don't want it?"
 	line "Then scram. Shoo!"
+	done
+
+SlowpokeText_Sold:
+	text "WAHAHAHA!!!"
+	line "Thanks kid!!!"
 	done
 
 FisherJustinSeenText:
