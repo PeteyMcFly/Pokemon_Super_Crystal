@@ -127,7 +127,7 @@ SlowpokeTailSalesmanScript:
 	faceplayer
 _OfferToSellSlowpokeTail:
 	checkevent EVENT_GOT_SLOWPOKETAIL
-	iftrue SlowpokeText_Sold
+	iftrue SlowpokeScript_Sold
 	writetext SlowpokeText_BuyTail
 	special PlaceMoneyTopRight
 	yesorno

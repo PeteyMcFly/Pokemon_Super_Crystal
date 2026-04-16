@@ -355,7 +355,7 @@ GuideGentPokecenterText:
 
 	para "You don't need to"
 	line "trade to evolve or"
-	cont "from other games"
+	cont "from other games."
 
 	para "in order to catch"
 	line "em all."
@@ -364,7 +364,7 @@ GuideGentPokecenterText:
 	line "because there are"
 
 	para "new #MON"
-	cont "everywhere!"
+	line "everywhere!"
 	done
 
 GuideGentMartText:

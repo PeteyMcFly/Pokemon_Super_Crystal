@@ -64,7 +64,7 @@ MartViolet:
 	db AWAKENING
 	db X_DEFEND
 	db X_ATTACK
-	db X_SPEED
+	db REPEL
 	db FLOWER_MAIL
 	db -1 ; end
 
