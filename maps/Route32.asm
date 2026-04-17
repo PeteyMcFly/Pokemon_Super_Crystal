@@ -17,14 +17,18 @@ SLOWPOKETAIL_PRICE EQU 1000
 	const ROUTE32_POKE_BALL2
 
 Route32_MapScripts:
-	db 2 ; scene scripts
+	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
+	scene_script .DummyScene1 ; SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	scene_script .DummyScene2 ; SCENE_ROUTE32_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .Frieda
 
 .DummyScene0:
+	end
+
+.DummyScene1:
 	end
 
 .DummyScene2:
