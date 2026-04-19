@@ -123,6 +123,7 @@ Route32WannaBuyASlowpokeTailScript:
 	turnobject ROUTE32_FISHER4, DOWN
 	turnobject PLAYER, UP
 	scall SlowpoketailMerchantScript
+	end
 
 SlowpokeTailSalesmanScript:
 	faceplayer

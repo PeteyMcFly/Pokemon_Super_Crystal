@@ -76,3 +76,4 @@ TrainerEncounterMusic::
 	db MUSIC_ROCKET_ENCOUNTER      ; exile
 	db MUSIC_SAGE_ENCOUNTER        ; crone
 	db MUSIC_LASS_ENCOUNTER        ; lady
+	db MUSIC_OFFICER_ENCOUNTER     ; detective
