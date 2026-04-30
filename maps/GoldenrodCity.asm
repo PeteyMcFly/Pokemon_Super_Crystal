@@ -52,20 +52,22 @@ GoldenrodCity_MapScripts:
 .MoveTutorDone:
 	return
 
-.Columbo
-	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
-	iftrue .NoAppearColumbo
-	checkevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
+.Columbo:
+	checkevent EVENT_TEAM_ROCKET_DISBANDED
 	iftrue .AppearColumbo
-.NoAppearColumbo:
+.DisappearColumbo:
 	disappear GOLDENRODCITY_COLUMBO
 	return
 
 .AppearColumbo:
+	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
+	iftrue .DisappearColumbo
 	appear GOLDENRODCITY_COLUMBO
 	return
 
 GoldenrodCityColumboScript:
+	checkevent EVENT_TEAM_ROCKET_DISBANDED
+	iffalse .DisappearColumbo
 	faceplayer
 	opentext
 	writetext GoldenrodCity_ColumboBeforeText
@@ -83,6 +85,10 @@ GoldenrodCityColumboScript:
 	waitbutton
 	closetext
 	end
+
+.DisappearColumbo:
+	disappear GOLDENRODCITY_COLUMBO
+	return
 
 MoveTutorScript:
 	faceplayer
@@ -650,4 +656,4 @@ GoldenrodCity_MapEvents:
 	object_event 29,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 31, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 12, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_GOLDENROD_CITY_MOVE_TUTOR
-	object_event  6, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PAL_NPC_BROWN, 0, GoldenrodCityColumboScript, EVENT_TEAM_ROCKET_DISBANDED
+	object_event  6, 17, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityColumboScript, EVENT_TEAM_ROCKET_DISBANDED
