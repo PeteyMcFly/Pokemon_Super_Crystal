@@ -15,6 +15,20 @@ GetPokeBallWobble:
 	inc a
 	ld [wBuffer2], a
 
+	push af
+	ld a, [wCurItem]
+	cp COLUMBO_BALL
+	jr nz, .regular_logic
+	pop af
+	cp 4
+	ld c, 0
+	jr nz, .done ; return 0 = keep shaking if this is below max num of shakes
+	ld c, 2 ; otherwise return 2 = escaped
+	jr .done
+
+.regular_logic
+	pop af
+
 ; Wobble up to 3 times.
 	cp 3 + 1
 	jr z, .finished
