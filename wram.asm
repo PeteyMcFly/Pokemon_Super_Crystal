@@ -1651,6 +1651,8 @@ wAISwitchedInLock:: db ; cfdf
 wFarArrayBank:: db ; cfe0
 wEnemyPreviousStatus:: db ; cfe1
 
+wPowerTrickStatus:: db ; cfe2 - 0 = neither pokemon, 1 = player pokemon, 2 = enemy pokemon, 3 = both pokemon - & 2 clears player, & 1 clears enemy
+
 SECTION "WRAM 1", WRAMX
 
 wGBCOnlyDecompressBuffer:: ds 1 ; also uses the next $53f bytes for $540 total

@@ -2101,3 +2101,10 @@ MultiHitFlinch:
 	raisesub
 	kingsrock
 	endmove
+
+PowerTrick:
+	checkobedience
+	usedmovetext
+	doturn
+	powertrick
+	endmove

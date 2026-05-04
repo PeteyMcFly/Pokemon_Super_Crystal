@@ -3207,11 +3207,14 @@ ShuckleEvosAttacks:
 	db 1, CONSTRICT
 	db 1, WITHDRAW
 	db 9, WRAP
+	db 10, LEECH_SEED
 	db 14, ENCORE
+	db 19, DEFENSE_CURL
 	db 23, SAFEGUARD
+	db 25, LEECH_LIFE
 	db 28, BIDE
 	db 37, REST
-	db 99, SKETCH
+	db 55, POWER_TRICK
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:

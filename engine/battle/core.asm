@@ -2,6 +2,7 @@
 
 DoBattle:
 	xor a
+	ld [wPowerTrickStatus], a
 	ld [wAISwitchedInLock], a
 	ld [wTimesUsedSwitch], a
 	ld [wBattleParticipantsNotFainted], a
@@ -2063,6 +2064,10 @@ UpdateHPBar:
 
 HandleEnemyMonFaint:
 	call FaintEnemyPokemon
+
+	ld hl, wPowerTrickStatus
+	res 2, [hl]
+
 	ld a, 1
 	ld [wAISwitchedInLock], a
 	ld hl, wBattleMonHP
@@ -2663,6 +2668,10 @@ INCLUDE "data/trainers/leaders.asm"
 
 HandlePlayerMonFaint:
 	call FaintYourPokemon
+	
+	ld hl, wPowerTrickStatus
+	res 1, [hl]
+
 	xor a
 	ld [wAISwitchedInLock], a
 	ld hl, wEnemyMonHP
@@ -3187,6 +3196,8 @@ ForceEnemySwitch:
 	ret
 
 EnemySwitch:
+	ld hl, wPowerTrickStatus
+	res 2, [hl]
 	call CheckWhetherToAskSwitch
 	jr nc, EnemySwitch_SetMode
 	; Shift Mode
@@ -5263,6 +5274,8 @@ TryPlayerSwitch:
 	ld a, [wCurPartyMon]
 	ld [wCurBattleMon], a
 PlayerSwitch:
+	ld hl, wPowerTrickStatus
+	res 1, [hl]
 	ld a, 1
 	ld [wPlayerIsSwitching], a
 	xor a

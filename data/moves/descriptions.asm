@@ -251,13 +251,16 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw FocusBlastDescription
-	dw MoveFCDescription
+	dw PowerTrickDescription
 	dw MoveFDDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 
-MoveFCDescription:
+PowerTrickDescription:
+	db   "Switches ATK and"
+	next "DEF stats.@"
+
 MoveFDDescription:
 MoveFEDescription:
 MoveFFDescription:

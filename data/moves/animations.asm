@@ -252,7 +252,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_FocusBlast
-	dw BattleAnim_252
+	dw BattleAnim_PowerTrick
 	dw BattleAnim_253
 	dw BattleAnim_254
 	dw BattleAnim_SignalBeam
@@ -2740,6 +2740,17 @@ BattleAnim_Harden:
 	anim_obp0 $0
 	anim_call BattleAnim_TargetObj_1Row
 	anim_call BattleAnim_Harden_branch_cbc43
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
+BattleAnim_PowerTrick:
+	anim_1gfx ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_1Row
+	anim_sound 0, 1, SFX_METRONOME
+	anim_bgeffect ANIM_BG_WAVE_DEFORM_USER, $0, $1, $0
+	anim_wait 48
+	anim_incbgeffect ANIM_BG_WAVE_DEFORM_USER
+	anim_wait 48
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 

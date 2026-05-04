@@ -3448,6 +3448,8 @@ INCLUDE "engine/battle/move_effects/false_swipe.asm"
 
 INCLUDE "engine/battle/move_effects/heal_bell.asm"
 
+INCLUDE "engine/battle/move_effects/power_trick.asm"
+
 FarPlayBattleAnimation:
 ; play animation de
 
@@ -4944,6 +4946,8 @@ CalcPlayerStats:
 	ld a, 5
 	call CalcBattleStats
 
+	call ApplyPowerTrickPlayer
+
 	ld hl, BadgeStatBoosts
 	call CallBattleCore
 
@@ -4964,6 +4968,8 @@ CalcEnemyStats:
 
 	ld a, 5
 	call CalcBattleStats
+
+	call ApplyPowerTrickEnemy
 
 	call BattleCommand_SwitchTurn
 
@@ -6986,4 +6992,47 @@ _CheckBattleScene:
 	pop bc
 	pop de
 	pop hl
+	ret
+
+ApplyPowerTrickPlayer:
+	ld a, [wPowerTrickStatus]
+	and 1
+	ret z
+	ld hl, wBattleMonAttack
+	ld de, wBattleMonDefense
+	call ApplyPowerTrickCont
+	ld hl, wPlayerAttack
+	ld de, wPlayerDefense
+	jr ApplyPowerTrickCont
+ApplyPowerTrickEnemy:
+	ld a, [wPowerTrickStatus]
+	and 2
+	ret z
+	ld hl, wEnemyMonAttack
+	ld de, wEnemyMonDefense
+	call ApplyPowerTrickCont
+	ld hl, wEnemyAttack
+	ld de, wEnemyDefense
+ApplyPowerTrickCont:
+	; backup attack to bc
+	ld a, [hli]
+	ld b, a
+	ld a, [hld]
+	ld c, a
+
+	; overwrite attack with defense
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hld], a
+	dec de
+
+	; overwrite def with copy of attack
+	ld a, b
+	ld [de], a
+	inc de
+	ld a, c
+	ld [de], a
+
 	ret
