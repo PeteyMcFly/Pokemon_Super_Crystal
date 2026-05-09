@@ -580,18 +580,114 @@ GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
 	done
 
 GoldenrodCity_ColumboBeforeText:
-	text "Wahahah!"
-	line "Farewell, kid!"
+	text "Oh, hello again"
+	line "<PLAY_G>."
+
+	para "I hope I'm not"
+	line "catching you"
+	cont "at a bad time."
+
+	para "Beautiful weather"
+	line "here in Goldenrod."
+
+	para "My wife always"
+	line "complains about"
+	cont "what we get over"
+
+	para "in Kanto."
+	line "But that's"
+	cont "no matter…"
+
+	para "I wanted to talk"
+	line "with you about"
+	cont "this SLOWPOKE"
+
+	para "issue."
+
+	para "You see, these"
+	line "ROCKET people…"
+
+	para "They're involved"
+	line "in this illegal"
+	cont "trade."
+
+	para "Everywhere they go"
+	line "there's more"
+	cont "sales."
+
+	para "More products"
+	line "of the illicit"
+	cont "#MON trade."
+
+	para "You don't happen"
+	line "to know anything"
+	cont "about that,"
+
+	para "do you?"
+
+	para "I only ask because"
+	line "you seem to show"
+	cont "up everywhere"
+
+	para "that they go."
+
+	para "What do you"
+	line "suppose the odds"
+	cont "of that are?"
+
+	para "I mean, showing"
+	line "up at the same"
+	cont "place once or"
+
+	para "twice, that's"
+	line "one thing."
+
+	para "But you, you've"
+	line "really had some"
+	cont "bad luck,"
+
+	para "haven't you?"
+
+	para "Oh, I heard back"
+	line "from the boys"
+	cont "at the lab."
+
+	para "Did you know that"
+	line "SLOWPOKETAIL has"
+	cont "a unique odor?"
+
+	para "It's funny…"
+
+	para "Every time I've"
+	line "met you, it"
+	cont "smelled just like"
+
+	para "What those lab"
+	line "boys gave me…"
+
+	para "Of course, I'm sure"
+	line "you don't know any-"
+	cont "thing about that."
+
+	para "Just thought I'd"
+	line "ask."
+
+	para "Oh, uh…"
+	line "One more thing."
+
+	para "What's that pink"
+	line "curly thing in"
+	cont "your bag?"
 	done
 
 GoldenrodCity_ColumboBeatenText:
-	text "Wahahah!"
-	line "Farewell, kid!"
+	text "This is certainly"
+	line "a surprise…"
 	done
 
 GoldenrodCity_ColumboAfterText:
-	text "Wahahah!"
-	line "Farewell, kid!"
+	text "Well, I'd better"
+	line "get going…"
 	done
 
 GoldenrodCityMoveTutorMoveText:
