@@ -83,4 +83,5 @@ MapScenes::
 	scene_var RYOKAN_3F,                                   wRyokan3FSceneID
 	scene_var RYOKAN_ONSEN,                                wRyokanOnsenSceneID
 	scene_var RYOKAN_1F,                                   wRyokan1FSceneID
+	scene_var ROUTE_34_ILEX_FOREST_GATE,                   wRoute34IlexForestGateSceneID
 	db -1 ; end

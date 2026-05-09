@@ -3,12 +3,38 @@
 	const ROUTE34ILEXFORESTGATE_BUTTERFREE
 	const ROUTE34ILEXFORESTGATE_LASS
 	const ROUTE34ILEXFORESTGATE_TEACHER2
+	const ROUTE34ILEXFORESTGATE_COLUMBO
 
 Route34IlexForestGate_MapScripts:
-	db 0 ; scene scripts
+	db 2; scene scripts
+	scene_script .SceneColumbo ; SCENE_DEFAULT
+	scene_script .SceneDone    ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .IsForestRestless
+
+.SceneColumbo:
+	showemote EMOTE_SHOCK, ROUTE34ILEXFORESTGATE_COLUMBO, 20
+	special FadeOutMusic
+	pause 15
+	playmusic MUSIC_OFFICER_ENCOUNTER
+	turnobject ROUTE34ILEXFORESTGATE_COLUMBO, DOWN
+	applymovement ROUTE34ILEXFORESTGATE_COLUMBO, MovementData_ColumboApproach
+	opentext
+	writetext Route34IlexForestGateColumboText
+	waitbutton
+	closetext
+	turnobject ROUTE34ILEXFORESTGATE_COLUMBO, UP
+	applymovement ROUTE34ILEXFORESTGATE_COLUMBO, MovementData_ColumboDeparture
+	setscene SCENE_FINISHED
+	disappear ROUTE34ILEXFORESTGATE_COLUMBO
+	special RestartMapMusic
+	; TODO use variablesprite here???
+	; TODO use LoadUsedSpritesGFX here???
+	end
+
+.SceneDone:
+	end
 
 .IsForestRestless:
 	checkevent EVENT_FOREST_IS_RESTLESS
@@ -76,6 +102,20 @@ Route34IlexForestGateButterfreeScript:
 Route34IlexForestGateLassScript:
 	jumptextfaceplayer Route34IlexForestGateLassText
 
+
+MovementData_ColumboApproach:
+	step DOWN
+	step DOWN
+	step_end
+
+MovementData_ColumboDeparture:
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
 MovementData_0x62d97:
 	step UP
 	step UP
@@ -85,6 +125,43 @@ MovementData_0x62d9a:
 	step DOWN
 	step RIGHT
 	step_end
+
+Route34IlexForestGateColumboText:
+	text "Hello. My name is"
+	line "Columbo."
+
+	para "I'm with the"
+	line "police."
+
+	para "I'm looking into"
+	line "a case on"
+	cont "#MON abuse."
+
+	para "TEAM ROCKET"
+	line "is trafficking"
+	cont "SLOWPOKEs."
+
+	para "Apparently, their"
+	line "tails can be sold"
+	cont "at a high price!"
+
+	para "This was even"
+	line "happening in"
+	cont "AZALEA TOWN!"
+
+	para "Would you happen"
+	line "to know anything"
+	cont "about that?"
+
+	para "Oh, I see."
+
+	para "You seem like a"
+	line "busy kid."
+
+	para "I'll get out of"
+	line "your hair."
+
+	done
 
 Route34IlexForestGateTeacherText:
 	text "Oh, honey. You're"
@@ -143,12 +220,13 @@ Route34IlexForestGate_MapEvents:
 	warp_event  5,  7, ILEX_FOREST, 1
 
 	db 1 ; coord events
-	coord_event  4,  7, SCENE_DEFAULT, Route34IlexForestGateCelebiEvent
+	coord_event  4,  7, SCENE_FINISHED, Route34IlexForestGateCelebiEvent
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  9,  3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_BEHIND_COUNTER
 	object_event  9,  4, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateButterfreeScript, -1
 	object_event  3,  4, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateLassScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 	object_event  5,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_IN_WALKWAY
+	object_event  4,  4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_COLUMBO_ROUTE34_ILEX
