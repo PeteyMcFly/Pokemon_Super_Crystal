@@ -654,8 +654,8 @@ BlackGlassesDesc:
 	next "type moves. (HOLD)@"
 
 SlowpokeTailDesc:
-	db   "Very tasty. Sell"
-	next "high.@"
+	db   "Very tasty. Strong"
+	next "odor.@"
 
 PinkBowDesc:
 	db   "Powers up normal-"

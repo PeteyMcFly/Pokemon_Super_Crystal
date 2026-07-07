@@ -246,6 +246,9 @@ PKMNTrainerGroup:
 	db 60, MEGANIUM
 	db 60, TYPHLOSION
 	db 60, FERALIGATR
+	db 60, VENUSAUR
+	db 60, CHARIZARD
+	db 60, BLASTOISE
 	db -1 ; end
 	
 BrunoGroup:	
