@@ -69,7 +69,7 @@ GoldenrodCity_MapScripts:
 	return
 
 GoldenrodColumboEvent:
-	swapsprite SPRITE_GRAMPS, SPRITE_PRYCE
+	swapsprite SPRITE_GRAMPS, SPRITE_COLUMBO
 	special	FadeOutMusic
 	pause 15
 	playmusic MUSIC_OFFICER_ENCOUNTER
