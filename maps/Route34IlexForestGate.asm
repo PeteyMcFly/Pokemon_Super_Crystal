@@ -29,6 +29,7 @@ Route34IlexForestGate_MapScripts:
 	setscene SCENE_FINISHED
 	disappear ROUTE34ILEXFORESTGATE_COLUMBO
 	special RestartMapMusic
+	setevent EVENT_COLUMBO_ROUTE34_ILEX
 	; TODO use variablesprite here???
 	; TODO use LoadUsedSpritesGFX here???
 	end
