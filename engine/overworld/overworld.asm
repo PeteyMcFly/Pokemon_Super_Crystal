@@ -560,7 +560,7 @@ GetUsedSprites:
 .done
 	ret
 
-GetUsedSprite:
+GetUsedSprite::
 	ldh a, [hUsedSpriteIndex]
 	call SafeGetSprite
 	ldh a, [hUsedSpriteTile]

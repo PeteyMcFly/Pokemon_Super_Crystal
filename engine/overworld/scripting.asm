@@ -232,6 +232,7 @@ ScriptCommandTable:
 	dw Script_getname                    ; a7
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
+	dw Script_swapsprite                 ; aa
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2798,4 +2799,26 @@ Script_checksave:
 	farcall CheckSave
 	ld a, c
 	ld [wScriptVar], a
+	ret
+
+Script_swapsprite:
+; script command 0xaa
+	
+	call GetScriptByte ; sprite to replace
+	ld b, a
+
+	call GetScriptByte ; sprite to load
+	ld c, a
+
+	push bc
+
+	ld a, b
+	call FindLoadedSprite
+	ldh [hUsedSpriteTile], a
+
+	pop bc
+	ld a, c
+	ldh [hUsedSpriteIndex], a
+
+	farcall GetUsedSprite
 	ret

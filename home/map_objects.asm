@@ -300,12 +300,6 @@ CheckObjectTime::
 	scf
 	ret
 
-; unused
-	ldh [hMapObjectIndexBuffer], a
-	call GetMapObject
-	call CopyObjectStruct
-	ret
-
 _CopyObjectStruct::
 	ldh [hMapObjectIndexBuffer], a
 	call UnmaskObject
@@ -627,4 +621,32 @@ GetSpriteDirection::
 	add hl, bc
 	ld a, [hl]
 	maskbits NUM_DIRECTIONS, 2
+	ret
+
+FindLoadedSprite::
+; a = sprite ID
+; sets carry if found
+; returns a = tile number
+	
+	ld b, a
+	ld hl, wUsedSprites
+	ld c, SPRITE_GFX_LIST_CAPACITY
+
+.loop
+	ld a, [hli]
+	cp b
+	jr z, .found
+
+	inc hl
+
+	dec c
+	jr nz, .loop
+	
+	;found nothing
+	and a
+	ret
+
+.found
+	ld a, [hl]
+	scf
 	ret
