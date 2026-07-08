@@ -34,7 +34,9 @@ GoldenrodCity_MapScripts:
 	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
 	iftrue .SceneNothingDone
 	setscene SCENE_GOLDENROD_COLUMBO
+	end
 .SceneNothingDone
+	disappear GOLDENRODCITY_COLUMBO
 	end
 
 .SceneColumbo
