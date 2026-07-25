@@ -141,7 +141,7 @@
 	const BASEMENT_KEY ; 85
 	const PASS         ; 86
 	const PENCIL       ; 87
-	const ITEM_88      ; 88
+	const COLUMBO_BALL ; 88
 	const ITEM_89      ; 89
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b

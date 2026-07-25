@@ -208,7 +208,7 @@ MartEcruteak:
 MartMahogany1:
 	db 4 ; # items
 	db TINYMUSHROOM
-	db SLOWPOKETAIL
+	db REVIVAL_HERB
 	db POKE_BALL
 	db POTION
 	db -1 ; end

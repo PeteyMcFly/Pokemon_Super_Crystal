@@ -292,6 +292,7 @@ BattleAnim_ThrowPokeBall:
 	anim_if_param_equal MASTER_BALL, .MasterBall
 	anim_if_param_equal ULTRA_BALL, .UltraBall
 	anim_if_param_equal GREAT_BALL, .GreatBall
+	anim_if_param_equal COLUMBO_BALL, .ColumboBall ; Used in phase 2 of the animation, where we catch it - pass POKE_BALL for phase 1 (psyche out)
 	; any other ball
 	anim_2gfx ANIM_GFX_POKE_BALL, ANIM_GFX_SMOKE
 	anim_sound 6, 2, SFX_THROW_BALL
@@ -339,6 +340,33 @@ BattleAnim_ThrowPokeBall:
 	anim_obj ANIM_OBJ_BALL_POOF, 136, 64, $10
 	anim_wait 16
 	anim_jump .Shake
+
+.ColumboBall
+	anim_2gfx ANIM_GFX_POKE_BALL, ANIM_GFX_SMOKE
+
+
+	anim_obj ANIM_OBJ_POKE_BALL, 136, 65, $0
+	anim_setobj $2, $7
+	anim_wait 16
+	anim_sound 0, 1, SFX_BALL_POOF
+	anim_obj ANIM_OBJ_BALL_POOF, 136, 64, $10
+	anim_wait 16
+
+	anim_bgeffect ANIM_BG_RETURN_MON, $0, $0, $0
+
+	anim_wait 8
+	anim_incobj 2
+	anim_wait 16
+	anim_sound 0, 1, SFX_CHANGE_DEX_MODE
+	anim_incobj 1
+	anim_wait 32
+	anim_sound 0, 1, SFX_BALL_BOUNCE
+	anim_wait 32
+	anim_wait 32
+	anim_wait 32
+	anim_wait 8
+
+	anim_jump .Click
 
 .MasterBall:
 	anim_3gfx ANIM_GFX_POKE_BALL, ANIM_GFX_SMOKE, ANIM_GFX_SPEED

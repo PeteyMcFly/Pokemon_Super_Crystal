@@ -1241,7 +1241,10 @@ Text_BallCaught::
 	sound_caught_mon
 	text_end
 
-	text_end ; unused
+_OneMoreThingText::
+	text "Oh, uh..."
+	line "One more thing!"
+	text_end
 
 _WaitButtonText::
 	text_promptbutton

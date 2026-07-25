@@ -104,6 +104,7 @@
 	const SPRITE_ENTEI ; 64
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
+	const SPRITE_COLUMBO ; 67
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
@@ -165,3 +166,4 @@ SPRITE_VARS EQU const_value
 	const SPRITE_FUCHSIA_GYM_4 ; fa
 	const SPRITE_COPYCAT ; fb
 	const SPRITE_JANINE_IMPERSONATOR ; fc
+	const SPRITE_PSC_VAR_1 ;fd

@@ -2708,8 +2708,9 @@ wMobileBattleRoomSceneID::                        db ; d9c0
 wRyokan3FSceneID::                                db ; d9c1
 wRyokanOnsenSceneID::                             db ; d9c2
 wRyokan1FSceneID::                                db ; d9c3
+wGoldenrodCitySceneID::                           db ; d9c4
 
-	ds 46
+	ds 45
 
 ; fight counts
 wJackFightCount::    db ; d9f2

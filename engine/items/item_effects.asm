@@ -381,6 +381,10 @@ PokeBallEffect:
 	jr c, .not_kurt_ball
 	ld a, POKE_BALL
 .not_kurt_ball
+	cp COLUMBO_BALL
+	jr nz, .not_columbo_ball
+	ld a, POKE_BALL
+.not_columbo_ball
 	ld [wBattleAnimParam], a
 
 	ld de, ANIM_THROW_POKE_BALL
@@ -394,6 +398,28 @@ PokeBallEffect:
 	ld [wNumHits], a
 	predef PlayBattleAnim
 
+	ld a, [wCurItem]
+	cp COLUMBO_BALL
+	jr nz, .not_columbo_ball2
+	ld hl, OneMoreThingText
+	call PrintText
+
+	; queue second poof + ball animation
+	ld a, COLUMBO_BALL
+	ld [wBattleAnimParam], a
+	ld de, ANIM_THROW_POKE_BALL
+	ld a, e
+	ld [wFXAnimID], a
+	ld a, d
+	ld [wFXAnimID + 1], a
+	xor a
+	ldh [hBattleTurn], a
+	ld [wBuffer2], a
+	ld [wNumHits], a
+	predef PlayBattleAnim
+	jr .caught
+
+.not_columbo_ball2
 	ld a, [wWildMon]
 	and a
 	jr nz, .caught
@@ -2771,6 +2797,10 @@ ItemGotOnText:
 
 ItemGotOffText:
 	text_far _ItemGotOffText
+	text_end
+
+OneMoreThingText:
+	text_far _OneMoreThingText
 	text_end
 
 ApplyPPUp:
