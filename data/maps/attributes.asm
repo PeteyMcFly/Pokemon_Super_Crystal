@@ -708,3 +708,4 @@ SECTION "Map Attributes", ROMX
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $00, 0
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $00, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $00, 0
+	map_attributes ColumboHouse, COLUMBO_HOUSE, $00, 0
