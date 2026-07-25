@@ -22,11 +22,23 @@ ColumboScript:
 	writetext ColumboText
 	waitbutton
 	closetext
+	checkitem PENCIL
+	iftrue .ColumboBallScript
 	end
 
 .MeetGoldenrod:
 	opentext
 	writetext GoldenrodText
+	waitbutton
+	closetext
+	end
+
+.ColumboBallScript
+	opentext
+	writetext ColumboBallText
+	waitbutton
+	takeitem PENCIL
+	verbosegiveitem COLUMBO_BALL
 	waitbutton
 	closetext
 	end
@@ -45,8 +57,54 @@ CFridgeScript:
 
 ColumboText:
 	text "Oh heya kid!"
-	line "good seeing you."
+	line "What are you"
+
+	para "doing all the"
+	line "way over here"
+	cont "in Kanto?"
+
+	para "My wife is"
+	line "usually around,"
+
+	para "but actually she"
+	line "is out running"
+	cont "about right now."
+
+	para "Good to seeya"
+	line "kid, you stay"
+	cont "out of trouble."
 	done
+
+ColumboBallText:
+	text "Oh gees, would"
+	line "you look at that?"
+
+	para "I was wondering"
+	line "where the heck"
+
+	para "I had lost my"
+	line "lost my pencil!"
+
+	para "the wife keeps"
+	line "gettin' upset"
+
+	para "with me that I"
+	line "am always losing"
+
+	para "things, and she"
+	line "is sick of buying"
+	cont "me new pencils."
+
+	para "Thanks for"
+	line "returning this"
+	cont "to me kid!"
+
+	para "As a token of my"
+	line "appreciation,"
+
+	para "Please take this!"
+	done
+
 
 GoldenrodText:
 	text "What are you"
