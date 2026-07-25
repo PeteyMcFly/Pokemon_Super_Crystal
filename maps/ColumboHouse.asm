@@ -34,6 +34,7 @@ ColumboScript:
 	end
 
 .ColumboBallScript
+	showemote EMOTE_SHOCK, COLUMBO_HOME, 15
 	opentext
 	writetext ColumboBallText
 	waitbutton
