@@ -16,8 +16,17 @@ ColumboHouse_MapScripts:
 
 ColumboScript:
 	faceplayer
+	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
+	iffalse .MeetGoldenrod
 	opentext
 	writetext ColumboText
+	waitbutton
+	closetext
+	end
+
+.MeetGoldenrod:
+	opentext
+	writetext GoldenrodText
 	waitbutton
 	closetext
 	end
@@ -37,6 +46,17 @@ CFridgeScript:
 ColumboText:
 	text "Oh heya kid!"
 	line "good seeing you."
+	done
+
+GoldenrodText:
+	text "What are you"
+	line "doing here kid?"
+
+	para "You and I have"
+	line "got unfinished"
+
+	para "business in"
+	line "GOLDENROD CITY."
 	done
 
 CStoveText:
