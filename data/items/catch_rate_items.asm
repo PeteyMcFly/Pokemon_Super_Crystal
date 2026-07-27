@@ -9,7 +9,7 @@ TimeCapsule_CatchRateItems:
 	db RYOKAN_KEY, BERRY
 	db ITEM_64, BERRY
 	db ITEM_78, BERRY
-	db ITEM_87, BERRY
+	db PENCIL, BERRY
 	db ITEM_BE, BERRY
 	db ITEM_C3, BERRY
 	db ITEM_DC, BERRY

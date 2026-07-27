@@ -2506,7 +2506,7 @@ wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 40
+	ds 6
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2525,6 +2525,8 @@ wMap12Object::  map_object wMap12
 wMap13Object::  map_object wMap13
 wMap14Object::  map_object wMap14
 wMap15Object::  map_object wMap15
+wMap16Object::  map_object wMap16
+wMap17Object::  map_object wMap17
 wMapObjectsEnd::
 
 wObjectMasks:: ds NUM_OBJECTS ; d81e
@@ -2706,8 +2708,9 @@ wMobileBattleRoomSceneID::                        db ; d9c0
 wRyokan3FSceneID::                                db ; d9c1
 wRyokanOnsenSceneID::                             db ; d9c2
 wRyokan1FSceneID::                                db ; d9c3
+wGoldenrodCitySceneID::                           db ; d9c4
 
-	ds 46
+	ds 45
 
 ; fight counts
 wJackFightCount::    db ; d9f2

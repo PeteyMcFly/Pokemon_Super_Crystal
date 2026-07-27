@@ -73,3 +73,4 @@ TrainerClassNames::
 	db "EXILE@"
 	db "CRONE@"
 	db "LADY@"
+	db "DETECTIVE@"

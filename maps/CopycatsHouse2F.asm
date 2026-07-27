@@ -117,6 +117,8 @@ Copycat:
 .TryGivePassAgain:
 	opentext
 .GivePass:
+	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
+	iffalse CannotGivePassYet
 	writetext CopycatText_GivePass
 	promptbutton
 	verbosegiveitem PASS
@@ -167,6 +169,13 @@ Copycat:
 	writetext CopycatText_ItsAScream
 	waitbutton
 .Cancel:
+	closetext
+	end
+
+CannotGivePassYet:
+	opentext
+	writetext CannotGivePassYetText
+	waitbutton
 	closetext
 	end
 
@@ -356,6 +365,27 @@ CopycatsHouse2FDollText:
 	line "#MON! Huh?"
 
 	para "It's only a doll…"
+	done
+
+CannotGivePassYetText:
+	text "I can't give you"
+	line "this PASS yet."
+
+	para "There is an"
+	line "investigation in"
+
+	para "GOLDENROD CITY,"
+	line "and the train"
+
+	para "there is cancelled"
+	line "until the"
+
+	para "investigation is"
+	line "concluded."
+
+	para "Come back when"
+	line "that happens to"
+	cont "receive the PASS!"
 	done
 
 CopycatsHouse2F_MapEvents:

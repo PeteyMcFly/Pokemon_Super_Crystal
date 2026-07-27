@@ -23,9 +23,6 @@ MenuTextbox::
 	pop hl
 	jp PrintText
 
-; unused
-	ret
-
 LoadMenuTextbox::
 	ld hl, .MenuHeader
 	call LoadMenuHeader

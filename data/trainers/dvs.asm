@@ -74,3 +74,4 @@ TrainerClassDVs:
 	dn 13, 13, 11, 13 ; EXILE
 	dn 11, 11, 13, 14 ; CRONE
 	dn 11, 11, 13, 14 ; LADY
+	dn 11, 11, 15,  9 ; DETECTIVE

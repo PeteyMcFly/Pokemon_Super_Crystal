@@ -1,3 +1,5 @@
+SPRITE_CUTSCENE_COLUMBO equ SPRITE_GRAMPS
+
 	object_const_def ; object_event constants
 	const GOLDENRODCITY_POKEFAN_M1
 	const GOLDENRODCITY_YOUNGSTER1
@@ -14,13 +16,31 @@
 	const GOLDENRODCITY_ROCKET5
 	const GOLDENRODCITY_ROCKET6
 	const GOLDENRODCITY_MOVETUTOR
+	const GOLDENRODCITY_COLUMBO
 
 GoldenrodCity_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .SceneNothing ; SCENE_GOLDENROD_NOTHING
+	scene_script .SceneColumbo ; SCENE_GOLDENROD_COLUMBO
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPointAndFloria
 	callback MAPCALLBACK_OBJECTS, .MoveTutor
+	; callback MAPCALLBACK_OBJECTS, .Columbo ; This actually controls both Columbo and the MoveTutor
+
+.SceneNothing
+	checkevent EVENT_TEAM_ROCKET_DISBANDED
+	iffalse .SceneNothingDone
+	checkevent EVENT_BEAT_DETECTIVE_COLUMBO
+	iftrue .SceneNothingDone
+	setscene SCENE_GOLDENROD_COLUMBO
+	end
+.SceneNothingDone
+	disappear GOLDENRODCITY_COLUMBO
+	end
+
+.SceneColumbo
+	end
 
 .FlyPointAndFloria:
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -49,6 +69,99 @@ GoldenrodCity_MapScripts:
 	appear GOLDENRODCITY_MOVETUTOR
 .MoveTutorDone:
 	return
+
+GoldenrodColumboEvent:
+	swapsprite SPRITE_GRAMPS, SPRITE_COLUMBO
+	special	FadeOutMusic
+	pause 15
+	playmusic MUSIC_OFFICER_ENCOUNTER
+	turnobject GOLDENRODCITY_COLUMBO, DOWN
+	applymovement GOLDENRODCITY_COLUMBO, MovementData_ColumboApproachGC
+
+	opentext
+	writetext GoldenrodCity_ColumboBeforeText
+	waitbutton
+	closetext
+
+	checkevent EVENT_GOT_SLOWPOKETAIL
+	iffalse .ColumboLawfulEnding
+
+	turnobject GOLDENRODCITY_COLUMBO, RIGHT
+	applymovement GOLDENRODCITY_COLUMBO, MovementData_ColumboOneMoreThing1
+	showemote EMOTE_SHOCK, GOLDENRODCITY_COLUMBO, 20
+	pause 15
+	
+	turnobject GOLDENRODCITY_COLUMBO, LEFT
+	applymovement GOLDENRODCITY_COLUMBO, MovementData_ColumboOneMoreThing2
+	
+	opentext
+	writetext GoldenrodCity_ColumboOneMoreThingText
+	waitbutton
+	closetext
+
+	winlosstext GoldenrodCity_ColumboBeatenText, 0
+	loadtrainer DETECTIVE, COLUMBO
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext GoldenrodCity_ColumboAfterText
+	promptbutton
+	closetext
+
+.ColumboScriptEnd
+	setevent EVENT_BEAT_DETECTIVE_COLUMBO
+	turnobject GOLDENRODCITY_COLUMBO, RIGHT
+	applymovement GOLDENRODCITY_COLUMBO, MovementData_ColumboDepartureGC
+	disappear GOLDENRODCITY_COLUMBO
+
+	opentext
+	writetext GoldenrodCity_FoundPencilText
+	promptbutton
+	verbosegiveitem PENCIL
+	waitbutton
+	closetext
+	setscene SCENE_GOLDENROD_NOTHING
+	swapsprite SPRITE_CUTSCENE_COLUMBO, SPRITE_GRAMPS
+	end
+
+.ColumboLawfulEnding
+	opentext
+	writetext GoldenrodCity_ColumboLawfulEndingText
+	waitbutton
+	giveitem RARE_CANDY, 5
+	itemnotify
+	closetext
+	sjump .ColumboScriptEnd
+
+MovementData_ColumboApproachGC:
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+MovementData_ColumboOneMoreThing1:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+MovementData_ColumboOneMoreThing2:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+MovementData_ColumboDepartureGC:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
 
 MoveTutorScript:
 	faceplayer
@@ -545,6 +658,150 @@ GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
 	line "enough coins here…"
 	done
 
+GoldenrodCity_ColumboBeforeText:
+	text "Oh, hello again"
+	line "<PLAY_G>."
+
+	para "I hope I'm not"
+	line "catching you"
+	cont "at a bad time."
+
+	para "Beautiful weather"
+	line "here in Goldenrod."
+
+	para "My wife always"
+	line "complains about"
+	cont "what we get over"
+
+	para "in Kanto."
+	line "But that's"
+	cont "no matter…"
+
+	para "I wanted to talk"
+	line "with you about"
+	cont "this SLOWPOKE"
+
+	para "issue."
+
+	para "You see, these"
+	line "ROCKET people…"
+
+	para "They're involved"
+	line "in this illegal"
+	cont "trade."
+
+	para "Everywhere they go"
+	line "there's more"
+	cont "sales."
+
+	para "More products"
+	line "of the illicit"
+	cont "#MON trade."
+
+	para "You don't happen"
+	line "to know anything"
+	cont "about that,"
+
+	para "do you?"
+
+	para "I only ask because"
+	line "you seem to show"
+	cont "up everywhere"
+
+	para "that they go."
+
+	para "What do you"
+	line "suppose the odds"
+	cont "of that are?"
+
+	para "I mean, showing"
+	line "up at the same"
+	cont "place once or"
+
+	para "twice, that's"
+	line "one thing."
+
+	para "But you, you've"
+	line "really had some"
+	cont "bad luck,"
+
+	para "haven't you?"
+
+	para "Oh, I heard back"
+	line "from the boys"
+	cont "at the lab."
+
+	para "Did you know that"
+	line "SLOWPOKETAIL has"
+	cont "a unique odor?"
+
+	para "It's funny…"
+
+	para "Every time I've"
+	line "met you, it"
+	cont "smelled just like"
+
+	para "What those lab"
+	line "boys gave me…"
+
+	para "These sorts of"
+	line "little things,"
+	cont "they bother me."
+
+	para "Of course, I'm sure"
+	line "you don't know any-"
+	cont "thing about that."
+
+	para "Just thought I'd"
+	line "ask."
+	
+	para "Well, that should"
+	line "about cover it."
+	done
+
+GoldenrodCity_ColumboOneMoreThingText:
+	text "Oh, uh…"
+	line "One more thing."
+
+	para "What's that pink"
+	line "curly thing in"
+	cont "your bag?"
+	done
+
+GoldenrodCity_ColumboBeatenText:
+	text "This is certainly"
+	line "a surprise…"
+	done
+
+GoldenrodCity_ColumboAfterText:
+	text "Well, I'd better"
+	line "get going…"
+	done
+
+GoldenrodCity_FoundPencilText:
+	text "It looks like he"
+	line "dropped his"
+	cont "PENCIL!"
+	done
+
+GoldenrodCity_ColumboLawfulEndingText:
+	text "I'm clearing you"
+	line "of any suspicion."
+
+	para "You know, I hardly"
+	line "ever say this to"
+	cont "anyone:"
+
+	para "I'm sorry for ever"
+	line "having suspected"
+	cont "you."
+
+	para "You seem like a"
+	line "good kid."
+
+	para "Here, take this."
+	done
+
 GoldenrodCityMoveTutorMoveText:
 	text_start
 	done
@@ -569,7 +826,8 @@ GoldenrodCity_MapEvents:
 	warp_event 11, 29, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 5
 	warp_event 15, 27, GOLDENROD_POKECENTER_1F, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 5, 16, SCENE_GOLDENROD_COLUMBO, GoldenrodColumboEvent
 
 	db 12 ; bg events
 	bg_event 10, 14, BGEVENT_READ, GoldenrodCityStationSign
@@ -585,7 +843,7 @@ GoldenrodCity_MapEvents:
 	bg_event 16, 27, BGEVENT_UP, GoldenrodCityPokecenterSign
 	bg_event 30,  6, BGEVENT_READ, GoldenrodCityFlowerShopSign
 
-	db 15 ; object events
+	db 16 ; object events
 	object_event  7, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityPokefanMScript, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 30, 17, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster1Script, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 12, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, EVENT_GOLDENROD_CITY_CIVILIANS
@@ -601,3 +859,4 @@ GoldenrodCity_MapEvents:
 	object_event 29,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 31, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 12, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_GOLDENROD_CITY_MOVE_TUTOR
+	object_event  9, 14, SPRITE_CUTSCENE_COLUMBO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_COLUMBO_IN_GOLDENROD

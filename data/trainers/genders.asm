@@ -75,3 +75,4 @@ BTTrainerClassGenders:
 	db MALE   ; Exile
 	db FEMALE ; Crone
 	db FEMALE ; Lady
+	db MALE   ; DETECTIVE

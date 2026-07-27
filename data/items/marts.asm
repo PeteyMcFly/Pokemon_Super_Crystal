@@ -64,7 +64,7 @@ MartViolet:
 	db AWAKENING
 	db X_DEFEND
 	db X_ATTACK
-	db X_SPEED
+	db REPEL
 	db FLOWER_MAIL
 	db -1 ; end
 
@@ -208,7 +208,7 @@ MartEcruteak:
 MartMahogany1:
 	db 4 ; # items
 	db TINYMUSHROOM
-	db SLOWPOKETAIL
+	db REVIVAL_HERB
 	db POKE_BALL
 	db POTION
 	db -1 ; end

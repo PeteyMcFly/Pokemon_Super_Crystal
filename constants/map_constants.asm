@@ -481,6 +481,7 @@ ENDM
 	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 13
 	map_const ROUTE_5_SAFFRON_GATE,                         5,  4 ; 14
 	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    4,  4 ; 15
+	map_const COLUMBO_HOUSE,                                5,  4 ; 16
 
 	newgroup                                                      ; 26
 

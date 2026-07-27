@@ -1056,3 +1056,10 @@ ENDM
 checksave: MACRO
 	db checksave_command
 ENDM
+
+	enum swapsprite_command ; $aa
+swapsprite: MACRO
+	db swapsprite_command
+	db \1 ; old
+	db \2 ; new
+ENDM

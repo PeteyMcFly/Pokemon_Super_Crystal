@@ -726,4 +726,7 @@ KRIS EQU __enum__
 	trainerclass LADY ; 49
 	const LORELEI
 
+	trainerclass DETECTIVE ; 50
+	const COLUMBO
+
 NUM_TRAINER_CLASSES EQU __enum__

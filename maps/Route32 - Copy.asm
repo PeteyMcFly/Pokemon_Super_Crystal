@@ -1,5 +1,4 @@
 SLOWPOKETAIL_PRICE EQU 1000
-
 	object_const_def ; object_event constants
 	const ROUTE32_FISHER1
 	const ROUTE32_FISHER2
@@ -122,57 +121,51 @@ Route32RoarTMGuyScript:
 Route32WannaBuyASlowpokeTailScript:
 	turnobject ROUTE32_FISHER4, DOWN
 	turnobject PLAYER, UP
-	scall SlowpoketailMerchantScript
-	end
+	sjump _OfferToSellSlowpokeTail
 
 SlowpokeTailSalesmanScript:
 	faceplayer
-SlowpoketailMerchantScript:
+_OfferToSellSlowpokeTail:
 	checkevent EVENT_GOT_SLOWPOKETAIL
-	iftrue .SlowpokeScript_Sold
-	scall .SellSlowpoketail
-	end
-
-.SellSlowpoketail:
-	opentext
+	iftrue SlowpokeScript_Sold
 	writetext SlowpokeText_BuyTail
 	special PlaceMoneyTopRight
 	yesorno
-	iffalse .SlowpokeScript_NoSale
+	iffalse SlowpokeScript_NoSale
 	checkmoney YOUR_MONEY, SLOWPOKETAIL_PRICE
-	ifequal HAVE_LESS, .SlowpokeScript_NoMoney
+	ifequal HAVE_LESS, SlowpokeScript_NoMoney
 	giveitem SLOWPOKETAIL
-	iffalse .SlowpokeScript_NoRoom
-	waitsfx
-	playsound SFX_TRANSACTION
+	iffalse SlowpokeScript_NoRoom
 	takemoney YOUR_MONEY, SLOWPOKETAIL_PRICE
 	special PlaceMoneyTopRight
+	waitsfx
+	playsound SFX_TRANSACTION
 	writetext SlowpokeText_Sold
-	waitbutton
-	closetext
 	setevent EVENT_GOT_SLOWPOKETAIL
+	promptbutton
+	itemnotify
+	closetext
 	end
 
-.SlowpokeScript_NoMoney:
+SlowpokeScript_NoMoney:
 	writetext SlowpokeText_NoMoney
 	waitbutton
 	closetext
 	end
 
-.SlowpokeScript_NoRoom:
+SlowpokeScript_NoRoom:
 	writetext SlowpokeText_NoRoom
 	waitbutton
 	closetext
 	end
 
-.SlowpokeScript_NoSale:
+SlowpokeScript_NoSale:
 	writetext SlowpokeText_NoSale
 	waitbutton
 	closetext
 	end
 
-.SlowpokeScript_Sold:
-	opentext
+SlowpokeScript_Sold:
 	writetext SlowpokeText_Sold
 	waitbutton
 	closetext
